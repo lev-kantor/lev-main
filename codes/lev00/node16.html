@@ -1,0 +1,1093 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Pc - Generate primitive cell from space group symbol</TITLE>
+<META NAME="description" CONTENT="Pc - Generate primitive cell from space group symbol">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node17.html">
+<LINK REL="previous" HREF="node15.html">
+<LINK REL="up" HREF="node13.html">
+<LINK REL="next" HREF="node17.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html450"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html446"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html440"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html448"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html451"
+  HREF="node17.html">Cl - Build up</A>
+<B> Up:</B> <A NAME="tex2html447"
+  HREF="node13.html">Detailed description of options</A>
+<B> Previous:</B> <A NAME="tex2html441"
+  HREF="node15.html">B - Generate supercell</A>
+ &nbsp <B>  <A NAME="tex2html449"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00363000000000000000"></A><A NAME="sub:Pc-option-tetr"></A>
+<BR>
+Pc - Generate primitive cell from space group symbol
+</H2>
+
+<P>
+This option allows construction of a geometry file using the information
+of the International Tables for Crystollography, i.e. from the space
+group symbol. This can be done either in 2D or 3D. This option is
+useful if correct space group symmetry is required for the system
+to be constructed since <B><I>tetr</I></B> will automatically create
+all atoms in the cell from the minimum possible number of them; in
+other words, complete stars of atoms are created according to the
+specified space group.
+
+<P>
+The initial <I>Pc-menu</I> looks like this:
+
+<P>
+<TT><FONT SIZE="-2">========= CHOOSE AN OPTION:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Sp. Select the space group from the list</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">At. Manually add an atom to the cell</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Ad. Add atoms from another file</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">----- operations with multiple
+lists of atoms ------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">------- g e n
+e r a l s e t t i n g s --------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">UU. ****** Start AGAIN from scratch
+******</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">U. ********** UNDO the last
+step *************</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Dm. 3D space groups (for bulk)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">XY. Produce &lt;geom.xyz&gt; file after every change
+for Xmol</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Hs. H atoms to be added to &lt;geom.xyz&gt; file: NO</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Quit: return to the previous setting (if exists)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-----&gt; Choose an appropriate
+option:</FONT></TT>
+<P>
+
+
+<P>
+To start, choose first the dimension using option <B>Dm</B>. Then,
+choose the space group using option <B>Sp</B>. In the 2D case the
+corresponding menu is:
+
+<P></P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 1] p1 [ 2] p2 [ 3] pm [ 4] pg
+[ 5] cm [ 6] p2mm [ 7] p2mg [ 8] p2gg </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 9] c2mm [ 10] p4 [ 11] p4mm [
+12] p4gm [ 13] p3 [ 14] p3m1 [ 15] p31m [ 16] p6 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 17] p6mm </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Choose the space group number from the Tables:</FONT></TT>
+<P>
+
+
+<P></P>
+
+
+<P>
+while in the 3D case the menu looks like this:
+
+<P></P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 1] C1_1 [ 2] Ci_1 [ 3] C2_1 [
+4] C2_2 [ 5] C2_3 [ 6] Cs_1 [ 7] Cs_2 [ 8] Cs_3 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 9] Cs_4 [ 10] C2h_1 [ 11] C2h_2
+[ 12] C2h_3 [ 13] C2h_4 [ 14] C2h_5 [ 15] C2h_6
+[ 16] D2_1 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 17] D2_2 [ 18] D2_3 [ 19] D2_4
+[ 20] D2_5 [ 21] D2_6 [ 22] D2_7 [ 23] D2_8 [
+24] D2_9 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 25] C2v_1 [ 26] C2v_2 [ 27] C2v_3
+[ 28] C2v_4 [ 29] C2v_5 [ 30] C2v_6 [ 31] C2v_7
+[ 32] C2v_8 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 33] C2v_9 [ 34] C2v_10[ 35] C2v_11[
+36] C2v_12[ 37] C2v_13[ 38] C2v_14[ 39] C2v_15[
+40] C2v_16</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 41] C2v_17[ 42] C2v_18[ 43] C2v_19[
+44] C2v_20[ 45] C2v_21[ 46] C2v_22[ 47] D2h_1 [
+48] D2h_2 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 49] D2h_3 [ 50] D2h_4 [ 51] D2h_5
+[ 52] D2h_6 [ 53] D2h_7 [ 54] D2h_8 [ 55] D2h_9
+[ 56] D2h_10</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 57] D2h_11[ 58] D2h_12[ 59] D2h_13[
+60] D2h_14[ 61] D2h_15[ 62] D2h_16[ 63] D2h_17[
+64] D2h_18</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 65] D2h_19[ 66] D2h_20[ 67] D2h_21[
+68] D2h_22[ 69] D2h_23[ 70] D2h_24[ 71] D2h_25[
+72] D2h_26</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 73] D2h_27[ 74] D2h_28[ 75] C4_1
+[ 76] C4_2 [ 77] C4_3 [ 78] C4_4 [ 79] C4_5 [
+80] C4_6 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 81] S4_1 [ 82] S4_2 [ 83] C4h_1
+[ 84] C4h_2 [ 85] C4h_3 [ 86] C4h_4 [ 87] C4h_5
+[ 88] C4h_6 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 89] D4_1 [ 90] D4_2 [ 91] D4_3
+[ 92] D4_4 [ 93] D4_5 [ 94] D4_6 [ 95] D4_7 [
+96] D4_8 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 97] D4_9 [ 98] D4_10 [ 99] C4v_1
+[100] C4v_2 [101] C4v_3 [102] C4v_4 [103] C4v_5
+[104] C4v_6 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[105] C4v_7 [106] C4v_8 [107] C4v_9
+[108] C4v_10[109] C4v_11[110] C4v_12[111] D2d_1
+[112] D2d_2 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[113] D2d_3 [114] D2d_4 [115] D2d_5
+[116] D2d_6 [117] D2d_7 [118] D2d_8 [119] D2d_9
+[120] D2d_10</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[121] D2d_11[122] D2d_12[123] D4h_1
+[124] D4h_2 [125] D4h_3 [126] D4h_4 [127] D4h_5
+[128] D4h_6 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[129] D4h_7 [130] D4h_8 [131] D4h_9
+[132] D4h_10[133] D4h_11[134] D4h_12[135] D4h_13[136]
+D4h_14</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[137] D4h_15[138] D4h_16[139] D4h_17[140]
+D4h_18[141] D4h_19[142] D4h_20[143] C3_1 [144]
+C3_2 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[145] C3_3 [146] C3_4 [147] C3i_1
+[148] C3i_2 [149] D3_1 [150] D3_2 [151] D3_3 [152]
+D3_4 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[153] D3_5 [154] D3_6 [155] D3_7
+[156] C3v_1 [157] C3v_2 [158] C3v_3 [159] C3v_4
+[160] C3v_5 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[161] C3v_6 [162] D3d_1 [163] D3d_2
+[164] D3d_3 [165] D3d_4 [166] D3d_5 [167] D3d_6
+[168] C6_1 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[169] C6_2 [170] C6_3 [171] C6_4
+[172] C6_5 [173] C6_6 [174] C3h_1 [175] C6h_1
+[176] C6h_2 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[177] D6_1 [178] D6_2 [179] D6_3
+[180] D6_4 [181] D6_5 [182] D6_6 [183] C6v_1 [184]
+C6v_2 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[185] C6v_3 [186] C6v_4 [187] D3h_1
+[188] D3h_2 [189] D3h_3 [190] D3h_4 [191] D6h_1
+[192] D6h_2 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[193] D6h_3 [194] D6h_4 [195] T_1
+[196] T_2 [197] T_3 [198] T_4 [199] T_5 [200]
+Th_1 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[201] Th_2 [202] Th_3 [203] Th_4
+[204] Th_5 [205] Th_6 [206] Th_7 [207] O_1 [208]
+O_2 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[209] O_3 [210] O_4 [211] O_5 [212]
+O_6 [213] O_7 [214] O_8 [215] Td_1 [216] Td_2 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[217] Td_3 [218] Td_4 [219] Td_5
+[220] Td_6 [221] Oh_1 [222] Oh_2 [223] Oh_3 [224]
+Oh_4 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[225] Oh_5 [226] Oh_6 [227] Oh_7
+[228] Oh_8 [229] Oh_9 [230] Oh_10 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Choose the space group number from the Tables:</FONT></TT>
+<P>
+
+
+<P></P>
+
+
+<P>
+The number to be used to choose the group in either case is the correct
+group number in the Tables, while the symbol corresponds to the Sch&#246;onflis
+notations. Once the space group is known, a new option <B>Lt</B>
+appears that allows choosing the spacial parameters of the Bravais
+lattice, e.g. lengths <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$a$">, <IMG
+ WIDTH="13" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$b$">, <IMG
+ WIDTH="13" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$c$"> of the conventional unit cell
+and the angles <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="$\alpha$">, <IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$\beta$"> and <IMG
+ WIDTH="16" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$\gamma$"> between its sides.
+Note that only the minimum number of parameters sufficient to specify
+the lattice will be asked, e.g. 
+
+<P>
+<FONT SIZE="-2">......O.K.! D4h_11 space group is found!!!</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">.... Crystal point-group is D4h</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">.... Singonia is: Tetragonal</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">.... Bravais lattice is: simple lattice </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">&nbsp;&nbsp;&nbsp;Specify cell via {a,c} (A) </FONT>
+<P>
+
+
+<P>
+After that, the space group is known completely so that it is possible
+to have a look at it (option <B>Sy</B>) in detail, e.g. the following
+information is shown for the group <IMG
+ WIDTH="36" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$D_{4h}^{11}$">: 
+
+<P>
+<FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+Space group &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">_i__KG__NAZ______{Fractional translation}_______Int.Tables___</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">1 1 UNIT 0.00000 0.00000 0.00000 (x,y,z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">2 7 C2X 0.00000 0.00000 0.50000 (x,-y,-z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">3 9 C2Y 0.00000 0.00000 0.50000 (-x,y,-z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">4 5 C2Z 0.00000 0.00000 0.00000 (-x,-y,z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">5 2 C4Z 0.50000 0.50000 0.50000 (-y+1/2,x+1/2,z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">6 6 -C4Z 0.50000 0.50000 -0.50000 (y+1/2,-x+1/2,z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">7 19 C22 0.50000 0.50000 0.00000 (y+1/2,x+1/2,-z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">8 20 C21 0.50000 -0.50000 0.00000 (-y+1/2,-x+1/2,-z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">9 48 I 0.50000 0.50000 0.50000 (-x+1/2,-y+1/2,-z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">10 26 PYZ 0.50000 -0.50000 0.00000 (-x+1/2,y+1/2,z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">11 27 PXZ 0.50000 0.50000 0.00000 (x+1/2,-y+1/2,z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">12 25 PXY 0.50000 0.50000 0.50000 (x+1/2,y+1/2,-z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">13 28 S4Z 0.00000 0.00000 0.00000 (y,-x,-z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">14 31 S4Z3 0.00000 0.00000 0.00000 (-y,x,-z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">15 43 P2 0.00000 0.00000 0.50000 (-y,-x,z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">16 42 P1 0.00000 0.00000 -0.50000 (y,x,z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Hit ENTER when done ...</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+Reciprocal lattice vectors (up tp 2*pi) &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">vec 1 =&gt; 1.00000 0.00000 0.00000</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">vec 2 =&gt; 0.00000 1.00000 0.00000</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">vec 3 =&gt; 0.00000 0.00000 0.33333</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Hit ENTER when done ...</FONT>
+<P>
+
+
+<P>
+The first column of the ``Space group'' table shows the space
+group operation number, the 2nd - the internal operation number (not
+important for the user), the 3rd - rotation/mirror operation name
+(see Figs. <A HREF="node11.html#cap:Symmetry-operations-of-Oh">2.1</A> and <A HREF="node11.html#cap:Symmetry-operations-of-D6h">2.2</A>
+and Section <A HREF="node11.html#sec:Symmetry-tetr">2.5</A>), then follows three columns
+with the fractional translation (can be shown either in fractional
+or Cartesian coordinates via option <B>Ca</B>; in the former case
+the fractional coordinates can be shown either with respect to the
+primitive or conventional cell via option <B>Re</B>). Finally, the
+last column shows the Tables notation for the group operation using
+a general position point <IMG
+ WIDTH="49" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$(xyz)$">. 
+
+<P>
+Once the lattice has been specified, atoms in the unit cell can also
+be added using <B>At</B> and/or <B>Ad</B>. The former one allows
+atoms to be added one by one, the latter - from another file. 
+
+<P>
+Then, by applying <B>Gn</B> you can generate the complete unit cell.
+In this case all group operations (shown in <B>Sy</B>) are applied
+to each of the atoms known at this stage, and new atoms are generated
+if found. If some of the atoms were there already, they will be removed,
+so that each position will appear only once. Thus, this way complete
+<I>stars</I> of atoms in the cell can be obtained. Note that you can
+use the option <B>Gn</B> at any stage. If new atoms are added (via
+<B>At</B> and/or <B>Ad</B>), then complete stars for these atoms
+can only be created by applying <B>Gn</B> again; otherwise, some
+starts may be incomplete. Thus, always apply <B>Gn</B> at the end
+of generating the cell. After the complete stars have been obtained,
+the <B>Sy</B> option will show which atoms of the cell are obtained
+from every atom bgy applying symmetry operations, e.g. 
+
+<P></P>
+
+
+<P>
+<FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+Space group &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">_i__KG__NAZ______{Fractional translation}_______Int.Tables___</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">1 1 UNIT 0.00000 0.00000 0.00000 (x,y,z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">2 7 C2X 0.00000 0.00000 1.50000 (x,-y,-z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">3 9 C2Y 0.00000 0.00000 1.50000 (-x,y,-z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">4 5 C2Z 0.00000 0.00000 0.00000 (-x,-y,z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">5 2 C4Z 0.50000 0.50000 1.50000 (-y+1/2,x+1/2,z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">6 6 -C4Z 0.50000 0.50000 -1.50000 (y+1/2,-x+1/2,z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">7 19 C22 0.50000 0.50000 0.00000 (y+1/2,x+1/2,-z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">8 20 C21 0.50000 -0.50000 0.00000 (-y+1/2,-x+1/2,-z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">9 48 I 0.50000 0.50000 1.50000 (-x+1/2,-y+1/2,-z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">10 26 PYZ 0.50000 -0.50000 0.00000 (-x+1/2,y+1/2,z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">11 27 PXZ 0.50000 0.50000 0.00000 (x+1/2,-y+1/2,z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">12 25 PXY 0.50000 0.50000 1.50000 (x+1/2,y+1/2,-z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">13 28 S4Z 0.00000 0.00000 0.00000 (y,-x,-z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">14 31 S4Z3 0.00000 0.00000 0.00000 (-y,x,-z) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">15 43 P2 0.00000 0.00000 1.50000 (-y,-x,z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">16 42 P1 0.00000 0.00000 -1.50000 (y,x,z+1/2) </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Hit ENTER when done ...</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+Reciprocal lattice vectors (up tp 2*pi) &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">vec 1 =&gt; 1.00000 0.00000 0.00000</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">vec 2 =&gt; 0.00000 1.00000 0.00000</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">vec 3 =&gt; 0.00000 0.00000 0.33333</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Hit ENTER when done ...</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+Group operations on cell atoms &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">-- Si atom 1 is transformed into atoms:</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">1 2 2 1 3 3 4 4 3 4 4 3 1 1 2 2</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">-- Si atom 2 is transformed into atoms:</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">2 1 1 2 4 4 3 3 4 3 3 4 2 2 1 1</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">-- Si atom 3 is transformed into atoms:</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">3 4 4 3 1 1 2 2 1 2 2 1 3 3 4 4</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">-- Si atom 4 is transformed into atoms:</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">4 3 3 4 2 2 1 1 2 1 1 2 4 4 3 3</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Hit ENTER when done ...</FONT>
+<P>
+
+
+<P></P>
+
+
+<P>
+Option <B>U1</B> appears after <B>Gn</B> has been applied, it
+keeps only first atoms of each star. This is useful if Wyckoff positions
+to be studied or during some intermediate stages of cell generation. 
+
+<P>
+The complete menu at that stage may look like this:
+
+<P></P>
+
+
+<P>
+<FONT SIZE="-2">========= CHOOSE AN OPTION:</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Current number of atoms in the cell: 1</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Current number of species: 1</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;Si[ 1] </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Sp. Space group has been selected as D4h_11</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Space group system : Tt</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Bravais lattice type: SL0</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Lt. Basic translations of the PRIMITIVE CELL:</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">&nbsp;&nbsp;&nbsp;vec 1 =&gt; 1.00000 0.00000 0.00000</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">&nbsp;&nbsp;&nbsp;vec 2 =&gt; 0.00000 1.00000 0.00000</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">&nbsp;&nbsp;&nbsp;vec 3 =&gt; 0.00000 0.00000 3.00000</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">At. Manually add an atom to the cell</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Ad. Add atoms from another file</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Gn. Generate the PRIMITIVE CELL</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">----- operations with multiple lists of atoms ------</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">T. Tag atoms (specify multiple lists): currently OFF</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">------- g e n e r a l s e t t i n g s --------</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">UU. ****** Start AGAIN from scratch ******</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">U. ********** UNDO the last step
+*************</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Dm. 3D space groups (for bulk)</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">XY. Produce &lt;geom.xyz&gt; file after every change for Xmol</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Hs. H atoms to be added to &lt;geom.xyz&gt; file: NO</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">An. [For input] Coordinates are specified in: &lt;Angstroms&gt; </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Bb. Set the size of the breeding box for visualisation</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&gt;&gt;
+Current setting for the breeding box: &lt;&lt;&lt;&lt;&lt;</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ 0... 0] x [ 0... 0] x [ 0... 0]</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&gt;&gt;
+extension = 1, # of atoms= 1</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Sy. Show the symmetry</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Ca. Fractional translations in Sy are in Cartesian</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Re. Fractional translations in Sy reduced wrt primitive
+cell</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Co. Show current atomic positions in fractional/Cartesian</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">W. Write &lt;geom.xyz&gt; file for preview using current breeding</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">P. Proceed: keep the curent setting</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Q. Quit: return to the previous setting (if exists)</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">-----&gt; Choose an appropriate option:</FONT>
+<P>
+
+
+<P></P>
+
+
+<P>
+Additional options appear if atoms are tagged (option <B>T</B>):
+
+<P></P>
+
+
+<P>
+<FONT SIZE="-2">----- operations with multiple lists of atoms ------</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">T. Untag atoms (multiple lists): currently ON</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt; Current set of tagged
+atoms: 1 </FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Rm. Remove tagged atoms with their stars</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Rn. Rename tagged atoms: change species</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Mv. Move tagged atoms to another general position</FONT>
+<P>
+
+
+<P>
+<FONT SIZE="-2">Rt. Rotate tagged atoms about the X,Y,Z axes</FONT>
+<P>
+
+
+<P></P>
+
+
+<P>
+You can (similarly to the corresponding options of the <B>M</B>
+menu of Section <A HREF="node18.html#sub:M-option-tetr">2.6.5</A>): 
+
+<P>
+
+<UL>
+<LI>remove tagged atoms from the cell (option <B>Rm</B>),
+</LI>
+<LI>rename them, i.e. species change (option <B>Rn</B>), 
+</LI>
+<LI>move/diplace tagged atoms (option <B>Mv</B>) or 
+</LI>
+<LI>rotate them (option <B>Rt</B>). 
+</LI>
+</UL>
+Note that complete stars of atoms will be tagged (if exist, i.e. if
+Gn has been applied before), moved, rotated, removed or renamed. 
+
+<P>
+Finally, you can save the obtained geometry using <B>S</B> or proceed
+to the main menu (option <B>P</B>) to apply other available operations
+on the constructed cell (e.g. from the <B>M</B> menu of Section
+<A HREF="node18.html#sub:M-option-tetr">2.6.5</A>). Option <B>Q</B> will take you out of
+the <B>Pc</B> menu, the geometry generated will be forgotten. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html450"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html446"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html440"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html448"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html451"
+  HREF="node17.html">Cl - Build up</A>
+<B> Up:</B> <A NAME="tex2html447"
+  HREF="node13.html">Detailed description of options</A>
+<B> Previous:</B> <A NAME="tex2html441"
+  HREF="node15.html">B - Generate supercell</A>
+ &nbsp <B>  <A NAME="tex2html449"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

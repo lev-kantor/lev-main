@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Atomic Coordinates</TITLE>
+<META NAME="description" CONTENT="Atomic Coordinates">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="previous" HREF="node70.html">
+<LINK REL="up" HREF="node66.html">
+<LINK REL="next" HREF="node72.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1270"
+  HREF="node72.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1266"
+  HREF="node66.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1262"
+  HREF="node70.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1268"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1271"
+  HREF="node72.html">Interactions between atoms</A>
+<B> Up:</B> <A NAME="tex2html1267"
+  HREF="node66.html">Box with atomic coordinates</A>
+<B> Previous:</B> <A NAME="tex2html1263"
+  HREF="node70.html">scan</A>
+ &nbsp <B>  <A NAME="tex2html1269"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION04023500000000000000"></A><A NAME="sub:Atomic-Coordinates"></A>
+<BR>
+Atomic Coordinates
+</H3>
+
+<P>
+The rest of the coordinates input box is used to input the positions
+of the atoms in the system in cartesian coordinates. Every atom is
+entered in the same format, but each belongs to one of five classes
+of atoms depending on the keyword used at the beginning of its group.
+The five keywords are: 
+
+<P>
+
+<UL>
+<LI><B>cluster-atoms</B> - relaxed, contributes to potential and image
+interactions. Usually used to represent relaxed atoms in a cluster.
+</LI>
+<LI><B>cluster-buffer</B> - frozen, contributes to potential and image
+interactions. Usually used to represent frozen atoms in a cluster.
+</LI>
+<LI><B>tip-atoms</B> - relaxed, contributes to potential and image interactions.
+Included in all operations on the tip (<B>move, rotate</B>). Usually
+used to represent relaxed atoms in the tip.
+</LI>
+<LI><B>tip-buffer</B> - frozen, contributes to potential and image interactions.
+Included in all operations on the tip (<B>move, rotate</B>). Usually
+used to represent frozen atoms in the tip.
+</LI>
+<LI><B>frozen-tip</B> - frozen, contributes to potential interactions,
+but is removed from image calculations. Included in all operations
+on the tip (<B>move, rotate</B>). Usually used to represent frozen
+atoms in the tip which are within the conducting sphere and are forbidden
+from the contributing to the image interaction.
+</LI>
+</UL>
+These groups can only appear once each in the coordinates section,
+although the order in which they appear is irrelevant. The format
+of entry of the coordinates is as follows:
+
+<P></P>
+
+
+<P>
+Element1 x y z (iRx iRy iRz)
+
+<P>
+Element2 x y z (iRx iRy iRz)
+
+<P>
+etc.....
+
+<P><P>
+<BR>
+
+
+<P>
+The parameters <TT>iRx</TT>, <TT>iRy</TT>, <TT>iRz</TT>
+control whether an atom is allowed to relax in the x, y, z directions
+respectively - 0 0 0 would fix the atom in all three directions. They
+are optional and do not need to be specified. The default values for
+<TT>iRx</TT>, <TT>iRy</TT>, <TT>iRz</TT> are taken from the group
+the atoms belong to e.g. all <B>tip-</B> and <B>cluster-atoms</B>
+atoms are relaxed by default. The relaxation flags for shells are
+obtained appropriately from the <B>shell</B> option (section <A HREF="node49.html#Sec::shells">8.2.1</A>).
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1270"
+  HREF="node72.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1266"
+  HREF="node66.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1262"
+  HREF="node70.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1268"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1271"
+  HREF="node72.html">Interactions between atoms</A>
+<B> Up:</B> <A NAME="tex2html1267"
+  HREF="node66.html">Box with atomic coordinates</A>
+<B> Previous:</B> <A NAME="tex2html1263"
+  HREF="node70.html">scan</A>
+ &nbsp <B>  <A NAME="tex2html1269"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

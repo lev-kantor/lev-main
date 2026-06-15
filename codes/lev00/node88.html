@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>What to do for processing the electronic/spin density?</TITLE>
+<META NAME="description" CONTENT="What to do for processing the electronic/spin density?">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="previous" HREF="node87.html">
+<LINK REL="up" HREF="node86.html">
+<LINK REL="next" HREF="node89.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1396"
+  HREF="node89.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1392"
+  HREF="node86.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1388"
+  HREF="node87.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1394"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1397"
+  HREF="node89.html">Working with old academic</A>
+<B> Up:</B> <A NAME="tex2html1393"
+  HREF="node86.html">lev00 and SIESTA</A>
+<B> Previous:</B> <A NAME="tex2html1389"
+  HREF="node87.html">Utility get_param_siesta</A>
+ &nbsp <B>  <A NAME="tex2html1395"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00622000000000000000"></A><A NAME="sub:Densiy-and-SIESTA"></A>
+<BR>
+What to do for processing the electronic/spin density?
+</H2>
+
+<P>
+For this calculation you can use the files of your ground state run.
+Therefore, follow this sequence:
+
+<P>
+
+<OL>
+<LI>Run <B><I>SIESTA</I></B> first; the total/spin densities are produced
+(the file <TT>&lt;job&gt;.RHO</TT>) provided that the <TT>SaveRho</TT> flag
+in the <TT>&lt;job&gt;.fdf</TT> file is set to TRUE
+</LI>
+<LI>After that you should run <B><I>get_param_siesta</I></B> to get
+<TT>param.inc</TT> file 
+</LI>
+<LI>Compile <B><I>lev00</I></B> using the script <TT>lev00.comp</TT>
+(provided)
+</LI>
+<LI>Run <B><I>lev00</I></B> as explained in Section <A HREF="node59.html#sub:density-lev00">3.6.3</A>
+</LI>
+</OL>
+Thus, you will need the following <B><I>SIESTA</I></B> output files: 
+
+<P>
+
+<UL>
+<LI><TT>&lt;job&gt;.XV</TT> file with the final geometry
+</LI>
+<LI><TT>&lt;job&gt;.RHO</TT> file for the electron/spin density
+</LI>
+</UL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

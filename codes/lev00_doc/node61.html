@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>1 - Plot density along a line </TITLE>
+<META NAME="description" CONTENT="1 - Plot density along a line ">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node62.html">
+<LINK REL="previous" HREF="node60.html">
+<LINK REL="up" HREF="node59.html">
+<LINK REL="next" HREF="node62.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1070"
+  HREF="node62.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1066"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1060"
+  HREF="node60.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1068"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1071"
+  HREF="node62.html">2 - Plot density</A>
+<B> Up:</B> <A NAME="tex2html1067"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1061"
+  HREF="node60.html">General remarks</A>
+ &nbsp <B>  <A NAME="tex2html1069"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00463200000000000000"></A><A NAME="sub:1-Plot-along-line-lev00"></A>
+<BR>
+1 - Plot density along a line 
+</H3>
+
+<P>
+This option is used to produce a 1D plot of the density along some
+direction is space. The line menu that is opened is this:
+
+<P>
+<TT><FONT SIZE="-2">.............. LINE MENU .......................</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">...... Change these parameters if necessary:....</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. Starting point (Angstroms): ( 0.00000, 0.00000,
+0.00000)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;Starting point (fractional): ( 0.00000,
+0.00000, 0.00000)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. Vector along the line: ....... undefined .......</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. Lenght along the line (in Angstroms): 0.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. Parameters for the plotting</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. Perform calculation for the plotting: file
+out.dat_1 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6. Preview the density</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">7. Create a postscript file out.dat_1.ps for
+the plot</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---- G e n e r a l&nbsp;&nbsp; s e t t
+i n g s -----</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">An. Coordinates are specified in: &lt;Angstroms&gt; </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Co. Show current atomic positions in fractional/Cartesian</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">--- L e a v e&nbsp;&nbsp;t h e&nbsp;&nbsp;m e n
+u -------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Return to the previous menu</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---&gt; Choose the item and press ENTER:</FONT></TT>
+<P>
+
+
+<P>
+You will have to specify the starting point (option <B>1</B>), direction
+(option <B>2</B>) and the length along this direction (option <B>3</B>).
+Calculation along the line is performed in optin <B>5</B> (the file
+name produced is shown explicitly), while the results of the calculation
+can be previewed using option <B>6</B> and the Postscript file (with
+the name shown) is produced in option <B>7</B>. Note that the density
+is available on a 3D grid, therefore, an interpolation by 8 points
+is used when performing the calculation. 
+
+<P>
+In ``General settings'' you can specify how the coordinates are
+to be given (option <B>An</B>), and also you can see all atomic
+positions (option <B>Co</B>). These two are analogous to those in
+<B><I>tetr</I></B> (Section <A HREF="node9.html#sec:Menus-in-tetr">2.3</A>). If <B>An</B>
+is set to <TT>&lt;AtomNumber&gt;</TT>, then the length (option <B>3</B>)
+is specified automatically when option <B>2</B> is done.
+
+<P>
+There is also an additional set of options available in <B>4</B>:
+
+<P>
+<TT><FONT SIZE="-2">..............CUSTOMISATION ......................</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">..... Change these parameters if necessary:...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. Resolution for the plot = 160</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. Low chop = 0.00 {disabled}</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. High chop = 0.00 {disabled}</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. Multiplication factor = 1.00</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. Return to the previous menu.</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---&gt; Choose the item and press ENTER:</FONT></TT>
+<P>
+
+
+<P>
+Here it is possible to choose the number of points along the line
+(option <B>1</B>), low and high chops (<B>2</B> and <B>3</B>)
+and the multiplication factor (option <B>4</B>). The chops, if specified,
+will fix the density at the chop value if the density is higher (``High
+chop'') or lower (``Low chop'') than the chop value. The high
+chop is useful if it is necessary to see the details of the density
+in the regions of small density (e.g. between atoms), while the low
+chop may be useful for the spin density. 
+
+<P>
+The file names created in this menu are <TT>out.dat_M</TT> and <TT>out.dat_M.ps</TT>,
+where <TT>M</TT> is the plot number of the parent (density) menu,
+see the bottom of Section <A HREF="node60.html#sub:General-remarks-density-lev00">3.6.3.1</A>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1070"
+  HREF="node62.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1066"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1060"
+  HREF="node60.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1068"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1071"
+  HREF="node62.html">2 - Plot density</A>
+<B> Up:</B> <A NAME="tex2html1067"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1061"
+  HREF="node60.html">General remarks</A>
+ &nbsp <B>  <A NAME="tex2html1069"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,442 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Utilities lev1 (old) and lev2 (new) </TITLE>
+<META NAME="description" CONTENT="Utilities lev1 (old) and lev2 (new) ">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node95.html">
+<LINK REL="previous" HREF="node93.html">
+<LINK REL="up" HREF="node91.html">
+<LINK REL="next" HREF="node95.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1476"
+  HREF="node95.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1472"
+  HREF="node91.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1466"
+  HREF="node93.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1474"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1477"
+  HREF="node95.html">How to split a</A>
+<B> Up:</B> <A NAME="tex2html1473"
+  HREF="node91.html">Utilities used by CASTEP</A>
+<B> Previous:</B> <A NAME="tex2html1467"
+  HREF="node93.html">Utility take</A>
+ &nbsp <B>  <A NAME="tex2html1475"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00723000000000000000">
+Utilities <I>lev1</I> (old) and <I>lev2</I> (new) </A>
+</H2>
+
+<P>
+Either utility is used to prepare data files for <B><I>lev00</I></B>
+for the calculation of the partial charge density as well as DOS/LDOS
+using <B><I>CASTEP</I></B> wavefunctions. To compile <B><I>lev1</I></B>,
+you should run the shell-script <TT>lev1.comp</TT> from the current
+directory using the same <TT>param.inc</TT> file. <B><I>lev2</I></B>
+should be compiled in directories <TT>LEV2_f77</TT> (f77 version,
+compile every time you get a new <TT>param.inc</TT> file) or <TT>LEV_f90</TT>
+(f90 version, to be compiled only once).
+
+<P>
+First of all, run <B><I>CASTEP</I></B> in the band-structure mode
+to write the wavefunctions. Note that the <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points mesh
+as given by <B><I>tetr</I></B> must to be used for the DOS/LDOS
+calculation. Then you can run <B><I>lev1</I></B>. It is an interactive
+menu-driven program and five options are available: DOS, DOp, SRF
+and MAP. At the end of the run a file <TT>psi2.[option]</TT>is
+produced that is needed for the subsequent run of the plotter <B><I>lev00</I></B>.
+Note that the utility <B><I>lev1</I></B> needs the file <TT>fort.14</TT>
+which contains the information necessary to perform the Fast Fourier
+Transform (FFT) from the reciprocal to the real space.
+
+<P>
+All states available (their number is <TT>NBANDS</TT>) can participate.
+However, it is possible to do a more sophisticated job by creating
+<I>islands</I> of bands, each island being a continuous manifold of
+states which can overlap, and then run the calculation for every island.
+This way it is possible to do a specific job on particular states.
+If all states are to be included, just specify one island with all
+states from 1 to <TT>NBANDS</TT>.
+
+<P>
+The five options available are listed below:
+
+<P>
+
+<OL>
+<LI><TT><FONT SIZE="+1">DOS</FONT></TT> <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\rightarrow$"> <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img140.png"
+ ALT="$s$">-projected DOS as in Eqs. (<A HREF="node49.html#4">3.5</A>)
+and (<A HREF="node49.html#6">3.7</A>) (with <IMG
+ WIDTH="27" HEIGHT="34" ALIGN="BOTTOM" BORDER="0"
+ SRC="img163.png"
+ ALT="$l=0$">) is calculated using conserving algorithm
+for the space integration. The projection is made either on a single
+Slater type AO, <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(r)=N(\xi)r^{n-1}e^{-\xi r}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="10"></A><IMG
+ WIDTH="17" HEIGHT="33" BORDER="0"
+ SRC="img164.png"
+ ALT="\begin{displaymath}
+R(r)=N(\xi)r^{n-1}e^{-\xi r}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+or on a linear combination of Gaussians
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(r)=\sum_{i=1}^{N_{G}}C_{i}N(\alpha_{i})e^{-\alpha_{i}r^{2}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="11"></A><IMG
+ WIDTH="17" HEIGHT="33" BORDER="0"
+ SRC="img165.png"
+ ALT="\begin{displaymath}
+R(r)=\sum_{i=1}^{N_{G}}C_{i}N(\alpha_{i})e^{-\alpha_{i}r^{2}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Here <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$N$"> is the normalisation of a single orbital which depends on
+the exponentials, <IMG
+ WIDTH="14" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\xi$"> or <IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img166.png"
+ ALT="$\alpha_{i}$">. Noninteractive option.
+All the information needed should be provided in the file <TT>fort.14.DOS</TT>
+(see below). Up to <TT>Ntask0</TT> spheres (set in <TT>dos_task.inc</TT>)
+can be defined for a single run of <B><I>lev1</I></B>. 
+</LI>
+<LI><TT><FONT SIZE="+1">PRO</FONT></TT> <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\rightarrow$"> local DOS, Eqs. (<A HREF="node49.html#4">3.5</A>) and
+(<A HREF="node49.html#5">3.6</A>), and <IMG
+ WIDTH="49" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.png"
+ ALT="$s,p,d$">-projected DOS, Eqs. (<A HREF="node49.html#4">3.5</A>) and (<A HREF="node49.html#6">3.7</A>),
+are calculated using nonconserving algorithm for the space integration.
+The projection is made on a single AO; its radial part is made either
+of a single Slater type AO, or of a linear combination of Gaussians.
+Noninteractive option. All the information needed should be provided
+in the file <TT>fort.14.PRO</TT> (see below). Up to <TT>Ntask0</TT>
+spheres can be defined for one run of <B><I>lev1</I></B>. 
+</LI>
+<LI><TT><FONT SIZE="+1">DOp</FONT></TT> <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\rightarrow$"> this is DOS projected on a layer,
+see Eqs. (<A HREF="node49.html#4">3.5</A>) and (<A HREF="node49.html#7">3.8</A>). Interactive option: you will be
+asked about each layer, its position and thickness. Up to <TT>Ntask0</TT>
+layers can be specified for one run of <B><I>lev1</I></B>. Islands
+of bands <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$n$"> should be provided in the file <TT>fort.14a</TT> (see
+below).
+</LI>
+<LI><TT><FONT SIZE="+1">MAP</FONT></TT> <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\rightarrow$"> partial electronic density as in
+Eq. (<A HREF="node49.html#1">3.1</A>) or (<A HREF="node49.html#2">3.2</A>). Islands of bands <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$n$"> should be provided
+in the file <TT>fort.14a</TT> (see below).
+</LI>
+<LI><TT><FONT SIZE="+1">SR</FONT></TT>F <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\rightarrow$"> partial electronic density which
+is 2D integrated over the plane parallel to the slab, i.e. <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\rho_{n}(i_{3})=\frac{1}{N_{1}N_{2}}\sum_{i_{1}=1}^{N_{1}}\sum_{i_{2}=1}^{N_{2}}\rho_{n}(i_{1},i_{2},i_{3})).
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="12"></A><IMG
+ WIDTH="21" HEIGHT="34" BORDER="0"
+ SRC="img167.png"
+ ALT="\begin{displaymath}
+\rho_{n}(i_{3})=\frac{1}{N_{1}N_{2}}\sum_{i_{1}=1}^{N_{1}}\sum_{i_{2}=1}^{N_{2}}\rho_{n}(i_{1},i_{2},i_{3})).
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="31" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img168.png"
+ ALT="$N_{1}$"> and <IMG
+ WIDTH="23" HEIGHT="20" ALIGN="MIDDLE" BORDER="0"
+ SRC="img169.png"
+ ALT="$N_{2}$"> are the number of grid points along vectors
+<!-- MATH
+ $\mathbf{a}_{1}$
+ -->
+<IMG
+ WIDTH="175" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img170.png"
+ ALT="$\mathbf{a}_{1}$"> and <!-- MATH
+ $\mathbf{a}_{2}$
+ -->
+<IMG
+ WIDTH="22" HEIGHT="17" ALIGN="MIDDLE" BORDER="0"
+ SRC="img171.png"
+ ALT="$\mathbf{a}_{2}$"> of the cell and <IMG
+ WIDTH="30" HEIGHT="19" ALIGN="MIDDLE" BORDER="0"
+ SRC="img172.png"
+ ALT="$i_{3}$"> runs
+from 1 to <IMG
+ WIDTH="43" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img173.png"
+ ALT="$N_{3}$"> (<IMG
+ WIDTH="31" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img168.png"
+ ALT="$N_{1}$">, <IMG
+ WIDTH="23" HEIGHT="20" ALIGN="MIDDLE" BORDER="0"
+ SRC="img169.png"
+ ALT="$N_{2}$">, <IMG
+ WIDTH="43" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img173.png"
+ ALT="$N_{3}$"> correspond to NGX,
+NGY, NGZ in <TT>param.inc</TT>). You will be asked to provide islands
+of bands (as in the file <TT>fort.14.SRF</TT>) and an output file
+<TT>psi2.SRF</TT> will be produced. Islands of bands <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$n$"> should be
+provided in the file <TT>fort.14a</TT> (see below).
+</LI>
+</OL>
+Formats of the input files mentioned in this section are provided
+below: 
+
+<P>
+
+<UL>
+<LI><TT>fort.14a</TT>: islands of states are provided, i.e. 
+
+<P>
+
+<UL>
+<LI>number of islands of states (1 integer)
+</LI>
+<LI>the first and the last states for the 1st island (2 integers)
+</LI>
+<LI>the first and the last states for the 2nd island (2 integers)
+</LI>
+<LI>etc.
+</LI>
+</UL>
+</LI>
+<LI><TT>fort.14.DOS</TT>: 
+
+<P>
+
+<UL>
+<LI>islands of states as above;
+</LI>
+<LI>number of spheres (1 integer);
+</LI>
+<LI>then for each sphere:
+
+<P>
+
+<UL>
+<LI>on 1 line: Cartesian coordinates of the sphere (in &#197;), sphere radius
+(in &#197;), 1 or 0 (for Slater or Gaussian AO, respectively)
+</LI>
+<LI>if Slater, Eq. (<A HREF="node94.html#10">6.2</A>), then on the next line: <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$n$"> and <IMG
+ WIDTH="14" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\xi$">
+(in &#197;<IMG
+ WIDTH="23" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.png"
+ ALT="$^{-1}$">)
+</LI>
+<LI>if Gaussian, Eq. (<A HREF="node94.html#11">6.3</A>), then on the next line:  and
+on the following line all the coefficients and exponentials (in &#197;)
+are provided as <!-- MATH
+ $(C_{i},\,\alpha_{i},i=1,...,N_{G})$
+ -->
+.
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+<LI><TT>fort.14.PRO</TT>: 
+
+<P>
+
+<UL>
+<LI>islands of states as above;
+</LI>
+<LI>number of spheres (1 integer);
+</LI>
+<LI>then for each sphere:
+
+<P>
+
+<UL>
+<LI>on 1 line: Cartesian coordinates of the sphere (in &#197;), sphere radius
+(in &#197;), 1 or 0 (for Slater or Gaussian AO, respectively), one integer
+ corresponding to the fine grid  of the nonconserving
+method, and three flags (0 for 'no' and 1 for 'yes') for whether to
+do <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img140.png"
+ ALT="$s$">, <IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img141.png"
+ ALT="$p$"> and <IMG
+ WIDTH="78" HEIGHT="34" ALIGN="BOTTOM" BORDER="0"
+ SRC="img142.png"
+ ALT="$d$"> projected DOS.
+</LI>
+<LI>then separately for every angular momenta with nonzero flag: specify
+the radial part of the orbital  (see <TT>fort.14.DOS</TT>)
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+<LI><TT>fort.14.DOp</TT>: 
+
+<P>
+
+<UL>
+<LI>islands of states as in other cases;
+</LI>
+<LI>number of layers (1 integer);
+</LI>
+<LI>then for each layer you provide the following information (one line
+per layer):
+
+<P>
+
+<UL>
+<LI>Cartesian position of the layer on the <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$z$">-axis (in &#197;);
+</LI>
+<LI>layer thickness (in &#197;);
+</LI>
+<LI>0 for conserving and 1 for non-conserving;
+</LI>
+<LI>numbers of grid points along each of the x,y,z directions necessary
+for the non-conserving method (3 integers); note that in the case
+of the conserving method this data will be ignored.
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+</UL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1476"
+  HREF="node95.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1472"
+  HREF="node91.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1466"
+  HREF="node93.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1474"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1477"
+  HREF="node95.html">How to split a</A>
+<B> Up:</B> <A NAME="tex2html1473"
+  HREF="node91.html">Utilities used by CASTEP</A>
+<B> Previous:</B> <A NAME="tex2html1467"
+  HREF="node93.html">Utility take</A>
+ &nbsp <B>  <A NAME="tex2html1475"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

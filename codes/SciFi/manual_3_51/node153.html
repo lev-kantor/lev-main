@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>interpolate{F/T,points}</TITLE>
+<META NAME="description" CONTENT="interpolate{F/T,points}">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node154.html">
+<LINK REL="previous" HREF="node152.html">
+<LINK REL="up" HREF="node143.html">
+<LINK REL="next" HREF="node154.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2371"
+  HREF="node154.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2367"
+  HREF="node143.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2361"
+  HREF="node152.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2369"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2372"
+  HREF="node154.html">extrapolate{F/T,polyn,points}</A>
+<B> Up:</B> <A NAME="tex2html2368"
+  HREF="node143.html">Force Field Box</A>
+<B> Previous:</B> <A NAME="tex2html2362"
+  HREF="node152.html">Atom_Sphere{#,dist}</A>
+ &nbsp <B>  <A NAME="tex2html2370"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION040331000000000000000">
+interpolate{F/T,points}</A>
+</H3>
+
+<P>
+Two parameters are supplied: a logical (False or True) and the number
+of points <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img374.png"
+ ALT="$N$">. If the first variable is False, then no interpolation
+of the tip force is done, it will be calculated at each tip position
+by running full SciFi ionic relaxation calculation. If, however, the
+first parameter is True, then an interpolation of the force between
+two nearest known values (for vertical positions of the tip only)
+will be done, atomic relaxation will not be performed saving computer
+time. 
+
+<P>
+The parameter <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img374.png"
+ ALT="$N$">specifies the number of nearest forces to be used
+in the interpolation (only <IMG
+ WIDTH="48" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img442.png"
+ ALT="$N=2$">is presently implemented).
+
+<P>
+<DIV ALIGN="LEFT">
+<I>Parameters</I>: F, <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img374.png"
+ ALT="$N$">&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;T, <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img374.png"
+ ALT="$N$">
+</DIV>
+
+<P>
+<DIV ALIGN="LEFT">
+<I>Default</I>: T,2
+</DIV>
+
+<P>
+<I>Example</I>: <TT><FONT SIZE="-1">Force_Test 0.01</FONT></TT>
+<P>
+
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

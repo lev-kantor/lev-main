@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introduction</TITLE>
+<META NAME="description" CONTENT="Introduction">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html153"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html149"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html145"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html151"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html154"
+  HREF="node3.html">Theoretical Models</A>
+<B> Up:</B> <A NAME="tex2html150"
+  HREF="node1.html">Contents</A>
+<B> Previous:</B> <A NAME="tex2html146"
+  HREF="node1.html">Contents</A>
+ &nbsp <B>  <A NAME="tex2html152"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION01010000000000000000">
+Introduction</A>
+</H1>
+
+<P>
+Motivated by the need to aid in the interpretation of experimental
+Atomic Force Microscopy (AFM) images, this code was developed to self-consistently
+calculate the interaction between a tip and surface, and then use
+this interaction in running a virtual AFM machine that simulates a
+real experimetal device. This may be time consuming. However, we believe
+this must be the option of choice in simulations that involve heavily
+the response of the probe on the surface species, e.g. during <B><I>manipulation</I></B>
+experiments. As&#92;far as we are aware, this is the most
+advanced AFM simulating tool today.
+
+<P>
+The code can be run in three regimes:
+
+<P>
+
+<UL>
+<LI>as a semi-classical simulation tool (known separately as the SciFi
+code)
+</LI>
+<LI>as a virtual AFM machine (vAFM), in which case a 3D force field is
+assumed to be prepared separately (preprocessed); in this case the
+SciFi part of the code is not activated;
+</LI>
+<LI>as a combination of the two. In this case the vAFM machine is used
+as an engine for moving the tip. At each tip position the atoms in
+the microscopic part are allowed to relax to mechanical equilibrium
+using the specified interactions between them, and then the force
+on the tip is calculated. This is performed by the SciFi part of the
+code. The tip force is then fed into the vAFM part to process, and,
+by advancing difference equations governing electronics, a new position
+of the tip is calculated that is fed back into the SciFi part. 
+</LI>
+</UL>
+The Sci-Fi part of the code has the facility to perform many different
+types of calculations on a tip-surface set up. The program can either
+be used to find the minimum energy configuation of a given system
+using powerful minimisation algorithms, or perform a finite temperature
+Molecular Dynamics (MD) simulation in a number of different ensembles.
+
+<P>
+Microscopic systems can be composed of a variety of different classical
+potentials and the program has the facility to implement atomic polarisation
+via the shell model, where pairwise interactions are modeled by a
+series of Buckingham style potentials. The modeling of covalent crystals
+and organic molecules is possible by the use of many-body potentials
+which comprise of bond, angle, torsion and out-of-plane interactions. 
+
+<P>
+The AFM functionality is facilitated via a number of ways. In the
+simplest ones, a user can simply specify how the tip moves (e.g. vertical
+oscillation or a linear displacement along a certain direction). The
+tip is moved in small steps, and at each step the atomic system is
+either allowed to relax or moves according to Newtonian equations
+of motion, i.e. a MD calculation is performed (a non-equilibrium MD). 
+
+<P>
+A new powerful feature, a vAFM, has been recently added. It is designed
+for simulating the work of electronics of an actual Non-Contact AFM
+device. If this functionality is on, then the movement of the tip
+is controlled by equations simulating electronics of an actual AFM
+apparatus. In this case, the tip can be moved in a number of ways,
+e.g. by performing a 2D scan. 
+
+<P>
+The calculation resembles an actual run of an experimental device:
+it starts by stabilising the cantilever, then the tip approaches the
+surface (e.g. by trying to match the frequency change setpoint) and
+makes a scan. To make the simulation as general as possible, it is
+split into elementary calculations associated with elementary cantilever
+movements called <B><I>stage</I></B>s. For instance, a single approach
+to a preset frequency shift is a single stage; a scan along a certain
+direction keeping the frequency shift and the velocity is also an
+elementary stage. A more complex tip movement can always be <I>programed</I>
+as a set of elementary stages, e.g. a 2D scan can be constructed as
+a set of forward and backward line scans along two perpendicular directions. 
+
+<P>
+When the SciFi and the vAFM work together, the full geometry optimisation
+in the junction and hence the calculation of the tip force is performed
+only when the tip is sufficiently close to the surface. At larger
+distances, a supplied analytical epxression for the tip force is used.
+This speeds up the calculation enormously. In addition, the following
+``learning'' feature is also implemented: if the lateral position
+of the tip does not change appreciably, the calculated force field
+is recorded, and interpolation of the force is made for a tip vertical
+position that lies between two known (already calculated) positions.
+
+<P>
+The whole code has been designed to run efficiently on both serial
+and distributed memory multi-processor machines with Fortran 77 or
+90 compilers. In parallel the program uses the Message Passing Interface
+(MPI) set of communication routines and is parallised according to
+the distributed memory paradigm with atomic pair decomposition. At
+present, the code only works in parallel when vAFM option is switched
+off. This will be rectified shortly.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html153"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html149"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html145"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html151"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html154"
+  HREF="node3.html">Theoretical Models</A>
+<B> Up:</B> <A NAME="tex2html150"
+  HREF="node1.html">Contents</A>
+<B> Previous:</B> <A NAME="tex2html146"
+  HREF="node1.html">Contents</A>
+ &nbsp <B>  <A NAME="tex2html152"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

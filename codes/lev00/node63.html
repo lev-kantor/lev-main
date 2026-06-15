@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>3 - Amount of charge inside a sphere</TITLE>
+<META NAME="description" CONTENT="3 - Amount of charge inside a sphere">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node64.html">
+<LINK REL="previous" HREF="node62.html">
+<LINK REL="up" HREF="node59.html">
+<LINK REL="next" HREF="node64.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1094"
+  HREF="node64.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1090"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1084"
+  HREF="node62.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1092"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1095"
+  HREF="node64.html">4 - Exploration of</A>
+<B> Up:</B> <A NAME="tex2html1091"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1085"
+  HREF="node62.html">2 - Plot density</A>
+ &nbsp <B>  <A NAME="tex2html1093"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00463400000000000000"></A><A NAME="sub:3-charge-lev00"></A>
+<BR>
+3 - Amount of charge inside a sphere
+</H3>
+
+<P>
+Here it is possible to integrate the density over one or several spheres
+of different radii. The point is that the notion of <I>atomic charge</I>
+is no well defined. To get around it, e.g. in order to analyse charge
+transfer during atomic adsorption, one can calculate the charge of
+the atom in spheres of <I>several</I> different radii for both situations
+(before and after adsorption) and then compare the curves. 
+
+<P>
+Here it is possible to plot one curve at a time. The comparison can
+be made separately. You should keel track of the data files produced,
+may be rename them for convenience, and then plot them together using
+other means. Note that, if you intend to use <B><I>GNUPLOT</I></B>,
+you may benefit from the <TT>test.gnu</TT> file, produced by <B><I>tetr</I></B>
+for the plotting, and edit it appropriately. 
+
+<P>
+The charge menu looks like this:
+
+<P>
+<TT><FONT SIZE="-2">..............MENU for CHARGE ........................</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">......... Change these parameters if necessary:.......</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. The number of (possibly) overlaping spheres: 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. The center(s) of your sphere(s):</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;[1] A=&gt; ( 0.000, 0.000, 0.000), fr=&gt;
+( 0.000, 0.000, 0.000)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. The smallest radius (Angstroms): 0.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. The largest radius (Angstroms): 0.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6. The number of points between these radii: ... undefined
+...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">7. Algorithm for the charge integration: &lt;conserving&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">8. X,Y,Z integration grid inside the sphere: IRRELEVANT</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">9. Perform calculation for the plotting: file
+out.dat_2 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">10. Preview the dependence of charge versus Radius</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">11. Create a PostScript file out.dat_2.ps</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---- G e n e r a l&nbsp;&nbsp;&nbsp;s e t
+t i n g s -----</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">An. Coordinates are specified in: &lt;Angstroms&gt; </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Ne. Representation of results: through number
+of electrons</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Co. Show current atomic positions in fractional/Cartesian</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">--- L e a v e&nbsp;&nbsp;&nbsp;t h e&nbsp;&nbsp;&nbsp;m
+e n u -------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Return to the previous menu</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---&gt; Choose the item and press ENTER:</FONT></TT>
+<P>
+
+
+<P>
+The number of spheres (up to five<A NAME="tex2html20"
+  HREF="footnode.html#foot9969"><SUP>3.8</SUP></A>) is specified in <B>2</B>, their centres in <B>3</B>, the range
+of radii in <B>4</B> and <B>5</B>, and the number of points between
+them - in <B>6</B>. The integration alsgorithm (see Section <A HREF="node51.html#sec:volume-integrals-lev00">3.5</A>)
+is chosen in <B>7</B> and <B>8</B> (the latter is about the fine
+grid to be used and is only needed for the <I>nonconserving</I> method).
+The calculation is performed in <B>9</B> with the data file name
+as shown, and can be previewed in <B>10</B>; the Postscript file
+(as indicated) is produced in <B>11</B>. The three setting options
+allow you to choose how points in space are specified (<B>An</B>)
+and in which units (via the number of electrons or as a % of the
+total electron charge in the cell) the integrated charge is shown
+(<B>Ne</B>); in addition, you can preview atomic positions using
+<B>Co</B>. 
+
+<P>
+If there are more than one sphere, the menu changes. In the example
+below three spheres were chosen: 
+
+<P>
+<TT><FONT SIZE="-2">..............MENU for CHARGE ........................</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">......... Change these parameters if necessary:.......</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. The number of (possibly) overlaping spheres: 3</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. The center(s) of your sphere(s):</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;[1] A=&gt; ( 0.000, 0.000, -0.066), fr=&gt;
+( 0.000, 0.000, -0.013)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;[2] A=&gt; ( 0.761, 0.000, 0.526), fr=&gt; (
+0.152, 0.000, 0.105)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;[3] A=&gt; ( -0.761, 0.000, 0.526), fr=&gt;
+( -0.152, 0.000, 0.105)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. The smallest radius (Angstroms): 0.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. The largest radius (Angstroms): 2.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">55. Shrinking factors: 1.000 1.100 0.900</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6. The number of points between these radii: 10</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">7. Algorithm for the charge integration: &lt;nonconserv&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">8. X,Y,Z integration grid inside the sphere: 30</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">9. Perform calculation for the plotting: file
+out.dat_2 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">10. Preview the dependence of charge versus Radius</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">11. Create a PostScript file out.dat_2.ps</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---- G e n e r a l s e t t i n
+g s -----</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">An. Coordinates are specified in: &lt;AtomNumber&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Ne. Representation of results: through number
+of electrons</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Co. Show current atomic positions in fractional/Cartesian</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">--- L e a v e t h e m e n u -------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Return to the previous menu</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---&gt; Choose the item and press ENTER:</FONT></TT>
+<P>
+
+
+<P>
+To control the radii of different spheres in this case, you can specify
+``<TT>Shrinking factors</TT>'' for every sphere in option <B>55</B>
+that opens if the number of spheres is larger than 1. To be precise,
+the radius of the sphere <IMG
+ WIDTH="11" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$i$"> is calculated as <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img147.png"
+ ALT="$R_{i}=s_{i}R$">, where
+<IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img106.png"
+ ALT="$R$"> changes from the minimum (in <B>4</B>) to the maximum (in <B>5</B>)
+values with the step calculated from <B>6</B>, whereas <IMG
+ WIDTH="28" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img148.png"
+ ALT="$s_{i}$">
+is the shrinking factor for this sphere. At first, spheres may not
+overlap, but, as the radius <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img106.png"
+ ALT="$R$"> grows, they may. In this case the
+charge is counted only once in the overlapping regions. Note that
+the plot is shown as the charge versus the common radius <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img106.png"
+ ALT="$R$">.
+
+<P>
+There is also one more facility that might be sometimes useful. When
+the calculation has been performed by <B>9</B>, two new options
+appear:
+
+<P>
+<TT><FONT SIZE="-2">9. Perform calculation for the plotting: file
+out.dat_2 &lt;= DONE!</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;98. Number of electrons to fit the sphere
+in: 1.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;99. Obtain the radius for the given # of
+electrons: </FONT></TT>
+<P>
+
+
+<P>
+It is a ``<I>charge calculator</I>'': you can choose the number
+of electrons in <B>98</B> and then obtain (by <B>99</B>) the corresponding
+radius of the sphere that fits exactly this amount. This is done by
+linearly interpolating the calculated curve. In the case of many spheres,
+the common radius <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img106.png"
+ ALT="$R$"> will be given.
+
+<P>
+The file names produced within this option are the same as in the
+case of 1D, Section <A HREF="node61.html#sub:1-Plot-along-line-lev00">3.6.3.2</A>, and 2D, Section
+<A HREF="node62.html#sub:2-Plot-in-plane-lev00">3.6.3.3</A>, plots. The number in the files names
+correspond to the ``<TT>NUMBER OF THE CURRENT PLOT:</TT>'' in
+the parent menu, Section <A HREF="node60.html#sub:General-remarks-density-lev00">3.6.3.1</A>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1094"
+  HREF="node64.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1090"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1084"
+  HREF="node62.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1092"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1095"
+  HREF="node64.html">4 - Exploration of</A>
+<B> Up:</B> <A NAME="tex2html1091"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1085"
+  HREF="node62.html">2 - Plot density</A>
+ &nbsp <B>  <A NAME="tex2html1093"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,335 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Constraints Box</TITLE>
+<META NAME="description" CONTENT="Constraints Box">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node115.html">
+<LINK REL="previous" HREF="node101.html">
+<LINK REL="up" HREF="node41.html">
+<LINK REL="next" HREF="node115.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1815"
+  HREF="node115.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1811"
+  HREF="node41.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1805"
+  HREF="node113.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1813"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1816"
+  HREF="node115.html">Quantum cluster</A>
+<B> Up:</B> <A NAME="tex2html1812"
+  HREF="node41.html">SciFi input</A>
+<B> Previous:</B> <A NAME="tex2html1806"
+  HREF="node113.html">buffer</A>
+ &nbsp <B>  <A NAME="tex2html1814"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION04028000000000000000"></A><A NAME="Sec::constraint-box"></A>
+<BR>
+Constraints Box
+</H2>
+
+<P>
+<B><I>Box Keyword</I></B>: <TT>.&lt;Constraints&gt;</TT>
+
+<P></P>
+
+
+<P>
+See the main points behind the constrained minimisations in section
+<A HREF="node14.html#Sec::constrains-theory">1.7</A>. Number of constrains is limited to
+<TT>N0CNSTR</TT> in <TT>param.inc</TT> file. Constraints are specified
+one per line. 
+
+<P>
+
+<UL>
+<LI>The format for linear constraints is: <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\textrm{LINR}\,\, I_{1}\,\, C_{1}\,\, I_{2}\,\, C_{2}\,\,\,\cdots
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="155" HEIGHT="27" BORDER="0"
+ SRC="img376.png"
+ ALT="\begin{displaymath}
+\textrm{LINR}\,\, I_{1}\,\, C_{1}\,\, I_{2}\,\, C_{2}\,\,\,\cdots\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="18" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img377.png"
+ ALT="$I_{1}$">, <IMG
+ WIDTH="18" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img378.png"
+ ALT="$I_{2}$">, etc. are coordinate indicators containing
+atomic number and a letter <TT>x</TT>, <TT>y</TT> or <TT>z</TT>, attached
+from the right. The coefficients <IMG
+ WIDTH="23" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img379.png"
+ ALT="$C_{1}$">, <IMG
+ WIDTH="23" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img380.png"
+ ALT="$C_{2}$">, etc. are associated
+with the corresponding atomic coordinates and corresponds to Eq. (<A HREF="node16.html#Constraines-view">20</A>).
+For instance, the condition <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\textrm{LINR}\,\,11x\,\,1.0\,\,12x\,\,-1.0\,\,9z\,\,2.0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="218" HEIGHT="25" BORDER="0"
+ SRC="img381.png"
+ ALT="\begin{displaymath}
+\textrm{LINR}\,\,11x\,\,1.0\,\,12x\,\,-1.0\,\,9z\,\,2.0\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+is equivalent to the following linear constraint: <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+x_{11}-x_{12}+2z_{9}=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="136" HEIGHT="27" BORDER="0"
+ SRC="img382.png"
+ ALT="\begin{displaymath}
+x_{11}-x_{12}+2z_{9}=0\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Note that the first coordinate is used as the redundand one. In the
+example above this will be <IMG
+ WIDTH="27" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img383.png"
+ ALT="$x_{11}$">.
+</LI>
+<LI>The format for the constraint in which the distance between two atoms
+in kept constant is: <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\textrm{D}\_1x\,\,\, N_{1}\,\,\, N_{2}\,\, d\,\,\pm
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="123" HEIGHT="27" BORDER="0"
+ SRC="img384.png"
+ ALT="\begin{displaymath}
+\textrm{D}\_1x\,\,\, N_{1}\,\,\, N_{2}\,\, d\,\,\pm\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <TT>D_1x</TT> is the keyword, <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img385.png"
+ ALT="$N_{1}$"> and <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img386.png"
+ ALT="$N_{2}$"> - atomic
+numbers, <IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$d$"> - the distance (in &#197;) and <IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img387.png"
+ ALT="$\pm$"> is the sign (either
+<IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img388.png"
+ ALT="$+$"> or <IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img389.png"
+ ALT="$-$">). The <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img192.png"
+ ALT="$x$"> coordinate of atom <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img385.png"
+ ALT="$N_{1}$"> is considered
+as redundand.
+</LI>
+<LI>The format for the constraint in which the angle <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img229.png"
+ ALT="$\alpha$"> between
+three atoms in kept constant is (to be fully implemented when necessary):
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\textrm{C}\_1x\,\,\, N_{1}\,\,\, N_{2}\,\, N_{3}\,\,\alpha\,\,\,\pm
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="150" HEIGHT="27" BORDER="0"
+ SRC="img390.png"
+ ALT="\begin{displaymath}
+\textrm{C}\_1x\,\,\, N_{1}\,\,\, N_{2}\,\, N_{3}\,\,\alpha\,\,\,\pm\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <TT>C_1x</TT> is the keyword, <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img385.png"
+ ALT="$N_{1}$">, <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img386.png"
+ ALT="$N_{2}$"> and <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img391.png"
+ ALT="$N_{3}$">
+- atomic numbers, <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img229.png"
+ ALT="$\alpha$"> - the angle (in degrees) and <IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img387.png"
+ ALT="$\pm$"> is
+the sign (either <IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img388.png"
+ ALT="$+$"> or <IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img389.png"
+ ALT="$-$">). The <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img192.png"
+ ALT="$x$"> coordinate of atom <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img385.png"
+ ALT="$N_{1}$">
+is considered as redundand.
+</LI>
+<LI>The format of the constraint in which the angle between two atoms
+and the <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img192.png"
+ ALT="$x$"> axis is kept, is given by: <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\textrm{A}\_1x\,\,\, N_{1}\,\,\, N_{2}\,\,\alpha\,\,\pm
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="123" HEIGHT="27" BORDER="0"
+ SRC="img392.png"
+ ALT="\begin{displaymath}
+\textrm{A}\_1x\,\,\, N_{1}\,\,\, N_{2}\,\,\alpha\,\,\pm\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <TT>A_1x</TT> is the keyword, <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img385.png"
+ ALT="$N_{1}$"> and <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img386.png"
+ ALT="$N_{2}$"> - atomic
+numbers, <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img229.png"
+ ALT="$\alpha$"> - the angle (in degrees) and <IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img387.png"
+ ALT="$\pm$"> is the sign
+(either <IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img388.png"
+ ALT="$+$"> or <IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img389.png"
+ ALT="$-$">). The <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img192.png"
+ ALT="$x$"> coordinate of atom <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img385.png"
+ ALT="$N_{1}$"> is considered
+as redundand.
+</LI>
+</UL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1815"
+  HREF="node115.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1811"
+  HREF="node41.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1805"
+  HREF="node113.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1813"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1816"
+  HREF="node115.html">Quantum cluster</A>
+<B> Up:</B> <A NAME="tex2html1812"
+  HREF="node41.html">SciFi input</A>
+<B> Previous:</B> <A NAME="tex2html1806"
+  HREF="node113.html">buffer</A>
+ &nbsp <B>  <A NAME="tex2html1814"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

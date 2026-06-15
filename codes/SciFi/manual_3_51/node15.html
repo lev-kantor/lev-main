@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>How constrains are dealt with in the code</TITLE>
+<META NAME="description" CONTENT="How constrains are dealt with in the code">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html363"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html359"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html353"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html361"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html364"
+  HREF="node16.html">Linear constraines</A>
+<B> Up:</B> <A NAME="tex2html360"
+  HREF="node14.html">Constrained minimisation</A>
+<B> Previous:</B> <A NAME="tex2html354"
+  HREF="node14.html">Constrained minimisation</A>
+ &nbsp <B>  <A NAME="tex2html362"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02017100000000000000">
+How constrains are dealt with in the code</A>
+</H3>
+
+<P>
+Constraints are dealt with in the following general way: every constrained
+equation specifies a single atomic coordinate of some atom (say, coordinate
+<IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img192.png"
+ ALT="$x$"> of atom 3, i.e. <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.png"
+ ALT="$x_{3}$">) which is a function of other coordinates
+of the same and/or some other atoms, i.e. <!-- MATH
+ $x_{3}=\xi(y_{3},z_{1},x_{2})$
+ -->
+<IMG
+ WIDTH="122" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img194.png"
+ ALT="$x_{3}=\xi(y_{3},z_{1},x_{2})$">.
+The coordinate <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.png"
+ ALT="$x_{3}$"> is then made <I>redundand</I> and is removed
+from the optimisation space. The consequence of this is that, when
+calculating the ``force'' in the optimisation space associated
+with other coordinates which are involved in the given constraint,
+there will be an additional contribution due to the constraint. In
+the example above coordinates <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img195.png"
+ ALT="$y_{3}$">, <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img196.png"
+ ALT="$z_{1}$"> and <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img197.png"
+ ALT="$x_{2}$"> are
+involved, so that the energy <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+E=E(x_{1},y_{1},z_{1},x_{2},y_{2},z_{2},x_{3}(y_{3},z_{1},x_{2}),y_{3},z_{3})\equiv\widetilde{E}(x_{1},y_{1},z_{1},x_{2},y_{2},z_{2},y_{3},z_{3})
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="540" HEIGHT="28" BORDER="0"
+ SRC="img198.png"
+ ALT="\begin{displaymath}
+E=E(x_{1},y_{1},z_{1},x_{2},y_{2},z_{2},x_{3}(y_{3},z_{1},x_...
+...v\widetilde{E}(x_{1},y_{1},z_{1},x_{2},y_{2},z_{2},y_{3},z_{3})\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+is a function of all coordinates except for <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.png"
+ ALT="$x_{3}$">. Therefore,
+the ``force'' associated with this coordinate is not needed during
+optimisation. However, e.g. the ``force'' associated with <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img195.png"
+ ALT="$y_{3}$">
+becomes:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\widetilde{f}_{3y}=-\frac{\partial\widetilde{E}}{\partial y_{3}}=-\frac{\partial E}{\partial y_{3}}-\frac{\partial E}{\partial x_{3}}\frac{\partial x_{3}}{\partial y_{3}}=f_{3y}+f_{3x}\frac{\partial x_{3}}{\partial y_{3}}=f_{3y}+f_{3x}\frac{\partial\xi}{\partial y_{3}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="449" HEIGHT="47" BORDER="0"
+ SRC="img199.png"
+ ALT="\begin{displaymath}
+\widetilde{f}_{3y}=-\frac{\partial\widetilde{E}}{\partial y_...
+...\partial y_{3}}=f_{3y}+f_{3x}\frac{\partial\xi}{\partial y_{3}}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="26" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img200.png"
+ ALT="$f_{3y}$"> and <IMG
+ WIDTH="26" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img201.png"
+ ALT="$f_{3x}$"> are the actual (physical) forces on
+atom 3 in the <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img202.png"
+ ALT="$y$"> and <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img192.png"
+ ALT="$x$"> directions, respectively. These are calculated
+routinely in the code irrespective of the constraints. The derivative
+<!-- MATH
+ $\frac{\partial\xi}{\partial y_{3}}$
+ -->
+<IMG
+ WIDTH="28" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img203.png"
+ ALT="$\frac{\partial\xi}{\partial y_{3}}$"> needed for the calculation of
+the ``force'' <!-- MATH
+ $\widetilde{f}_{3y}$
+ -->
+<IMG
+ WIDTH="26" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img204.png"
+ ALT="$\widetilde{f}_{3y}$"> should be calculated analytically
+for every particular constraint from the known function <IMG
+ WIDTH="12" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img125.png"
+ ALT="$\xi$"> and
+then coded in in the appropriate places. 
+
+<P>
+There is presently only one important limitation on the atoms involved
+in constraints: a reduntand coordinate must be contained in only one
+constraint; it is not allowed that it is a member of another constraint
+as well. However, other coordinates are allowed to participate in
+several constraints.
+
+<P>
+A note for programmers: coordinates allowed to relax have their relaxation
+flags (<TT>iRx</TT>, <TT>iRy</TT>, <TT>iRz</TT>) fixed to 1; coordinates
+not allowed to relax have the flags equal to 0; redundand coordinates,
+however, have their flags equal to 2. Gradients are calculated for
+all atoms which have their flags larger than zero.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html363"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html359"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html353"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html361"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html364"
+  HREF="node16.html">Linear constraines</A>
+<B> Up:</B> <A NAME="tex2html360"
+  HREF="node14.html">Constrained minimisation</A>
+<B> Previous:</B> <A NAME="tex2html354"
+  HREF="node14.html">Constrained minimisation</A>
+ &nbsp <B>  <A NAME="tex2html362"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

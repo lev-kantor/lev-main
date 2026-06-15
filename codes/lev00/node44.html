@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Point group generator</TITLE>
+<META NAME="description" CONTENT="Point group generator">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="previous" HREF="node43.html">
+<LINK REL="up" HREF="node40.html">
+<LINK REL="next" HREF="node45.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html796"
+  HREF="node45.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html792"
+  HREF="node40.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html788"
+  HREF="node43.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html794"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html797"
+  HREF="node45.html">Scripting capabilities of tetr</A>
+<B> Up:</B> <A NAME="tex2html793"
+  HREF="node40.html">Miscellaneous menus</A>
+<B> Previous:</B> <A NAME="tex2html789"
+  HREF="node43.html">Rt - Rotate atoms</A>
+ &nbsp <B>  <A NAME="tex2html795"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION003611400000000000000"></A><A NAME="sub:Point-group-generator-tetr"></A>
+<BR>
+Point group generator
+</H3>
+
+<P>
+The point group generator allows you to build a point group of your
+Bravais lattice. <A NAME="tex2html7"
+  HREF="footnode.html#foot9800"><SUP>2.5</SUP></A>
+<P>
+How does the generator work? The generator first checks the point
+symmetry of the Bravais lattice (``<I>Y<SMALL>OUR CRYSTAL CLASS
+GROUP IS</SMALL></I> ...'') and then each operation of this group is applied
+to every atom in the cell. In this way, an actual point group is built
+(``Y<SMALL>OUR LARGEST SYMMORPHIC GROUP IS</SMALL> ...'') and shown
+(the name of the group and all the elements as shown in Figs. <A HREF="node11.html#cap:Symmetry-operations-of-Oh">2.1</A>
+and <A HREF="node11.html#cap:Symmetry-operations-of-D6h">2.2</A>). A menu which opens up
+here allows you to either adopt this group (``A<SMALL>DOPT THE
+LARGEST SYMMORPHIC GROUP</SMALL>''), continue generation of the group by
+adding new elements from the crystal class group (``P<SMALL>ROCEED
+GENERATION FROM</SMALL>'') or start generation from scratch. In the last
+two cases you can add/remove elements, the generator multiplies all
+the elements with each other, adds new elements (if necessary) and
+then shows you the current group generated so far. 
+
+<P>
+If the symmetry and/or special constraints imposed on atomic coordinates
+have not been used at the stage of atomic relaxation while running
+a DFT code, the symmetry generator may fail to determine the correct
+symmetry group due to numerical errors in the atomic positions. Therefore,
+to make your symmetry group as rich as possible, you may need to generate
+the symmetry manually. One method is to use the geometry of the <I>unrelaxed</I>
+system (if it should have the same symmetry). Other (brr!!!) would
+be to edit your geometry file to make sure that there is no any numerical
+noise in the atomic coordinates (in some cases this is a real challenge!).
+Alternatively, use the point group generator: it allows you to play
+with the symmetry operations by adding/removing them, each time the
+whole group is generated and shown. It is a useful exercise in the
+group theory as well, especially in understanding group <I>generators</I>. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html796"
+  HREF="node45.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html792"
+  HREF="node40.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html788"
+  HREF="node43.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html794"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html797"
+  HREF="node45.html">Scripting capabilities of tetr</A>
+<B> Up:</B> <A NAME="tex2html793"
+  HREF="node40.html">Miscellaneous menus</A>
+<B> Previous:</B> <A NAME="tex2html789"
+  HREF="node43.html">Rt - Rotate atoms</A>
+ &nbsp <B>  <A NAME="tex2html795"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

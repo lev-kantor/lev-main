@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>General linear combination of charge densities</TITLE>
+<META NAME="description" CONTENT="General linear combination of charge densities">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node77.html">
+<LINK REL="previous" HREF="node59.html">
+<LINK REL="up" HREF="node52.html">
+<LINK REL="next" HREF="node77.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1248"
+  HREF="node77.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1244"
+  HREF="node52.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1238"
+  HREF="node75.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1246"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1249"
+  HREF="node77.html">Search for the surface</A>
+<B> Up:</B> <A NAME="tex2html1245"
+  HREF="node52.html">Detailed description of options</A>
+<B> Previous:</B> <A NAME="tex2html1239"
+  HREF="node75.html">Option 4 of the</A>
+ &nbsp <B>  <A NAME="tex2html1247"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00464000000000000000">
+General linear combination of charge densities</A>
+</H2>
+
+<P>
+For some applications it is useful to have a tool which could, for
+example, subtract one density from the other. This possibility is
+provided by option <B>6</B> of the main menu (both <B><I>VASP</I></B>
+and <B><I>SIESTA</I></B> are supported!). In fact, if two densities,
+<IMG
+ WIDTH="110" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img152.png"
+ ALT="$\rho_{a}$"> and <IMG
+ WIDTH="25" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img153.png"
+ ALT="$\rho_{b}$"> are given, it is possible to calculate
+a new density on the grid, <IMG
+ WIDTH="440" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img154.png"
+ ALT="$\rho_{ab}$">, that is their linear combination:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\rho_{c}(i_{1},i_{2},i_{3})=c_{1}\rho_{a}(i_{1},i_{2},i_{3})+c_{1}\rho_{b}(i_{1},i_{2},i_{3})
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="36" HEIGHT="45" BORDER="0"
+ SRC="img155.png"
+ ALT="\begin{displaymath}
+\rho_{c}(i_{1},i_{2},i_{3})=c_{1}\rho_{a}(i_{1},i_{2},i_{3})+c_{1}\rho_{b}(i_{1},i_{2},i_{3})\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="108" HEIGHT="20" ALIGN="MIDDLE" BORDER="0"
+ SRC="img156.png"
+ ALT="$c_{1}$"> and <IMG
+ WIDTH="45" HEIGHT="18" ALIGN="MIDDLE" BORDER="0"
+ SRC="img157.png"
+ ALT="$c_{2}$"> are arbitrary constants. It is necessary
+that the two files containing densities <IMG
+ WIDTH="110" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img152.png"
+ ALT="$\rho_{a}$"> and <IMG
+ WIDTH="25" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img153.png"
+ ALT="$\rho_{b}$">
+be compatible with each other (the same lattice vectors and grid,
+atomic positions can be different). 
+
+<P>
+The following menu opens:
+
+<P>
+<TT><FONT SIZE="-2">....... DENSITIES MANIPULATION MENU .................</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">... CALCULATE the density from A,B-densities as: ....</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;final(grid) = 1.000 * A(grid) -1.000
+* B(grid)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&lt;&lt;
+active code = VASP &gt;&gt;&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. file name of the A-density = CHGCAR_a</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. file name of the B-density = CHGCAR_b</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. file name of the final density = CHGCAR_ab</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. coefficient c1= 1.00000000000000 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. coefficient c1= -1.00000000000000 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6. calculate and write the final density</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">7. quit</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">------&gt;</FONT></TT>
+<P>
+
+
+<P>
+The file names in options <B>1</B>-<B>3</B> are initially suggested
+by the current DFT code, however, they can be changed in those options.
+The coefficients <IMG
+ WIDTH="108" HEIGHT="20" ALIGN="MIDDLE" BORDER="0"
+ SRC="img156.png"
+ ALT="$c_{1}$">and <IMG
+ WIDTH="45" HEIGHT="18" ALIGN="MIDDLE" BORDER="0"
+ SRC="img157.png"
+ ALT="$c_{2}$"> are specified in 4 and 5, while
+the actual calculation and saving of the density <IMG
+ WIDTH="440" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img154.png"
+ ALT="$\rho_{ab}$"> to the
+file is performed in <B>6</B>. The sum of the density over all grid
+points (in units of electrons) is shown after the calculation for
+information, e.g.: 
+
+<P>
+<TT><FONT SIZE="-2">6. calculate and write the final density &lt;= DONE</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">.....&gt; Total charge in CHGCAR = 8.00000219907003
+&lt;.....</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">.....&gt; Total charge in 1 = 8.00000219907003 &lt;.....</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">.....&gt; Final charge in 2 = 0.00000000000000D+000
+&lt;.....</FONT></TT>
+<P>
+
+
+<P>
+In this example two identical densities were used (both corresponding
+to 8 electrons) and <!-- MATH
+ $c_{1}=-c_{2}=1$
+ -->
+<IMG
+ WIDTH="365" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img158.png"
+ ALT="$c_{1}=-c_{2}=1$">, so that their linear combination
+gives zero density. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1248"
+  HREF="node77.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1244"
+  HREF="node52.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1238"
+  HREF="node75.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1246"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1249"
+  HREF="node77.html">Search for the surface</A>
+<B> Up:</B> <A NAME="tex2html1245"
+  HREF="node52.html">Detailed description of options</A>
+<B> Previous:</B> <A NAME="tex2html1239"
+  HREF="node75.html">Option 4 of the</A>
+ &nbsp <B>  <A NAME="tex2html1247"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

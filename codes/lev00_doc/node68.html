@@ -1,0 +1,427 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>8 - Cutting atoms out of the density</TITLE>
+<META NAME="description" CONTENT="8 - Cutting atoms out of the density">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node69.html">
+<LINK REL="previous" HREF="node67.html">
+<LINK REL="up" HREF="node59.html">
+<LINK REL="next" HREF="node69.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1154"
+  HREF="node69.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1150"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1144"
+  HREF="node67.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1152"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1155"
+  HREF="node69.html">9 - Write non-zero</A>
+<B> Up:</B> <A NAME="tex2html1151"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1145"
+  HREF="node67.html">7 - Get density</A>
+ &nbsp <B>  <A NAME="tex2html1153"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00463900000000000000"></A><A NAME="sub:8-cut-atoms-from-density"></A>
+<BR>
+8 - Cutting atoms out of the density
+</H3>
+
+<P>
+Here, it is possible to modify the electron density on the grid<A NAME="tex2html24"
+  HREF="footnode.html#foot7927"><SUP>3.11</SUP></A> by taking away (setting to zero) the density at all grid points that
+are inside spheres build around specified atoms. This might be useful
+if, for instance, one is interested in some local region in the cell,
+e.g. a defect. In this case the density associated with the atoms
+around that region can be removed to isolate the density in the region
+of interest. Sometimes, some of the density inside that region (e.g.
+around specific atoms) can also be removed. This way it is easy, for
+example, to get the ``pure'' F-centre density localised in the
+vacancy which can be then (see Section ) simulated by point charges.
+
+<P>
+The spheres radii are calculated inside the code from the charges
+that to be cut off around each atom; the charges are specified by
+the user. The initial menu: 
+
+<P>
+<TT><FONT SIZE="-2">..............MENU for CUT ...........................</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">......... Change these parameters if necessary:.......</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;
+Representation of results: through number of electrons</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;
+Algorithm for the charge integration: &lt;nonconserving&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. Specify atoms/electrons to be cut out of the
+density:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. The smallest radius (Angstroms): 5.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. The largest radius (Angstroms): 10.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. The number of points between these radii: ... undefined
+...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. X,Y,Z integration grid inside the sphere: 30</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6. Scan atoms to obtain the radii using charge
+to cut</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---- A t o m i c&nbsp;&nbsp;&nbsp;p o s i
+t i o n s -----</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Co. Show current atomic positions in fractional/Cartesian</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">--- L e a v e&nbsp;&nbsp;&nbsp;t h e&nbsp;&nbsp;&nbsp;m
+e n u -------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Return to the previous menu</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---&gt; Choose the item and press ENTER:</FONT></TT>
+<P>
+
+
+<P>
+In option <B>1</B> you can specify a range of atoms (e.g. 5-10)
+that carry the same charges and which should be removed. At the same
+time, you will be asked about the (positive) charge to be associated
+with the atoms. It is not possible to specify several lists of atoms.
+However, when using option <B>1</B> several times, it is possible
+to update and complement the existing list of atoms, and add other
+atoms with different charges. For example, in the case of a MgO cell,
+you can first enter a list of Mg atoms with nearly zero electron charge,
+and then (the second time) - the list of O atoms with the charge of,
+say, 7.8.
+
+<P>
+The next step is to specify the radii (options <B>2</B> and <B>3</B>)
+and the number of points (option <B>4</B>). This information will
+be used for interpolation of the charge around the atoms listed in
+option <B>1</B>. Then, perform the scan of all specified atoms in
+<B>6</B>, and the radii for each set of atoms of equal charge will
+be calculated. The menu grows:
+
+<P>
+<TT><FONT SIZE="-2">..............MENU for CUT ...........................</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">......... Change these parameters if necessary:.......</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;
+Representation of results: through number of electrons</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;
+Algorithm for the charge integration: &lt;nonconserving&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. Atoms to be cut out of the density:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">To be cut 2 atoms with numbers(electrons):</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1( 0.10) 2( 0.50)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. The smallest radius (Angstroms): 0.10000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. The largest radius (Angstroms): 2.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. The number of points between these radii: 10</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. X,Y,Z integration grid inside the sphere: 30</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6. Scan atoms to obtain the radii using charge
+to cut &lt;= DONE!</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">7. Show the list of atoms and their radii + exact
+charge to be cut out</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">8. The threshhold: the smallest density allowed: 0.000000E+00</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">9. Cut atoms out (current density (in memory)
+is destroyed!)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---- A t o m i c p o s i t i o
+n s -----</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Co. Show current atomic positions in fractional/Cartesian</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">--- L e a v e t h e m e n u -------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Return to the previous menu</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---&gt; Choose the item and press ENTER:</FONT></TT>
+<P>
+
+
+<P>
+The calculated information can be previewed in <B>7</B>, e.g.
+
+<P>
+<TT><FONT SIZE="-2">Please, wait, scanning the charge density again
+...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+Radii + charges for chosen atoms &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2"># atom radius&nbsp;&nbsp;charge(asked) charge(estimate)
+charge(actual)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1&nbsp;&nbsp;1&nbsp;0.76386 0.10000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.09044981
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.08987854</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2&nbsp;&nbsp;2&nbsp;0.23717 0.50000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.30739785
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.30747416</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Press ENTER when ready ...</FONT></TT>
+<P>
+
+
+<P>
+Here one can see for each atom the sphere radius found by interpolation
+from the target charge, an estimate of the charge calculated using
+the nonconserving algorithm (Section <A HREF="node51.html#sec:volume-integrals-lev00">3.5</A>)
+for the same radius, and, finally, the actual charge inside the sphere
+calculated using the conserving algorithm. 
+
+<P>
+It is also possible to remove the density from the grid points where
+the density is smaller than some specified threshold in <B>8</B>.
+
+<P>
+Finally, option <B>9</B> sets all grid points of the density that
+are found inside either of the specified spheres to zero. After the
+calculation, the following information is displayed:
+
+<P>
+<TT><FONT SIZE="-2">9. Cut atoms out (current density (in memory)
+is destroyed!)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;Out of the total original density = 8.00338</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;... grid points removed due to radii = 4870</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;... with the density cut out = 0.39735</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;... add. grid points removed due to threshold
+= 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;... with the density cut out = 0.000000E+00</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;... so that the TOTAL density left is =
+7.60602</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">10. Write charges cut out + core charges into
+a file</FONT></TT>
+<P>
+
+
+<P>
+Some information about the charges on removed atoms can be obtained
+and then saved in a file <TT>charges.cut</TT> in a new option <B>10</B>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1154"
+  HREF="node69.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1150"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1144"
+  HREF="node67.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1152"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1155"
+  HREF="node69.html">9 - Write non-zero</A>
+<B> Up:</B> <A NAME="tex2html1151"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1145"
+  HREF="node67.html">7 - Get density</A>
+ &nbsp <B>  <A NAME="tex2html1153"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Statistics File</TITLE>
+<META NAME="description" CONTENT="Statistics File">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node178.html">
+<LINK REL="previous" HREF="node176.html">
+<LINK REL="up" HREF="node173.html">
+<LINK REL="next" HREF="node178.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2686"
+  HREF="node178.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2682"
+  HREF="node173.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2676"
+  HREF="node176.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2684"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2687"
+  HREF="node178.html">Trajectory File</A>
+<B> Up:</B> <A NAME="tex2html2683"
+  HREF="node173.html">SciFi specific output</A>
+<B> Previous:</B> <A NAME="tex2html2677"
+  HREF="node176.html">Configuration Files</A>
+ &nbsp <B>  <A NAME="tex2html2685"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION05014000000000000000">
+Statistics File</A>
+</H2>
+
+<P>
+If a Molecular Dynamics simulation is being performed, the run will
+produce a file with thermodynamic data at intervals set with the <B>statistics</B>
+variable, with the filename <TT>name.STS</TT>. This file constists
+of a line for every interval, split into six columns that give: timestep,
+total system energy, potential energy, kinetic energy, temperature
+and shell temperature. 
+
+<P>
+The same file is also produced during a scan made using options in
+the TipDynamics box. If only energy minimisation is performed (the
+box MDcontrol is absent) and the tip is allowed to move (the TipDynamics
+box is present), the file will contain only total energies of the
+system at every scan point.
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,507 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>1,2,11 - Projected (local) DOS calculations</TITLE>
+<META NAME="description" CONTENT="1,2,11 - Projected (local) DOS calculations">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="previous" HREF="node57.html">
+<LINK REL="up" HREF="node54.html">
+<LINK REL="next" HREF="node59.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1018"
+  HREF="node59.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1014"
+  HREF="node54.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1010"
+  HREF="node57.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1016"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1019"
+  HREF="node59.html">Studying the partial or</A>
+<B> Up:</B> <A NAME="tex2html1015"
+  HREF="node54.html">Calculation of the DOS</A>
+<B> Previous:</B> <A NAME="tex2html1011"
+  HREF="node57.html">3 - Total DOS:</A>
+ &nbsp <B>  <A NAME="tex2html1017"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00462400000000000000"></A><A NAME="sub:11-LDOS-lev00"></A>
+<BR>
+1,2,11 - Projected (local) DOS calculations
+</H3>
+
+<P>
+The calculation of the LDOS are accomplished by the options <B>11</B>,
+<B>1</B> and <B>2</B> of the main menu of <B><I>lev00</I></B>
+(the options 1 and 2 work only with <B><I>CASTEP</I></B>). If the
+corresponding files with weights (see Section <A HREF="node49.html#sec:Main-definitions-lev00">3.3</A>)
+are found and read in successfully, you will be prompted to the same
+sort of menu as described above for the total DOS:
+
+<P>
+<TT><FONT SIZE="-2">..............MENU DOS/LDOS .......................</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">..... Change these parameters if necessary:...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">_____________&gt; LDOS + total DOS &lt;______________</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">0. THE CURRENT PICTURE IS: 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. Current LDOS task to be studied: ... undefined
+...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. Maximal energy step for the plotting: 0.10000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&gt; Number of points for the DOS plot: 220</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&gt; Steps for each &#34;physical&#34;
+band:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.10000 0.10000 0.10000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. Smeared DOS/LDOS: ENABLED fast method</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. Broaden band boundaries by 1.500 dispersions</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. Dispersion for the smearing: 0.30000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6. For previewing: original DOS/LDOS </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">7. Number of plots in the group: ... undefined
+...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">8. Adopt present setting and calculate DOS/LDOS</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">11. Preview the current DOS/LDOS</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">12. PostScript file for the current DOS/LDOS</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">13. Upper limit to the energy-range of the plot: DISABLED</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">14. Quit: do not proceed.</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---&gt; Choose the item and press ENTER:</FONT></TT>
+<P>
+
+
+<P>
+Options (<B>0</B>, <B>2</B>-<B>14</B>) are exactly the same
+as in the previous Section <A HREF="node57.html#sub:DOS-3-lev00">3.6.2.3</A>. In particular,
+options <B>4</B>, <B>5</B> and <B>6</B> are shown only if the
+smearing (option <B>3</B>) is enabled.
+
+<P>
+The only new option that appear here is <B>1</B>. This requires
+some explanation. In the LDOS calculations you can specify several
+spheres (or layers when option <B>2</B> of the main menu, Section
+<A HREF="node53.html#sub:Main-menu-lev00">3.6.1</A> is chosen). In addition, there is also
+a possibility to calculate <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img140.png"
+ ALT="$s$">-, <IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img141.png"
+ ALT="$p$">- and <IMG
+ WIDTH="78" HEIGHT="34" ALIGN="BOTTOM" BORDER="0"
+ SRC="img142.png"
+ ALT="$d$">-projected LDOS for
+every sphere as well as the total local DOS. For each such a case
+we have a different factor <!-- MATH
+ $A_{n\mathbf{k}}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img143.png"
+ ALT="$A_{n\mathbf{k}}$"> calculated either by
+<B><I>lev1</I></B>/<B><I>lev2</I></B> (routines working with <B><I>CASTEP</I></B>,
+see Section <A HREF="node89.html#cha:Working-with-CASTEP">6</A>) or by <B><I>VASP</I></B>. 
+
+<P>
+Every such type of the LDOS is referred to as a ``LDOS task''
+and is to be considered separately. Tasks are numbered and you have
+to specify a task number using a table which appears as you choose
+the menu item, e.g.:
+
+<P>
+<TT><FONT SIZE="-2">_____________&gt; LDOS + total DOS &lt;______________</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">0. THE CURRENT PICTURE IS: 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. Current LDOS task to be studied: ... undefined
+...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. Maximal energy step for the plotting: 0.10000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt; Number of points for the DOS plot: 220</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt; Steps for each &#34;physical&#34;
+band:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">0.10000 0.10000 0.10000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. Smeared DOS/LDOS: ENABLED fast method</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. Broaden band boundaries by 1.500 dispersions</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. Dispersion for the smearing: 0.30000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6. For previewing: original DOS/LDOS </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">7. Number of plots in the group: ... undefined
+...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">8. Adopt present setting and calculate DOS/LDOS</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">11. Preview the current DOS/LDOS</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">12. PostScript file for the current DOS/LDOS</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">13. Upper limit to the energy-range of the plot: DISABLED</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">14. Quit: do not proceed.</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---&gt; Choose the item and press ENTER:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">...... You have the following tasks: ......</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1 task {t} with Radius= 1.00 and center in (0.000
+0.000 0.000 ) from_vasp</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2 task {s} with Radius= 1.00 and center in (0.000
+0.000 0.000 ) from_vasp</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3 task {p} with Radius= 1.00 and center in (0.000
+0.000 0.000 ) from_vasp</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4 task {d} with Radius= 1.00 and center in (0.000
+0.000 0.000 ) from_vasp</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5 task {t} with Radius= 1.00 and center in (2.100
+2.100 2.100 ) from_vasp</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6 task {s} with Radius= 1.00 and center in (2.100
+2.100 2.100 ) from_vasp</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">7 task {p} with Radius= 1.00 and center in (2.100
+2.100 2.100 ) from_vasp</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">8 task {d} with Radius= 1.00 and center in (2.100
+2.100 2.100 ) from_vasp</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Choose one between 1 and 8 :</FONT></TT>
+<P>
+
+
+<P>
+In this table, some useful additional information is shown, e.g. radius
+and position of the sphere and (in curly brackets) whether this is
+a total local DOS (<TT>{t}</TT>) or the <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img140.png"
+ ALT="$s$">-, <IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img141.png"
+ ALT="$p$">-, <IMG
+ WIDTH="78" HEIGHT="34" ALIGN="BOTTOM" BORDER="0"
+ SRC="img142.png"
+ ALT="$d$">-projections
+(<TT>{s}</TT>, <TT>{p}</TT>, <TT>{d}</TT>). This information
+is provided to help you to choose the task correctly. 
+
+<P>
+Now, choose the LDOS task, e.g. number 4; the option <B>1</B> will
+then transform into: 
+
+<P>
+<TT><FONT SIZE="-2">1. Current LDOS task to be studied: 4</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&gt; Type of the LDOS: d </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&gt; Radius of the sphere: 1.000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&gt; Center of the sphere: ( 0.000, 0.000,
+0.000)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&gt; Method of projection: from_vasp</FONT></TT>
+<P>
+
+
+<P>
+The data files produced here (options <B>8</B> and <B>88</B>,
+the latter one is on if the smearing is enabled) contain both the
+total DOS and LDOS columns. If the smearing is enabled, then the data
+files contain both smeared and raw total DOS and LDOS.
+
+<P>
+When previewed (option <B>11</B>), both total and local/projected
+DOS for every curve in the group (from option <B>7</B>) will be
+shown, as shown in Fig. <A HREF="node58.html#cap:Total-LDOS-raw">3.3</A>.
+<DIV ALIGN="CENTER"><A NAME="cap:Total-LDOS-raw"></A><A NAME="9932"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.3:</STRONG>
+Total and local DOS for the MgO bulk (raw curves).Different groups
+of bands are shown separately.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="196" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img144.png"
+ ALT="\includegraphics[%%
+height=8cm,
+angle=-90]{dos_local.eps}">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+If smearing is on (check option <B>3</B>), smeared curves will
+be shown instead if these are chosen in option <B>6</B>, see Fig.
+<A HREF="node58.html#cap:Total-LDOS-smeared">3.4</A>. 
+<DIV ALIGN="CENTER"><A NAME="cap:Total-LDOS-smeared"></A><A NAME="9933"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.4:</STRONG>
+Total and local DOS for the MgO bulk shown in Fig. <A HREF="node58.html#cap:Total-LDOS-raw">3.3</A>,
+that were smeared by the Gaussian with <IMG
+ WIDTH="36" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$\sigma =$">0.3 eV.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="104" HEIGHT="37" ALIGN="BOTTOM" BORDER="0"
+ SRC="img145.png"
+ ALT="\includegraphics[%%
+height=8cm,
+angle=-90]{dos_local_smear.eps}">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Use option <B>13</B> to make the local/projected DOS visible since
+the total DOS usually appears too high on the graph.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1018"
+  HREF="node59.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1014"
+  HREF="node54.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1010"
+  HREF="node57.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1016"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1019"
+  HREF="node59.html">Studying the partial or</A>
+<B> Up:</B> <A NAME="tex2html1015"
+  HREF="node54.html">Calculation of the DOS</A>
+<B> Previous:</B> <A NAME="tex2html1011"
+  HREF="node57.html">3 - Total DOS:</A>
+ &nbsp <B>  <A NAME="tex2html1017"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

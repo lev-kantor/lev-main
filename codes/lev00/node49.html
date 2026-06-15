@@ -1,0 +1,412 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Main definitions</TITLE>
+<META NAME="description" CONTENT="Main definitions">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node50.html">
+<LINK REL="previous" HREF="node48.html">
+<LINK REL="up" HREF="node46.html">
+<LINK REL="next" HREF="node50.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html885"
+  HREF="node50.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html881"
+  HREF="node46.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html875"
+  HREF="node48.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html883"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html886"
+  HREF="node50.html">A note on calculating</A>
+<B> Up:</B> <A NAME="tex2html882"
+  HREF="node46.html">Utility lev00</A>
+<B> Previous:</B> <A NAME="tex2html876"
+  HREF="node48.html">Installation and general information</A>
+ &nbsp <B>  <A NAME="tex2html884"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00430000000000000000"></A><A NAME="sec:Main-definitions-lev00"></A>
+<BR>
+Main definitions
+</H1>
+
+<P>
+Here we provide some basic definitions for a number of quantities
+which are calculated by the code: 
+
+<P>
+
+<UL>
+<LI>A charge in a sphere <IMG
+ WIDTH="28" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.png"
+ ALT="$P_{R}$"> of radius <IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img106.png"
+ ALT="$R$"> is defined as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q=\int_{\mathbf{r}\in P_{R}}\rho(\mathbf{r})\textrm{d}\mathbf{r}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="139" HEIGHT="44" BORDER="0"
+ SRC="img107.png"
+ ALT="\begin{displaymath}
+Q=\int_{\mathbf{r}\in P_{R}}\rho(\mathbf{r})\textrm{d}\mathbf{r}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where the sphere is centred at point <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img108.png"
+ ALT="$\mathbf{P}$">. 
+</LI>
+<LI>A charge in a volume <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img109.png"
+ ALT="$V$"> made by several overlapping spheres, <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V=\bigcup_{R}P_{R}\,,
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="90" HEIGHT="49" BORDER="0"
+ SRC="img110.png"
+ ALT="\begin{displaymath}
+V=\bigcup_{R}P_{R}\,,\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+is defined similarly, with <IMG
+ WIDTH="28" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.png"
+ ALT="$P_{R}$"> replaced by <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img109.png"
+ ALT="$V$">. 
+</LI>
+<LI>Partial electronic density for the state (``band'') <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$n$"> is defined
+as:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\rho_{n}(\mathbf{r})=\frac{1}{N}\sum_{\mathbf{k}\in BZ}\left|\psi_{n\mathbf{k}}(\mathbf{r})\right|^{2}=\sum_{\mathbf{k}\in SP}\omega_{\mathbf{k}}\left|\psi_{n\mathbf{k}}(\mathbf{r})\right|^{2}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="1"></A><IMG
+ WIDTH="361" HEIGHT="54" BORDER="0"
+ SRC="img111.png"
+ ALT="\begin{displaymath}
+\rho_{n}(\mathbf{r})=\frac{1}{N}\sum_{\mathbf{k}\in BZ}\left...
+...hbf{k}}\left\vert\psi_{n\mathbf{k}}(\mathbf{r})\right\vert^{2}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where SP means a set of (special) <B>k</B>-points (i.e. the actual
+<B>k</B>-point sampling), <!-- MATH
+ $\psi_{n\mathbf{k}}(\mathbf{r})$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.png"
+ ALT="$\psi_{n\mathbf{k}}(\mathbf{r})$"> is the
+wave function and <!-- MATH
+ $\omega_{\mathbf{k}}$
+ -->
+<IMG
+ WIDTH="25" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\omega_{\mathbf{k}}$"> is the weighting factor.
+</LI>
+<LI>Partial electronic density for an <I>island</I> of bands <!-- MATH
+ $n\in[n_{1},n_{2}]$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.png"
+ ALT="$n\in[n_{1},n_{2}]$">
+is
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\rho_{[n_{1},n_{2}]}(\mathbf{r})=\sum_{n=n_{1}}^{n_{2}}\rho_{n}(\mathbf{r})
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="2"></A><IMG
+ WIDTH="177" HEIGHT="56" BORDER="0"
+ SRC="img115.png"
+ ALT="\begin{displaymath}
+\rho_{[n_{1},n_{2}]}(\mathbf{r})=\sum_{n=n_{1}}^{n_{2}}\rho_{n}(\mathbf{r})
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+</LI>
+<LI>Partial <IMG
+ WIDTH="29" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img116.png"
+ ALT="$z-$">densities, integrated over the surface plane (<IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img117.png"
+ ALT="$x$"> and
+<IMG
+ WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.png"
+ ALT="$y$">), useful for slab (surface) calculations:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\rho_{[n_{1},n_{2}]}(z)=\int_{\mathbf{r}\in(layer)}\rho(\mathbf{r})\textrm{d}x\textrm{d}y
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:z-density"></A><IMG
+ WIDTH="244" HEIGHT="45" BORDER="0"
+ SRC="img119.png"
+ ALT="\begin{displaymath}
+\rho_{[n_{1},n_{2}]}(z)=\int_{\mathbf{r}\in(layer)}\rho(\mathbf{r})\textrm{d}x\textrm{d}y
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+</LI>
+<LI>Total electronic Density of States (DOS): <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+N(\epsilon)=\frac{1}{N}\sum_{n}\sum_{\mathbf{k}\in BZ}\delta(\epsilon-\epsilon_{n\mathbf{k}})
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="3"></A><IMG
+ WIDTH="233" HEIGHT="54" BORDER="0"
+ SRC="img120.png"
+ ALT="\begin{displaymath}
+N(\epsilon)=\frac{1}{N}\sum_{n}\sum_{\mathbf{k}\in BZ}\delta(\epsilon-\epsilon_{n\mathbf{k}})
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the sum over <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$n$"> is run over all states (both occupied and
+unoccupied) and <!-- MATH
+ $\epsilon_{n\mathbf{k}}$
+ -->
+<IMG
+ WIDTH="30" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.png"
+ ALT="$\epsilon_{n\mathbf{k}}$"> are Kohn-Sham eigenvalues.
+</LI>
+<LI>Local DOS (projected on a sphere): <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+N_{\mathbf{P}_{R}}(\epsilon)=\frac{1}{N}\sum_{n}\sum_{\mathbf{k}\in BZ}A_{n\mathbf{k}}\delta(\epsilon-\epsilon_{n\mathbf{k}})
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="4"></A><IMG
+ WIDTH="284" HEIGHT="54" BORDER="0"
+ SRC="img122.png"
+ ALT="\begin{displaymath}
+N_{\mathbf{P}_{R}}(\epsilon)=\frac{1}{N}\sum_{n}\sum_{\mathbf{k}\in BZ}A_{n\mathbf{k}}\delta(\epsilon-\epsilon_{n\mathbf{k}})
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the weighting factors are defined as:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+A_{n\mathbf{k}}=\int_{\mathbf{r}\in P_{R}}|\Psi_{n\mathbf{k}}(\mathbf{r})|^{2}\textrm{d}\mathbf{r}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="5"></A><IMG
+ WIDTH="196" HEIGHT="44" BORDER="0"
+ SRC="img123.png"
+ ALT="\begin{displaymath}
+A_{n\mathbf{k}}=\int_{\mathbf{r}\in P_{R}}\vert\Psi_{n\mathbf{k}}(\mathbf{r})\vert^{2}\textrm{d}\mathbf{r}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+with the integration performed over the sphere <IMG
+ WIDTH="28" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.png"
+ ALT="$P_{R}$"> of radius
+<IMG
+ WIDTH="19" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img106.png"
+ ALT="$R$"> centered at point <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img108.png"
+ ALT="$\mathbf{P}$">.
+</LI>
+<LI><I><I>Angular-momenta (<IMG
+ WIDTH="49" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.png"
+ ALT="$s,p,d$">) projected DOS</I></I> is defined
+as above, but with the following factors: <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+A_{n\mathbf{k}}=\int_{\mathbf{r}\in P_{R}}\,\sum_{m=-l}^{l}\left|\left\langle \psi_{n\mathbf{k}}(\mathbf{r})\right|\left.R_{nl}(r)S_{lm}(\widehat{\mathbf{r}})\right\rangle \right|^{2}\textrm{d}\mathbf{r}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="6"></A><IMG
+ WIDTH="368" HEIGHT="60" BORDER="0"
+ SRC="img125.png"
+ ALT="\begin{displaymath}
+A_{n\mathbf{k}}=\int_{\mathbf{r}\in P_{R}}\,\sum_{m=-l}^{l}\...
+...{\mathbf{r}})\right\rangle \right\vert^{2}\textrm{d}\mathbf{r}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $S_{lm}(\widehat{\mathbf{r}})$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img126.png"
+ ALT="$S_{lm}(\widehat{\mathbf{r}})$"> is a real spherical function
+for the momenta <IMG
+ WIDTH="81" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img127.png"
+ ALT="$l=0,1,2$">. 
+</LI>
+<LI>A DOS projected on a layer (for the slab calculations). The factors
+in this case are:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+A_{n\mathbf{k}}=\int_{\mathbf{r}\in(layer)}|\Psi_{n\mathbf{k}}(\mathbf{r})|^{2}\textrm{d}\mathbf{r}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="7"></A><IMG
+ WIDTH="219" HEIGHT="45" BORDER="0"
+ SRC="img128.png"
+ ALT="\begin{displaymath}
+A_{n\mathbf{k}}=\int_{\mathbf{r}\in(layer)}\vert\Psi_{n\mathbf{k}}(\mathbf{r})\vert^{2}\textrm{d}\mathbf{r}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the layer is thought to be perpendicular to the <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$z$">-axis.
+</LI>
+</UL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html885"
+  HREF="node50.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html881"
+  HREF="node46.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html875"
+  HREF="node48.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html883"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html886"
+  HREF="node50.html">A note on calculating</A>
+<B> Up:</B> <A NAME="tex2html882"
+  HREF="node46.html">Utility lev00</A>
+<B> Previous:</B> <A NAME="tex2html876"
+  HREF="node48.html">Installation and general information</A>
+ &nbsp <B>  <A NAME="tex2html884"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

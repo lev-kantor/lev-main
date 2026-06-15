@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>test</TITLE>
+<META NAME="description" CONTENT="test">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="previous" HREF="node64.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node66.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1195"
+  HREF="node66.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1191"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1187"
+  HREF="node64.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1193"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1196"
+  HREF="node66.html">Box with atomic coordinates</A>
+<B> Up:</B> <A NAME="tex2html1192"
+  HREF="node43.html">Tolerance Box</A>
+<B> Previous:</B> <A NAME="tex2html1188"
+  HREF="node64.html">Testing of the code</A>
+ &nbsp <B>  <A NAME="tex2html1194"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION040222200000000000000">
+test</A>
+</H3>
+
+<P>
+This flag will activate a numerical test of the input, the
+energy, the forces on the atoms or the tip depending on the option
+selected. A value for the step # used in calculating the numerical
+force can also be given. 
+
+<P>
+<I>Options</I>:
+
+<P>
+
+<UL>
+<LI><B>direct</B> (#1 #2 #3 #4) - energy along a single direction
+(= degree of freedom) #1, between values of #2 and #3, is calculated
+using step #; file <TT>fort.19</TT> will contain the results; <I>default</I>
+used: #1 =1, #2 =-0.5, #3 = 0.5, #4 = 0.01;
+</LI>
+<LI><B>atom</B> (#) <B>-</B> compares analytical and numerical
+forces for all degrees of freedom in the system; file <TT>fort.19</TT>
+will contain a comparison of the forces on each atom and the error;
+</LI>
+<LI><B>tip</B> (#) - compares the analytical and numerical
+vertical force on the tip; file <TT>fort.19</TT> will contain a comparison
+of the forces and the error. Note that <TT>max_opt</TT> must be greater
+than one for this option to work;
+</LI>
+<LI><B>input -</B> will check the input and the code will
+then stop.
+</LI>
+</UL>
+<I>Default</I> (general): 
+
+<P>
+
+<UL>
+<LI>all test options are off;
+</LI>
+<LI>the value for the step <B><I># =</I></B> <B>0.0001</B>;
+</LI>
+</UL>
+<I>Example</I> <I>1</I>: <B>test atom 0.00005</B>
+
+<P>
+<I>Example 2</I>: <B>test tip 0.01</B>
+
+<P>
+<I>Example 3</I>: <B>test input</B>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1195"
+  HREF="node66.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1191"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1187"
+  HREF="node64.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1193"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1196"
+  HREF="node66.html">Box with atomic coordinates</A>
+<B> Up:</B> <A NAME="tex2html1192"
+  HREF="node43.html">Tolerance Box</A>
+<B> Previous:</B> <A NAME="tex2html1188"
+  HREF="node64.html">Testing of the code</A>
+ &nbsp <B>  <A NAME="tex2html1194"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

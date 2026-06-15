@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>What controls every elementary stage?</TITLE>
+<META NAME="description" CONTENT="What controls every elementary stage?">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node161.html">
+<LINK REL="previous" HREF="node159.html">
+<LINK REL="up" HREF="node159.html">
+<LINK REL="next" HREF="node161.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2463"
+  HREF="node161.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2459"
+  HREF="node159.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2453"
+  HREF="node159.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2461"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2464"
+  HREF="node161.html">Specifying each elementary stage</A>
+<B> Up:</B> <A NAME="tex2html2460"
+  HREF="node159.html">Elementary Stages Box</A>
+<B> Previous:</B> <A NAME="tex2html2454"
+  HREF="node159.html">Elementary Stages Box</A>
+ &nbsp <B>  <A NAME="tex2html2462"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION04034100000000000000">
+What controls every elementary stage?</A>
+</H3>
+
+<P>
+Parameters controlling every elementary stage are listed below:
+
+<P>
+
+<UL>
+<LI>amplitude noise ON/OFF (logical);
+</LI>
+<LI>force noise ON/OFF (logical)
+</LI>
+<LI>ADC is ON/OFF (logical):
+
+<P>
+
+<UL>
+<LI>if ON, then the <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$z$"> distance is adjusted so that the frequency shift
+<IMG
+ WIDTH="27" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img322.png"
+ ALT="$\Delta f$"> could be maintained aproximately constant close to the
+set value,<IMG
+ WIDTH="27" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img322.png"
+ ALT="$\Delta f$"> (real);
+</LI>
+<LI>if OFF, then the distance is kept exactly constant instead (constant
+height mode); the frequency will change along the simulation, still
+kept at resonance;
+</LI>
+</UL>
+</LI>
+<LI>AGC is ON/OFF (logical):
+
+<P>
+
+<UL>
+<LI>if ON, then gain control allows to keep the oscillation amplitude
+approximately constant close to the set value, <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img366.png"
+ ALT="$A$"> (real), by constantly
+adjusting the excitation amplitude;
+</LI>
+<LI>if OFF, then the excitation amplitude is kept exactly constant, whereas
+the oscillation amplitude may change along the simulation;
+</LI>
+</UL>
+</LI>
+<LI>velocities <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img367.png"
+ ALT="$v_{x}$"> and <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img368.png"
+ ALT="$v_{y}$"> along the <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img430.png"
+ ALT="$X$"> and <IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img394.png"
+ ALT="$Y$"> axes, kept
+constant during every elementary stage (two real);
+</LI>
+<LI>a logical variable which switches ON/OFF the tip-surface force;
+</LI>
+<LI>a logical variable which switches ON/OFF the excitation signal applied
+to the cantilever;
+</LI>
+<LI>a logical variable which switches ON/OFF the detailed printout during
+each stage to be made into the file <TT>stageM.out</TT> (<TT>M</TT>
+being the stage number); if ON, then there is also an integer vartiable
+equal to the number of timesteps after which the printout will be
+made;
+</LI>
+<LI>finally, presently there are three ways in which each stage can be
+terminated (a character variable):
+
+<P>
+
+<UL>
+<LI><TT>'time'</TT> followed by the time is seconds;
+</LI>
+<LI><TT>'freq'</TT>: the stage will run to meet the frequency shift setpoint
+for this stage (up to an error of 0.5 Hz);
+</LI>
+<LI><TT>'ampl'</TT>: the stage will run to meet the oscillation amplitude
+setpoint for this stage (up to an error of 0.1 &#197;). 
+</LI>
+</UL>
+</LI>
+</UL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2463"
+  HREF="node161.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2459"
+  HREF="node159.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2453"
+  HREF="node159.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2461"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2464"
+  HREF="node161.html">Specifying each elementary stage</A>
+<B> Up:</B> <A NAME="tex2html2460"
+  HREF="node159.html">Elementary Stages Box</A>
+<B> Previous:</B> <A NAME="tex2html2454"
+  HREF="node159.html">Elementary Stages Box</A>
+ &nbsp <B>  <A NAME="tex2html2462"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

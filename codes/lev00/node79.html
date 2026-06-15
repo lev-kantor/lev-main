@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>tetr and VASP</TITLE>
+<META NAME="description" CONTENT="tetr and VASP">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node80.html">
+<LINK REL="previous" HREF="node78.html">
+<LINK REL="up" HREF="node78.html">
+<LINK REL="next" HREF="node80.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1287"
+  HREF="node80.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1283"
+  HREF="node78.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1277"
+  HREF="node78.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1285"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1288"
+  HREF="node80.html">lev00 and VASP</A>
+<B> Up:</B> <A NAME="tex2html1284"
+  HREF="node78.html">Working with VASP</A>
+<B> Previous:</B> <A NAME="tex2html1278"
+  HREF="node78.html">Working with VASP</A>
+ &nbsp <B>  <A NAME="tex2html1286"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00510000000000000000"></A><A NAME="sec:tetr-and-VASP"></A>
+<BR>
+<I>tetr</I> and <I>VASP</I>
+</H1>
+
+<P>
+First of all, the main usage of <B><I>tetr</I></B> is to produce
+the <B><I>VASP</I></B> input files like <TT>CONTCAR</TT> and <TT>KPOINTS</TT>
+as described in Section <A HREF="node13.html#sec:Detailed-description-of-tetr">2.6</A>.
+
+<P>
+If the DOS option is used while generating <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points, the
+<TT>brill.dat</TT> file will be also produced that contains an important
+information needed for <B><I>lev00</I></B> to calculate the DOS
+(Section <A HREF="node21.html#sub:KP-DOS-tetr">2.6.6.2</A>). Note that the <TT>DOSCAR</TT> file
+written by VASP does give the total DOS. However, using the route
+of <B><I>lev00</I></B> it is possible to have more functionality
+as described in Section <A HREF="node54.html#sub:Calculation-of-DOS-lev00">3.6.2</A>. See Section
+<A HREF="node82.html#sub:DOS-and-VASP">4.2.2</A>.
+
+<P>
+Finally, the calculation of phonon frequencies with <B><I>VASP</I></B>
+is completely supported. <B><I>tetr</I></B> will take care of all
+input and output files as described in Section <A HREF="node23.html#sub:Calculation-of-phonons-tetr">2.6.8</A>.
+No need for <B><I>lev00</I></B> in this case at all!
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

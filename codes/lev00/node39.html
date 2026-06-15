@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>PE - PES: move atoms keeping the symmetry</TITLE>
+<META NAME="description" CONTENT="PE - PES: move atoms keeping the symmetry">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node40.html">
+<LINK REL="previous" HREF="node34.html">
+<LINK REL="up" HREF="node13.html">
+<LINK REL="next" HREF="node40.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html736"
+  HREF="node40.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html732"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html726"
+  HREF="node38.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html734"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html737"
+  HREF="node40.html">Miscellaneous menus</A>
+<B> Up:</B> <A NAME="tex2html733"
+  HREF="node13.html">Detailed description of options</A>
+<B> Previous:</B> <A NAME="tex2html727"
+  HREF="node38.html">Sb - Save in</A>
+ &nbsp <B>  <A NAME="tex2html735"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION003610000000000000000">
+PE - PES: move atoms keeping the symmetry</A>
+</H2>
+
+<P>
+An atom can be displaced from its positions, and all other atoms of
+the <I>orbit</I><A NAME="tex2html6"
+  HREF="footnode.html#foot5584"><SUP>2.4</SUP></A> this atom belongs to (see Section <A HREF="node26.html#sub:Theory-vibr-symmetry-tetr">2.6.8.3</A>)
+will be moved <I>in concert</I> to keep the symmetry. Atoms of the
+orbit are detected automatically. This is useful if one wants to calculate
+the potential energy surface (PES) with respect to full-symmetry displacements
+of atoms in the system. See also Sections <A HREF="node12.html#sub:A-note-about-symmetry">2.5.1</A>
+about symmetry.
+
+<P>
+First of all, you will arrive at the point group generator menu (Section
+<A HREF="node44.html#sub:Point-group-generator-tetr">2.6.11.4</A>). Use it to accept the group
+automatically detected or build a new one. Then the following menu
+will appear:
+
+<P>
+<TT><FONT SIZE="-2">______ So, your system point group is C2h </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with elements:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNIT I P1 C21</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Choose an option:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;&gt;
+atoms are numbered across species &lt;&lt;&lt;&lt;&lt;&lt;&lt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. Specify atom to be moved and show all equivalent</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. Choose the method of displacing atoms</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">M. Move it!</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">------- g e n
+e r a l s e t t i n g s --------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">UU. ****** RESTORE the original serting
+******</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">U. ********** UNDO ***********
+the last step</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">XY. Produce &lt;geom.xyz&gt; file after every change
+for Xmol</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Hs. H atoms to be added to &lt;geom.xyz&gt; file: NO</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">An. [For input] Coordinates are specified
+in: &lt;AtomNumber&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Sy. Check the symmetry after distortion</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Co. Show current atomic positions in fractional/Cartesian</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Bb. Set the size of the breeding box for visualisation</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;
+Current setting for the breeding box: &lt;&lt;&lt;&lt;&lt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ 0... 0] x [ 0... 0] x [
+0... 0]</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;
+extension = 1, # of atoms= 65</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">W. Write &lt;geom.xyz&gt; file to preview using current
+breeding</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">S. Save.</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Proceed/Quit</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-----&gt; Choose the appropriate
+option:</FONT></TT>
+<P>
+
+
+<P>
+Apart from the self-explanatory options in the settings, the first
+tree options do the actual job:
+
+<P>
+
+<UL>
+<LI><B>1</B> - specify an atom that represents the orbit you wnat to
+displace
+</LI>
+<LI><B>2</B> - choose how to displace and by what amount
+</LI>
+<LI><B>M</B> - displace atoms of tbhis orbit
+</LI>
+</UL>
+The new geometry can be written into a file with the desired format
+in a usual way (Section <A HREF="node41.html#sub:Save-Read-tetr">2.6.11.1</A>) via option <B>S</B>.
+After this is done, you can run the DFT code of your choice to calculate
+the energy.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html736"
+  HREF="node40.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html732"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html726"
+  HREF="node38.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html734"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html737"
+  HREF="node40.html">Miscellaneous menus</A>
+<B> Up:</B> <A NAME="tex2html733"
+  HREF="node13.html">Detailed description of options</A>
+<B> Previous:</B> <A NAME="tex2html727"
+  HREF="node38.html">Sb - Save in</A>
+ &nbsp <B>  <A NAME="tex2html735"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

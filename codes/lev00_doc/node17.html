@@ -1,0 +1,463 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Cl - Build up a cluster from the lattice</TITLE>
+<META NAME="description" CONTENT="Cl - Build up a cluster from the lattice">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node18.html">
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="up" HREF="node13.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html462"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html458"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html452"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html460"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html463"
+  HREF="node18.html">M - Complex cell</A>
+<B> Up:</B> <A NAME="tex2html459"
+  HREF="node13.html">Detailed description of options</A>
+<B> Previous:</B> <A NAME="tex2html453"
+  HREF="node16.html">Pc - Generate primitive</A>
+ &nbsp <B>  <A NAME="tex2html461"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00364000000000000000"></A><A NAME="sub:Cl-option-tetr"></A>
+<BR>
+Cl - Build up a cluster from the lattice
+</H2>
+
+<P>
+This option becomes available in the main menu if the geometry is
+known, i.e. it has either been read in or constructed from scratch.
+The idea is this: starting from one atom, build up all or some its
+nearest neighbours, then nearest neighbours to latter atoms and so
+on. Finally, if desired, some or all boundary atoms of the cluster
+are terminated by hydrogen atoms positioned at a certain distance
+from them and along the directions of the actual bonds of the bulk
+system.
+
+<P>
+The <I>Cl-menu</I> initially looks like this:
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">... CURRENT lattice vectors for the supercell
+ARE...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">AJ(1): 10.88160 0.00000 0.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">AJ(2): 0.00000 10.88160 0.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">AJ(3): 0.00000 0.00000 10.88160</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+Current species are: &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Si O</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">========= CHOOSE AN OPTION:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">/================================================&#92;&#92;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">|| HELP: when using options N and H, you may not
+||</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">|| be bothered about internal cluster atoms as
+||</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">|| those will be ignored anyway ||</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&#92;&#92;================================================/</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">R. Read existing cluster geometry</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. START HERE: choose the first cluster atom</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">------- g e n
+e r a l s e t t i n g s --------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">XY. Produce &lt;geom.xyz&gt; file after every change
+for Xmol</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Hs. H atoms to be added to &lt;geom.xyz&gt; file: NO</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Co. Show lattice atomic positions</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Hd. Distance between an atom and H is: 1.00000000000000 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Nd. Spherical belt width when finding nn is: 0.100000001490116 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">W. Write &lt;geom.xyz&gt; file for the current cluster</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Proceed/Quit</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-----&gt; Choose an appropriate
+option:</FONT></TT>
+<P>
+
+
+<P>
+At the top, lattice vectors of the unit cell are shown together with
+existing species. Start from option <B>1</B> that will prompt you
+to choose the very first atom of the cluster. After this is done,
+the menu grows into: 
+
+<P>
+<TT><FONT SIZE="-2">R. Read existing cluster geometry</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. Cluster has been started from atom = 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;Species = Si</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;Position = ( 0.05194, 0.05194, 0.03418)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">N. Build all first neighbours around atom(s)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">H. Terminate a range of atoms with hydrogens</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">mH. Move a range of H atoms along bonds</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. Rename a range of atoms: change species</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">----- operations with multiple
+lists of atoms ------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">T. Tag atoms (specify multiple lists): currently
+OFF</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-----------
+shift -----------------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">O. General shift of the cluster (new origin)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Cm. Shift the cluster to the centre of mass</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-------------
+final options -----------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Rt. Rotate the WHOLE cluster about the X,Y,Z axes</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Mv. Move atom(s)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">------- g e n
+e r a l s e t t i n g s --------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">XY. Produce &lt;geom.xyz&gt; file after every change
+for Xmol</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Hs. H atoms to be added to &lt;geom.xyz&gt; file: NO</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Co. Show lattice atomic positions</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Hd. Distance between an atom and H is: 1.00000000000000 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Nd. Spherical belt width when finding nn is: 0.100000001490116 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">W. Write &lt;geom.xyz&gt; file for the current cluster</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Cc. Show current atomic positions in Cartesian</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">S. Save geometry</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Proceed/Quit</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-----&gt; Choose an appropriate
+option:</FONT></TT>
+<P>
+
+
+<P>
+Now it is possible to choose the first shell of nearest neighbours
+of the first atom by pressing <B>N</B>. All nearest neighbours of
+the first atom will be added. This is decided within a certain thickness
+specified in settings by <B>Nd</B>. Two new options appear in the
+Cl-menu: 
+
+<P>
+<TT><FONT SIZE="-2">/3. Remove a range of atoms from the cluster </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&#92;4. Keep a range of atoms in the
+cluster: remove the rest </FONT></TT>
+<P>
+
+
+<P>
+<DIV ALIGN="LEFT">
+that allow you to remove unwanted atoms from the
+cluster. Next time <B>N</B> is chosen, you will be prompted to give
+numbers of atoms around which the nearest neighbours are to be constructed.
+This process can be continued almost indefinitely and leads to a cluster
+of atoms that is a fragment of the bulk crystal. 
+</DIV>
+
+<P>
+At the end of the construction, by pressing option <B>H</B>, it
+is possible to terminate some or all atoms with hydrogens. Their distance
+from the boundary cluster atoms is determined by <B>Hd</B> in the
+settings. If the distance appeared wrong, you can either undo this
+step (option <B>U</B>), change the setting (option <B>Nd</B>)
+and then repeat the construction. Alternatively, the atom-H distances
+can be corrected using option <B>mH</B>. 
+
+<P>
+Note that, when specifying a range of atoms (options <B>N</B> and
+<B>H</B>), it is possible to include internal atoms of the cluster
+as well in the lists; this is very convenient and does not have any
+effect at all as only external atoms will be considered anyway. 
+
+<P>
+At each step, the current arrangement of the cluster atoms can be
+seen in <B>Cc</B>. If the option <B>XY</B> is on (either at <B><I>Xmol</I></B>
+or <B><I>Ymol</I></B>), then you can preview the cluster by invoking
+<B><I>Xmol</I></B> or similar software and reading in the file <TT>geom.xyz</TT>.
+This file is dumped automatically in the current directory every time
+a change is made.
+
+<P>
+Additionally to the above mentioned options, it is also possible to
+change species (or ``rename'') a set of atoms (option <B>5</B>).
+The option <B>T</B> allows a different (and, in many cases, more
+convenient) way of choosing atoms ``by lists'' (Section <A HREF="node4.html#sec:Menus">1.2</A>).
+At any point the cluster can be shifted as a whole (options <B>O</B>
+and <B>Cm</B>). 
+
+<P>
+At the end of the construction some or all atoms can be moved to new
+positions, option <B>Mv</B>, seen Section <A HREF="node42.html#sub:Mv-Move-atoms">2.6.11.2</A>.
+Finally, the <I>whole</I> system can be rotated (option <B>Rt</B>,
+see Section <A HREF="node43.html#sub:Rt-Rotate-atoms">2.6.11.3</A>). Note that either of the options
+<B>Mv</B> and <B>Rt</B> has been used, it will not longer be possible
+to add more atoms to the system and/or terminate boundary atoms with
+hydrogens, i.e. options <B>N</B> and <B>H</B> will be disabled
+(unvisible).
+
+<P>
+Finally, the cluster geometry can be saved in either an <TT>xyz</TT>
+or a <TT>mol</TT> file formats, the latter is an internal format of
+the <B>Cl</B> option. Files in the <TT>mol</TT> format can be read
+in by the option <B>R</B> of the Cl-menu (e.g. from the previous
+unfinished project).
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html462"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html458"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html452"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html460"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html463"
+  HREF="node18.html">M - Complex cell</A>
+<B> Up:</B> <A NAME="tex2html459"
+  HREF="node13.html">Detailed description of options</A>
+<B> Previous:</B> <A NAME="tex2html453"
+  HREF="node16.html">Pc - Generate primitive</A>
+ &nbsp <B>  <A NAME="tex2html461"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

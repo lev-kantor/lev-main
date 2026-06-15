@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>How one can find parameters of the virtual AFM</TITLE>
+<META NAME="description" CONTENT="How one can find parameters of the virtual AFM">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="previous" HREF="node32.html">
+<LINK REL="up" HREF="node26.html">
+<LINK REL="next" HREF="node34.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html584"
+  HREF="node34.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html580"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html576"
+  HREF="node32.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html582"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html585"
+  HREF="node34.html">Installation</A>
+<B> Up:</B> <A NAME="tex2html581"
+  HREF="node26.html">Virtual AFM</A>
+<B> Previous:</B> <A NAME="tex2html577"
+  HREF="node32.html">Influence of experimental noises</A>
+ &nbsp <B>  <A NAME="tex2html583"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION02023000000000000000">
+How one can find parameters of the virtual AFM</A>
+</H2>
+
+<P>
+The aim of the virtual machine is to mimic the dynamic of a true experimental
+AFM system. In this subsection we shall briefly describe a response
+of the whole machine (Omicron RT-AFM with an easyPLL Nanosurf Demodulator)
+on a square periodic offset added to the distance signal <IMG
+ WIDTH="36" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img259.png"
+ ALT="$D(t)$">.
+This is an example of how one can experimentally find the correct
+parameters needed to run the virtual AFM machine.
+
+<P>
+Fig. <A HREF="node33.html#fCompareExpNum">11</A> (a) shows the frequency response to a periodic
+square excitation added to the surface-tip distance <IMG
+ WIDTH="18" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$D$"> while the
+microscope was in operation above a <IMG
+ WIDTH="43" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img321.png"
+ ALT="${\rm MoS_{2}}$"> substrate covered
+by silver clusters. This measurement was performed for two different
+settings of the ADC feedback loop. A loop gain of 2% (slow response)
+corresponds to the typical value for normal imaging while a loop gain
+of 20% (fast response) is only used when approaching the surface
+at the beginning of the experiment. The asymmetry of the response
+between a positive and negative <IMG
+ WIDTH="27" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img322.png"
+ ALT="$\Delta f$"> (the positive peak is
+smaller and wider than the negative one) is a consequence of the increase
+of the absolute value of the slope of the van der Waals interaction
+when the tip approaches the surface.
+
+<P>
+Fig. <A HREF="node33.html#fCompareExpNum">11</A> (b) shows the response calculated with
+the virtual AFM modelling the tip by a sphere of the radius 20 nm
+and taking into account only the van der Waals interaction between
+tyhe tip and sample, with a Hamaker constant of 1 eV. The experimental
+behaviour can be well reproduced by choosing the parameters <IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img306.png"
+ ALT="$K_{P}^{ADC}$">
+and <IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img307.png"
+ ALT="$K_{I}^{ADC}$"> [<A
+ HREF="node188.html#Wang-PI">29</A>]. The shape of the peaks is qualitatively
+correct while the time constants, ranging from a few milliseconds
+at 20% to a few tens of milliseconds at 2%, are of the same order
+of magnitude as in the experiment. 
+
+<P>
+<DIV ALIGN="CENTER">
+</DIV>
+<DIV ALIGN="CENTER"><A NAME="fCompareExpNum"></A><A NAME="3782"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 11:</STRONG>
+Experimental (a) and calculated (b) response of the ADC. Electrostatic
+forces have been compensated following Ref. [<A
+ HREF="node188.html#guggisberg-electrostatic">38</A>].</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="245" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img323.png"
+ ALT="\includegraphics[%%
+height=6cm]{pictures/xfig.offset.eps}">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+<DIV ALIGN="CENTER">
+</DIV>
+
+<P>
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html584"
+  HREF="node34.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html580"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html576"
+  HREF="node32.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html582"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html585"
+  HREF="node34.html">Installation</A>
+<B> Up:</B> <A NAME="tex2html581"
+  HREF="node26.html">Virtual AFM</A>
+<B> Previous:</B> <A NAME="tex2html577"
+  HREF="node32.html">Influence of experimental noises</A>
+ &nbsp <B>  <A NAME="tex2html583"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

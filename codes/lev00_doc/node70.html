@@ -1,0 +1,273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>10 - Write density in gOpenMol cube format</TITLE>
+<META NAME="description" CONTENT="10 - Write density in gOpenMol cube format">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node71.html">
+<LINK REL="previous" HREF="node69.html">
+<LINK REL="up" HREF="node59.html">
+<LINK REL="next" HREF="node71.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1178"
+  HREF="node71.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1174"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1168"
+  HREF="node69.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1176"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1179"
+  HREF="node71.html">A short note on</A>
+<B> Up:</B> <A NAME="tex2html1175"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1169"
+  HREF="node69.html">9 - Write non-zero</A>
+ &nbsp <B>  <A NAME="tex2html1177"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION004631100000000000000"></A><A NAME="sub:10-weite-for-gOpenmol"></A>
+<BR>
+10 - Write density in gOpenMol cube format
+</H3>
+
+<P>
+This option allows one to save a density in a so-called <TT>Cube</TT>
+format that can be then read in by <B><I>gOpenMol</I></B> to do
+nice pictures of isodensity surfaces. For extra convenience, the density
+can only be saved that fits inside a box. The latter may run across
+the cells. In addition, atomic positions inside the same or bigger
+box can also be saved (in the <TT>xyz</TT> format), so that <B><I>gOpenMol</I></B>
+would be able to show atoms alongside the density surfaces.
+
+<P>
+The menu that opens is this:
+
+<P>
+<TT><FONT SIZE="-2">............MENU for gOpenMol writer .................</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">......... Change these parameters if necessary:.......</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. The box center is at: ( 0.00000, 0.00000, 0.00000)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;Directions of the box sides are fixed
+along:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 &lt; 1.00000, 0.00000, 0.00000
+&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 &lt; 0.00000, 1.00000, 0.00000
+&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 &lt; 0.00000, 0.00000, 1.00000
+&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. Lengths of the box sides (in A) are: 1.00000
+1.00000 1.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&gt;
+the starting point (corner) of the box is at -0.50 -0.50 -0.50</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. Box extension for xyz-file: [ 0.00000 0.00000
+0.00000]</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. The grid in the box in 3 directions: 1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&gt;
+total number of grid points = 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&gt;
+steps along 3 directions are 1.00000 1.00000 1.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. Scan the box and integrate the charge (reference
+only):</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">W. Write the cube-format file for gOpenMol</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---- G e n e r a l&nbsp;&nbsp;s e t t
+i n g s -----</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">An. Coordinates are specified in: &lt;Angstroms&gt; </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Co. Show current atomic positions in fractional/Cartesian</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">cT. Centre of a triangle of points/atoms</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">mD. Middle distance between two points/atoms</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">XY. Atoms in the XYZ box: constrained by the density
+box</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">--- L e a v e&nbsp;&nbsp;t h e&nbsp;&nbsp; m e n
+u -------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Return to the previous menu</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---&gt; Choose the item and press ENTER:</FONT></TT>
+<P>
+
+
+<P>
+The box for the density is specified in options <B>1</B> and <B>2</B>,
+and its possible extension for the atomic positions - in <B>3</B>
+(this option can be disabled by <B>XY</B>). The grid inside the
+box for the density interpolation is given in <B>4</B>. Note that
+the directions of the box faces are fixed along the Cartesian axes.
+
+<P>
+To check how much electron charge is inside the box, run <B>5</B>.
+The actual calculation is performed in W, after which the two files
+are saved:
+
+<P>
+
+<UL>
+<LI><TT>gOpenMol.cube</TT> - the <TT>Cube</TT> file with the density on
+the grid inside the box
+</LI>
+<LI><TT>gOpenMol.xyz</TT> - atomic poisitons inside the same or larger
+box
+</LI>
+</UL>
+Under the settings there are usual options <B>An</B> (how coordinates
+are specified) and <B>Co</B> (show atomic positions). In addition
+to those, two options <B>cT</B> and <B>mD</B> serve as a mini-calculator
+that may be sometimes useful to find the best position for the box
+centre in <B>1</B>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1178"
+  HREF="node71.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1174"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1168"
+  HREF="node69.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1176"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1179"
+  HREF="node71.html">A short note on</A>
+<B> Up:</B> <A NAME="tex2html1175"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1169"
+  HREF="node69.html">9 - Write non-zero</A>
+ &nbsp <B>  <A NAME="tex2html1177"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

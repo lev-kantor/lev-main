@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>4 - Exploration of the density</TITLE>
+<META NAME="description" CONTENT="4 - Exploration of the density">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node65.html">
+<LINK REL="previous" HREF="node63.html">
+<LINK REL="up" HREF="node59.html">
+<LINK REL="next" HREF="node65.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1106"
+  HREF="node65.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1102"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1096"
+  HREF="node63.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1104"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1107"
+  HREF="node65.html">5 - Dipole moment</A>
+<B> Up:</B> <A NAME="tex2html1103"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1097"
+  HREF="node63.html">3 - Amount of</A>
+ &nbsp <B>  <A NAME="tex2html1105"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00463500000000000000"></A><A NAME="sub:4-Expl-lev00"></A>
+<BR>
+4 - Exploration of the density
+</H3>
+
+<P>
+This is an interactive (no menus) option that allows one to find where
+the density is mostly concentrated in the cell and in what extent.
+When you run it, a special ``exploration'' routine is retrieved.
+It scans the density inside the cell, finds the grid point with the
+highest density and shows its Cartesian and fractional coordinates.
+Then, three 1D plots of the density along the cell basic lattice vectors
+<!-- MATH
+ $\mathbf{a}_{i}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img135.png"
+ ALT="$\mathbf{a}_{i}$"> and passing through the grid point are calculated
+and plotted as shown in Fig. <A HREF="node64.html#cap:1D-plots-explor-lev00">3.6</A>. 
+<DIV ALIGN="CENTER"><A NAME="cap:1D-plots-explor-lev00"></A><A NAME="9977"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.6:</STRONG>
+The 1D plots of the electron densities of a water molecule shot through
+the grid point of the highest density along the basic lattice vectors
+directions.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="455" HEIGHT="33" ALIGN="BOTTOM" BORDER="0"
+ SRC="img149.png"
+ ALT="\includegraphics[%%
+height=6cm,
+angle=-90]{explor_charge.eps}">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+These peak-shaped curves allow you to estimate the width of each peak.
+This is needed as the next thing you will be asked to do is to specify
+the integration radius: the charge inside the sphere with that grid
+point as the centre will be calculated and shown.
+
+<P>
+Then, the charge inside the sphere will be ``cut off''<A NAME="tex2html22"
+  HREF="footnode.html#foot10260"><SUP>3.9</SUP></A>, and the procedure can be repeated for the rest of the cell as many
+times as you wish. This way the whole cell can be represented by lumps
+of densities in spheres. The result will be dumped in a file <TT>explor.dat.</TT>
+ An example of the workout of the routine: 
+
+<P>
+<TT><FONT SIZE="-2">........&gt; Final distribution of the density:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Peak Hight _________(x,y,z)_________
+&nbsp;Charge(e) Radius</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1 7.77606 ( 0.00000, 0.25000, 4.83333) 5.88374
+1.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2 2.09367 ( 0.66667, 4.91667, 0.50000) 0.24454
+0.50000</FONT></TT>
+<P>
+
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1106"
+  HREF="node65.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1102"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1096"
+  HREF="node63.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1104"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1107"
+  HREF="node65.html">5 - Dipole moment</A>
+<B> Up:</B> <A NAME="tex2html1103"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1097"
+  HREF="node63.html">3 - Amount of</A>
+ &nbsp <B>  <A NAME="tex2html1105"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Internal Coordinates</TITLE>
+<META NAME="description" CONTENT="Internal Coordinates">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html335"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html331"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html327"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html333"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html336"
+  HREF="node14.html">Constrained minimisation</A>
+<B> Up:</B> <A NAME="tex2html332"
+  HREF="node11.html">Interatomic Potentials</A>
+<B> Previous:</B> <A NAME="tex2html328"
+  HREF="node12.html">Force Field</A>
+ &nbsp <B>  <A NAME="tex2html334"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02016200000000000000">
+Internal Coordinates</A>
+</H3>
+
+<P>
+The internal coordinates used to calculate the energy expressions
+for many body intercations are described below. The internal coordinates
+are defined between the cores, and not shells, of atoms. 
+
+<P>
+The length of a bond between two atoms in a molecule is straightforward
+to visualise, and is simply calculated as the magnitude of the vector
+(<B>r</B>) between the two atoms (<I>i</I> and <I>j</I>) (figure
+<A HREF="node13.html#bond-length">3</A>).
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="bond-length"></A><A NAME="3716"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3:</STRONG>
+Bond Length</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="146" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img180.png"
+ ALT="\includegraphics[%%
+width=4cm]{bond.eps}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- MATH
+ $b_{ij}=\left|\underline{r}_{ij}\right|=\sqrt{(x_{j}-x_{i})+(y_{j}-y_{i})+(z_{j}-z_{i})}$
+ -->
+<IMG
+ WIDTH="329" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img179.png"
+ ALT="$b_{ij}=\left\vert\underline{r}_{ij}\right\vert=\sqrt{(x_{j}-x_{i})+(y_{j}-y_{i})+(z_{j}-z_{i})}$">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The angle between two adjacent bonds in a molecule, or the angle formed
+by the three nuclei <I>i</I>, <I>j</I> and <I>k</I> is calculated
+using the dot product of the two vectors from <I>j</I> to <I>i</I>
+(<IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img181.png"
+ ALT="$r_{ji}$">) and <I>j</I> to <I>k</I> (<IMG
+ WIDTH="25" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img182.png"
+ ALT="$r_{jk}$">) as shown in figure
+<A HREF="node13.html#bond-angle">4</A>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="bond-angle"></A><A NAME="3719"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4:</STRONG>
+Bond Angle</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="148" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img184.png"
+ ALT="\includegraphics[%%
+width=4cm]{angle.eps}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- MATH
+ $\theta_{ijk}=\arccos\left(\frac{\underline{r}_{ij}\bullet\underline{r}_{kj}}{\left|\underline{r}_{ij}\right|\left|\underline{r}_{kj}\right|}\right)$
+ -->
+<IMG
+ WIDTH="176" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img183.png"
+ ALT="$\theta_{ijk}=\arccos\left(\frac{\underline{r}_{ij}\bullet\underline{r}_{kj}}{\l...
+...ert\underline{r}_{ij}\right\vert\left\vert\underline{r}_{kj}\right\vert}\right)$">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+A torsion angle about a bond <I>j</I> - <I>k</I> is defined for
+any four sequentially bonded atoms in a molecule, <I>i</I>, <I>j</I>,
+<I>k</I> and <I>l</I> and made by the angle between the planes
+formed by the two angles <I><IMG
+ WIDTH="30" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img185.png"
+ ALT="$\theta_{ijk}$"></I> and <I><IMG
+ WIDTH="29" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img186.png"
+ ALT="$\theta_{jkl}$"></I>
+(Figure 3.4). The torsion angle is then calculated by taking the dot
+product of the normal unit vectors of these two planes, each of which
+is calculated from the vector cross products of <!-- MATH
+ $\underline{r}_{ji}$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img187.png"
+ ALT="$\underline{r}_{ji}$">
+with <!-- MATH
+ $\underline{r}_{jk}$
+ -->
+<IMG
+ WIDTH="26" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img188.png"
+ ALT="$\underline{r}_{jk}$"> and of <!-- MATH
+ $\underline{r}_{jk}$
+ -->
+<IMG
+ WIDTH="26" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img188.png"
+ ALT="$\underline{r}_{jk}$"> with <!-- MATH
+ $\underline{r}_{lk}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img189.png"
+ ALT="$\underline{r}_{lk}$">
+as shown in figure <A HREF="node13.html#torsion">5</A>. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="torsion"></A><A NAME="3724"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5:</STRONG>
+Torsion Angle</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="159" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img191.png"
+ ALT="\includegraphics[%%
+width=4cm]{torsion.eps}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- MATH
+ $\phi_{ijkl}=\arccos\left[\frac{(\underline{r}_{ij}\times\underline{r}_{kj})\bullet(\underline{r}_{kj}\times\underline{r}_{kl})}{\left|\underline{r}_{ij}\times\underline{r}_{kj}\right|\left|\underline{r}_{kj}\times\underline{r}_{kl}\right|}\right]$
+ -->
+<IMG
+ WIDTH="239" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img190.png"
+ ALT="$\phi_{ijkl}=\arccos\left[\frac{(\underline{r}_{ij}\times\underline{r}_{kj})\bul...
+...ght\vert\left\vert\underline{r}_{kj}\times\underline{r}_{kl}\right\vert}\right]$">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+An out-of-plane angle needs to be defined when an atom in a molecule
+is bonded to just three other atoms (central atom <I>i</I> bonded
+to atoms <I>j</I>, <I>k</I> and <I>l</I>), and the out-of-plane
+angle (<IMG
+ WIDTH="14" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img178.png"
+ ALT="$\chi$">) is defined as the average of the three improper torsions
+formed by the interaction. 
+
+<P>
+The improper torsion definition uses the torsion angle expression
+above to calculate the torsion angle formed by the atoms <I>i</I>
+- <I>k</I> - <I>l</I> - <I>j</I>, which is the angle between
+the plane formed by the three atoms <I>i</I>, <I>k</I>, <I>l</I>
+and the plane formed the atoms <I>k</I>, <I>l</I> and the central
+atom <I>i</I>. It is so called improper as the torsion is about
+two atoms that are not bonded together. 
+
+<P>
+The analytical derivatives of these expresions are used by the code
+to calculate the gradients of the energy analytically, which allows
+both MD and minimisation calculations to be performed efficiently.
+The code also allows the forces on atoms calculated analytically to
+be checked by a numerical interpolation of the energy (see section
+4.2.13). 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html335"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html331"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html327"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html333"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html336"
+  HREF="node14.html">Constrained minimisation</A>
+<B> Up:</B> <A NAME="tex2html332"
+  HREF="node11.html">Interatomic Potentials</A>
+<B> Previous:</B> <A NAME="tex2html328"
+  HREF="node12.html">Force Field</A>
+ &nbsp <B>  <A NAME="tex2html334"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

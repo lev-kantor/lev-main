@@ -1,0 +1,22 @@
+SolutionMethod diagon
+SystemLabel graphene
+
+NumberOfSpecies     1
+NumberOfAtoms       2
+
+%block ChemicalSpeciesLabel
+    1 14 Si
+%endblock ChemicalSpeciesLabel
+
+LatticeConstant    1.00000 Ang
+%block LatticeVectors
+   0.000000000000000  2.53121787000000  0.000000000000000
+   2.19210000000000  1.26560893500000  0.000000000000000
+   0.000000000000000  0.000000000000000  14.6140000000000
+%endblock LatticeVectors
+
+AtomicCoordinatesFormat Ang
+%block AtomicCoordinatesAndAtomicSpecies
+  0.000000000000   0.000000000000   0.000000000000     1 # Si    1
+  1.461400000000   0.000000000000   0.000000000000     1 # Si    2
+%endblock AtomicCoordinatesAndAtomicSpecies

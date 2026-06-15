@@ -1,0 +1,824 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Solution of the electrostatic problem of point
+charges inside the sphere-plane capacitor</TITLE>
+<META NAME="description" CONTENT="Solution of the electrostatic problem of point
+charges inside the sphere-plane capacitor">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node4.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html276"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html272"
+  HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html266"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html274"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html277"
+  HREF="node9.html">The calculation of the</A>
+<B> Up:</B> <A NAME="tex2html273"
+  HREF="node4.html">Semi-classical part (SciFi)</A>
+<B> Previous:</B> <A NAME="tex2html267"
+  HREF="node7.html">Tip-surface Interaction</A>
+ &nbsp <B>  <A NAME="tex2html275"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION02014000000000000000"></A><A NAME="charges_sol"></A>
+<BR>
+Solution of the electrostatic problem of point
+charges inside the sphere-plane capacitor
+</H2>
+
+<P>
+First, let us consider the calculation of the potential <!-- MATH
+ $\phi^{(0)}(\mathbf{r})$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\phi^{(0)}(\mathbf{r})$">
+of the bare electrodes, i.e. the capacitor problem. We note that the
+potential <!-- MATH
+ $\phi^{(0)}(\mathbf{r})$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\phi^{(0)}(\mathbf{r})$"> satisfies the same boundary conditions
+as the original problem, i.e. <IMG
+ WIDTH="60" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$\phi^{(0)}=0$"> and <IMG
+ WIDTH="65" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$\phi^{(0)}=V$">
+at the lower and upper electrodes, respectively. The solution for
+the plane-spherical capacitor is well known [<A
+ HREF="node188.html#Smythe">9</A>] and can
+be given using the method of image charges. Since we will need this
+solution for calculating forces later on, we have to give it here
+in detail. It is convenient to choose the coordinate system as shown
+in Fig. <A HREF="node5.html#Tip_surf_schem">1</A>. Then it is easy to check that the following
+two <I>infinite</I> sequences of image charges give the potential
+at the sphere and the metal plane as <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$V$"> and zero respectively. The
+first sequence is given by the image charges <!-- MATH
+ $\varsigma_{1}=RV$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$\varsigma_{1}=RV$"> and
+then <!-- MATH
+ $\varsigma_{k+1}=\frac{\varsigma_{k}}{D_{k}}$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$\varsigma_{k+1}=\frac{\varsigma_{k}}{D_{k}}$"> for <!-- MATH
+ $\forall k=1,2,\ldots$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\forall k=1,2,\ldots$">,
+where the dimensionless constants <IMG
+ WIDTH="25" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$D_{k}$"> are defined by the recurrence
+relation <!-- MATH
+ $D_{k+1}=2\lambda-\frac{1}{D_{k}}$
+ -->
+<IMG
+ WIDTH="120" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.png"
+ ALT="$D_{k+1}=2\lambda-\frac{1}{D_{k}}$">with <!-- MATH
+ $D_{1}=2\lambda$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$D_{1}=2\lambda$">
+and <!-- MATH
+ $\lambda=\frac{z_{s}}{R}>1$
+ -->
+<IMG
+ WIDTH="80" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$\lambda=\frac{z_{s}}{R}&gt;1$">, <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$z_{s}$"> being the distance between
+the sphere centre and the plane (Fig. <A HREF="node5.html#Tip_surf_schem">1</A>). The
+point charges <!-- MATH
+ $\{\varsigma_{k}\}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.png"
+ ALT="$\{\varsigma_{k}\}$"> are all inside the sphere along
+the normal line passing through the sphere centre. Their <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$z$">-coordinates
+are as follows: <IMG
+ WIDTH="54" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.png"
+ ALT="$z_{1}=z_{s}$"> and <!-- MATH
+ $z_{k+1}=R\left(\lambda-\frac{1}{D_{k}}\right)=R(D_{k+1}-\lambda)$
+ -->
+<IMG
+ WIDTH="252" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.png"
+ ALT="$z_{k+1}=R\left(\lambda-\frac{1}{D_{k}}\right)=R(D_{k+1}-\lambda)$">
+for <!-- MATH
+ $\forall k=1,2,\ldots$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\forall k=1,2,\ldots$">. The second sequence of charges <!-- MATH
+ $\{\varsigma_{k}^{\prime}\}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.png"
+ ALT="$\{\varsigma_{k}^{\prime}\}$">
+is formed by the images of the first sequence with respect to the
+metal plane, i.e. <!-- MATH
+ $\varsigma_{k}^{\prime}=-\varsigma_{k}$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.png"
+ ALT="$\varsigma_{k}^{\prime}=-\varsigma_{k}$"> and <!-- MATH
+ $z_{k}^{\prime}=-z_{k}$
+ -->
+<IMG
+ WIDTH="68" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.png"
+ ALT="$z_{k}^{\prime}=-z_{k}$">.
+An interesting point about the image charges <!-- MATH
+ $\{\varsigma_{k}\}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.png"
+ ALT="$\{\varsigma_{k}\}$">
+is that they converge very quickly at the point <!-- MATH
+ $z_{\infty}=R\sqrt{\lambda^{2}-1}$
+ -->
+<IMG
+ WIDTH="116" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.png"
+ ALT="$z_{\infty}=R\sqrt{\lambda^{2}-1}$">
+(i.e. <!-- MATH
+ $z_{k}\rightarrow z_{\infty}$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img84.png"
+ ALT="$z_{k}\rightarrow z_{\infty}$"> with <!-- MATH
+ $k\rightarrow\infty$
+ -->
+<IMG
+ WIDTH="53" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.png"
+ ALT="$k\rightarrow\infty$">) and
+that <IMG
+ WIDTH="72" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.png"
+ ALT="$z_{k+1}&lt;z_{k}$"> for <IMG
+ WIDTH="22" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img87.png"
+ ALT="$\forall k$">. This is because the numbers
+<IMG
+ WIDTH="25" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$D_{k}$"> converge rapidly to the limiting value <!-- MATH
+ $D_{\infty}=\lambda+\sqrt{\lambda^{2}-1}$
+ -->
+<IMG
+ WIDTH="138" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.png"
+ ALT="$D_{\infty}=\lambda+\sqrt{\lambda^{2}-1}$">
+which follows from the original recurrent relation above, <!-- MATH
+ $D_{\infty}=2\lambda-\frac{1}{D_{\infty}}$
+ -->
+<IMG
+ WIDTH="114" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.png"
+ ALT="$D_{\infty}=2\lambda-\frac{1}{D_{\infty}}$">.
+Therefore, while calculating the potential <!-- MATH
+ $\phi^{(0)}(\mathbf{r})$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\phi^{(0)}(\mathbf{r})$">,
+one can consider the charges <!-- MATH
+ $\{\varsigma_{k}\}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.png"
+ ALT="$\{\varsigma_{k}\}$"> and <!-- MATH
+ $\{\varsigma_{k}^{\prime}\}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.png"
+ ALT="$\{\varsigma_{k}^{\prime}\}$">
+explicitly only up to some <IMG
+ WIDTH="77" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.png"
+ ALT="$k=k_{0}-1$"> and then sum up the rest of
+the charges to infinity analytically to obtain the effective charge
+<!-- MATH
+ $\varsigma_{\infty}=\sum_{k=k_{0}}^{\infty}\varsigma_{k}=\sum_{n=0}^{\infty}\frac{\varsigma_{k_{0}}}{D_{\infty}^{n}}=\frac{\varsigma_{k_{0}}D_{\infty}}{D_{\infty}-1}$
+ -->
+<IMG
+ WIDTH="265" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img91.png"
+ ALT="$\varsigma_{\infty}=\sum_{k=k_{0}}^{\infty}\varsigma_{k}=\sum_{n=0}^{\infty}\fra...
+...sigma_{k_{0}}}{D_{\infty}^{n}}=\frac{\varsigma_{k_{0}}D_{\infty}}{D_{\infty}-1}$">
+to be placed at <IMG
+ WIDTH="25" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.png"
+ ALT="$z_{\infty}$">. This can be used <I>instead</I> of
+the rest of the series: <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\phi^{(0)}(\mathbf{r})=\sum_{k=1}^{k_{0}}\overline{\varsigma}_{k}\left(\frac{1}{|\mathbf{r}-\mathbf{r}_{\varsigma_{k}}|}-\frac{1}{|\mathbf{r}-\widehat{\sigma}\mathbf{r}_{\varsigma_{k}}|}\right)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="fi-0"></A><IMG
+ WIDTH="281" HEIGHT="57" BORDER="0"
+ SRC="img93.png"
+ ALT="\begin{displaymath}
+\phi^{(0)}(\mathbf{r})=\sum_{k=1}^{k_{0}}\overline{\varsigma...
+...hbf{r}-\widehat{\sigma}\mathbf{r}_{\varsigma_{k}}\vert}\right)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $\overline{\varsigma}_{k}=\varsigma_{k}$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img94.png"
+ ALT="$\overline{\varsigma}_{k}=\varsigma_{k}$"> for <IMG
+ WIDTH="49" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.png"
+ ALT="$k&lt;k_{0}$"> and
+<!-- MATH
+ $\overline{\varsigma}_{k_{0}}=\varsigma_{\infty}$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.png"
+ ALT="$\overline{\varsigma}_{k_{0}}=\varsigma_{\infty}$">; then, <!-- MATH
+ $\mathbf{r}_{\varsigma_{k}}=(0,0,z_{k})$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.png"
+ ALT="$\mathbf{r}_{\varsigma_{k}}=(0,0,z_{k})$">
+is the position vector of the charge <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.png"
+ ALT="$\varsigma_{k}$"> and <!-- MATH
+ $\mathbf{r}_{\varsigma_{k}^{\prime}}=\widehat{\sigma}\mathbf{r}_{\varsigma_{k}}=(0,0,-z_{k})$
+ -->
+<IMG
+ WIDTH="167" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.png"
+ ALT="$\mathbf{r}_{\varsigma_{k}^{\prime}}=\widehat{\sigma}\mathbf{r}_{\varsigma_{k}}=(0,0,-z_{k})$">
+is the position of the charge <!-- MATH
+ $\varsigma_{k}^{\prime}$
+ -->
+<IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.png"
+ ALT="$\varsigma_{k}^{\prime}$"> (<!-- MATH
+ $\widehat{\sigma}$
+ -->
+<IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.png"
+ ALT="$\widehat{\sigma}$">
+means reflection with respect to the substrate surface <IMG
+ WIDTH="41" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img102.png"
+ ALT="$z=0$">). To
+find the charge <IMG
+ WIDTH="34" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$Q^{(0)}$"> which is also needed for the calculation
+of the electrostatic energy, Eq. (<A HREF="node7.html#el-energy">5</A>), one should calculate
+the normal derivative of the potential <!-- MATH
+ $\phi^{(0)}(\mathbf{r})$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\phi^{(0)}(\mathbf{r})$"> on
+the sphere and then take the corresponding surface integral (see above).
+However, it is useful to recall that the total charge induced on the
+metal sphere due to an external charge is equal exactly to the image
+charge inside the sphere [<A
+ HREF="node188.html#Landau-8">4</A>], [<A
+ HREF="node188.html#Jackson">5</A>]. Therefore,
+one immediately obtains: <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+Q^{(0)}=\sum_{k=1}^{k_{0}}\overline{\varsigma}_{k}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="Q_0"></A><IMG
+ WIDTH="90" HEIGHT="57" BORDER="0"
+ SRC="img103.png"
+ ALT="\begin{displaymath}
+Q^{(0)}=\sum_{k=1}^{k_{0}}\overline{\varsigma}_{k}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Note that the potential <!-- MATH
+ $\phi^{(0)}(\mathbf{r})$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\phi^{(0)}(\mathbf{r})$"> and the charge <IMG
+ WIDTH="34" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$Q^{(0)}$">
+depend on the position <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$z_{s}$"> of the sphere <I>indirectly</I> via
+the charges <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.png"
+ ALT="$\varsigma_{k}$"> and their positions <!-- MATH
+ $\mathbf{r}_{\varsigma_{k}}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.png"
+ ALT="$\mathbf{r}_{\varsigma_{k}}$">
+according to the recurrent expressions above. Therefore, one has to
+be careful when calculating the contribution to the force imposed
+on the tip due to bias V (i.e. when differentiating <!-- MATH
+ $\phi^{(0)}(\mathbf{r})$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\phi^{(0)}(\mathbf{r})$">
+and <IMG
+ WIDTH="34" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$Q^{(0)}$"> in Eq. (<A HREF="node7.html#el-energy">5</A>)). 
+
+<P>
+Now we turn to the calculation of the function <!-- MATH
+ $\phi_{ind}(\mathbf{r},\mathbf{r}^{\prime})$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$\phi_{ind}(\mathbf{r},\mathbf{r}^{\prime})$">
+in Eq. (<A HREF="node7.html#el-energy">5</A>). This function corresponds to the image
+potential at a point <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$\mathbf{r}$"> due to a unit charge at <!-- MATH
+ $\mathbf{r}^{\prime}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$\mathbf{r}^{\prime}$">.
+This potential is to be defined in such a way that together with the
+direct potential of the unit point charge, it should be zero on both
+electrodes (the boundary condition for the Green function). Thus,
+let us consider a unit charge <IMG
+ WIDTH="41" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.png"
+ ALT="$q=1$"> at <!-- MATH
+ $\mathbf{r}_{q}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\mathbf{r}_{q}$"> somewhere
+outside the metal electrodes as shown in Fig. <A HREF="node8.html#2spheres">2</A>.
+<DIV ALIGN="CENTER"><A NAME="2spheres"></A><A NAME="3648"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2:</STRONG>
+Construction of image charges in the sphere-plane capacitor system
+due to one charge <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$q$"> outside the metals.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="189" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img106.png"
+ ALT="\includegraphics[%%
+width=10cm]{xfig.image.eps}">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+We first create the direct image <IMG
+ WIDTH="24" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img107.png"
+ ALT="$-q$"> of this charge with respect
+to the plane at the point <!-- MATH
+ $\mathbf{r}_{q}^{\prime}=\widehat{\sigma}\mathbf{r}_{q}$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img108.png"
+ ALT="$\mathbf{r}_{q}^{\prime}=\widehat{\sigma}\mathbf{r}_{q}$">
+to maintain zero potential at the plane. Then, we create images of
+the two charges, <IMG
+ WIDTH="41" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img105.png"
+ ALT="$q=1$"> and <IMG
+ WIDTH="66" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.png"
+ ALT="$-q=-1$">, with respect to the sphere to
+get two image charges <!-- MATH
+ $\xi_{1}=-\frac{R}{|\mathbf{r}_{q}-\mathbf{R}_{s}|}$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img110.png"
+ ALT="$\xi_{1}=-\frac{R}{\vert\mathbf{r}_{q}-\mathbf{R}_{s}\vert}$">
+and <!-- MATH
+ $\zeta_{1}=\frac{R}{|\widehat{\sigma}\mathbf{r}_{q}-\mathbf{R}_{s}|}$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.png"
+ ALT="$\zeta_{1}=\frac{R}{\vert\widehat{\sigma}\mathbf{r}_{q}-\mathbf{R}_{s}\vert}$">,
+as shown in Fig. <A HREF="node8.html#2spheres">2</A> where <!-- MATH
+ $\mathbf{R}_{s}=(0,0,z_{s})$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.png"
+ ALT="$\mathbf{R}_{s}=(0,0,z_{s})$">.
+These image charges are both inside the sphere by construction and
+their positions can be written down using a vector function <!-- MATH
+ $\mathbf{f}(\mathbf{r})=\mathbf{R}_{s}+R^{2}\frac{\mathbf{r}-\mathbf{R}_{s}}{|\mathbf{r}-\mathbf{R}_{s}|^{2}}$
+ -->
+<IMG
+ WIDTH="162" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$\mathbf{f}(\mathbf{r})=\mathbf{R}_{s}+R^{2}\frac{\mathbf{r}-\mathbf{R}_{s}}{\vert\mathbf{r}-\mathbf{R}_{s}\vert^{2}}$">
+as follows: <!-- MATH
+ $\mathbf{r}_{\xi_{1}}=\mathbf{f}(\mathbf{r}_{q})$
+ -->
+<IMG
+ WIDTH="80" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.png"
+ ALT="$\mathbf{r}_{\xi_{1}}=\mathbf{f}(\mathbf{r}_{q})$"> and
+<!-- MATH
+ $\mathbf{r}_{\zeta_{1}}=\mathbf{f}(\widehat{\sigma}\mathbf{r}_{q})$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img115.png"
+ ALT="$\mathbf{r}_{\zeta_{1}}=\mathbf{f}(\widehat{\sigma}\mathbf{r}_{q})$">.
+Now the potential at the surface will be zero. At the next step we
+construct the images <!-- MATH
+ $\xi_{1}^{\prime}=-\xi_{1}$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img116.png"
+ ALT="$\xi_{1}^{\prime}=-\xi_{1}$"> and <!-- MATH
+ $\zeta_{1}^{\prime}=-\zeta_{1}$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img117.png"
+ ALT="$\zeta_{1}^{\prime}=-\zeta_{1}$">
+of the charges <IMG
+ WIDTH="18" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.png"
+ ALT="$\xi_{1}$"> and <IMG
+ WIDTH="18" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img119.png"
+ ALT="$\zeta_{1}$"> in the plane at points
+<!-- MATH
+ $\widehat{\sigma}\mathbf{r}_{\xi_{1}}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img120.png"
+ ALT="$\widehat{\sigma}\mathbf{r}_{\xi_{1}}$"> and <!-- MATH
+ $\widehat{\sigma}\mathbf{r}_{\zeta_{1}}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.png"
+ ALT="$\widehat{\sigma}\mathbf{r}_{\zeta_{1}}$">
+respectively, to get the potential at the plane also zero. This process
+is continued and in this way two infinite sequences of image charges
+are constructed, which are given by the following recurrence relations:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{c}
+\xi_{k+1}=\xi_{k}\frac{R}{|\widehat{\sigma}\mathbf{r}_{\xi_{k}}-\mathbf{R}_{s}|}\\
+\mathbf{r}_{\zeta_{k+1}}=\mathbf{f}(\widehat{\sigma}\mathbf{r}_{\xi_{k}})=\mathbf{R}_{s}+R^{2}\frac{\widehat{\sigma}\mathbf{r}_{\xi_{k}}-\mathbf{R}_{s}}{|\widehat{\sigma}\mathbf{r}_{\xi_{k}}-\mathbf{R}_{s}|^{2}}\end{array}\right.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="1st-seq"></A><IMG
+ WIDTH="277" HEIGHT="67" BORDER="0"
+ SRC="img122.png"
+ ALT="\begin{displaymath}
+\left\{ \begin{array}{c}
+\xi_{k+1}=\xi_{k}\frac{R}{\vert\wid...
+...mathbf{r}_{\xi_{k}}-\mathbf{R}_{s}\vert^{2}}\end{array}\right.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(10)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="83" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.png"
+ ALT="$k=1,2,\ldots$"> and similarly for the <IMG
+ WIDTH="12" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.png"
+ ALT="$\zeta$">-sequence. Note,
+however, that the two sequences start from different initial charges.
+Namely, the <IMG
+ WIDTH="12" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img125.png"
+ ALT="$\xi$">-sequence starts from the original charge <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$q$"> while
+the <IMG
+ WIDTH="12" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.png"
+ ALT="$\zeta$">-sequence from its image in the plane <IMG
+ WIDTH="24" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img107.png"
+ ALT="$-q$">. The two sequences
+<IMG
+ WIDTH="35" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img126.png"
+ ALT="$\{\xi_{k}\}$"> and <IMG
+ WIDTH="35" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img127.png"
+ ALT="$\{\zeta_{k}\}$"> are to be accompanied by the other
+two sequences <!-- MATH
+ $\{\xi_{k}^{\prime}\}$
+ -->
+<IMG
+ WIDTH="35" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img128.png"
+ ALT="$\{\xi_{k}^{\prime}\}$"> and <!-- MATH
+ $\{\zeta_{k}^{\prime}\}$
+ -->
+<IMG
+ WIDTH="35" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img129.png"
+ ALT="$\{\zeta_{k}^{\prime}\}$">
+which are the images of the former charges with respect to the plane.
+The four sequences of the image charges and the charges <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$q$"> and <IMG
+ WIDTH="24" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img107.png"
+ ALT="$-q$">
+provide the correct solution for the problem formulated above since
+they produce the potential which is the solution of the corresponding
+Poisson equation and, at the same time, is zero both on the metal
+sphere and the metal plane. 
+
+<P>
+It is useful to study the convergence properties of the sequences
+of image charges. To simplify the notations, let us assume that the
+original charge is in the <IMG
+ WIDTH="21" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img130.png"
+ ALT="$xz$">-plane. Then it follows from Eq. (<A HREF="node8.html#1st-seq">10</A>)
+that <!-- MATH
+ $x_{\xi_{k+1}}<x_{\xi_{k}}$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img131.png"
+ ALT="$x_{\xi_{k+1}}&lt;x_{\xi_{k}}$"> . It is also seen that <!-- MATH
+ $x_{\xi_{k}}\rightarrow0$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img132.png"
+ ALT="$x_{\xi_{k}}\rightarrow0$">
+and <!-- MATH
+ $z_{\xi_{k}}\rightarrow z_{\infty}=R\sqrt{\lambda^{2}-1}$
+ -->
+<IMG
+ WIDTH="161" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img133.png"
+ ALT="$z_{\xi_{k}}\rightarrow z_{\infty}=R\sqrt{\lambda^{2}-1}$"> (see
+above) as <!-- MATH
+ $k\rightarrow\infty$
+ -->
+<IMG
+ WIDTH="53" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.png"
+ ALT="$k\rightarrow\infty$"> and the same for the <IMG
+ WIDTH="12" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.png"
+ ALT="$\zeta$">-sequence.
+This means that the image charges inside the sphere move towards the
+vertical line passing through the centre of the sphere and finally
+converge at the same point <IMG
+ WIDTH="25" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img92.png"
+ ALT="$z_{\infty}$">. This is the same behaviour
+we observed for charges in the capacitor problem at the beginning
+of this subsection (see Fig. <A HREF="node8.html#2spheres">2</A>). In fact, the calculation
+clearly shows a very fast convergence so that we can again sum up
+the series of charges from some <IMG
+ WIDTH="49" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img134.png"
+ ALT="$k=k_{0}$">. Thus, the image potential
+at a point <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$\mathbf{r}$"> due to the unit charge at <!-- MATH
+ $\mathbf{r}_{q}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\mathbf{r}_{q}$">
+is: <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\phi_{ind}(\mathbf{r},\mathbf{r}_{q})=-\frac{1}{\mathbf{r}-\widehat{\sigma}\mathbf{r}_{q}}+\sum_{k=1}^{k_{0}}\left[\overline{\xi}_{k}\left(\frac{1}{|\mathbf{r}-\mathbf{r}_{\xi_{k}}|}-\frac{1}{|\mathbf{r}-\widehat{\sigma}\mathbf{r}_{\xi_{k}}|}\right)+\overline{\zeta}_{k}\left(\frac{1}{|\mathbf{r}-\mathbf{r}_{\zeta_{k}}|}-\frac{1}{|\mathbf{r}-\widehat{\sigma}\mathbf{r}_{\zeta_{k}}|}\right)\right]
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="Fi-ind"></A><IMG
+ WIDTH="615" HEIGHT="57" BORDER="0"
+ SRC="img135.png"
+ ALT="\begin{displaymath}
+\phi_{ind}(\mathbf{r},\mathbf{r}_{q})=-\frac{1}{\mathbf{r}-\...
+...{r}-\widehat{\sigma}\mathbf{r}_{\zeta_{k}}\vert}\right)\right]
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(11)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $\overline{\xi}_{k}=\xi_{k}$
+ -->
+<IMG
+ WIDTH="56" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img136.png"
+ ALT="$\overline{\xi}_{k}=\xi_{k}$"> for <IMG
+ WIDTH="49" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.png"
+ ALT="$k&lt;k_{0}$"> and <!-- MATH
+ $\overline{\xi}_{k_{0}}=\xi_{\infty}=\xi_{k_{0}}\frac{D_{\infty}}{D_{\infty}-1}$
+ -->
+<IMG
+ WIDTH="151" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img137.png"
+ ALT="$\overline{\xi}_{k_{0}}=\xi_{\infty}=\xi_{k_{0}}\frac{D_{\infty}}{D_{\infty}-1}$">,
+and similarly for the <IMG
+ WIDTH="12" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.png"
+ ALT="$\zeta$">-sequence. Here <IMG
+ WIDTH="31" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img138.png"
+ ALT="$D_{\infty}$"> is the
+geometrical characteristic of the capacitor introduced at the beginning
+of this subsection. 
+
+<P>
+As it has been already mentioned in Section 2.1, the function <!-- MATH
+ $\phi_{ind}(\mathbf{r},\mathbf{r}_{q})$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img139.png"
+ ALT="$\phi_{ind}(\mathbf{r},\mathbf{r}_{q})$">
+must be symmetric with respect to the permutation of its two variables.
+It is not at all obvious that this is the case since the meaning of
+its two arguments in Eq. (<A HREF="node8.html#Fi-ind">11</A>) is rather different. Nevertheless,
+we show in ref. [<A
+ HREF="node188.html#our_imageforce">2</A>] that the function <!-- MATH
+ $\phi_{ind}(\mathbf{r},\mathbf{r}_{q})$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img139.png"
+ ALT="$\phi_{ind}(\mathbf{r},\mathbf{r}_{q})$">
+is symmetric.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html276"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html272"
+  HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html266"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html274"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html277"
+  HREF="node9.html">The calculation of the</A>
+<B> Up:</B> <A NAME="tex2html273"
+  HREF="node4.html">Semi-classical part (SciFi)</A>
+<B> Previous:</B> <A NAME="tex2html267"
+  HREF="node7.html">Tip-surface Interaction</A>
+ &nbsp <B>  <A NAME="tex2html275"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

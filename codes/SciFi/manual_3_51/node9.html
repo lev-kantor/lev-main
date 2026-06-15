@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The calculation of the total force acting on the tip</TITLE>
+<META NAME="description" CONTENT="The calculation of the total force acting on the tip">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node11.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node4.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html288"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html284"
+  HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html278"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html286"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html289"
+  HREF="node10.html">Definition of the Instantaineous</A>
+<B> Up:</B> <A NAME="tex2html285"
+  HREF="node4.html">Semi-classical part (SciFi)</A>
+<B> Previous:</B> <A NAME="tex2html279"
+  HREF="node8.html">Solution of the electrostatic</A>
+ &nbsp <B>  <A NAME="tex2html287"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION02015000000000000000">
+The calculation of the total force acting on the tip</A>
+</H2>
+
+<P>
+In order to calculate the total force acting on the tip, one has to
+differentiate the total energy, Eq. (<A HREF="node7.html#1">4</A>), with respect to the
+position of the sphere, <!-- MATH
+ $\mathbf{R}_{s}$
+ -->
+<IMG
+ WIDTH="25" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img140.png"
+ ALT="$\mathbf{R}_{s}$">. Since we are interested
+only in the force acting in the <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$z$">-direction, it is sufficient to
+study the dependence of the energy on <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$z_{s}$">. There will be three
+contributions to the force. The second contribution to the force comes
+from the van der Waals interaction [<A
+ HREF="node188.html#French">10</A>]. Finally, the interatomic
+interactions lead to a force which is calculated by differentiating
+the shell-model energy (the first term in Eq. (<A HREF="node7.html#1">4</A>)). Therefore, 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F_{tip}=-\frac{dU_{sh}}{dz_{s}}-\frac{dU_{vdW}}{dz_{s}}-\frac{dU_{el}}{dz_{s}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="force-1"></A><IMG
+ WIDTH="219" HEIGHT="42" BORDER="0"
+ SRC="img141.png"
+ ALT="\begin{displaymath}
+F_{tip}=-\frac{dU_{sh}}{dz_{s}}-\frac{dU_{vdW}}{dz_{s}}-\frac{dU_{el}}{dz_{s}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(12)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $U_{sh}=\frac{1}{2}\sum_{ij}\,^{\prime}v_{ij}$
+ -->
+<IMG
+ WIDTH="120" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img142.png"
+ ALT="$U_{sh}=\frac{1}{2}\sum_{ij}\,^{\prime}v_{ij}$"> is the shell
+model energy. We recall that the summation here is performed over
+all atoms in regions 1 to 4. Only positions of the atoms in region
+1 depend directly on <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$z_{s}$"> since atoms in other regions are allowed
+to relax. However, their equilibrium positions, <!-- MATH
+ $\mathbf{r}_{i}^{(0)}$
+ -->
+<IMG
+ WIDTH="29" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img143.png"
+ ALT="$\mathbf{r}_{i}^{(0)}$">,
+determined by the minimisation of the energy of Eq. (<A HREF="node7.html#1">4</A>), will
+depend <I>indirectly</I> on <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$z_{s}$"> at equilibrium, <!-- MATH
+ $\mathbf{r}_{i}^{(0)}=\mathbf{r}_{i}^{(0)}(z_{s})$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img144.png"
+ ALT="$\mathbf{r}_{i}^{(0)}=\mathbf{r}_{i}^{(0)}(z_{s})$">.
+Then, we also recall that the electrostatic energy, <IMG
+ WIDTH="26" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$U_{el}$">, depends
+only on positions of atoms, as well as on the tip position <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$z_{s}$">.
+
+<P>
+Let us denote the positions of atoms by a vector <B><!-- MATH
+ $\mathbf{x}=(\mathbf{r}_{1},\mathbf{r}_{2},\ldots)$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img145.png"
+ ALT="$\mathbf{x}=(\mathbf{r}_{1},\mathbf{r}_{2},\ldots)$"></B>.
+The total energy <!-- MATH
+ $U=U(\mathbf{x},z_{s})$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img146.png"
+ ALT="$U=U(\mathbf{x},z_{s})$">, where the direct dependence
+on <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$z_{s}$"> comes from relaxed tip atoms of the shell model energy,
+<IMG
+ WIDTH="29" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img147.png"
+ ALT="$U_{sh}$">, and from the electrostatic energy, <IMG
+ WIDTH="26" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$U_{el}$">. In equilibrium
+the total energy is a minimum:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\left(\frac{\partial U}{\partial\mathbf{x}}\right)_{z_{s}}=0
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="equi"></A><IMG
+ WIDTH="88" HEIGHT="47" BORDER="0"
+ SRC="img148.png"
+ ALT="\begin{displaymath}
+\left(\frac{\partial U}{\partial\mathbf{x}}\right)_{z_{s}}=0
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(13)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the derivatives are calculated at a given fixed tip position
+<IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$z_{s}$">. Let <B><!-- MATH
+ $\mathbf{x}_{0}=(\mathbf{r}_{1}^{(0)},\mathbf{r}_{2}^{(0)},\ldots)$
+ -->
+<IMG
+ WIDTH="136" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img149.png"
+ ALT="$\mathbf{x}_{0}=(\mathbf{r}_{1}^{(0)},\mathbf{r}_{2}^{(0)},\ldots)$"></B>
+be the solution of Eq. (<A HREF="node9.html#equi">13</A>). Then, since <!-- MATH
+ $\mathbf{x}_{0}=\mathbf{x}_{0}(z_{s})$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img150.png"
+ ALT="$\mathbf{x}_{0}=\mathbf{x}_{0}(z_{s})$">,
+we have for the force: <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F_{tip}=-\frac{dU(\mathbf{x}_{0}(z_{s}),z_{s})}{dz_{s}}=-\left(\frac{\partial U}{\partial\mathbf{x}_{0}}\right)_{z_{s}}\frac{\partial\mathbf{x}_{0}}{\partial z_{s}}-\left(\frac{\partial U}{\partial z_{s}}\right)_{\mathbf{x}_{0}}=-\left(\frac{\partial U}{\partial z_{s}}\right)_{\mathbf{x}_{0}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="fin-prelast"></A><IMG
+ WIDTH="482" HEIGHT="47" BORDER="0"
+ SRC="img151.png"
+ ALT="\begin{displaymath}
+F_{tip}=-\frac{dU(\mathbf{x}_{0}(z_{s}),z_{s})}{dz_{s}}=-\le...
+...left(\frac{\partial U}{\partial z_{s}}\right)_{\mathbf{x}_{0}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(14)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where we have used Eq. (<A HREF="node9.html#equi">13</A>). This result can be simplified
+further. Indeed, the partial derivative of the shell-model energy,
+<!-- MATH
+ $-\frac{\partial U_{sh}}{\partial z_{s}}$
+ -->
+<IMG
+ WIDTH="49" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img152.png"
+ ALT="$-\frac{\partial U_{sh}}{\partial z_{s}}$">, is equal to the sum of
+all <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$z$">-forces acting on atoms in region 1 due to all shell-model
+interactions, since only these atoms are responsible for the dependence
+on <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$z_{s}$"> in the energy <IMG
+ WIDTH="29" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img147.png"
+ ALT="$U_{sh}$">. Therefore, finally we have: <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F_{tip}=\sum_{i\in1}\left(F_{iz}^{(sh)}\right)_{\mathbf{x}_{0}}-\frac{dU_{vdW}}{dz_{s}}-\left(\frac{\partial U_{el}}{\partial z_{s}}\right)_{\mathbf{x}_{0}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="fin-force"></A><IMG
+ WIDTH="305" HEIGHT="51" BORDER="0"
+ SRC="img153.png"
+ ALT="\begin{displaymath}
+F_{tip}=\sum_{i\in1}\left(F_{iz}^{(sh)}\right)_{\mathbf{x}_{...
+...\frac{\partial U_{el}}{\partial z_{s}}\right)_{\mathbf{x}_{0}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(15)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the first summation runs only over fixed tip atoms. Thus, in
+order to calculate the force imposed on the tip at a given tip position
+<IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$z_{s}$">, one has to relax the positions of atoms using the <I>total
+energy</I> of the system, <IMG
+ WIDTH="71" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img154.png"
+ ALT="$U_{sh}+U_{el}$">. Then calculate the shell-model
+force, <IMG
+ WIDTH="41" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img155.png"
+ ALT="$F_{iz}^{(sh)}$">, acting on every fixed tip atom in the <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$z$">-direction
+as well as the electrostatic contribution to the force given by the
+last term in Eq. (<A HREF="node9.html#fin-force">15</A>). The van der Waals force between
+macroscopic tip and sample does not depend on the geometry of atoms
+and can be calculated just once for every given <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$z_{s}$">. 
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html290"
+  HREF="node10.html">Definition of the Instantaineous Force on the Tip (for MD)</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html288"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html284"
+  HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html278"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html286"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html289"
+  HREF="node10.html">Definition of the Instantaineous</A>
+<B> Up:</B> <A NAME="tex2html285"
+  HREF="node4.html">Semi-classical part (SciFi)</A>
+<B> Previous:</B> <A NAME="tex2html279"
+  HREF="node8.html">Solution of the electrostatic</A>
+ &nbsp <B>  <A NAME="tex2html287"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

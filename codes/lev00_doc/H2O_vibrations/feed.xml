@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:C100CA5F-FCDB-469F-8C74-246CDAF810C4</id>
+ <title>Page list Atom feed</title>
+ <updated>2011-04-19T10:44:05+01:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:93364261-74C0-4D0F-99C3-8D5CA6E8B0AC</id>
+  <title>1</title>
+  <title xmlns="urn:iweb:">1</title>
+  <in-navbar xmlns="urn:iweb:">93364261-74C0-4D0F-99C3-8D5CA6E8B0AC</in-navbar>
+  <link rel="alternate" href="1.html"/>
+  <updated>2011-04-19T10:44:05.001+01:00</updated>
+  <content>1</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:D10EAA5E-C2ED-4D66-B490-453F7703462F</id>
+  <title>2</title>
+  <title xmlns="urn:iweb:">2</title>
+  <in-navbar xmlns="urn:iweb:">D10EAA5E-C2ED-4D66-B490-453F7703462F</in-navbar>
+  <link rel="alternate" href="2.html"/>
+  <updated>2011-04-19T10:44:05.002+01:00</updated>
+  <content>2</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:C796978E-2DCE-4279-9C19-36420BC6EF06</id>
+  <title>3</title>
+  <title xmlns="urn:iweb:">3</title>
+  <in-navbar xmlns="urn:iweb:">C796978E-2DCE-4279-9C19-36420BC6EF06</in-navbar>
+  <link rel="alternate" href="3.html"/>
+  <updated>2011-04-19T10:44:05.003+01:00</updated>
+  <content>3</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:5D876AA2-5E7A-423B-84A6-7F3066DA1C1F</id>
+  <title>4</title>
+  <title xmlns="urn:iweb:">4</title>
+  <in-navbar xmlns="urn:iweb:">5D876AA2-5E7A-423B-84A6-7F3066DA1C1F</in-navbar>
+  <link rel="alternate" href="4.html"/>
+  <updated>2011-04-19T10:44:05.004+01:00</updated>
+  <content>4</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:FA13CC2E-3D9B-4E51-9CA4-7AC8F626AD4E</id>
+  <title>5</title>
+  <title xmlns="urn:iweb:">5</title>
+  <in-navbar xmlns="urn:iweb:">FA13CC2E-3D9B-4E51-9CA4-7AC8F626AD4E</in-navbar>
+  <link rel="alternate" href="5.html"/>
+  <updated>2011-04-19T10:44:05.005+01:00</updated>
+  <content>5</content>
+ </entry>
+</feed>

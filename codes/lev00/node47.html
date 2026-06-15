@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>What it can do</TITLE>
+<META NAME="description" CONTENT="What it can do">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node48.html">
+<LINK REL="previous" HREF="node46.html">
+<LINK REL="up" HREF="node46.html">
+<LINK REL="next" HREF="node48.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html861"
+  HREF="node48.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html857"
+  HREF="node46.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html851"
+  HREF="node46.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html859"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html862"
+  HREF="node48.html">Installation and general information</A>
+<B> Up:</B> <A NAME="tex2html858"
+  HREF="node46.html">Utility lev00</A>
+<B> Previous:</B> <A NAME="tex2html852"
+  HREF="node46.html">Utility lev00</A>
+ &nbsp <B>  <A NAME="tex2html860"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00410000000000000000">
+What it can do</A>
+</H1>
+
+<P>
+<B><I>lev00</I></B> is an interactive menu-driven (and quite intelligent!)
+program with quite a few applications. It implements the Tex User
+Interface (TUI) similar to that of tetr (Sections <A HREF="node4.html#sec:Menus">1.2</A>
+and <A HREF="node9.html#sec:Menus-in-tetr">2.3</A>). It has a rich functionality, e.g.: 
+
+<P>
+
+<UL>
+<LI>DOS/LDOS applications (presently works only for <B><I>VASP</I></B>
+and old <B><I>CASTEP</I></B><A NAME="tex2html8"
+  HREF="footnode.html#foot10257"><SUP>3.1</SUP></A>):
+
+<P>
+
+<UL>
+<LI>plot of the total and projected DOS for various choices of groups
+of states (or for the whole set of those) using the method of tetrahedra;
+one can preview several curves at the time for different choices of
+groups of states; this last option has proven to be useful for the
+identification of peaks in the LDOS; 
+</LI>
+<LI>the DOS/LDOS can be smeared out by a Gaussian; this can be done either
+analytically or numerically; 
+</LI>
+<LI>there is also a possibility to play around with various dispersions
+for the Gaussian smearing and compare DOS calculated with them at
+the same time; this helps to select the correct dispersion for smearing. 
+</LI>
+</UL>
+</LI>
+<LI>Charge/spin/partial densities (presently works fully for <B><I>VASP</I></B>
+and old <B><I>CASTEP</I></B>; however, most of the density related
+options work for <B><I>SIESTA</I></B> as well):
+
+<P>
+
+<UL>
+<LI>plot of charge/spin densities or partial charge densities in the cell
+along a line (1-dimensional) or in a plane (2-dimensional)
+</LI>
+<LI>explore the charge density: it seeks peaks and gives their positions
+in the space of the cell, heights, amount of charge involved, etc.;
+this has been proved to be especially useful for studying partial
+charge densities or wave functions for particular states in the direct
+space which were thought to be responsible for particularly interesting
+features in the LDOS;
+</LI>
+<LI>integration of the (partial) charge densities over a set of spheres
+of given radii; this allows you to gain an idea about the chemical
+nature of bonding in the system, charges on atoms, etc.; note that
+spheres may overlap so that you can construct a quite sophisticated
+region in space to study the density!
+</LI>
+<LI>one can cut out parts of the density, simulate it by point charges;
+this may be useful if a complimentary calculation is to be done (e.g.
+a Coulomb correction, polarisation calculation for a defect outside
+the cell, etc.)
+</LI>
+<LI>dipole and quadrupole moments of the cell (useful, frankly, only for
+molecules, or any densities that go to zero at the border of the cell)
+</LI>
+<LI>a density file in a <TT>Cube</TT> format that allows one to plot nice
+surfaces of constant density using e.g. <B><I>gOpenMol</I></B>
+</LI>
+<LI>construction of a general linear combination of two charge densities;
+for example, one can subtract one density from another;
+</LI>
+<LI>recalculation of the charge density with respect to a new position
+of the coordinate system (<I>shift</I>); this is necessary if the
+ground state calculation charge density has been obtained for a lower
+symmetry position of the coordinate system<A NAME="tex2html9"
+  HREF="footnode.html#foot9821"><SUP>3.2</SUP></A>, while e.g. for the DOS one has to do the band-structure calculation
+with as high symmetry as possible to reduce the number of <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points.
+Instead of repeating the ground state calculation for the new choice
+of the coordinate system, it is possible here to recalculate and then
+save the electronic density for the new position <I>prior</I> to
+the band-structure run of the DFT code. This would save one ground
+state calculation. 
+</LI>
+</UL>
+</LI>
+<LI>the total Coulomb potential (including the electronic part<A NAME="tex2html10"
+  HREF="footnode.html#foot10258"><SUP>3.3</SUP></A>) across the cell: plotting
+</LI>
+</UL>
+In all cases the information obtained can be previewed using <B><I>Gnuplot</I></B>
+directly from <B><I>lev00</I></B> in a form of 1- or 2-dimensional
+plots. It can be checked, corrected (e.g., the position of the plane
+for a 2-dimensional plot), previewed again and then finally printed
+out to a data and/or Postscript file.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html861"
+  HREF="node48.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html857"
+  HREF="node46.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html851"
+  HREF="node46.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html859"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html862"
+  HREF="node48.html">Installation and general information</A>
+<B> Up:</B> <A NAME="tex2html858"
+  HREF="node46.html">Utility lev00</A>
+<B> Previous:</B> <A NAME="tex2html852"
+  HREF="node46.html">Utility lev00</A>
+ &nbsp <B>  <A NAME="tex2html860"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

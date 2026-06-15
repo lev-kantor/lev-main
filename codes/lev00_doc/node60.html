@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>General remarks</TITLE>
+<META NAME="description" CONTENT="General remarks">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node61.html">
+<LINK REL="previous" HREF="node59.html">
+<LINK REL="up" HREF="node59.html">
+<LINK REL="next" HREF="node61.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1058"
+  HREF="node61.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1054"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1048"
+  HREF="node59.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1056"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1059"
+  HREF="node61.html">1 - Plot density</A>
+<B> Up:</B> <A NAME="tex2html1055"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1049"
+  HREF="node59.html">Studying the partial or</A>
+ &nbsp <B>  <A NAME="tex2html1057"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00463100000000000000"></A><A NAME="sub:General-remarks-density-lev00"></A>
+<BR>
+General remarks
+</H3>
+
+<P>
+Options <B>4</B>, <B>5</B> and (in the case of a spin-polarised
+calculation) <B>55</B> work similarly. The difference is only in
+physical meaning of the objects <B><I>lev00</I></B> is dealing with: 
+
+<P>
+
+<UL>
+<LI><B>4</B> - partial electron density, Eq. (<A HREF="node49.html#2">3.2</A>), works only
+with <B><I>CASTEP</I></B>; in fact, it is redundant for <B><I>VASP</I></B>
+and <B><I>SIESTA</I></B> as option <B>5</B> (next) completely
+replaces it
+</LI>
+<LI><B>5</B> - total (all occupied bands) or partial electron density
+or any other file (e.g. an electrostatic potential) of the same format 
+</LI>
+<LI><B>55</B> - total spin density; equivalent to <B>5</B>, but reads
+in specifically the spin density (which is usually contained at the
+end of the full density file, at least, in the cases of <B><I>VASP</I></B>
+and <B><I>SIESTA</I></B>).
+</LI>
+</UL>
+In fact, in all these cases the structure of the files is the same
+or similar (for the given DFT code). Moreover, files of identical
+structure (if named appropriately) can also be read in and analysed,
+see Sections <A HREF="node78.html#cha:Working-with-VASP">4</A> and <A HREF="node84.html#cha:Working-with-SIESTA">5</A>.
+For convenience, in the forthcoming Sections we shall be talking about
+density.
+
+<P>
+We shall first consider option <B>5</B> in detail. After that, percularities
+of options <B>4</B> (Section <A HREF="node75.html#sub:Option-4-of-density-menu">3.6.3.15</A>)
+and <B>55</B> (Section <A HREF="node74.html#sub:Option-55-of-density-menu">3.6.3.14</A>) will
+also be mentioned.
+
+<P>
+When activating option <B>5</B>, the file name to be read in is
+implicit for <B><I>SIESTA</I></B>, <B><I>CASTEP</I></B> and <B><I>CETEP</I></B>:
+job name appended by <TT>.RHO</TT>, <TT>fort.16</TT> and <TT>fort.200</TT>,
+respectively. In the case of <B><I>VASP</I></B>, three possibilities
+exist: <TT>CHGCAR</TT> (total density), <TT>PARCHG</TT> (partial density),
+<TT>LOCPOT</TT> (electrostatic potential). The formats of these three
+files are similar. Then the file is read in:
+
+<P>
+<TT><FONT SIZE="-2">Reading in charge density, please wait ...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">it is done 10 %</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">it is done 20 %</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">it is done 30 %</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">it is done 40 %</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">it is done 50 %</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">it is done 60 %</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">it is done 70 %</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">it is done 80 %</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">it is done 90 %</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">it is done 100 %</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Done!</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">The charge is = 0.800338E+01</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">.....&gt; Total charge = 8.00337610269848 &lt;.....</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Done!</FONT></TT>
+<P>
+
+
+<P>
+It shows the total number of electrons in the system<A NAME="tex2html16"
+  HREF="footnode.html#foot7008"><SUP>3.5</SUP></A> (8 in the example above). Then, the main menu of this option is opened
+up:
+
+<P>
+<TT><FONT SIZE="-2">...... Choose between line or plane ......</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">NUMBER OF THE CURRENT PLOT: 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. Plot density along a line</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. Plot density in a plane</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. Amount of charge inside a sphere</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. Exploration of the density</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. Dipole moment</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6. Quadrupole moment</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">7. Get density via point charges: match moments
+&amp; potential</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">8. Cutting atoms out of the density</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">9. Write non-zero density as CHGCAR.new</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">10. Write density in gOpenMol cube format</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">11. Get density via point charges: match density</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">12. Transform the charge density for a shifted
+system</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">12. Return to the previous menu</FONT></TT>
+<P>
+
+
+<P>
+The options of this menu are explained in some detail in the Sections
+below. At this point, note the <I>plot number</I> in the first line.
+This is automatically updated every time you return to this menu.
+This number is used in file names created in various options and is
+necessary to avoid creating files with identical names.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1058"
+  HREF="node61.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1054"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1048"
+  HREF="node59.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1056"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1059"
+  HREF="node61.html">1 - Plot density</A>
+<B> Up:</B> <A NAME="tex2html1055"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1049"
+  HREF="node59.html">Studying the partial or</A>
+ &nbsp <B>  <A NAME="tex2html1057"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

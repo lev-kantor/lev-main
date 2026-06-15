@@ -1,0 +1,372 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>11 - Get density via point charges: match density</TITLE>
+<META NAME="description" CONTENT="11 - Get density via point charges: match density">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node73.html">
+<LINK REL="previous" HREF="node71.html">
+<LINK REL="up" HREF="node59.html">
+<LINK REL="next" HREF="node73.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1202"
+  HREF="node73.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1198"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1192"
+  HREF="node71.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1200"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1203"
+  HREF="node73.html">12 - Transform the</A>
+<B> Up:</B> <A NAME="tex2html1199"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1193"
+  HREF="node71.html">A short note on</A>
+ &nbsp <B>  <A NAME="tex2html1201"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION004631300000000000000"></A><A NAME="sub:11-get-point-charges-from-density"></A>
+<BR>
+11 - Get density via point charges: match density
+</H3>
+
+<P>
+This may be useful if a point charge representation of the density
+in some region is required. For instance, in the case of a charged
+cell (e.g. a charged molecule or defect), the Coulomb correction is
+needed to be subtracted from the energy to avoid the cell-size dependence,
+this can most easily be done using point charges. 
+
+<P>
+Given the density, a box is chosen with a fine grid in it. Then, point
+charges are calculated by integrating the density in each parallelepiped
+of the grid. These charges give a reasonable representation of the
+density inside the box. 
+
+<P>
+The menu when opens is this:
+
+<P>
+<TT><FONT SIZE="-2">............MENU for SIMULATE in the BOX .............</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">......... Change these parameters if necessary:.......</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;
+Representation of results: through number of electrons</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;
+Algorithm for the charge integration: &lt;nonconserving&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. The box center is at: ( 0.00000, 0.00000, 0.00000)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. Directions of the box sides are along:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 1.00000, 0.00000, 0.00000)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 0.00000, 1.00000, 0.00000)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 0.00000, 0.00000, 1.00000)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. Lengths of the box sides (in A) are: 1.00000
+1.00000 1.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;
+corner of the box is at -0.50000 -0.50000 -0.50000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. The number of charges in each direction: 1
+1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;
+total number of charges = 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;
+the cell volume = 1.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. The integration grid in each cell of the box: 10
+10 10</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6. Scan the box and integrate the charge (reference
+only):</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">7. Get point charges using the grid specified</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---- G e n e r a l&nbsp;&nbsp; s e t t
+i n g s -----</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">An. Coordinates are specified in: &lt;Angstroms&gt; </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Co. Show current atomic positions in fractional/Cartesian</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">--- L e a v e&nbsp;&nbsp;t h e&nbsp;&nbsp;m e n
+u -------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Return to the previous menu</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---&gt; Choose the item and press ENTER:</FONT></TT>
+<P>
+
+
+<P>
+The box is psecified in options <B>1</B>-<B>3</B>. The grid inside
+the box (that will eventuallly give the total number of point charges)
+is specified in <B>4</B>. Each charge is positioned in the ``centre
+of charge'' in each parallellepiped of the grid. To calculate its
+position and the total charge, a fine grid is used inside each parallellepiped,
+this is given in <B>5</B>. To check if the two grids are reasonable,
+you can integrate the charge in <B>6</B>. This gives some information
+that might be useful to decide:
+
+<P>
+<TT><FONT SIZE="-2">6. Scan the box and integrate the charge (reference
+only):</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;
+total charge in the box = 8.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;
+total grid points in the box = 216000</FONT></TT>
+<P>
+
+
+<P>
+When this all done, apply <B>7</B> to calculate the point charges.
+A file <TT>charges.sim</TT> is written with all charges, and the menu
+changes into this:
+
+<P>
+<TT><FONT SIZE="-2">7. Get point charges using the grid specified
+&lt;= DONE!</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;
+total number of charges = 110</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;
+total charge = 7.98368</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;
+charges between 0.00010 and 3.46360</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">8. Show point charges</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">88. Visualise point charges</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">9. Number of unit cells to test the potential: 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;
+the test box defined as : 1x 1x 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">10. Calculate the potential at a set of points</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">11. Calculate the dipole moment</FONT></TT>
+<P>
+
+
+<P>
+The view a table with all charges, use <B>8</B>. A better way to
+preview charges is to use <B>88</B> instead. In this case a file
+<TT>charges.xyz</TT> is written in the <B><I>Xmol</I></B> format
+with all charges, in which the species field of each charge is filled
+with one of the symbols <TT>LV1</TT>,...,<TT>LV11</TT>, the larger
+number correspond to a larger charge. If <B><I>Xmol</I></B> is properly
+configured, then small charges will be shown by smaller balls, while
+larger ones by larger balls.
+
+<P>
+The calculated point charges can now be used in simple claculations,
+for those new options <B>9</B>-<B>11</B> can be used. Option <B>9</B>
+gives the box <!-- MATH
+ $N\times N\times N$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img151.png"
+ ALT="$N\times N\times N$"> of cells in which the potential
+is calculated by using <B>10</B>. As this is done, the menu option
+<B>10</B> changes into:
+
+<P>
+<TT><FONT SIZE="-2">10. Compare potential with the previous one</FONT></TT>
+<P>
+
+
+<P>
+This means the following: you can now go and generate a new set of
+charges, e.g. by choosing a different number of them (a new grid).
+Then, by using <B>10</B>, you can find if the potential in the cells
+around the central one changed significantly. This can be used as
+a criteria for the proper representation of the charge density by
+the point charges generated. Finally, the dipole moment of the charge
+distribution in the box (with respect to the box centre) is calculated
+in <B>11</B>.
+
+<P>
+The settings options here are <B>Co</B> and <B>An</B> with their
+usual meaning of showing atoms and choosing the format for the coordinates.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1202"
+  HREF="node73.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1198"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1192"
+  HREF="node71.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1200"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1203"
+  HREF="node73.html">12 - Transform the</A>
+<B> Up:</B> <A NAME="tex2html1199"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1193"
+  HREF="node71.html">A short note on</A>
+ &nbsp <B>  <A NAME="tex2html1201"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

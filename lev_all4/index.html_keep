@@ -1,0 +1,1871 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="description" content="No Title">
+  <meta name="keywords" content="lev_all4">
+  <meta name="resource-type" content="document">
+  <meta name="distribution" content="global">
+  <meta name="GENERATOR"
+ content="Mozilla/4.79 [en] (X11; U; Linux 2.4.18-24.7.x i686) [Netscape]">
+  <meta name="Author" content="L. Kantorovich">
+  <meta name="Keywords"
+ content="embedding, group functions, structure elements, Ewald summation,AFM, DFT">
+  <title>L.Kantorovich: List of Publications</title>
+<!--Converted with LaTeX2HTML 97.1 (release) (July 13th, 1997)
+ by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippman, Marek Rouchal, Martin Wilck and others -->
+  <link rel="STYLESHEET" href="lev_all4.css">
+  <link rel="next" href="node1.html">
+</head>
+<body text="#000000" bgcolor="#c7ffff" link="#0000ef" vlink="#55188a"
+ alink="#ff0000">
+<!--Navigation Panel--><a name="tex2html1" href="node1.html"></a><a
+ name="tex2html1" href="node1.html"></a><a name="tex2html1"
+ href="node1.html"></a><a name="tex2html1" href="node1.html"></a><a
+ name="tex2html1" href="node1.html"></a><a name="tex2html1"
+ href="node1.html"></a><a name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"
+ name="tex2html1"><img src="next_motif.gif" alt="next" border="0"
+ height="24" width="37" align="bottom"></a><img src="up_motif_gr.gif"
+ alt="up" border="0" height="24" width="26" align="bottom"><img
+ src="previous_motif_gr.gif" alt="previous" border="0" height="24"
+ width="63" align="bottom">
+<br>
+<b>Next:<a name="tex2html2" href="node1.html"></a><a name="tex2html2"
+ href="node1.html"></a><a name="tex2html2" href="node1.html"></a><a
+ name="tex2html2" href="node1.html"></a><a name="tex2html2"
+ href="node1.html"></a><a name="tex2html2" href="node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a></b><a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"
+ name="tex2html2">About
+this document ...</a>
+<p><!--End of Navigation Panel--></p>
+<center><a name="List of publications"></a><b><font color="#ff0000"><font
+ size="+4">List
+of publications</font></font></b></center>
+<ul>
+  <center> <li><b><font color="#3333ff"><font size="+1"><a
+ href="#Books%20and%20Review%20Articles">Books
+and Review Articles</a></font></font></b></li>
+  </center>
+  <center> <li><b><font color="#3333ff"><font size="+1"><a
+ href="#Papers">Papers<br>
+    </a></font></font></b></li>
+  <li><b><font color="#3333ff"><font size="+1"><a
+ href="#SubmittedPapers">Submitted
+Papers</a></font></font></b></li>
+  <li><b><font color="#3333ff"><font size="+1"><a
+ href="#papersinpreparation">Papers in Preparation</a><br>
+    </font></font></b></li>
+  </center>
+  <center> <li><b><font color="#3333ff"><font size="+1"><a
+ href="#Conferences%20Participation/Proceedings">Conferences
+Participation/Proceedings</a></font></font></b></li>
+  </center>
+</ul>
+<center>
+<hr width="100%"></center>
+Some papers are available on-line from this page either as a <i><u><font
+ color="#330000"><font size="+1">gunzip
+tar </font></font></u></i>file (in UNIX/Linux you will have to untar
+and
+then gunzip
+<br>
+them which will give you all the original files you need to
+process/print
+it in a separate directory), or as a <b><i><font color="#330000"><font
+ size="+1"><u>gunzip
+Poscript</u> </font></font></i></b>file, or
+<br>
+as a <b><i><u><font color="#330000"><font size="+1">gunzip PDF</font></font></u></i></b>file.
+The latter files (after you gunzip them) should be read by the Acrobat
+reader which is available free.
+<p><b><font size="+1"><font color="#ff0000">(A)<a
+ name="Books and Review Articles"></a></font><font color="#3333ff">Books
+and Review Articles</font></font></b><a href="#List%20of%20publications"><img
+ src="xfig.up.gif" height="20" width="25"></a>
+</p>
+<p><a name="A1"></a>1. Kantorovich L.N. An embedded-molecular-cluster
+method
+in the studies of defects electronic structure in wide-gap insulators.
+- Zh.Fiz.Khim., v.61, 1987, p.3137-3150 (in Russian).
+</p>
+<p><a name="A2"></a>2. Zhidomirov G.M., Shluger A.L., Kantorovich L.N.
+Modern models in the chemisorption theory. - In: Modern problems in
+quantum
+chemistry, Leningrad, Nauka Publ., 1987, p.224-281 (in Russian).
+</p>
+<p><a name="A3"></a>3. Zakis Ju., Kantorovich L.N., Kotomin E.A.,
+Kuzovkov
+V.N., Tale I., Shluger A.L. Models of processes in wide gap solids with
+defects. - Riga, Zinatne Publ., 1991, 320 p. (in Russian).
+</p>
+<p><a name="A4"></a>4. M. J. Gillan, L. N. Kantorovich and P. J. D.
+Lindan,
+Modelling of oxide surfaces. - Current Opinion In Solid State and
+Materials
+Science, 1996, Vol.1, No.6, pp.820-826
+</p>
+<p><a name="A5"></a>5. M. J. Gillan, P. J. D. Lindan, L. N. Kantorovich
+and S. P. Bates, Molecular processes on oxide surfaces studied by
+first-
+principles calculations. - Mineralogical Magazine, 1998, v. 62, No.5,
+pp.
+669-685.
+</p>
+<p><a name="A6"></a>6. L. N. Kantorovich, A. L. Shluger and&nbsp; M. J.
+Gillan, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/jurmala_final.ps.gz">What
+can we learn about perfect and defective MgO (001) surface using
+density
+functional theory?</a>&nbsp; - In: Defects and Surface-Induced Effects
+in Advanced Perovskites, G. Borstel et al. (Eds.),&nbsp; Kluwer
+Academic
+Publishers,&nbsp; Netherlands, 2000, pp. 49-60. (this is a&nbsp; talk
+presented
+on the "NATO Advanced Research Workshop", Jurmala, 1999).
+<br>
+</p>
+<p><a name="A7"></a>7. L. Kantorovich, M.&nbsp; Gauthier and M.&nbsp;
+Tsukada,
+Theory of energy dissipation into surface vibrations, - Chapter
+19 in Noncontact atomic force microscopy,&nbsp; Springer series
+"Nanoscience and Technology", Eds. S. Morita, R. Wiesendanger and E.
+Meyer, 2002.
+<br>
+<br>
+<a name="A8"></a>8. L. Kantorovich,&nbsp; Quantum theory of the solid
+state: an introduction, - in the series "Fundamental Theories of
+Physics", A. van der Merwe (Ed.) (Kluwer Academic Publishers, 
+Dordrecht, 2004).
+<br>
+<br>
+<a name="A9"></a>9. N. Martsinovich, C. Hobbs, L. Kantorovich and P. Beton, Theory of Adsorption and Manipulation of C<sub>60</sub> on the Si(001) Surface. - Chapter in a book: Fundamentals of friction and wear on the nanoscale, Eds. E. Gnecco and E. Meyer, Springer, 2007, p. 601-618.  
+<br> <br>
+<a name="A10"></a>10. T. Trevethan and L. Kantorovich, Mechanisms of atomic scale dissipation at close approach in dynamic atomic force microscopy. - Chapter in a book:
+Fundamentals of friction and wear on the nanoscale, Eds. E. Gnecco and E. Meyer, Springer, 2007, p. 373-391.
+<br> <br>
+<a name="A11"></a>11. T. Trevethan, N. Martsinovich, L. Kantorovich, and A. L. Shluger. Multi-scale modelling of NC-AFM imaging and and controlling atomic diffusion on insulating surfaces. - Chapter in a book: "Non-Contact Atomic Force Microscopy", Vol. 2, in the series "Nanoscience and Technology", Eds.: S. Morita, F. Giessible and R. Wiesendanger. Springer, 2009.
+<br><br>
+
+</p>
+<p></p>
+<hr width="100%"><b><font size="+1"><font color="#ff0000">(B)<a
+ name="Papers"></a></font><font color="#3333ff"> Papers</font></font></b><a
+ href="#List%20of%20publications"><img src="xfig.up.gif" height="20"
+ width="25"></a>
+<BR>
+<p> <B><I><FONT COLOR="FF3300">1981</FONT></I></B> </p>
+
+<p><a name="B1"></a>1. Egorova T.V., Kantorovich L.N., Livshitz A.I.,
+Shluger
+A.L. Adsorption of water molecules on alkali halide crystals surfaces.-
+Zh.Fiz.Khim.,v.55, 1981, p.1350-1351 (in Russian).
+</p>
+<p> <B><I><FONT COLOR="FF3300">1982</FONT></I></B> </p>
+<p><a name="B2"></a>2. Kantorovich L.N., Shluger A.L. Adsorption of a
+water
+molecule on alkali halide crystals surfaces. - Khim.Fiz., v.1, 1982,
+p.1341-1348
+(in Russian).
+</p>
+<p><a name="B3"></a>3. Shluger A.L., Kotomin E.A. and Kantorovich L.N.
+Calculations of energies of radiative tunneling transitions between
+defects
+in alkali halides. - Solid State Comm., v.42, 1982, p.749-752.
+</p>
+<p> <B><I><FONT COLOR="FF3300">1983</FONT></I></B> </p>
+<p><a name="B4"></a>4. Kantorovich L.N. Multipole theory of the
+polarization
+of solids by point defect. I.Dipole approximation. - Phys.stat.sol.(b),
+v.120, 1983, p.77-86.
+</p>
+<p><a name="B5"></a>5. Kantorovich L.N., Shluger A.L. Defect induced
+crystal
+polarization effects in potential surfaces calculations of
+thermoactivated
+processes.- In: Thermoactivated spectroscopy of defects in ionic
+crystals,
+Riga, Latv.State Univ. Press, 1983, p.23-38 (in Russian).
+</p>
+<p> <B><I><FONT COLOR="FF3300">1984</FONT></I></B> </p>
+<p><a name="B6"></a>6. Kantorovich L.N. Multipole theory of the
+polarization
+of solids by point defect. II.The point charge approximation. -
+Phys.stat.sol.(b)
+v.123, 1984, p.325-334.
+</p>
+<p><a name="B7"></a>7. Gotlib V.I., Kantorovich L.N., Grebenshicov
+V.L.,
+Bichev V.R. and Nemiro E.A. The study of thermoluminescence using the
+contact
+method of sample heating. - J.Phys.D:Appl.Phys., v.17, 1984,
+p.2097-2114.
+</p>
+<p><a name="B8"></a>8. Kantorovich L.N., Shluger A.L., Tiliks Y.E.
+Interaction
+of adsorbed water molecules with an alkali halide surface.- Khim.Fiz.,
+v.3, 1984, p.894-899 (in Russian).
+</p>
+<p> <B><I><FONT COLOR="FF3300">1985</FONT></I></B> </p>
+<p><a name="B9"></a>9. Shluger A.L., Kantorovich L.N., Kotomin E.A.,
+Dzelme
+Y.R. Influence of an alkali halide crystal surface on defects
+electronic
+structure and their interaction with each other and with water.-
+Zh.Fiz.Khim.,
+v.59, 1985, p.1224-1227 (in Russian).
+</p>
+<p><a name="B10"></a>10. Kantorovich L.N., Kotomin E.A., Shluger A.L.
+Quantum-chemical
+simulation for determination of electronic and spatial structure of
+defects
+in wide-gap solids. - In: Electronic processes and defects in ionic
+crystals,
+1985, Riga, Latv. State Univ.Press, p.146- 166 (in Russian).
+</p>
+<p> <B><I><FONT COLOR="FF3300">1986</FONT></I></B> </p>
+<p><a name="B11"></a>11. Kantorovich L.N. Multipole theory of the
+polarization
+of solids by point defect. III.Transition energy calculations, the
+approximation
+of non - point charges. - Phys.stat.sol.(b), v.137, 1986, p.229-240.
+</p>
+<p><a name="B12"></a>12. Shluger A.L., Kotomin E.A. and Kantorovich
+L.N.
+Quantum-chemical simulation of impurity-induced trapping of a hole: [Li]<sup>0</sup>
+centre in MgO. - J.Phys.C:Solid State Phys., v.19, 1986, p.4183-4199.
+</p>
+<p> <B><I><FONT COLOR="FF3300">1987</FONT></I></B> </p>
+<p><a name="B13"></a>13. Gotlib V.I., Grebenchicov V.L., Zahre P.,
+Kantorovich
+L.N., Nemiro E.A. Thermoluminescence dosimetry of beta radiation. - In:
+Luminescence detectors and converters of ionising radiation, 1987,
+Tartu,
+Est.SSR, p.20-29 (in Russian).
+</p>
+<p><a name="B14"></a>14. Kantorovich L.N. Excitonic representation for
+investigation of electronic polarization in insulating crystals.-
+Izv.Acad.Nauk
+Latv.SSR, No.5, 1987, p.18-24 (in Russian).
+</p>
+<p><a name="B15"></a>15. Kantorovich L.N. Multipole theory of the
+polarization
+of solids by point defect. IV.Electronic and spatial structure of
+single
+electronic and hole centers and their pairs in LiF, KCl crystals. -
+Phys.stat.sol.(b),
+v. 144, 1987, p.719-726.
+</p>
+<p> <B><I><FONT COLOR="FF3300">1988</FONT></I></B> </p>
+<p><a name="B16"></a>16. L.N.Kantorovich, G.M.Fogel, V.I.Gotlib. A
+theoretical
+description of complex thermoluminescence curves.- J.Phys.D:Appl.Phys.,
+v.21, 1988, p.1008-1014.
+</p>
+<p><a name="B17"></a>17. Gotlib V.I., Grebenchicov V.L., Kantorovich
+L.N.
+and Sahre P. Thermoluminescence of beta radiation. - Rad.Prot.Dos.,
+v.22,
+1988, p.13-17.
+</p>
+<p><a name="B18"></a>18. Kantorovich L.N. <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/jcv21i29p5041.pdf.gz">An
+embedded-molecular-cluster method for calculating the electronic
+structure
+of point defects in non-metallic crystals: I.General theory. </a>-
+J.Phys.C:Solid
+State Phys. v.21, 1988, p.5041-5056.
+</p>
+<p><a name="B19"></a>19. Kantorovich L.N. <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/jcv21i29p5057.pdf.gz">An
+embedded-molecular-cluster method for calculating the electronic
+structure
+of point defects in non - metallic crystals: II.Structure elements in
+the
+form of molecules</a> - J.Phys.C:Solid State Phys., v.21, 1988,
+p.5057-5073.
+</p>
+<p><a name="B20"></a>20. Gotlib V.I., Grebenchicov V.L., Kantorovich
+L.N.
+Thermoluminescence dosimetry of beta radiation. - Rad.Prot.Dos., v.25,
+1988, p.67-68.
+</p>
+<p><a name="B21"></a>21. Kantorovich L.N. Calculations of optical
+properties
+of glasses in the molecular cluster model accounting for a continuous
+disordering.-
+In: Spectroscopy of glasses, Riga, 1988, Latv.State Univ.Press, p.12-20
+(in Russian).
+</p>
+<p> <B><I><FONT COLOR="FF3300">1989</FONT></I></B> </p>
+<p><a name="B22"></a>22. L.N.Kantorovich, G.M.Fogel - A theoretical
+description
+of complex thermoluminescence curves.II.Method of integral equation.-
+J.Phys.D:
+Appl.Phys., v.22, 1989, p.817-824.
+</p>
+<p> <B><I><FONT COLOR="FF3300">1990</FONT></I></B> </p>
+<p><a name="B23"></a>23. L.N.Kantorovich, G.M.Fogel, V.I.Gotlib. An
+integral
+equation method for discrete and continuous distribution of centres in
+thermoluminescence kinetics.- J.Phys.D: Appl. Phys., v.23, 1990,
+p.1219-1226.
+</p>
+<p><a name="B24"></a>24. Gotlib V.I., Grebenchicov V.L., Kantorovich
+L.N.
+and Nemiro E.A. Thermoluminescence dosimetry of beta radiation on the
+basis
+of several TL detectors of usual thickness. - Rad.Prot.Dos., v.34,
+1990,
+p.131-134.
+</p>
+<p><a name="B25"></a>25. C.Pisani, R.Dovesi, R.Nada and
+L.N.Kantorovich.
+Ab initio Hartree - Fock pertubed-cluster treatment of local defects in
+crystals. - J.Chem. Phys., v.92, 1990, p.7448-7460.
+</p>
+<p> <B><I><FONT COLOR="FF3300">1992</FONT></I></B> </p>
+<p><a name="B26"></a>26. Kantorovich L.N. and Zapol B.P. <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/JCP08420.pdf.gz">A
+diagram technique for non- orthogonal electron group functions. I.Right
+coset decomposition of symmetric group.</a>- J.Chem.Phys., v.96, No 11,
+1992, p.8420-8426.
+</p>
+<p><a name="B27"></a>27. Kantorovich L.N. and Zapol B.P. <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/JCP08427.pdf.gz">A
+diagram technique for non- orthogonal electron group functions.
+II.Reduced
+density matrices and total energy.</a> - J.Chem.Phys., v.96, No 11,
+1992
+p.8427-8438.
+</p>
+<p><a name="B28"></a>28. Kantorovich L.N. Method of functional
+derivatives
+in the theory of point defects in crystals. I.General theory:
+representations
+of the self-energy. - Phys.stat.sol.(b), v.171, 1992, p.113-129.
+</p>
+<p><a name="B29"></a>29. Kantorovich L.N. Method of functional
+derivatives
+in the theory of point defects in crystals. II.General theory: Total
+energy,
+electronic density and density of states. - Phys.stat.sol.(b), v.171,
+1992,
+p.447- 458.
+</p>
+<p><a name="B30"></a>30. Shluger A.L., Kantorovich L.N., Heifets E.N.,
+Shidlovskaya E.K. and Grimes R.W. Theoretical simulation of V<i><sub>k</sub></i>-centre
+migration in KCl: I. A quantum-chemical study. - J.Phys. Condens.
+Matter,
+v.4, 1992, p.7417 - 7428.
+</p>
+<p><a name="B31"></a>31. E.A.Kotomin, L.N.Kantorovich, I.A.Tale and
+V.G.Tale.
+Theoretical simulation of V<i><sub>k</sub></i>-centre migration in KCl:
+II.Phenomenological theory.- J.Phys. Condens. Matter, v.4, 1992, p.7429
+- 7440.
+</p>
+<p><a name="B32"></a>32. Kantorovich L.N. and Livshitz A.I. A Novel
+Approach
+for Constructing Symmetry-Adapted Basis Sets for Quantum-Chemical
+Calculations.
+I.Real symmetry-adapted orbitals - Phys. stat.sol.(b), v.174, 1992,
+p.79-90.
+</p>
+<p> <B><I><FONT COLOR="FF3300">1993</FONT></I></B> </p>
+<p><a name="B33"></a>33. Kantorovich L., Heifets E., Livshitz A.,
+Kuklja
+M. and Zapol P. <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/vk_sth.pdf.gz">Theoretical
+analysis of hole self-trapping in ionic solids. Application to the KCl
+crystal</a>. - Phys. Rev. B, v.47, No.22, 1993, p.14875-14885.
+</p>
+<p><a name="B33a"></a>33a. B. P. Zapol and L. N. Kantorovich. An
+operator
+technique for calculations using nonorthogonal electron group
+functions.
+- Latv. J. Phys. and Techn. Sciences, N.5, 1993, p. 18 -22.
+</p>
+<p> <B><I><FONT COLOR="FF3300">1994</FONT></I></B> </p>
+<p><a name="B34"></a>34. Kantorovich L.N., Livshitz A.I. and Fogel G.M.
+Thermoluminescence kinetic in the case of a continuous distribution of
+trap centers over their activation energies. - J.Phys. Condens. Matter,
+v.5, 1994, p.7503-7514.
+</p>
+<p><a name="B35"></a>35. Kantorovich L.N. and Zapol P.B. Theoretical
+investigation
+of the self- trapped hole in alkali halides. I.Long-range effects
+within
+the model hamiltonian approach. - Phys.Stat.Sol.(b), v.183, 1994,
+p.201-221.
+</p>
+<p><a name="B36"></a>36. Kantorovich L., Stashans A., Kotomin E. and
+Jacobs
+P.W.M. Quantum chemical simulations of hole self-trapping in semi-ionic
+crystals. - Int.J.Quant.Chem., v.52, 1994, p.1177-1198.
+</p>
+<p><a name="B37"></a>37. A.Martin Pendas, V.Luana, J.M.Recio, M.Florez,
+E.Francisco, M.A.Blanco and L.Kantorovich. Pressure induced B1-B2 phase
+transition in alkali halides: General aspects from first principles
+calculations.
+- Phys. Rev. B, v.49, No.5, 1994, 3066-3074.
+</p>
+<p> <B><I><FONT COLOR="FF3300">1995</FONT></I></B> </p>
+<p><a name="B38"></a>38. L.N.Kantorovich, Thermoelastic properties of
+perfect
+crystals with nonprimitive lattices. I. General theory. - Phys. Rev. B,
+v.51, 1995, p.3520-3534.
+</p>
+<p><a name="B39"></a>39. L.N.Kantorovich, Thermoelastic properties of
+perfect
+crystals with nonprimitive lattices. II. Application to KCl and NaCl. -
+Phys. Rev. B, v.51, 1995, p.3535-3548.
+</p>
+<p><a name="B40"></a>40. Kotomin E., Stashans A., Kantorovich L.,
+Lifshitz
+A., Popov A., Tale I. and Calais J.-L., Calculations of the geometry
+and
+optical properties of F<i><sub>Mg</sub></i> centers and dimer (F<sub>2</sub>-type)
+centers in corundum crystals. - Phys. Rev. B, v.51, 1995, p.8770-8778.
+</p>
+<p><a name="B41"></a>41. I.Manassidis, J.Goniakowski, L. Kantorovich
+and
+M.J.Gillan, The structure of the stoichiometric and reduced SnO<sub>2</sub>
+(110) surface. - Surface Science, v.339, 1995, p. 258 - 271.
+</p>
+<p><a name="B42"></a>42. L.Kantorovich, J.Holender and M.J.Gillan, The
+energetics and electronic structure of defective and irregular surfaces
+on MgO. - Surface Science, v.343, 1995, p. 221 - 239.
+</p>
+<p><a name="B43"></a>43. J. Goniakowski, J. M. Holender, L. N.
+Kantorovich,
+M. J. Gillan and J. A. White, Influence of gradient corrections on the
+bulk and surface properties if TiO<sub>2</sub> and SnO<sub>2</sub>. -
+Phys.
+Rev. B, v. 53, 1995, p. 957 - 960.
+</p>
+<p> <B><I><FONT COLOR="FF3300">1996</FONT></I></B> </p>
+<p><a name="B44"></a>44. L.Kantorovich and A.Shluger, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/response.tar.gz">
+Polrization of a semi-infinite crystal by a point defect at the surface</a>.
+- Phys. Rev. B, v. 53, 1996, p. 136 - 147.
+</p>
+<p><a name="B45"></a>45. L.Kantorovich, M.J.Gillan and J. A. White,
+Adsorption
+of atomic oxygen on the MgO (001) surface. - J. Chem. Soc. Farad.
+Trans.,
+v. 92, No. 12, 1996, p. 2075 - 2080.
+</p>
+<p><a name="B46"></a>46. P.B.Zapol and L.N.Kantorovich. Theoretical
+Investigation
+of Self-Trapped Hole in Alkali Halides. Long-Range Effects Within the
+Model
+Hamiltonian Approach. In: Prospectives of Polarons. Eds: G.N.Chuev and
+V.D.Lakhno. World Scientific (Singapore, New Jersey, London, Hong
+Kong),
+1996, p: 38-62.
+</p>
+<p><a name="B47"></a>47. D. Ochs, W. Maus-Friedrichs, M. Brause, J.
+G&uuml;nster,
+V. Kempter, V. Puchin, A. Shluger and L. Kantorovich, Study of the
+surface
+electronic structure of MgO bulk crystals and thin films. - Surface
+Science,
+v. 365, 1996, pp. 557 - 571.
+</p>
+<p> <B><I><FONT COLOR="FF3300">1997</FONT></I></B> </p>
+<p><a name="B48"></a>48. L.Kantorovich and M.J.Gillan, Adsorption of
+atomic
+and molecular oxygen on the MgO and CaO (001) surface. - Materials
+Science
+Forum, Vols. 239 - 241, 1997, pp. 637 - 640.
+</p>
+<p><a name="B49"></a>49. L.Kantorovich and M.J.Gillan , Adsorption of
+atomic
+and molecular oxygen on the MgO (001) surface. - Surface Science, v.
+374,
+1997, pp. 373 - 386.
+</p>
+<p><a name="B50"></a>50. L.Kantorovich and M.J.Gillan , The energetics
+of N<sub>2</sub>O dissociation on CaO (001). - Surface Science, v. 376,
+1997, pp. 169 - 176.
+</p>
+<p><a name="B51"></a>51. A. L. Shluger, L. N. Kantorovich, A. I.
+Livshits
+and M. J. Gillan,
+<a href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/PRB15332.ps.gz">Ionic
+and electronic processes at ionic surfaces induced by Atomic Force
+Microscope
+tips.</a> - Phys. Rev. B, v. 56, 1997, pp. 15332- 15344.
+</p>
+<p><a name="B52"></a>52.  G. D. Barrera, M. B. Taylor, N. L. Allan, T.
+H.
+K. Barron, L. N. Kantorovich and W. C. Mackrodt, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/JCP004337.pdf.gz">Ionic 
+solids at elevated temperatures and high pressures: MgF<sub>2</sub></a>.
+- J.&nbsp; Chem. Phys., v. 107, 1997, pp. 4337-4344.
+</p>
+<p> <B><I><FONT COLOR="FF3300">1998</FONT></I></B> </p>
+<p><a name="B53"></a>53. P. V. Sushko, A. S. Foster, L. N. Kantorovich
+and A. L. Shluger, Investigating the effects of silicon tip
+contamnination
+in non-contact SFM. - Appl. Surf. Science, v. 144-145, 1998, pp.
+608-612.
+</p>
+<p><a name="B54"></a>54.&nbsp;&nbsp; L. N. Kantorovich,&nbsp; <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/qm_mm.ps.gz">Derivation
+of a hybrid scheme for cluster embedding.</a> - J.&nbsp; Mol. Graphics
+&amp; Modeling,&nbsp;&nbsp; v. 16, No.4-6, 1998, pp. 272-273
+</p>
+<p> <B><I><FONT COLOR="FF3300">1999</FONT></I></B> </p>
+<p><a name="B55"></a>55. A. L. Shluger, P. V. Sushko and L. N.
+Kantorovich,
+<a href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/PRB02417.ps.gz">Spectroscopy
+of low-coordinated surface sites: theoretical study of MgO. </a>-
+Phys.
+Rev. B, v. 59, 1999, pp. 2417-2430 .
+</p>
+<p><a name="B56"></a>56. L. N. Kantorovich, I. I. Tupitsyn, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/madlng.tar.gz">Coulomb
+potential inside a large finite crystal. </a>- J. Phys.: Condens.
+Matter,
+v. 11, 1999, pp. 6159-6168.
+</p>
+<p><a name="B57"></a>57. L. N. Kantorovich, A. L. Shluger, P. V.
+Sushko,
+J. G&uuml;nster, P. Stracke, D.W. Goodman and V. Kempter, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/A903241J.PDF.gz">Mg
+Clusters on MgO surfaces: study of the nucleation mechanism with MIES
+and
+<i>ab
+initio</i> calculations</a>. - Farad. Disc., v. 114, 1999, pp. 173-194.
+</p>
+<p><a name="B58"></a>58. L. Kantorovich, A. Shluger, J. G&uuml;nster,
+J.
+Stultz, S. Krischok, D. W. Goodman, P. Stracke, V. Kempter, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/short_Mg_clusters.ps.gz">Mg
+Clusters on MgO surfaces: Characterization by MIES and Electronic
+Structure
+ab initio Calculations. </a>- Nucl. Instr. Methods B,&nbsp; v. 157,
+1999,
+pp. 162-166.
+</p>
+<p><a name="B59"></a>59. L. N. Kantorovich, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/PRB15476.ps.gz">Elimination
+of the long-range dipole interaction in calculations with Periodic
+Boundary
+Conditions.</a> - Phys. Rev. B, v. 60, No. 23, 1999,&nbsp; pp.
+15476-15479.
+</p>
+<p><a name="B60"></a>60. L. Kantorovich , General Discussion - Faraday
+Discussions, v . 114, 1999, pp.&nbsp; 235-238.
+</p>
+<p> <B><I><FONT COLOR="FF3300">2000</FONT></I></B> </p>
+<p><a name="B61"></a>61. L. Kantorovich, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/diagrams1.tar.gz">Application
+of the group function theory to infinite systems</a>. - Int. J. Quant.
+Chem.,&nbsp; v. 76, 2000, pp. 511-534.
+</p>
+<p><a name="B62"></a>62. L. N. Kantorovich, A. L. Shluger, P. V. Sushko
+and A. M. Stoneham, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/peroxi.pdf.gz">The
+prediction of metastable impact electronic spectra (MIES):&nbsp;
+perfect
+and defective MgO (001) surfaces by state-of-the-art methods </a>-&nbsp;&nbsp;
+Surf. Science, v. 444,&nbsp; 2000, pp. 31-51.
+</p>
+<p><a name="B63"></a>63. L. N. Kantorovich, A.I. Livshits and M.
+Stoneham,
+<a href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/image_energy.ps.gz">Electrostatic
+energy calculation for the interpretation of Surface Probe Microscopy
+experiments</a>.
+- J. Phys.: Condens. Matter,&nbsp; v. 12, 2000, pp. 795-814.
+</p>
+<p><a name="B64"></a>64. L. N. Kantorovich, A. S. Foster, A. L. Shluger
+and A. M. Stoneham,
+<a href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/imagefor.pdf.gz">Role
+of image forces in NC-SFM images of ionic surfaces</a>. -&nbsp; Surf.
+Science,&nbsp;
+v. 445, 2000, pp. 283-299.
+</p>
+<p><a name="B65"></a>65. L. N. Kantorovich, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/diagrams2.tar.gz">Derivation
+of Atomistic Models for Lattices Consisting of Weakly Overlapping
+Structural
+Elements</a>. - Int. J. Quant. Chem., v.&nbsp; 78, 2000, pp. 306-330.
+</p>
+<p><a name="B66"></a>66. R. Bennewitz, A. S. Foster, L. N. Kantorovich,
+M. Bammerlin, Ch. Loppacher, S. Schar, M. Guggisberg, E. Meyer and A.
+L.
+Shluger, <a href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/nacl.pdf.gz">Atomically
+resolved edges and kinks of NaCl islands on Cu(111): experiment and
+theory</a>.
+- Phys. Rev. B, v. 62, No. 3, 2000, pp. 2074-2084.
+</p>
+<p><a name="B67"></a>67.&nbsp; L. Kantorovich, A. L. Shluger and A. M.
+Stoneham, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/PRL03846.pdf.gz">Structure
+and Spectroscopy of Surface Defects from Scanning Force Microscopy:
+Theoretical
+Predictions.&nbsp;&nbsp; </a>- Phys. Rev. Lett.,&nbsp; v. 85, 2000,
+pp.
+3846 -3849.
+</p>
+
+<p> <B><I><FONT COLOR="FF3300">2001</FONT></I></B> </p>
+<p><a name="B68"></a>68.&nbsp; A. S. Foster, L. Kantorovich and A.
+Shluger,
+<a href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/metal_tip.ps.gz">Tip
+and surface properties from the distance dependence of tip-surface
+interaction</a>.
+- Appl. Phys. A ,&nbsp;&nbsp;&nbsp; v. 72, 2001, pp. S59-S62.
+</p>
+<p><a name="B69"></a>69.&nbsp; L. Kantorovich, A. L. Shluger and A. M.
+Stoneham,&nbsp; <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/PRB184111.pdf.gz">Recognition
+of Surface Species in Atomic Force Microscopy: Optical properties of Cr<sup>3+</sup>
+defect at the MgO (001) surface</a>. - Phys. Rev. B, 2001,&nbsp; v. 63,
+pp. 184111-184123.
+</p>
+<p><a name="B70"></a>70.&nbsp; L. Kantorovich, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/c10513.pdf.gz">A
+simple nonequilibrium theory of non-contact dissipation force
+microscopy.</a>
+- J. Phys. Condens. Matter,&nbsp; v. 13, No. 5,&nbsp; 2001, pp.
+945-958.
+</p>
+<p><a name="B71"></a>71.&nbsp; L. Kantorovich, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/PRB45409.pdf.gz">Stochastic
+friction force mechanism of energy dissipation in noncontact atomic
+force
+microscopy.</a>&nbsp; - Phys. Rev. B, 2001, v. 64, No. 245409 (13
+pages).
+</p>
+<p><a name="B72"></a>72. M. Y. Mo and&nbsp; L. Kantorovich,&nbsp; <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/Mo.pdf.gz">Application
+of the non-equilibrium statistical operator method (NESOM) to
+dissipation
+atomic force microscopy. </a>-&nbsp; J. Phys. Condens. Matter,&nbsp;
+v.
+13, No. 7,&nbsp; 2001, pp.&nbsp; 1439-1459.
+</p>
+
+<p> <B><I><FONT COLOR="FF3300">2002</FONT></I></B> </p>
+<p><a name="B73"></a>73.&nbsp; L N Kantorovich, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/c21706.pdf">Energy
+dissipation above plane terraces of a model crystal in non-contact
+atomic
+force microscopy</a>. -&nbsp; J. Phys.: Condens. Matter, v. 14, No 17,
+2002, pp. 4329-4343.
+</p>
+<p><a name="B74"></a>74.&nbsp; L N Kantorovich, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/c23003.pdf.gz">Non-equilibrium
+dynamics of a classical tip interacting with a quantum surface</a>.
+-&nbsp;
+J. Phys.: Condens. Matter,&nbsp; v. 14, No. 30, 2002, pp.&nbsp;
+7123-7133.
+</p>
+<p><a name="B75"></a>75.&nbsp; L N Kantorovich, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/PRL96105.pdf.gz">Nonequilibrium
+statistical mechanics of mixed quantum classical ensembles:
+application&nbsp;
+to noncontact atomic force microscopy </a>. -&nbsp; Phys. Rev.
+Letters,&nbsp;
+v. 89, No. 9, 2002, No. 096105.
+</p>
+<p><a name="B76"></a>76.&nbsp; L N Kantorovich, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/PRL96105.pdf.gz">Nonequilibrium
+statistical mechanics of mixed quantum classical ensembles:
+application&nbsp;
+to noncontact atomic force microscopy </a>. -&nbsp; Virtual Journal of
+Nanoscale Science &amp; Technology, v. 6, issue 9., 2002. </p>
+<p><a name="B77"></a>77.&nbsp; Bennewitz R, Pfeiffer O, Schar S,
+Barwich
+V, Meyer E, Kantorovich LN,&nbsp; <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/appl_surf_sci.pdf.gz">Atomic
+corrugation in nc-AFM of alkali halides.</a> - Appl. Surface Science,
+v.&nbsp;
+188 (3-4), pp.232-237 (2002).
+</p>
+<p><a name="B78"></a>78.&nbsp; L N Kantorovich,&nbsp; <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/qm_coarse-grained.pdf.gz">Quantum
+theory of energy dissipation in non-contact atomic force microscopy in
+Markovian approximation, -</a> Surface Science, v. 521, Issue 3, pp.
+117-128&nbsp;
+(2002).
+</p>
+
+<p> <B><I><FONT COLOR="FF3300">2003</FONT></I></B> </p>
+<p><a name="B79"></a>79. L. N. Kantorovich, <a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/papers/inf_summation.pdf.gz">Exact
+calculation of the tip friction within the harmonic model,</a> - Appl.
+Surface Science, v.&nbsp; 210 (1-2), pp. 27-31 (2003).<br>
+</p>
+<a name="B80"></a>80. T. Trevethan and L. Kantorovich,&nbsp; Tip models
+and force definitions in molecular mynamics simualtions of&nbsp;
+scanning force microscopy. - Surface Science, v. 540, pp. 497--503
+(2003).<br>
+
+<p> <B><I><FONT COLOR="FF3300">2004</FONT></I></B> </p>
+<p>&nbsp;<a name="B81"></a>81. T. Trevethan and L. Kantorovich,
+Atomistic simulations of the adhesion hysteresis mechanism of atomic
+scale dissipation in non-contact atomic force microscopy,
+Nanotechnology, v. 15, pp. S34--S39 (2004).<br>
+</p>
+<a name="B82"></a>82. T. Trevethan and L. Kantorovich , Physical
+dissipation mechanisms in non-contact atomic force microscopy. -
+Nanotechnology, v. 15,&nbsp; pp. S44-S48 (2004).
+<br>
+<a name="B83"></a>83. C. Hobbs and L. Kantorovich, Adsorption of C<sub>60</sub>
+on the Si(001) surface calculated within the&nbsp; generalised gradient
+approximation. - Nanotechnology, v. 15, pp. S1--S4 (2004).<br>
+<br>
+<a name="B84"></a>84. O. Danyliv and L. Kantorovich, Comparison of
+localisation procedures for applications in crystal&nbsp; embedding. -
+Phys. Rev. B70, No.075113 (2004).<br>
+<br>
+<a name="B85"></a>85. O. Danyliv and L. Kantorovich, Strongly localized
+molecular orbitals for alpha-quartz. - J. Phys.: Condens. Matter, v.
+16, pp.&nbsp; 7233-7246 (2004).<br>
+<br>
+<a name="B86"></a>86. L. Kantorovich and O. Danyliv. Electron density
+of periodic systems derived from non-orthogonal localized orbitals. -
+J. Phys.: Condens. Matter, v. 16, pp. 2575--2584 (2004).<br>
+<br>
+<a name="B87"></a>87. R. Hoffmann, L. N. Kantorovich, A. Baratoff, H.
+J. Hug, and H.-J Guntherodt,&nbsp; Sublattice identification in
+scanning force microscopy on alkali halide surfaces. - Phys. Rev.
+Lett., v. 92, No. 146103 (2004).<br>
+<br>
+<a name="B88"></a>88. S. Hao, L. Kantorovich, and G. Davies,
+Interstitial oxygen in Si and Si<sub>1-x</sub>Ge<sub>x</sub>. - Phys.
+Rev. B, v. 69, No. 155204 (2004).<br>
+<br>
+<a name="B89"></a>89. T. Trevethan and L. Kantorovich, Stochastic
+mechanism of energy dissipation in NC-AFM studied using&nbsp; molecular
+dynamics with Langevin boundary conditions. - Phys. Rev. B70,&nbsp; No.
+115411 (2004).<br>
+<br>
+<a name="B90"></a>90. L. Kantorovich and T. Trevethan, General theory of microscopic
+dynamical response in surface probe microscopy: from imaging to dissipation.&nbsp;
+- Phys. Rev. Lett., v. 93, No. 236102 (2004).<br>
+<br>
+<a name="B91"></a>91. S. Hao, L. Kantorovich, and G. Davis, Interstitial C<sub>i</sub>O<sub>i</sub>
+defect in bulk Si and Si<sub>1-x</sub>Ge<sub>x</sub>. - J. Phys. Cond.
+Matter, v. 16, No 47, pp. 8545-8555 (2004).<br>
+<br>
+<a name="B92"></a>92. T. Trevethan and L. Kantorovich, General theory of microscopic
+dynamical response in surface probe microscopy: from imaging to dissipation.&nbsp;
+- Virtual Journal of Biological Physics Research -- v. 8, No. 11 (2004).<br>
+
+<p> <B><I><FONT COLOR="FF3300">2005</FONT></I></B> </p>
+<a name="B93"></a>93. L. Kantorovich and T. Trevethan, Molecular dynamics simulations of
+atomic scale processes at close approach in non-contact atomic force
+microscopy. - Nanotechnology, v. 16 (2005) pp. S79-S84.<br>
+<br>
+<a name="B94"></a>94.  D. L. Keeling, M. J. Humphry, R. H. J. Fawcett, P. H. Beton, C. Hobbs and L. Kantorovich, Bond breaking
+coupled with translation in rolling of covalently bound
+molecules.- Phys. Rev. Lett., v. 94 (2005) No. 146104.<br>
+<br>
+<a name="B95"></a>95.  D. L. Keeling, M. J. Humphry, R. H. J. Fawcett, P. H. Beton, C. Hobbs and L. Kantorovich, Bond breaking
+coupled with translation in rolling of covalently bound
+molecules.- Virtual Journal of Nanoscale Science & Technology. -- v. 11, No. 16 (2005).<br>
+<br>
+<a name="B96"></a>96. R. E. A. Kelly, Y. J. Lee and L. N. Kantorovich, Homo-pairing possibilities of the DNA base Adenine. - 
+J. Phys. Chem.B, v.109, pp. 11933-11939 (2005).
+<br><br>
+<a name="B97"></a>97. Wang Y, Kantorovich L, Arrow diagram approach to nonorthogonal electron group functions in extended systems. - J. Phys. Cond. Matter v. 18 (1), pp. 295-313 (2005). <br>
+<br>
+<a name="B98"></a>98. Kelly REA, Lee YJ, Kantorovich LN, Homopairing possibilities of the DNA bases cytosine and guanine: An ab initio DFT study. - J. Phys. Chem. B, v. 109 (46), pp. 22045-22052 (2005).
+<br><br>
+<a name="B99"></a>99.	Hobbs C, Kantorovich L, Gale JD, An ab initio study of C<sub>60</sub> adsorption on the Si(001) surface. - Surf. Science, v. 591 (1-3), pp. 45-55 (2005). 
+<br><br>
+<a name="B100"></a>100.	Kelly REA, Kantorovich LN, Hexagonal adenine networks constructed from their homopairings. - Surf. Science, v. 589 (1-3), pp. 139-152 (2005).
+<br>
+
+<p> <B><I><FONT COLOR="FF3300">2006</FONT></I></B> </p>
+<a name="B101"></a>101. Hobbs C, Kantorovich L, Non-contact AFM images of a C<sub>60</sub> molecule adsorbed on the Si(001) surface: An ab initio method. - Surf. Science, v. 600 (3), pp.551-558 (2006).
+<br><br>
+<a name="B102"></a>102	Kelly REA, Kantorovich LN, Homopairing possibilities of the DNA base thymine and the RNA base uracil: An ab initio density functional theory study. - J. Phys. Chem. B, v.110 (5), pp.2249-2255 (2006).
+<br><br>
+<a name="B103"></a>103 Y. J. Li, H. Nomura, N. Ozaki, Y. Naitoh, M. Kageshima, Y. Sugawara, C.Hobbs and L. Kantorovich,Origin of p(2x1) Phase on Si(001) by Noncontact Atomic Force Microscopy at 5 K. - Phys. Rev. Letters, v. 96, No.106104 (2006) 
+<br>
+<br>
+<a name="B104"></a>104 T. Trevethan and L. Kantorovich, Models of atomic contrast in dissipation images of binary ionic surfaces in non-contact atomic force microscopy. - Nanotechnology, v. 17, pp. S205-S212 (2006).
+<br><br>
+<a name="B105"></a>105  R. E. A. Kelly and L. Kantorovich, Planar nucleic acid base super-structures. - Journal of Materials Chemistry, v. 16, p. 1894 (2006), <b>Feature Article</b>.
+<br> <br> 
+<a name="B106"></a>106 L. Kantorovich and C. Hobbs, Probing the Si(001) surface with a Si tip: an ab initio study. - Phys. Rev. B, v. 73, 245420 (2006).
+<br> <br> 
+<a name="B107"></a>107 L. M. A. Perdigao, P. A. Staniec, N. A. Champness,  R. E. A. Kelly, L. Kantorovich and P. Beton, Experimental and theoretical identification of adenine mononlayers on Ag-terminated Si(111). - Phys. Rev. B, v. 73, 195423 (2006).
+<br><br>
+<a name="B108"></a>108. N. Martsinovich, C. Hobbs, L. Kantorovich, R. H. J. Fawcett, M. J. Humphry, D. L. Keeling and P. H. Beton, Manipulation of C<sub>60</sub> on the Si(001)
+Surface: Experiment and Theory. - Phys. Rev. B, v. 74, 085304 (2006).
+<br><br>
+<a name="B109"></a>109. T. Trevethan, M. Watkins, L. N. Kantorovich, A. L. Shluger, J. Polesel-Maris and S. Gauthier, Modelling atomic scale manipulation with the non-contact atomic force microscope. - Nanotechnology, v. 17, 5866-5874 (2006). 
+ <br><br>
+<a name="B110"></a>110. L. Kantorovich, Simulating system dynamics with arbitrary time step. - Phys. Rev. B, v. 75, 064305 (2006).
+<br> 
+
+<p> <B><I><FONT COLOR="FF3300">2007</FONT></I></B> </p>
+<a name="B111"></a>111. T. Trevethan, M. Watkins, L. N. Kantorovich, and A. L. Shluger, Controlled manipulation of atoms in insulating surfaces with the Virtual Atomic Force Microscope. - Phys. Rev. Lett., v. 98, No.028101 (2007).
+ <br><br>
+<a name="B112"></a>112. R. Kelly and L. Kantorovich, Planar Heteropairing Possibilities of the DNA and RNA Bases: An ab initio Density Functional Theory Study. - J. Phys. Chem. C, v. 111, 3883-3892 (2007). 
+<br> <br>
+<a name="B113"></a>113.  T. Trevethan, L. N. Kantorovich, J. Polesel-Maris and S. Gauthier, Is atomic scale dissipation in NC-AFM real? Investigation using the Virtual Atomic Force Microscope. - Nanotechnology, v. 18, 084017 (2007). 
+<br> <br>
+<a name="B114"></a>114. Yu Wang and Lev Kantorovich, Nonequilibrium statistical mechanics of classical nuclei interacting with the quantum electron gas. - Phys. Rev. B, v. 76, 144304 (2007)
+<br> <br>
+<a name="B115"></a>115. Trevethan T., Watkins M., Shluger A.L., Polesel-Maris J., Gauthier S., Kantorovich L.N., A comparison of dynamic atomic force microscope set-ups for performing atomic scale manipulation experiments. - Nanotechnology, v. 18, No. 345503 (2007). 
+<br> <br>
+<a name="B116"></a>116. Trevethan T., Kantorovich L., Polesel-Maris J., Gauthier S., Shluger A., Multiscale model of the manipulation of single atoms on insulating surfaces using an atomic force microscope tip.  - Phys. Rev. B, v. 76, No. 085414 (2007).
+<br> <br>
+<a name="B117"></a>117.  Danyliv O., Kantorovich L., Cora F., Treating periodic systems using embedding: Adams-Gilbert approach. - Phys. Rev. B, v. 76, No. 045107 (2007).
+<br> <br>
+<a name="B118"></a>118. W. Mamdouh, M. Dong, R. E. A. Kelly, L. N. Kantorovich and F. Besenbacher, Coexistence of homochiral and heterochiral adenine domains at the liquid/solid interface. - J. Phys. Chem. B, v. 111, 12048-12052 (2007).
+<br> <br>
+<a name="B119"></a>119. Wei Xu, R. E. A. Kelly, R. Otero, M. Schock , E. Laegsgaard, I. Stensgaard, L. N. Kantorovich and F. Besenbacher, Probing the ierarchy of thymine-thymine interactions in self-asembled structures by manipulation with scanning tunneling microscopy. - Small, v. 3, p. 2011  (2007). 
+<br> <br>
+<a name="B120"></a>120.  M. Watkins, T. Trevethan, A.L. Shluger, L.N. Kantorovich, Dynamical processes at oxide surfaces studied with the virtual atomic force microscope. - Phys. Rev. B, v. 76, No. 245421 (2007).
+<br> <br>
+<a name="B121"></a>121. U. Wyder, A. Baratoff, E. Meyer, L.N. Kantorovich, J. David, S. Maier, T. Filleter, and R. Bennewitz, Interpretation of atomic friction experiments based on atomistic simulations. - Journal of Vacuum Science and Technology B25 (2007) 1547.
+<br> 
+
+<p> <B><I><FONT COLOR="FF3300">2008</FONT></I></B> </p>
+<a name="B122"></a>122.  Wael Mamdouh, Ross E. A. Kelly, Mingdong Dong, Lev N. Kantorovich, Flemming Besenbacher, Two-Dimensional Supramolecular Nanopatterns Formed by the Co-adsorption of Guanine and Uracil at the Liquid/Solid Interface. - JACS, v. 130, pp. 695-702 (2008).
+<br> <br> 
+<a name="B123"></a>123.  N. Martsinovich and L. Kantorovich,  Pulling the C60 molecule on a Si(001) surface with an STM tip: A theoretical study. -  Phys. Rev. B, v. 77, No. 115429 (2008). [selected for the March 31, 2008 issue of Virtual Journal of Nanoscale Science & Technology.]
+<br> <br> 
+<a name="B124"></a>124.  N. Martsinovich and L. Kantorovich,  Vertical manipulation of a molecule with chemical forces. - Physical Review B, v. 77, No. 205412 (2008) [selected for the May 26, 2008 issue of Virtual Journal of Nanoscale Science & Technology and May 15, 2008 issue of Virtual Journal of Biological Physics Research]
+<br> <br> 
+<a name="B125"></a>125. N. Martsinovich, L. Kantorovich, R. H. J. Fawcett, M. J. Humphry and P. H. Beton. Constrained molecular manipulation mediated by attractive and repulsive tip-adsorbate forces. - Small, v. 4, p. 765-769 (2008).
+<Br> <br> 
+<a name="B126"></a>126. N. Martsinovich and L. Kantorovich. Theoretical modelling of tip effects in the pushing manipulation of C60 on the Si(001) surface. - Nanotechnology, v. 19, No. 235702 (2008). [appeared on  <a href="http://nanotechweb.org/cws/article/lab/34401">the 'Lab talk' channel</a>]
+<br> <br> 
+<a name="B127"></a>127. R. Otero, M. Lukas, R. E. A. Kelly, W. Xu, E. Lagsgaard, I. Stensgaard, L. N. Kantorovich, F. Besenbacher. Elementary Structural Motifs in a Random Network of Cytosine Adsorbed on a Gold(111) Surface? - Science, v. 319, pp. 312-315 (2008) 
+<Br><br>
+<a name="B128"></a>128. R. E. A. Kelly, W. Xu, M. Lukas, L. N. Kantorovich, R. Otero, M. Mura, Y. J. Lee, E. Lagsgaard, I. Stensgaard, F. Besenbacher. An investigation into the interactions between self-assembled adenine molecules and the Au(111) surface. - Small, v. 4, 1494-1500 (2008).
+<Br><br>
+<a name="B129"></a>129. F. Silly, A. Q. Shaw, M. R. Castell, G. A. D. Briggs, M. Mura, N. Martsinovich and L. Kantorovich. Melamine structures on the Au(111) surface. - J. Phys. Chem. C, v. 112, p. 11476-11480 (2008). 
+<br><br>
+<a name="B130"></a>130. N. Martsinovich and L. Kantorovich. A comparative theoretical study of O- and S-containing hydrogen-bonded supramolecular structures. - J. Phys. Chem. C, v. 112, pp. 17340-17350 (2008).
+<Br><br>
+<a name="B131"></a>131. R. Otero, W. Xu, M. Lukas, R. E. A. Kelly, E. Laegsgaard, I. Stensgaard, L. Kantorovich, F. Besenbacher. Specificity of Watson-Crick base pairing on a solid surface studied at the atomic scale. - Angew. Chem. Int. Ed., v. 47, pp. 9673-9676 (2008).
+<Br><br>  
+<a name="B132"></a>132. L. Kantorovich. Generalised Langevin Equation for solids: I. Rigorous derivation and main properties. - Phys. Rev. B, v. 78, No. 094304 (2008).
+<br><br>
+<a name="B133"></a>133. L. Kantorovich and N. Rompotis.  Generalised Langevin Equation for solids: II. Stochastic Boundary Conditions for non-equilibrium molecular dynamics simulations. - Phys. Rev. B, v. 78, No. 094305 (2008).
+<br><br>
+<a name="B134"></a>134. A. Bellec, D. Riedel, D. Dujardin, N. Rompotis and L. Kantorovich. Dihydride dimer structures on the Si(100):H surface studied by low-temperature scanning tunneling microscopy. - Phys. Rev. B, v. 78, No. 165302 (2008) .
+<br><br> 
+<a name="B135"></a>135. R. E. A. Kelly, M. Lukas, L. N. Kantorovich, R. Otero,  W. Xu, M. Mura, E. Laesgaard, I. Stensgaard and F. Besenbacher. Understanding Disorder of the DNA Base Cytosine on the Au(111) surface. - J. Chem. Phys. v. 129, 184707 (2008). [published in Virtual Journal of Nanoscale Science & Technology, 1 December 2008; published by the Virtual Journal of Biological Physics Research, Nov. 15, 2008]
+<br><br>
+<a name="B136"></a>136. M. Mura, N. Martsinovich and L. Kantorovich. Theoretical study of melamine super-structures and their interaction with the Au(111) surface. - Nanotechnology, v. 19, No. 465704 (2008).
+<br>
+
+<p> <B><I><FONT COLOR="FF3300">2009</FONT></I></B> </p>
+<a name="B137"></a>137. M. Lukas, R. Kelly, L. Kantorovich, R. Otero, W. Xu, E. Laegsgaard, I. Stensgaard and F. Besenbacher. Adenine monolayers on the Au(111) surface: structure identification by STM experiment and ab initio calculations. - JCP, v 130, No. 024705 (2009).[selected for the January 26, 2009, issue of Virtual Journal of Nanoscale Science & Technology]
+<br><br>
+<a name="B138"></a>138. N. Martsinovich and L. Kantorovich. Modelling the manipulation of C$_{60}$ on the Si(001) surface performed with NC-AFM. - Nanotechnology, v. 20, 135706 (2009). [Selected by the Editor as an article of particular interest.] 
+<br><br>
+<a name="B139"></a>139. J. He, C. di Paolo and L. Kantorovich. Partitioning scheme for precise density functional calculations of extended systems. -  J. Chem. Phys., v. 130, No. 144104 (2009). [Selected for the April 15, 2009 issue of Virtual Journal of Biological Physics Research]
+<br><br>
+<a name="B140"></a>140. W. Xu, R. E. A. Kelly, H. Gersen, E. Lagsgaard, I.Stensgaard, L. Kantorovich, F. Besenbacher. Prochiral Guanine adsorption on Au(111): An entropy stabilised intermixed Guanine-quartet chiral structure. - Small, v. 5, 1952 (2009). 
+<Br><br>
+<a name="B141"></a>141. W. Mamdouh, R. Kelly, M. D. Dong, M. F. Jacobsen, E. E. Ferapontova,  L. N. Kantorovich, K. V. Gothelf and F. Bessenbacher. Self-assembly of artificial nucleobase 1H-benzimidazole-4,7-dione at the liquid/solid interface. - J. Phys. Chem. B, v. 113, 8675 (2009).
+<br><br>
+<a name="B142"></a>142. Yu Wang and  L. Kantorovich, Arrow diagram theory for nonorthogonal electronic groups: 
+method of continued fractions.  - J. Phys. Cond. Matter, v. 21, 474204 (2009), Special issue in honour of Richard Palmer.
+<br><br>
+<a name="B143"></a>143. M. Mura, F. Silly, G. A. D. Briggs, M. R. Castell and L. Kantorovich. H-bonding supramolecular assemblies of PTCDI molecules on the Au(111) surface. - J. Phys. Chem. C, v. 113, 21840-21848 (2009).
+<br><br>
+<a name="B144"></a>144. R. Kelly and L. Kantorovich. Homopairings of
+the Artificial Nucleobase  1H-benzoimidazole-4,7-dione. - J. Phys. Chem. B, v. 113, p. 16016-16020 (2009).
+<br>
+
+<p> <B><I><FONT COLOR="FF3300">2010</FONT></I></B> </p>
+<a name="B145"></a>145. T. Trevethan, A. Shluger and L. Kantorovich. Modelling components of future molecular devices. - J. Phys. Cond. Matter, v. 22, 084024 (2010) - Special issue "Prospects in surface science" 
+<br><br>
+<a name="B146"></a>146. D. Toton, C. D. Lorenz, N. Rompotis, N. Martsinovich and L. Kantorovich. Temperature Control in Molecular Dynamic Simulations of Non-Equilibrium Processes. - J. Phys. Cond. Matter, v. 22, No. 074205 (2010). - Special issue in honour of Mike Gillan.
+<br><br>
+<a name="B147"></a>147. M. Mura, A. Gulans, T. Thonhauser and L. Kantorovich. Role of van der Waals interaction in forming molecule-metal junctions: flat organic molecules on the Au(111) surface. - Phys. Chem. Chem. Phys., v. 12, 4759 - 4767 (2010).
+<Br><br>
+<a name="B148"></a>148. M. Mura, X. Sun, F. Silly, H. T. Jonkman, G.A.D. Briggs, M. R. Castell, and L. N. Kantorovich, Experimental and theoretical analysis of H-bonded supramolecular assemblies of PTCDA molecules. - Phys. Rev. B 81, 195412 (2010).
+<br><br>
+<a name="B149"></a>149. D. Toton, J. He, G. Goryl, J. Koaodziej, S. Godlewski, L. Kantorovich, and M. Szymonski. Structure of InSb (001) surface. - J. Phys. Cond. Matter, v. 22, 265001 (2010).
+<br><br>
+<a name="B150"></a>150. G. Goryl, D. Toton, N. Tomaszewska, J. S. Prauzner-Bechcicki, L. Walczak, A. Tejeda, A. Taleb-Ibrahimi, L. Kantorovich, E. G. Michel, and J. J. Kolodziej. Structure of the indium-rich InSb(001) surface. - Phys. Rev. B 82, 165311 (2010).
+<br><br>
+<a name="B151"></a>151. W. Xu, J.-G. Wang, M. F. Jacobsen, M. Mura, M. Yu, R. E. A. Kelly, Q.-Q. Meng, E. LÃÂ¦gsgaard, I. Stensgaard, T. R. Linderoth, J. Kjems, L. N. Kantorovich, K. V. Gothelf, and F. Besenbacher. Supramolecular Porous Network Formed by Molecular Recognition between Chemically Modified Nucleobases Guanine and Cytosine. - Angew. Chem. Int. Ed., v. 49, pp. 9373-9377 (2010).
+<br>
+<p> <B><I><FONT COLOR="FF3300">2011</FONT></I></B> </p>
+<a name="B152"></a>152. V. M. Burlakov and L. Kantorovich, Ostwald ripening of binary alloy particles. - J. Chem. Phys., v. 134, 024521 (2011).
+<br><br>
+<a name="B153"></a>153. A. Sweetman, S. Jarvis, R. Danza, J. Bamidele, S. Gangopadhyay, G. A. Shaw, L. Kantorovich, and P. Moriarty. Toggling bistable atoms via mechanical switching of bond angle. - PRL, v. 106, No. 136101 (2011)
+<Br><br>
+<a name="B154"></a>154. D. Toton, S. Godlewski, G. Goryl, J. J. Kolodziej, L. Kantorovich and M. Szymonski, Architecture of PTCDA molecular structures on a reconstructed InSb(001) surface. - Phys. Rev. B, v. 83, 235431 (2011). 
+<br><br>
+<a name="B155"></a>155. A. Sweetman, S. Jarvis, R. Danza, J. Bamidele, L. Kantorovich and P. Moriarty.   Manipulating Si(100) at 5 K using qPlus noncontact atomic force microscopy: Role of defects and dynamics in the mechanical switching of atoms. - Phys. Rev. B, v. 84, 085426 (2011).
+<br><br>
+<a name="B156"></a>156. M. Yu, J. Wang, M. Mura, Q.-Q. Meng, W. Hu, H. Gersen, E. Lagsgaard, I. Stensgaard, R. Kelly, J. Kjems, T. R. Linderoth, L. N. Kantorovich and F. Besenbacher. Homochoral Xanthine quintet networks self-assembled on Au(111) surfaces. - ACS Nano, v. 5, pp. 6651-6660 (2011).
+<br>
+<p> <B><I><FONT COLOR="FF3300">2012</FONT></I></B> </p>
+<a name="B157"></a>157. X. Sun, M. Mura, H. Jonkman, L. Kantorovich
+and F. Silly. Fabrication of Complex Two-Dimensional Adenine - Perylene-3,4,9, 2,10-tetracarboxylic Dianhydride
+Chiral Nanoarchitecture through Molecular Self-Assembly. - J. Phys. Chem. C, v. 116, 2493-2499 (2012).
+<br><br>
+<a name="B158"></a>158. M. Mura, F. Silly, V. Burlakov, M. R. Castell,
+G. A. D. Briggs and L. Kantorovich. Formation Mechanism for a Hybrid
+Supramolecular Network Involving Cooperative Interactions. - Phys. Rev. Letters, v. 108, 176103 (2012).
+<br><br>
+<a name="B159"></a>159. S. Jarvis, A. Sweetman, J. Bamidele, L. Kantorovich and P. Moriarty. What role does orbital overlap play in atomic manipulation? - Phys. Rev. B, v. 85, 235305 (2012).
+<br><br>
+<a name="B160"></a>160. C. Chiutu, S. Jarvis, A. J. Lakin, A. Stannard, A. M. Sweetman, L. Kantorovich, J.L. Dunn, and P. Moriarty. Orienting a Single Molecule Probe with Atomic Precision. - Phys. Rev. Letters, v. 108, No. 268302 (2012).
+<br><br>
+<a name="B161"></a>161. Peter Sharp, Sam Jarvis, Richard Woolley, Adam Sweetman, Lev Kantorovich, Chris Pakes, and Philip Moriarty. Identifying passivated dynamic force microscopy tips on H:Si(100). - Appl. Phys. Lett., v. 100, 233120 (2012).
+<br><br>
+<a name="B162"></a>162. J. Bamidele, Y. Kinoshita, R. Turansky, S. H. Lee, Y. Naitoh,
+ Y. J. Li, Y. Sugawara, I. Stich, and L. Kantorovich.  Chemical tip fingerprinting in scanning probe microscopy of an oxidized Cu(110) surface.  - Phys. Rev. B, v. 86, No. 155422 (2012).
+<br><br>
+<a name="B163"></a>163. H. Labidi, L. Kantorovich and D. Riedel. Atomic-scale control of hydrogen bonding on a bare Si(100) 2x1 surface. -  Phys. Rev. B, v. 86, No. 165441 (2012).
+<br><br>
+<a name="B164"></a>164. J. Bamidele, Y. J. Li, S. Jarvis, Y. Naitoh, Y. Sugawara, and L. Kantorovich, Complex Design of Dissipation Signals in Non Contact Atomic Force Microscopy. - PCCP, v. 14, 16250-16257 (2012).
+<br>
+<p> <B><I><FONT COLOR="FF3300">2013</FONT></I></B> </p>
+<a name="B165"></a>165. A. I. Livshits and L. Kantorovich. Guanine assemblies on the Au(111) surface: a theoretical study.  - J. Phys. Chem. C, v. 117, 5684-5692 (2013).
+<br><br>
+<a name="B166"></a>166. Marek Kolmer, Szymon Godlewski, Jakub Lis, Bartosz Such, Lev Kantorovich, Marek Szymonski. Construction of atomic-scale logic gates on a surface of hydrogen passivated germanium. - Microelectronic Engineering, v.  109, p. 262-265 (2013).
+<br><br>
+<a name="B167"></a>167. J. Bamidele, J. Brndiar, A. Gulans, L. Kantorovich, and Ivan Stich. Critical Importance of van der Waals Stabilization in Strongly Chemically Bonded Surfaces: Cu(110):O. - J. Chem. Theory and Comput. (JCTC), v. 9, 5578-5584 (2013).
+<br><br>
+<a name="B168"></a>168. 3. S. Jarvis, L. Kantorovich and P. Moriarty. Structural development and energy dissipation in simulated silicon apices. - Belstein J. Nanotechn. v.4, 941-948 (2013).
+<br>
+<p> <B><I><FONT COLOR="FF3300">2014</FONT></I></B> </p>
+<a name="B169"></a>169. M. Marschall, J. Reichert, K. Diller, S. Klyatskaya, M. Ruben, A. Nefedov, C. Woll, L. N. Kantorovich, F. Klappenberger, and J. V. Barth. Meta positioning of carbonitrile functional groups induces edge-on phase of oligophenyl derivatives. Meta-Positioning of Carbonitrile Functional Groups Induces Interfacial Edge-On Phase of Oligophenyl Derivatives - J. Phys. Chem. C, v. 118, p. 2622-2633 (2014).
+<br><br>
+<a name="B170"></a>170. L. Stella, C. D. Lorenz, and L. Kantorovich. Generalized Langevin equation: An efficient approach to nonequilibrium molecular dynamics of open systems. - Phys. Rev. B, v. 89, 134303 (2014). [selected as an Editor's suggestion] 
+<br><br>
+<a name="B171"></a>171. A. M. Sweetman, S. Jarvis, H. Sang, I. Lekkas, P. Rahe, Yu Wang, J. Wang, N. Champness, L. Kantorovich, and P. J. Moriarty. Mapping the force-field of a hydrogen-bonded assembly. - Nature Comm., v. 5, p. 3931 (2014).
+<br><br>
+<a name="B172"></a>172. J. Posthuma de Boer, I. J. Ford, L. Kantorovich and D. D. Vvedensky. Optimization algorithm for rate equations with an application to epitaxial graphene. - J. Phys.: Condens. Matter, v. 26, p. 185008 (2014).
+<br><br>
+<a name="B173"></a>173. D. Abbasi-Perez, J. M. Recio, and L.Kantorovich. Building Motifs during Self-Assembly of para-Terphenyl-meta-dicarbonitrile on a Metal Surface: A Gas-Phase Study.  - J. Phys. Chem. C, v. 118, p. 10358-10365 (2014).
+<br><br>
+<a name="B174"></a>174. H. Tetlow, J. Posthuma de Boer, I. J. Ford, D. Vvedensky, J. Coraux and L. Kantorovich. Growth of Epitaxial Graphene: Theory and Experiment.  - Physics Reports, v. 542, p. 195-295 (2014). 
+<br><br>
+<a name="B175"></a>175. J. Bamidele, S. H. Lee, Y. Kinoshita, R. Turansky, Y. Naitoh, Y. J. Li, Y. Sugawara, I. Stich, and L. Kantorovich. Vertical atomic manipulation with dynamic AFM without tip change via multi-step mechanism. - Nature Comm., v. 5, p. 4476 (2014). 
+<br><br>
+<a name="B176"></a>176. L. Brinkmann, E. Heifets and L. Kantorovich. Density functional calculations of extended, periodic systems using Coulomb corrected Molecular Fractionation with Conjugated Caps method (CC-MFCC). - PCCP, v. 16, p. 21252-21270 (2014). 
+<br><br>
+<a name="B177"></a>177. J. Bamidele, Y. Kinoshita, R. Turansky, S. H. Lee, Y. Naitoh, Y. J. Li, Y. Sugawara, I. Stich, and L. Kantorovich. Image Formation and Contrast Inversion in NC-AFM Imaging of the Oxidized Cu(110) Surfaces. - Phys. Rev. B 90, 035410 (2014).
+<br><br>
+<a name="B178"></a>178. A. Sweetman, S. P. Jarvis, P. Rahe, N. R. Champness, L. Kantorovich, and Philip Moriarty. Intramolecular resolution resolved on a semiconductor surface. - Phys. Rev. B 90, 165425 (2014).
+<br><br>
+<a name="B179"></a>179. Hongqian Sang, Samuel Paul Jarvis, Zhichao Zhou, Peter Sharp, Jianbo Wang, Yu Wang, and Lev Kantorovich. Identifying tips for intramolecular NC-AFM imaging via in situ tip fingerprinting. - Scientific Reports, v. 4, p. 6678 (2014) 
+<br>
+<p> <B><I><FONT COLOR="FF3300">2015</FONT></I></B> </p>
+<a name="B180"></a>180.  S. Jarvis, A. Sweetman, I. Lekkas, N. Champness, L. Kantorovich, P. Moriarty. Simulated structure and imaging of NTCDI on Si(111)-7x7: a combined STM, NC-AFM and DFT study. - J. Phys.: Cond. Matter, v. 27, 054004 (2015).
+<br><br>
+<a name="B181"></a>181. H. Ness, L. Stella, C.D. Lorenz, and L. Kantorovich. Applications of the Generalised Langevin Equation: towards a realistic description of the baths. - Phys. Rev. B 91, 014301 (2015).
+<br><br>
+<a name="B182"></a>182. David Abbasi-Perez, J. Manuel Recio, and Lev Kantorovich. The role of isomerization in the kinetics f self-assembly: p-Terphenyl-m-Dicarbonitrile on the Ag(111) Surface. - Phys. Chem. Chem. Phys., v. 17, 11182 (2015). 
+<br><br>
+<a name="B183"></a>183. S. Jarvis, A. Sweetman, L. Kantorovich, E. McGlynn, and . Moriarty. Pauli's principle  probe microscopy.  - in "Imaging and manipulation of adsorbates using dynamic force microscopy" (Proceedings of the AtMol conference series, Nottingham, U.K., 2013), p. 1-24 (2015), Springer.
+<br><br>
+<a name="B184"></a>184. Michael Ridley, Angus MacKinnon, and Lev Kantorovich. Current through a multi-lead junction caused by applied bias with arbitrary time-dependence. - Phys. Rev. B 91, 125433 (2015). 
+<br><br>
+<a name="B185"></a>185. Sam Haq, Bareld Wit, Hongqian Sang, Andrea Floris, Yu Wang, Jianbo Wang, Lluisa Perez-Garcia, Lev Kantorovitch, David B. Amabilino and Rasmita Raval. A small molecule that walks along a surface between paorphyrin fences assembled in situ.  - Angewante Chemie Int. Ed.,  v. 54, p. 7101-7105 (2015).
+<br><br>
+<a name="B186"></a>186. Szymon Godlewski, Marek Kolmer, Jakub Lis, Rafal Zuzak, Bartosz Such, Wojciech Gren, Marek Szymonski and Lev Kantorovich.  Dynamical behaviour of a dangling bond dimer on a hydrogenated semiconductor: Ge(001):H. - Phys. Rev. B 92, 115403 (2015).
+<br>
+<p> <B><I><FONT COLOR="FF3300">2016</FONT></I></B> </p>
+<a name="B187"></a>187. Michael Ridley, Angus MacKinnon, and Lev Kantorovich. Calculation of the current response in a nanojunction for an arbitrary time-dependent bias: application to the molecular wire. - J. of Physics: Conf. Series, v. 696, 012017 (2016).
+<br><br>
+<a name="B188"></a>188. Andrea Floris, Sam Haq, Mendel Inât Veld, David B. Amabilino, Rasmita Raval, and Lev Kantorovich. Driving forces for covalent assembly of porphyrins by selective C-H bond activation and intermolecular coupling on a copper surface. - JACS 138, 5837-5847 (2016).
+<br><br>
+<a name="B189"></a>189. Michael Ridley, Angus MacKinnon, and Lev Kantorovich. Fluctuating-bias controlled electron transport in molecular junctions. - Phys. Rev. B 93, 205408 (2016).
+<br><br>
+<a name="B190"></a>190. H. Ness, A. Genina, L. Stella, C.D. Lorenz, and L. Kantorovich. Nonequilibrium processes from Generalised Langevin Equations: realistic nanoscale systems connected to two thermal baths. - Phys. Rev. B, v. 93, 174303 (2016) 
+<br><br>
+<a name="B191"></a>191. Chiara Paris, Andrea Floris, Simon Aeschlimann, Markus Kittelmann, Felix Kling, Ralf Bechstein, Angelika Kuhnle, and Lev Kantorovich. Increasing the templating effect on a bulk insulator surface: from a kinetically trapped to a thermodynamically more stable structure. - J. Phys. Chem. C, v. 120, 17546 (2016).
+<br><br>
+<a name="B192"></a>192. H. Tetlow, J. P. de Boer, I. J. Ford, D. D. Vvedensky, D. Curcio, L. Omiciuolo, S. Lizzit, A. Baraldi and L. Kantorovich. Ethylene decomposition on Ir(111): initial path to graphene formation. - PCCP, v. 18, 27897 (2016) [DOI: 10.1039/c6cp03638d]
+<br><br>
+<a name="B193"></a>193. Y. Kinoshita, R. Turansky, J. Brndiar, Y. Naitoh, Y. J. Li, L. Kantorovich, Y. Sugawara, and I. Stich. Promoting atoms into delocalized long-living magnetically modified state using Atomic Force Microscopy. - Nano Letters, <B>16</B> 7490 (2016).
+<br><br>
+<a name="B194"></a>194. L. Kantorovich, H. Ness, L. Stella, C.D. Lorenz. $c$-number Quantum Generalised Langevin Equation for an open system.  - Phys. Rev. B 94, 184305 (2016). 
+<br><br>
+<p> <B><I><FONT COLOR="FF3300">2017</FONT></I></B> </p>
+<a name="B195"></a>195. H. Tetlow, I. Ford and L. Kantorovich. A free energy study of carbon clusters on Ir(111): precursors of graphene growth.  - J. Chem. Phys. <B>146</B>, 044702 (2017).
+<br><br>
+<a name="B196"></a>196. G. M. G. McCaul, C. D. Lorenz and L. Kantorovich. Partition-free approach to open quantum systems in harmonic environment: An exact stochastic Liouville equation. - Phys. Rev. B <B>95</B>, 125124 (2017)
+<br><br>
+<a name="B197"></a>197. Junning Li, Yu Wang, Davide Curcio, Silvano Lizzit, Alessandro Baraldi, Lev Kantorovih and Andreas Floris. Ethylene dissociation on Ni$_3$Al (111). - J. Phys. Chem. C <B>121</B>, p. 7967 (2017).
+<br><br>
+<a name="B198"></a>198. Michael Ridley, Angus MacKinnon, and Lev Kantorovich. Partition-free theory of time-dependent current correlations in nanojunctions in response to an arbitrary time-dependent bias. - Phys. Rev. B  <B>95</B>, 165440 (2017).
+<br><br>
+<a name="B199"></a>199. H. Ness, L. Stella, C. D. Lorenz, and L. Kantorovich. Nonequilibrium generalised Langevin equation for the calculation of heat transport properties in model 1D atomic chains coupled to two 3D thermal baths. - J. Chem. Phys. <B>146</B>, 164103 (2017).
+<br><br>
+<a name="B200"></a>200. C. Guo, Y. Wang, M. Kittelmann, L. Kantorovitch, A. Kuhnle, and A. Floris. Mechanism of covalent dimerisation on a bulk insulator surface. - J. Phys. Chem. C <B>121</B>, 10053 (2017).
+<br><br>
+<a name="B201"></a>201. F. Presel, C. A. Tache, H. Tetlow, D. Curcio, P. Lacovig, L. Kantorovich, S. Lizzit, and A. Baraldi. Spectroscopic Fingerprints of Carbon Monomers and Dimers on Ir(111) : Experiment and Theory. - J. Phys. Chem. C <B>121</B>, p. 11335 (2017).
+<br><br>
+<a name="B202"></a>202.  L. Stella, H. Ness, C. D. Lorenz, and L. Kantorovich. Modelling a bistable system strongly coupled to a Debye bath: a quasiclassical approach based on the Generalised Langevin Equation. - Comput. Methods
+in Sci. and Tech., <B>23</B>, p. 251 (2017).
+
+<br><br>
+<p> <B><I><FONT COLOR="FF3300">2018</FONT></I></B> </p>
+<a name="B203"></a>203. Chong Chen, Hongqian Sang, Pengcheng Ding, Ye Sun, Manuela Mura, Ying Hu, Lev N. Kantorovich, Flemming Besenbacher, and Miao Yu. Xanthine Quartets on Au(111). - JACS <B>140</B>, 54-57 (2018).
+<br><br>
+<a name="B204"></a>204. H. Tetlow, D. Curcio, A. Baraldi and L. Kantorovich. Hydrocarbon decomposition kinetics on the Ir(111) surface. - PCCP <B>20</B>, 6083 (2018) 
+<br><br>
+<a name="B205"></a>205. A. Richter, A. Floris, R. Bechstein, L. Kantorovich, and A. Kuhnle. On-surface synthesis on a bulk insulator. - J. Phys.: Condes. Matter, v. <B>30</B>, 133001 (2018).
+<br><br>
+<a name="B206"></a>206. Francesco Presel, Holly Tetlow, Luca Bignardi, Paolo Lacovig, Cristian A. Tache, Silvano Lizzit, Lev Kantorovich, and Alessandro Baraldi. Graphene growth by molecular beam epitaxy: an inteplay between desorption, diffusion and intercalation of elemental C species on the islands. - Nanoscale <B>10</B>, 7396 (2018).
+<br><br>
+<a name="B207"></a>207. G. M. G. McCaul, C. D. Lorenz and L. K. Kantorovich. Driving spin-boson models from equilibrium exact quantum dynamnics. - Phys. Rev. B <B>97</B>, 224310 (2018).
+<br><br>
+<a name="B208"></a>208. L. K. Kantorovich. Non-adiabatic dynamics of electrons and atoms under non-equilibrium conditions. - Phys. Rev. B  <B>98</B>, 014307 (2018). 
+<br><br>
+<a name="B209"></a>209. Chiara Paris, Andrea Floris, Simon Aeschlimann, Julia Neff, Felix Kling, Angelika Kühnle, and Lev Kantorovich. Kinetic control of molecular assembly on surfaces. - Comm. Chem. <B> 1 </B>, 66 (2018).
+<br><br>
+<a name="B210"></a>210 C. Cheng, P. Ding, M. Mura, Y. Sun, L. N. Kantorovich, H. Gersen, F. Besenbacher and M. Yu. Formation of hypxanthine tetrad by reaction with sodium chloride: from planar to stereo. - Angev. Chem. Int. Ed. <B>57</B>, 16015 (2018).
+<br> <p> 
+</a name="B211"></a>211 Q. Zhang, Y. J. Li, H. F. Wen, Y. Adachi, M. Miyazaki, Y. Sugawara, R. Xu, Z. H. Cheng, J. Brndiar, L. Kantorovich and I. Stich. Meaurement and manipulation of the charge state of adsorbed oxygen adatom on rutile TiO2(11)-1x1 surface by nc-AFM and KPFM. - JACS <B>140</B>,  15668 (2018).
+<br> <p> 
+</a name="B212"></a>212. J. P. de Boer, I. J. Ford, L. Kantorovich and D. D. Vvedensky. Phase-field method for epitaxial kinetics on surfaces. - J. Chem. Phys. <B>149</B>, 194107 (2018).
+<br><br>
+<p> <B><I><FONT COLOR="FF3300">2019</FONT></I></B> </p>
+<a name="B213"></a>213. D. Abbasi-Perez, H. Sang, L. Perez-Garcia, A. Floris, D. B. Amabilino, R. Raval, J. M. Recio, and L. Kantorovich. Controlling preferential motion of chiral molecular walkers at a surface.- Chem. Science, v. <B>10</B>, 5864 (2019).
+<br><br>
+<a name="B214"></a>214. Yuuki Adachi, Huan Fei Wen, Quan zhen Zhang, Masato Miyazaki, Yasuhiro Sugawara, Hongqian Sang, Jan Brndiar, Lev Kantorovich, Ivan Stich, and Yan Jun Li. Tip-induced Control of Charge and Molecular Bonding of Oxygen Atoms on the Rutile TiO2 (110) Surface with Atomic Force Microscopy. - ACS Nano (2019) [accepted]
+<br><br>
+<hr width="100%"><b><font size="+2"><font color="#ff0000">(C)</font><font
+ color="#3333ff"> <a name="SubmittedPapers"></a>Submitted papers</font></font></b><a
+ href="#List%20of%20publications"><img src="xfig.up.gif" height="20"
+ width="25"></a>
+<br> <p> 
+1. Miao Yu, Chong Chen, Qi Liu, Hongqian Sang, Cristina Mattioli, Pengfei Guan, Shaoshan Wang, Pengcheng Ding, Ye Sun, Andre Gourdon, Lev Kantorovich, FFlemming Besenbacher, Federico Rosei, and Xueming Yang. Long-range Ordered and Atomic-scale Control of Graphene Hybridization by Photocycloaddition. - (2018)
+<br> <p> 
+2. S. Aeschlimann, J. Neff, R. Bechstein, C. Paris, A. Floris, K. Kantorovich, and A. Kühnle. Focus on the essential: extracting the decisive energy barrier of a complex process.  - (2018).
+<br> <p> 
+3. H. Sang, D. Abbasi-Perez, J. M. Recio and L. Kantorovich. Molecular ratchets on a periodic potential: a rate equations approach. (2019)
+<br> <p> 
+
+<hr width="100%"><b><font size="+2"><font color="#ff0000">(D)<a name="papersinpreparation"></a>
+   </font><font color="#3333ff"> Papers
+in Preparation and work</font></font></b><a href="#List%20of%20publications"><img
+ src="xfig.up.gif" height="20" width="25"></a>
+<br>
+<br> <p> 1. Walking molecules with a bias (Sang) - 2nd analytical
+<br> <p> 2. AFM induced manipulation - atomic crane (David)
+<br> <p> 3. Spin-boson simulations using a new code (Matt/Daniel)
+<br> <p> 4. H2O@C60 (Sang)
+<br> <p> 5. BCM molecule (Miao)
+<br> 
+
+<hr width="100%"><b><font size="+2"><font color="#ff0000">(E)<a
+ name="Conferences Participation/Proceedings"></a></font><font
+ color="#3333ff"> Conferences
+Participation/Proceedings</font></font></b><a
+ href="#List%20of%20publications"><img src="xfig.up.gif" height="20"
+ width="25"></a>
+<p>1. Gotlib V.I., Grebenshikov V.L., Kantorovich L.N., Nemiro E.A.
+TL-dosimetry
+method for beta radiation.- Proc.YI Sov. symp. on luminescence
+detectors
+and converters of ionizing radiation. Lvov, August, 1988, p.66 (in
+Russian).
+</p>
+<p>2. Kantorovich L.N., Fogel G.M., Calculation of the peak area in the
+complex thermoluminescence curve. - Proc. VI Sov. symp. on lumin.
+detectors
+and converters of ionizing rad., Lvov, 1988, p.96 (in Russian).
+</p>
+<p>3. Kantorovich L.N., Fogel G.M., Gotlib V.I. Thermoluminescence
+kinetics.-Proc.
+YI Sov. symp. on luminescene detectors and converters of ionizing
+radiation.
+Lvov, August, 1988, p.71 (in Russian).
+</p>
+<p>4. Puchin V.E., Kantorovich L.N., Zapol B.P. Computer code for the
+ab-
+initio calculations of electronic structure of defects in ionic
+crystals.-
+Proc. Conf. on computer simul. of defects structure in crystals.
+Leningrad,
+1988, p.124 (in Russian).
+</p>
+<p>5. Gotlib V.I., Grebenshikov V.L., Kantorovich L.N., Nemiro E.A.
+Thermoluminescence
+dosimetry of beta-radiation. - Proc. 9-th Int. Conf. on solid state
+dosimetry.
+Austrian research centre Seibersdorf, 1989, Vienna, p.6.18.
+</p>
+<p>6. Kantorovich L.N., Zapol B.P. Diagrammatic techniques for
+non-orthogonal
+geminals in the theory of semiconductors. Donetsk, Oct. 1989, Don.
+Techn.
+Inst., p.61 (in Russian).
+</p>
+<p>7. Gotlib V.I., Fogel G.M., Kantorovich L.N. Termoluminescence
+kinetics.
+- Proc. VII Sov. conf. on rad. phys. and chem. of inorganic materials.
+Riga, 1989, Phys. Inst. Acad. of Scien., Latv.SSR, p. 546 (in Russian).
+</p>
+<p>8. Kantorovich L.N. The functional derivatives method in the defects
+theory. - Proc. III Sov. conf. on quantum chem. of solids. Riga, Nov.
+1990,
+Latv. Univ., p.196-197.
+</p>
+<p>9. Kantorovich L.N. The embedded-molecular-cluster method taking
+into
+account the effects of non-orthogonality.- Proc. III Sov. conf. on
+quantum
+chem. of solids. Riga, 1990, Latv.Univ., p.198- 199.
+</p>
+<p>10. Kantorovich L.N., Zapol B.P. The diagram techniques for the non-
+orthogonal group functions.- Proc. III Sov. conf. on quantum chem. of
+solids.
+Riga, 1990, Latv. Univ., p.200-201.
+</p>
+<p>11. Kantorovich L., Livshitz A. Rigorous TL kinetic in the case of a
+continuous distribution of trap centers over their activation energies.
+- Proc. Intern. Symp. on luminescent detectors and transformers of
+ionizing
+radiation, Riga, Latvia, October 9-12, 1991.
+</p>
+<p>12. Kantorovich L. Physically correct embedding of a molecular
+cluster
+into a crystal environment. - Abstracts of the International Conference
+on Defects in Insulating Materials, p.85, Schlob Nordkirchen, FRG,
+August
+16th-22nd, 1992.
+</p>
+<p>13. Heifets E.,Kantorovich L. and Kuklja M. Calculation of the Hole
+Self- Trapped Energy. - Abstracts of the International Conference on
+Defects
+in Insulating Materials, p.86, Schlob Nordkirchen, FRG, August 16th -
+22nd,
+1992.
+</p>
+<p>14. Kantorovich L., Livshitz A., Gotlib V. General integral equation
+method for studying the TL kinetic of disordered solids. - In the
+Proceedings
+of 10th Intern. Conf. on Solid State Dosimetry, No. G43.P4, p.32,
+Washington,
+1992.
+</p>
+<p>15. A.Martin Pendas, V.Luana, J.M.Recio, M.Florez, E.Francisco,
+L.Kantorovich
+and M.A.Blanco. The B1-B2 phase transition in alkali halides:
+thermodynamic
+and kinetic aspects from first principles calculations. - In: 1st
+Intern.
+Congress of the Theor. Soc. of Chem. Phys., Gerona, 28 June - 3 July,
+1993.
+</p>
+<p>16. L. Kantorovich, Thermoelastic and dielectric properties of KCl
+and
+NaCl crystals in the quasiharmonic approximation: fuly automatic
+approach.
+- Presented at the Conference ``How to derive the interatomic
+potentials
+needed for simulation studies'', Mansfield College, Oxford, July 4-5,
+1994.
+</p>
+<p>17. L. Kantorovich, J. Holender and M.J. Gillan, F-centers on the
+MgO
+(001) surface. - In: Book of Abstracts of the 7th International
+Workshop
+on Computational Condensed Matter Physics: Total energy and Force
+Methods
+(Trieste, Italy, 11-15 Jan. 1995), p.131.
+</p>
+<p>18. L. Kantorovich, J. Holender and M.J. Gillan, The irregular and
+defective
+MgO (001) surface. - Presented at the meeting ``The structure and
+properties
+of oxide surfaces'', Daresbury Laboratory, April 5-6, 1995.
+</p>
+<p>19. L. Kantorovich, J. Holender and M.J. Gillan, F-centers on the
+MgO
+(001) surface. - Presented at The 1995 March Meeting of the American
+Physical
+Society, San Jose, USA, 20 - 24 March 1995.
+</p>
+<p>20. L. Kantorovich, J. Holender and M.J. Gillan, F-centers on the
+MgO
+(001) surface studied by <i>ab initio</i> calculations. - Presented at
+the Christmas Meeting of Polar Solids Group of Royal Society of
+Chemistry,
+St. Andrews, Scotland, 19-20 Dec. 1994.
+</p>
+<p>21. L. Kantorovich, Quantum cluster in polarisable crystal
+environment.
+Consistent microscopical approach. - Presented at the CCP1/CCP5
+Workshop
+on Modelling of Localised States in Condensed Matter, Keele, Keele
+University,
+Staffordshire, 14 - 16 June 1995.
+</p>
+<p>22. L. N. Kantorovich and M. J. Gillan, Adsorption of an oxygen atom
+on the MgO (001) surface studied by <i>ab initio</i> calculations. -
+Presented
+at the CCP5 Annual Meeting entitled Advanced Computer Simulation of
+Materials,
+20 - 22 September 1995, Daresbury.
+</p>
+<p>23. L. N. Kantorovich, M. J. Gillan and J. A. White, Adsorption of
+atomic
+and molecular oxygen on the MgO (001) surface. - Presented at the ISSC
+11 Meeting in Fitzwilliam College, Cambridge, 15th-18th April 1996, p.
+T.02.
+</p>
+<p>24. L. N. Kantorovich and M. J. Gillan, Adsorption of atomic and
+molecular
+oxygen on the MgO and CaO (001) surface. -&nbsp;<img src="img1.gif"
+ alt="\( \psi _{k} \)" border="0" height="30" width="23" align="middle">
+Network Conference, Schw&auml;bisch Gm&uuml;nd, September 1996,
+Germany,
+Program and Abstracts, p. 66.
+</p>
+<p>25. L. N. Kantorovich and M. J. Gillan, Adsorption of atomic and
+molecular
+oxygen on the MgO (100) surface. - 13th International Conference on
+Defects
+in Insulating Materials (ICDIM 96), Wake Forest University, U.S.A.,
+July
+1996, Abstracts, p. 45.
+</p>
+<p>26. A. I. Livshits, A. L. Shluger and L. N. Kantorovich, How to
+observe
+point defects at ionic surfaces using scanning force microscopy? -
+Program
+and Abstracts, 8th Europhysical Conference on Defects in Insulating
+Materials
+(EURODIM98), Keele University, U.K., July 1998, p. 163.
+</p>
+<p>27. A. L. Shluger, P. V. Sushko and L. N. Kantorovich, Spectroscopy
+of low-coordinated surface sites: theoretical study of MgO. - EURODIM98
+Program and Abstracts, 8th Europhysical Conference on Defects in
+Insulating
+Materials, Keele University, U.K., July 1998, p. 162.
+</p>
+<p>28. L. N. Kantorovich, Derivation of a hybrid scheme for cluster
+embedding.
+- EURODIM98 Program and Abstracts, 8th Europhysical Conference on
+Defects
+in Insulating Materials, Keele University, U.K., July 1998, p. 177.
+</p>
+<p>29. L. N. Kantorovich, Derivation of a hybrid scheme for cluster
+embedding.
+- MM/QM Methods and Applications, Univ. of Southampton, 14-16 April,
+1999.
+</p>
+<p>30. L. N. Kantorovich, Application of the Group Function Theory in
+the
+Theory of Crystals. - Quantum Systems in Chemistry and Physics, INJEP,
+Marly-Le-Roi, France, 22-27 April 1999.
+</p>
+<p>31. L.N. Kantorovich, A. L. Shluger and&nbsp; M. J. Gillan,&nbsp;
+Defects
+and metal clusters at oxide surfaces: theory and comparision with UPS
+and
+MIES.&nbsp; - NATO Advanced Research Workshop, Jurmala,&nbsp; Latvia,
+August
+23-25, 1999
+</p>
+<p>32.&nbsp;&nbsp; L. N. Kantorovich, A. L. Shluger, P. V. Sushko, J.
+G&uuml;nster,
+P. Stracke, D.W. Goodman and V. Kempter, Mg Clusters on MgO surfaces:
+Study
+of the nucleation mechanism with MIES and ab initio calculations. -
+Farad.
+Discussions, Ambleside, U. K.,&nbsp; Sepetember 1-3, 1999
+</p>
+<p>33. A. S. Foster, L. N. Kantorovich, A. L. Shluger,&nbsp; A.
+I.&nbsp;
+Livshits, Non-contact atomic force microscopy theoretical imaging of
+islands&nbsp;
+on the NaCl(001) surface. -&nbsp; Indisciplinary Surface Science
+Conference
+12 at&nbsp; Chester College, 31.03.99.
+</p>
+<p>34. A. S. Foster, L. N. Kantorovich, A. L. Shluger,&nbsp; A.
+I.&nbsp;
+Livshits,&nbsp; Non-contact atomic force microscopy theoretical imaging
+of islands&nbsp; on the NaCl(001) surface. - UK Scanning Probe
+Microscopy
+99 at Surrey University,&nbsp; 20.04.99.
+</p>
+<p>35.&nbsp; A. L. Shluger, P. Sushko and L. Kantorovich, Spectroscopy
+of low-coordinated surface sites: Theoretical study og MgO. - Worshop
+on
+Surface and Interface optics' 99 (SIO'99), Sainte-Maxime (France), 4-9
+May, 1999 (# P.67).
+</p>
+<p>36.&nbsp; A. S. Foster, A. L. Shluger,&nbsp; L. N.
+Kantorovich,&nbsp;
+A. I.&nbsp; Livshits, Theoretical Modelling of Non-contact Atomic Force
+Microscopy. -&nbsp; European Materials Research Society Spring Meeting
+in&nbsp; Strasbourg, 3.06.99.
+</p>
+<p>37.&nbsp; A. S. Foster, A. L. Shluger,&nbsp; L. N.
+Kantorovich,&nbsp;
+A. I.&nbsp; Livshits,&nbsp; Modelling Image Forces in Non-contact
+Atomic
+Force Microscopy. - European Materials Research Society Spring Meeting
+in&nbsp; Strasbourg, 4.06.99.
+</p>
+<p>38.&nbsp; A. S. Foster, L. N. Kantorovich, A. L. Shluger,&nbsp; A.
+I.&nbsp;
+Livshits,&nbsp; Role of Image Forces in Non-contact Atomic Force
+Microscopy.
+-&nbsp; Non-contact Atomic Force Microscopy 99 in Pontresina, 2.09.99.
+</p>
+<p>39. ???
+</p>
+<p>40.&nbsp; L. Kantorovich and M. Mo, Theoretical analysis of the
+physical
+origin of energy dissipation in Atomic Force Microscopy. - 11th
+International
+Conference on Scanning Tunneling Microscopy/Spectroscopy and Related
+Techniques.
+Technical Program &amp; Abstracts, Univ. of British Columbia,
+Vancouver,
+Canada, July 15-20, 2001, page 211 (oral presentation)
+</p>
+<p>41.&nbsp; L, Kantorovich, A. Shluger and A. Stoneham, Recognition of
+surface species in Atomic Force Microscopy: optical properties of Cr3+
+defect at the MgO (001) surface. - 11th International Conference on
+Scanning
+Tunneling Microscopy/Spectroscopy and Related Techniques. Technical
+Program
+&amp; Abstracts, Univ. of British Columbia, Vancouver, Canada, July
+15-20,
+2001, page 431 (poster)
+</p>
+<p>42. L. Kantorovich, Physical origin of energy dissipation in Atomic
+Force Microscopy and sample calculations in a simple model. - NC-AFM
+2001,
+4th International Conference on Noncontact Atomic&nbsp; Force
+Microscopy,
+Kyoto, Japan, Sept. 1-5, 2001, page 15 (oral presentation).
+</p>
+<p>43. L. Kantorovich, Quantum friction in Non-Contact AFM. -&nbsp;
+CMMP
+2002 - Condensed Matter and Material Physics, 1-77 April 2002,
+Brighton,&nbsp;
+Europhysics Conference Abstracts, vol. 26A, page 20 (oral
+presentation).
+</p>
+<p>44. L. Kantorovich, Non-equilibrium quantum dynamics of NC-AFM. -
+5th
+International Conference on Noncontact Atomic Force Microscopy, 11-14
+August
+2002, Montreal, Canada, page 37&nbsp; (poster).
+</p>
+<p>45. L. Kantorovich, Dissipation mechanisms in AFM: approach based on
+nonequilibrium statistical mechanics. - 1st ESF Nanotribology Workshop
+in Portovenere, Italy, 19-23 October 2002, page 34 (oral presentation).
+</p>
+<p></p>
+<hr><!--Table of Child-Links--><a name="CHILD_LINKS"></a>
+<ul>
+  <li> <a name="tex2html3"
+ href="node1.html#SECTION00010000000000000000"></a><a name="tex2html3"
+ href="node1.html#SECTION00010000000000000000"></a><a name="tex2html3"
+ href="node1.html#SECTION00010000000000000000"></a><a name="tex2html3"
+ href="node1.html#SECTION00010000000000000000"></a><a name="tex2html3"
+ href="node1.html#SECTION00010000000000000000"></a><a name="tex2html3"
+ href="node1.html#SECTION00010000000000000000"></a><a name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ name="tex2html3"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"></a><a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html#SECTION00010000000000000000"
+ name="tex2html3">About
+this document ...</a></li>
+</ul>
+<!--End of Table of Child-Links-->
+<hr><!--Navigation Panel--><a name="tex2html1" href="node1.html"></a><a
+ name="tex2html1" href="node1.html"></a><a name="tex2html1"
+ href="node1.html"></a><a name="tex2html1" href="node1.html"></a><a
+ name="tex2html1" href="node1.html"></a><a name="tex2html1"
+ href="node1.html"></a><a name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html1"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"
+ name="tex2html1"><img src="next_motif.gif" alt="next" border="0"
+ height="24" width="37" align="bottom"></a><img src="up_motif_gr.gif"
+ alt="up" border="0" height="24" width="26" align="bottom"><img
+ src="previous_motif_gr.gif" alt="previous" border="0" height="24"
+ width="63" align="bottom"><br>
+<b>Next:<a name="tex2html2" href="node1.html"></a><a name="tex2html2"
+ href="node1.html"></a><a name="tex2html2" href="node1.html"></a><a
+ name="tex2html2" href="node1.html"></a><a name="tex2html2"
+ href="node1.html"></a><a name="tex2html2" href="node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a><a
+ name="tex2html2"
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"></a></b><a
+ href="http://www.cmmp.ucl.ac.uk/%7Elev/lev_all4/node1.html"
+ name="tex2html2">About
+this document ...</a><!--End of Navigation Panel-->
+<address><i>Lev Kantorovich</i></address>
+<br>
+<i>8/11/1999</i>
+</body>
+</html>

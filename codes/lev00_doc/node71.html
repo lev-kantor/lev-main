@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A short note on how to use gOpenMol</TITLE>
+<META NAME="description" CONTENT="A short note on how to use gOpenMol">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node72.html">
+<LINK REL="previous" HREF="node70.html">
+<LINK REL="up" HREF="node59.html">
+<LINK REL="next" HREF="node72.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1190"
+  HREF="node72.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1186"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1180"
+  HREF="node70.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1188"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1191"
+  HREF="node72.html">11 - Get density</A>
+<B> Up:</B> <A NAME="tex2html1187"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1181"
+  HREF="node70.html">10 - Write density</A>
+ &nbsp <B>  <A NAME="tex2html1189"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION004631200000000000000">
+A short note on how to use gOpenMol</A>
+</H3>
+
+<P>
+What you need to do with gOpenMol: 
+
+<P>
+
+<OL>
+<LI>read the <TT>gOpenMol.xyz</TT> file by going to: <TT>File -&gt; Import
+-&gt; Coord -&gt; Browse -&gt; Apply</TT>; you should see your system in the main
+graphical window as connections between atoms
+</LI>
+<LI>read in the <TT>gOpenMol.cube</TT> file by going to: <TT>Run -&gt;
+gCube2plt/g94cub2pl (cube) -&gt; Browse -&gt; Apply</TT> ; it will open a window
+and will produce an output in it finished by &#34;<TT>Job
+done ...</TT>&#34;; a file <TT>gOpenMol.plt</TT> will be produced 
+</LI>
+<LI>then plot the density by reading the <TT>gOpenMol.plt</TT> file: <TT>Plot
+-&gt; Contour -&gt; Browse -&gt; Import Fil</TT>e. In a new window openned, you
+will find the minimum and the maximum values of the density; choose
+the density value in the boxes underneath the min/max info and click
+<TT>Apply</TT>: the density will be shown alongside the atomic positions
+in the graphical window where you will be able to rotate it
+</LI>
+<LI>To make the density transparent, click on <TT>Details</TT> opposite
+the chosen density level and change the <TT>Opacity</TT> level, then
+click <TT>Apply</TT>. It is possible to plot several density levels
+in the same way by filling in several density levels and then changing
+their opacities.
+</LI>
+<LI>To see atoms better, use: <TT>View -&gt; Atom Type</TT> and then the
+option <TT>Licorice</TT> with e.g. <TT>Cyl.rad</TT> = 0.1 and <TT>Sph. rad.</TT>
+= 0.3. To have different radii for different species, use <TT>CPK</TT>
+as well. See the <B><I>gOpenMol</I></B> manual for more instructions.
+<B><I>gOpenMol</I></B> is freely available at: <TT>http://www.csc.fi/gopenmol/</TT> 
+</LI>
+<LI>To save a file with the picture in the graphical window, use: File
+-&gt; Hardcopy -&gt; Apply
+</LI>
+</OL>
+An example of the <B><I>gOpenMol</I></B> image is shown in Fig.
+<A HREF="node71.html#cap:gopenmol-pictures">3.7</A>. 
+<DIV ALIGN="CENTER"><A NAME="cap:gopenmol-pictures"></A><A NAME="10029"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.7:</STRONG>
+Surfaces of constant density for an adenine molecule on gold: side
+(left) and top (right) views.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="22" HEIGHT="36" ALIGN="BOTTOM" BORDER="0"
+ SRC="img150.png"
+ ALT="\includegraphics[%%
+height=6cm]{adenine.eps}">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+Two transparent surfaces are shown.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1190"
+  HREF="node72.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1186"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1180"
+  HREF="node70.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1188"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1191"
+  HREF="node72.html">11 - Get density</A>
+<B> Up:</B> <A NAME="tex2html1187"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1181"
+  HREF="node70.html">10 - Write density</A>
+ &nbsp <B>  <A NAME="tex2html1189"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

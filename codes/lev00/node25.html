@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Theory: practical side</TITLE>
+<META NAME="description" CONTENT="Theory: practical side">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node26.html">
+<LINK REL="previous" HREF="node24.html">
+<LINK REL="up" HREF="node23.html">
+<LINK REL="next" HREF="node26.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html568"
+  HREF="node26.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html564"
+  HREF="node23.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html558"
+  HREF="node24.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html566"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html569"
+  HREF="node26.html">Theory: use of symmetry</A>
+<B> Up:</B> <A NAME="tex2html565"
+  HREF="node23.html">Calculation of phonons (atomic</A>
+<B> Previous:</B> <A NAME="tex2html559"
+  HREF="node24.html">Theory: method of displacements</A>
+ &nbsp <B>  <A NAME="tex2html567"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00368200000000000000"></A><A NAME="sub:Theory:-practical-side"></A>
+<BR>
+Theory: practical side
+</H3>
+
+<P>
+The precision of the calculation can be checked in the following way.
+For simplicity, we consider the first method. We start from <IMG
+ WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$u_{1}$">
+and in a single energy calculation (without relaxation, of course!)
+all forces <IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$F_{i}$"> are determined. Thus, in a single calculation,
+the whole row, <IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$\Phi_{1i}$"> of the FCM is obtained. Then, we take
+<IMG
+ WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$u_{2}$"> and repeat the calculation. It gives the complete second
+row, <IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$\Phi_{2i}$">. This way, the whole matrix is obtained. However,
+the FCM should be symmetric. Due to the higher anharmonic terms that
+were dropped in deriving the working expression for the FCM, Eq. (<A HREF="node24.html#eq:force-1-displ">2.3</A>),
+this condition, however, will not be satisfied. Thus, by checking
+the relative difference between elements <IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$\Phi_{ij}$"> and <IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$\Phi_{ji}$">,
+one can check its precision.
+
+<P>
+There are basically two ways in improving precision. Firstly, one
+can reduce the trial displacements <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$u_{i}$">. This is tricky as the
+forces on atoms are calculated numerically in any DFT code, so that
+forces may become unrealiable if <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$u_{i}$"> are too small. Note that
+it is vital to have reliable forces in the DFT code you use. Normally,
+it is necessary to use as high precision in the code as possible,
+especially, if small displacements <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$u_{i}$"> are to be used. The other
+option is to use more displacements, at least two (works up to the
+4th order in the energy expression). Still, make sure that the forces
+are at least two orders of magnitude more accurate than in ordinary
+ground state relaxation calculations. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html568"
+  HREF="node26.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html564"
+  HREF="node23.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html558"
+  HREF="node24.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html566"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html569"
+  HREF="node26.html">Theory: use of symmetry</A>
+<B> Up:</B> <A NAME="tex2html565"
+  HREF="node23.html">Calculation of phonons (atomic</A>
+<B> Previous:</B> <A NAME="tex2html559"
+  HREF="node24.html">Theory: method of displacements</A>
+ &nbsp <B>  <A NAME="tex2html567"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

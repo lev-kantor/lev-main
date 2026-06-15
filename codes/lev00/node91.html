@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Utilities used by CASTEP</TITLE>
+<META NAME="description" CONTENT="Utilities used by CASTEP">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="previous" HREF="node90.html">
+<LINK REL="up" HREF="node89.html">
+<LINK REL="next" HREF="node92.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1436"
+  HREF="node92.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1432"
+  HREF="node89.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1428"
+  HREF="node90.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1434"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1437"
+  HREF="node92.html">Utility check</A>
+<B> Up:</B> <A NAME="tex2html1433"
+  HREF="node89.html">Working with old academic</A>
+<B> Previous:</B> <A NAME="tex2html1429"
+  HREF="node90.html">CASTEP</A>
+ &nbsp <B>  <A NAME="tex2html1435"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00720000000000000000">
+Utilities used by <I>CASTEP</I></A>
+</H1>
+
+<P>
+
+<UL>
+<LI><B><I>lev1</I></B> <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\rightarrow$"> an interactive menu-driven utility;
+it needs files with wavefunctions at all <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points generated
+by <B><I>CASTEP</I></B> and then calculates an intermediate file
+<TT>psi2.[option]</TT> for one of the options <I>DOS</I>, <I>DOp</I>,
+<I>SRF</I> or <I>MAP</I>:
+
+<P>
+
+<UL>
+<LI><I>DOS</I> option: calculate the total DOS, LDOS projected onto spheres
+as well as LDOS projected on a <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img140.png"
+ ALT="$s$">, <IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img141.png"
+ ALT="$p$">, <IMG
+ WIDTH="78" HEIGHT="34" ALIGN="BOTTOM" BORDER="0"
+ SRC="img142.png"
+ ALT="$d$">-like AO;
+</LI>
+<LI><I>DOp</I> options: calculate LDOS projected to thin layers; this
+is useful for analysing structure of surface states in the case of
+slab calculations;
+</LI>
+<LI><I>MAP</I> option: calculate and store partial charge densities in
+the real space for the specific range of states;
+</LI>
+<LI><I>SRF</I> option: for the slab calculations, calculate and store
+<IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$z$">-dependent partial charge densities which are partial charge densities
+integrated in the <IMG
+ WIDTH="379" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img159.png"
+ ALT="$xy$">-plane parallel to the surface of the slab;
+this is the simplest way to distinguish surface and bulk states in
+your slab system
+</LI>
+</UL>
+Eigenvalues calculated on the last iteration of the band-structure
+run of <B><I>CASTEP</I></B> are to be printed out into a special
+file called <TT>band.out</TT>. At the last stage, files <TT>band.out</TT>
+and <TT>psi2.[option]</TT> are used to calculate and plot DOS,
+LDOS, wavefunctions or partial charge densities by running <B><I>lev00</I></B>. 
+
+<P>
+</LI>
+<LI><B><I>check</I></B> <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\rightarrow$"> (is probably redundant by now)
+reads <I>all</I> files needed to run the <B><I>CASTEP</I></B>
+and tells the user: 
+
+<P>
+
+<UL>
+<LI>whether all the parameters in the <TT>param.inc</TT> file are sufficient
+for the present job, e.g. number of plane waves, etc.;
+</LI>
+<LI>whether all input files are okay and consistent with each other and
+with the parameters in the <TT>param.inc</TT> file.
+</LI>
+<LI>allows you to choose the minimum possible parameters for the <B><I>CASTEP</I></B>
+run 
+</LI>
+</UL>
+</LI>
+<LI><B><I>take</I></B> <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\rightarrow$"> checks the convergence of eigenvalues
+calculated by <B><I>CASTEP</I></B> during the band-structure run
+as well as their correct order; also, it allows one to choose eigenvalues
+from any desired iteration;
+</LI>
+<LI><B><I>sum</I></B> <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\rightarrow$"> an utility which allows you to
+split one big <B><I>CASTEP</I></B> job into a sequence of smaller
+jobs with smaller numbers of <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points; if files, produced
+at each run, are properly named, then the utility <B><I>sum</I></B>
+will ``gather'' the files and will produce the resulting file(s)
+<TT>psi2.[option]</TT> and <TT>band.out</TT> corresponding to
+just one (big) run of <B><I>CASTEP</I></B>. 
+</LI>
+</UL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html1438"
+  HREF="node92.html">Utility <I>check</I></A>
+<LI><A NAME="tex2html1439"
+  HREF="node93.html">Utility <I>take</I></A>
+<LI><A NAME="tex2html1440"
+  HREF="node94.html">Utilities <I>lev1</I> (old) and <I>lev2</I> (new) </A>
+<LI><A NAME="tex2html1441"
+  HREF="node95.html">How to split a large job into a set of smaller jobs. Utility <I>sum</I></A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1436"
+  HREF="node92.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1432"
+  HREF="node89.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1428"
+  HREF="node90.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1434"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1437"
+  HREF="node92.html">Utility check</A>
+<B> Up:</B> <A NAME="tex2html1433"
+  HREF="node89.html">Working with old academic</A>
+<B> Previous:</B> <A NAME="tex2html1429"
+  HREF="node90.html">CASTEP</A>
+ &nbsp <B>  <A NAME="tex2html1435"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

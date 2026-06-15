@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Installation and general information</TITLE>
+<META NAME="description" CONTENT="Installation and general information">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node49.html">
+<LINK REL="previous" HREF="node47.html">
+<LINK REL="up" HREF="node46.html">
+<LINK REL="next" HREF="node49.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html873"
+  HREF="node49.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html869"
+  HREF="node46.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html863"
+  HREF="node47.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html871"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html874"
+  HREF="node49.html">Main definitions</A>
+<B> Up:</B> <A NAME="tex2html870"
+  HREF="node46.html">Utility lev00</A>
+<B> Previous:</B> <A NAME="tex2html864"
+  HREF="node47.html">What it can do</A>
+ &nbsp <B>  <A NAME="tex2html872"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00420000000000000000"></A><A NAME="sec:Installation-info-lev00"></A>
+<BR>
+Installation and general information
+</H1>
+
+<P>
+The distribution file archive (e.g. <TT>lev00_2.44.tgz</TT>) should
+be untarred and unzipped, e.g.
+
+<P>
+<DIV ALIGN="CENTER">
+<TT>tar&nbsp;&nbsp;-xzf&nbsp;&nbsp;lev00_2.44.tgz</TT>
+</DIV>
+
+<P>
+<DIV ALIGN="LEFT">
+in a directory of your choice (e.g. <TT>/TOOLS</TT>).
+</DIV>
+
+<P>
+<B><I>lev00</I></B> code has to be compiled for every new system/application
+(contrary to <B><I>tetr</I></B>). This is because it requires much
+more memory (e.g. electron density on a grid) and is written in <B><I>f77</I></B><A NAME="tex2html11"
+  HREF="footnode.html#foot10259"><SUP>3.4</SUP></A>. 
+
+<P>
+Before compiling the code for the first time, you should edit the
+script <B><I>lev00.comp</I></B> (supplied in subdirectory <TT>/TOOLS/SCRIPTS</TT>)
+to indicate the correct directory for the source code by setting the
+variable <TT>road</TT> there, e.g. 
+
+<P>
+<TT>set road=&#34;/TOOLS&#34;</TT> 
+
+<P>
+The compilation of <B><I>lev00</I></B> is performed by calling the
+script <B><I>lev00.comp</I></B> from your working directory (where
+is your <B><I>VASP</I></B> or <B><I>SIESTA</I></B> job resides).
+What is needed is the file <TT>param.inc</TT> file containing the
+parameters of your system:
+
+<P>
+
+<UL>
+<LI><TT>NGX,NGY,NGZ</TT> - the grid for the electron density files
+</LI>
+<LI><TT>NSPEC</TT> - number of species
+</LI>
+<LI><TT>NIONS</TT> - total number of atoms in the cell
+</LI>
+<LI><TT>NKPTS</TT> - number of <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points
+</LI>
+<LI><TT>NBANDS</TT> - total number of ``bands'' (i.e. the states for
+each <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-point) 
+</LI>
+<LI><TT>ispin</TT> - equal 2 for spin-polarised calculations, equal to
+1 otherwise. 
+</LI>
+</UL>
+This file can be created manually for each DFT job you are working
+with by using the Fortran <TT>parameter</TT> statements. In the cases
+of <B><I>VASP</I></B> and <B><I>SIESTA</I></B>, special routines
+are supplied to do this and some other necessary preparatory work
+for <B><I>lev00</I></B> to work properly (see Sections <A HREF="node78.html#cha:Working-with-VASP">4</A>
+and <A HREF="node84.html#cha:Working-with-SIESTA">5</A>). The old <B><I>CASTEP</I></B>
+has this file already. This is an example:
+
+<P>
+<TT><FONT SIZE="-2">parameter (NGX= 60,NGY= 60,NGZ= 60)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">parameter (NSPEC= 2,NIONS= 3)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">parameter (NKPTS= 1,NBANDS= 8)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">parameter (NPLWV=NGX*NGY*NGZ)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">parameter (ispin= 1)</FONT></TT>
+<P>
+
+
+<P>
+The script copies the file <TT>param.inc</TT> into the directory where
+the source code resides (variable <TT>$road</TT> in the script),
+compiles the code, and then moves it back to your current (working)
+directory. After running the script, you should find an executable
+<B><I>lev00</I></B> there.
+
+<P>
+In practice, what you should do depends on the code you intend to
+use, and this will be described in the proper Sections <A HREF="node78.html#cha:Working-with-VASP">4</A>,
+<A HREF="node84.html#cha:Working-with-SIESTA">5</A> and <A HREF="node89.html#cha:Working-with-CASTEP">6</A>
+for the <B><I>VASP</I></B>, <B><I>SIESTA</I></B> and <B><I>CASTEP</I></B>
+codes, respectively.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html873"
+  HREF="node49.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html869"
+  HREF="node46.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html863"
+  HREF="node47.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html871"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html874"
+  HREF="node49.html">Main definitions</A>
+<B> Up:</B> <A NAME="tex2html870"
+  HREF="node46.html">Utility lev00</A>
+<B> Previous:</B> <A NAME="tex2html864"
+  HREF="node47.html">What it can do</A>
+ &nbsp <B>  <A NAME="tex2html872"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,5119 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass article
+\language english
+\inputencoding latin1
+\fontscheme default
+\graphics default
+\float_placement !ht
+\paperfontsize default
+\spacing single 
+\papersize Default
+\paperpackage a4
+\use_geometry 1
+\use_amsmath 0
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+
+\layout Title
+
+vAFM v3.1
+\layout Date
+
+17 August 2004
+\layout Standard
+\added_space_bottom 150mm* \align center 
+
+\series bold 
+V
+\series default 
+irtual 
+\series bold 
+A
+\series default 
+tomic
+\series bold 
+ F
+\series default 
+orce 
+\series bold 
+M
+\series default 
+icroscopy machine simulation code
+\layout Author
+\pagebreak_bottom 
+
+\series bold 
+by Lev Kantorovich
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Physics, King's College London, U.
+ K.
+\end_inset 
+
+ and Jerome Polesel-Maris
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+CEMES-CNRS, Toulouse, France
+\end_inset 
+
+
+\layout Standard
+\pagebreak_bottom 
+
+\begin_inset LatexCommand \tableofcontents{}
+
+\end_inset 
+
+
+\layout Section
+
+Introduction
+\layout Standard
+
+Motivated by the need to aid in the interpretation of experimental Atomic
+ Force Microscopy (AFM) images, this code was developed to simulate on a
+ computer the work of electronics of an actual Non-Contact AFM device.
+ The necessary force field of the interaction of the tip with the surface
+ is considered as given (calculated by other codes such as, e.g.
+ Sci-Fi).
+ At present, only conservative interactions are accounted for.
+\layout Standard
+
+The calculation resembles an actual run of an experimental device: it starts
+ by stabilising the cantilever, then the tip approaches the surface (e.g.
+ by trying to match the frequency change setpoint) and makes a scan.
+ To make the simulation as general as possible, it is split into elementary
+ calculations associated with an elementary cantilever movement called 
+\series bold 
+\emph on 
+stage
+\series default 
+\emph default 
+.
+ For instance, a single approach to a preset frequency shift is a single
+ stage; a scan along a certain direction keeping the frequency shift and
+ the velocity is also an elementary stage.
+ A more complex tip movement can always be simulated as a set of elementary
+ stages, e.g.
+ a 2D scan can be constructed as a set of forward and backward line scans
+ along two perpendicular directions.
+ 
+\layout Subsection
+
+How the virtual machine works
+\layout Standard
+
+The virtual AFM was built on the basis of the precise experimental determination
+ of the transfer function and impulse response of each element of the real
+ AFM in order to reproduce as precisely as possible the experimental behaviours.
+ A room temperature commercial AFM/STM 
+\begin_inset LatexCommand \cite{Omicron}
+
+\end_inset 
+
+ was used with its standard electronic control system, except for the frequency
+ demodulator which was replaced by a digital Phase Locked Loop (PLL) based
+ frequency demodulator 
+\begin_inset LatexCommand \cite{Nanosurf}
+
+\end_inset 
+
+.
+ The block diagram of the system is shown in figure 
+\begin_inset LatexCommand \ref{fFMAFM}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed true
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename pictures/fmafm.ps
+	lyxscale 50
+	height 7cm
+	keepAspectRatio
+
+\end_inset 
+
+
+\layout Caption
+
+Schematic of the FM-AFM.
+ 
+\begin_inset LatexCommand \label{fFMAFM}
+
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Standard
+
+FM-AFM involves two control loops: 
+\layout Itemize
+
+The first one is supposed to maintain the cantilever oscillation amplitude
+ at a preset value 
+\begin_inset Formula $A_{0}$
+\end_inset 
+
+ (typically from a few nm to tens of nm).
+ This is achieved by an Automatic Gain Control block (AGC), which acts on
+ the power delivered to the cantilever excitation piezoelectric ceramics.
+ This power can be made proportional to the power dissipated by the tip-surface
+ interaction by a proper setting of the phase of the excitation drive of
+ the cantilever 
+\begin_inset LatexCommand \cite{durig-pll,loppacher-phase,pfeiffer-phase}
+
+\end_inset 
+
+.
+ It is used to produce dissipation images.
+\layout Itemize
+
+The second one is supposed to maintain the resonance frequency shift induced
+ by the tip-surface interaction at a preset value 
+\begin_inset Formula $\Delta f_{c}$
+\end_inset 
+
+ (typically from a few Hz to hundreds of Hz).
+ This is achieved by an Automatic Distance Control block (ADC), which adjusts
+ the tip-surface distance 
+\begin_inset Formula $D(t)$
+\end_inset 
+
+.
+ It is used to produce "topographic" images.
+ 
+\layout Subsubsection
+
+Equation of motion of the cantilever
+\begin_inset LatexCommand \label{sub:Equation-of-motion}
+
+\end_inset 
+
+
+\layout Standard
+
+The dynamics of the cantilever is giverned by the following equation of
+ motion: 
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+M\ddot{z}(t)+\frac{M\omega_{0}}{Q}\dot{z}(t)+kz(t)=RA_{pll}\sin(\omega_{pll}t+\varphi)+F_{int}\left(z(t)+D(t);\dot{z}(t)\right)\label{eq:eDynamic}\end{equation}
+
+\end_inset 
+
+It is solved numericacally using the velocity Verlet algorithm
+\begin_inset LatexCommand \cite{verlet-algo,anczykowski-simulafm}
+
+\end_inset 
+
+.
+ In this equation 
+\begin_inset Formula $z(t)$
+\end_inset 
+
+ is the vertical displacement of the cantileved around its mean value.
+ The actual distance of the cantilever from the surface plane is given by
+ 
+\begin_inset Formula $z(t)+D(t)$
+\end_inset 
+
+ as shown in Fig.
+ 
+\begin_inset LatexCommand \ref{cap:tip-oscillations}
+
+\end_inset 
+
+.
+ 
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename xfig.tip.eps
+	height 5cm
+
+\end_inset 
+
+
+\layout Caption
+
+Schematic of the oscilating cantilever system.
+ 
+\begin_inset LatexCommand \label{cap:tip-oscillations}
+
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Standard
+
+Various terms in the above equation have the following meaning:
+\layout Itemize
+
+Terms in the LHS correspond to a damped harmonic oscillator: 
+\begin_inset Formula $M=k/\omega_{0}^{2}$
+\end_inset 
+
+ is the effective cantilever mass, where 
+\begin_inset Formula $k$
+\end_inset 
+
+ is cantilever stiffness and 
+\begin_inset Formula $\omega_{0}=2\pi f_{0}$
+\end_inset 
+
+ is the resonance frequency of the free cantilever; in addition, there is
+ also a friction term in the LHS containing the dimensionless quality factor
+ 
+\begin_inset Formula $Q$
+\end_inset 
+
+; these are all intrinsic parameters of the probe.
+ 
+\layout Itemize
+
+The first term in the RHS is the excitation signal which is used to maintain
+ the cantilever oscillation amplitude at a preset value 
+\begin_inset Formula $A_{0}$
+\end_inset 
+
+.
+ The first factor in the excitation amplitude 
+\begin_inset Formula $R$
+\end_inset 
+
+ is called a damping or dissipation term and is considered in section 
+\begin_inset LatexCommand \ref{sub:Amplitude-regulation}
+
+\end_inset 
+
+ in more detail.
+ It's just a variable gain.
+ Note that the other part of the signal, 
+\begin_inset Formula $A_{pll}\sin(\omega_{pll}t+\varphi)$
+\end_inset 
+
+, is produced by the PLL as described in more detail in sections 
+\begin_inset LatexCommand \ref{sub:Amplitude-regulation}
+
+\end_inset 
+
+ and 
+\begin_inset LatexCommand \ref{sub:Frequency-demodulation}
+
+\end_inset 
+
+.
+ It drives the piezo of the cantilever.
+\layout Itemize
+
+
+\begin_inset Formula $F_{int}\left(z(t)+D(t);\dot{z}(t)\right)$
+\end_inset 
+
+ corresponds to the conservative and dissipative interactions between the
+ tip and the surface (the latter is not implemented presently).
+\layout Subsubsection
+
+Amplitude regulation 
+\begin_inset LatexCommand \label{sub:Amplitude-regulation}
+
+\end_inset 
+
+
+\layout Standard
+
+Amplitude regulation is achieved by the Automatic Gain Control (see figure
+ 
+\begin_inset LatexCommand \ref{fAGC}
+
+\end_inset 
+
+).
+ The modulus 
+\begin_inset Formula $A(t)$
+\end_inset 
+
+ of the cantilever oscillation 
+\begin_inset Formula $z(t)$
+\end_inset 
+
+ is extracted by a diode followed by a first-order low-pass filter, modelized
+ by:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+A(t)=\frac{\pi}{2\tau_{D}}e^{-t/\tau_{D}}\int_{0}^{t}\left|z(t^{\prime})\right|e^{t/\tau_{D}}\textrm{d}t^{\prime}\label{eq:ePeakDetection}\end{equation}
+
+\end_inset 
+
+with 
+\begin_inset Formula $\tau_{D}$
+\end_inset 
+
+ being the time constant of the envelope detection.
+ 
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed true
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename pictures/agc.ps
+	lyxscale 50
+	height 7cm
+	keepAspectRatio
+
+\end_inset 
+
+
+\layout Caption
+
+Automatic Gain Control.
+ 
+\begin_inset LatexCommand \label{fAGC}
+
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula $A(t)$
+\end_inset 
+
+ is then compared to the amplitude setpoint 
+\begin_inset Formula $A_{0}$
+\end_inset 
+
+.
+ The error signal 
+\begin_inset Formula $A(t)-A_{0}$
+\end_inset 
+
+, after being fed into a PI (Proportional-Integral) system 
+\begin_inset LatexCommand \cite{etique-automatique,silva-PI,Wang-PI}
+
+\end_inset 
+
+, is used to change the variable gain 
+\begin_inset Formula $R(t)$
+\end_inset 
+
+.
+ Both the Proportional gain 
+\begin_inset Formula $K_{P}^{AGC}$
+\end_inset 
+
+ (controlling the 
+\begin_inset Quotes eld
+\end_inset 
+
+stiffness
+\begin_inset Quotes erd
+\end_inset 
+
+ of the AGC loop) and the Integration gain 
+\begin_inset Formula $K_{I}^{AGC}$
+\end_inset 
+
+ (controlling the 
+\begin_inset Quotes eld
+\end_inset 
+
+viscosity
+\begin_inset Quotes erd
+\end_inset 
+
+ of the AGC loop) can be set by the user.
+ One obtains the dynamic gain 
+\begin_inset Formula $R(t)$
+\end_inset 
+
+:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+R(t)=K_{P}^{AGC}\left[A(t)-A_{0}\right]+K_{I}^{AGC}\int_{-\infty}^{t}\left[A(t')-A_{0}\right]\; dt'\label{eAGC}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Without tip-surface interaction, 
+\begin_inset Formula $R(D\rightarrow\infty)=\frac{k_{c}\, A_{0}}{Q_{c}}$
+\end_inset 
+
+ with 
+\begin_inset Formula $A_{pll}=1.$
+\end_inset 
+
+
+\layout Subsubsection
+
+Frequency demodulation and cantilever excitation
+\begin_inset LatexCommand \label{sub:Frequency-demodulation}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename pictures/pll.ps
+	lyxscale 50
+	height 7cm
+	keepAspectRatio
+
+\end_inset 
+
+
+\layout Caption
+
+Phase Locked Loop
+\begin_inset LatexCommand \label{fPLL}
+
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Standard
+
+Far from any tip-surface interaction, the pulsation 
+\begin_inset Formula $\omega_{pll}(t)$
+\end_inset 
+
+ of the PLL (see figure 
+\begin_inset LatexCommand \ref{fPLL}
+
+\end_inset 
+
+) reference signal is set by the user to the free frequency of the cantilever
+ such as 
+\begin_inset Formula $\omega_{pll}(t)=\omega_{0}$
+\end_inset 
+
+.
+ The VCO (Voltage Controlled Oscillator), inside the PLL, produces this
+ reference signal by the integration of the input voltage 
+\begin_inset Formula $u(t)$
+\end_inset 
+
+: 
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\omega_{pll}(t)\, t=\omega_{0}\, t+\int_{-\infty}^{t}\Delta\omega(t')\; dt'=\omega_{0}\, t+K_{0}\int_{-\infty}^{t}u(t')\; dt'\label{eVCO}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+where 
+\begin_inset Formula $K_{0}$
+\end_inset 
+
+ (in Hz) is the conversion factor (voltage to frequency) of the VCO 
+\begin_inset LatexCommand \cite{loppacherPLL}
+
+\end_inset 
+
+.
+\layout Standard
+
+The signal 
+\begin_inset Formula $u(t)$
+\end_inset 
+
+ which is proportional to the detuning, 
+\begin_inset Formula $\Delta\omega(t)=\omega(t)-\omega_{0}$
+\end_inset 
+
+, of the cantilever frequency, is obtained by low-pass filtering the product
+ 
+\begin_inset Formula $p(t)$
+\end_inset 
+
+ of the reference signal by the cantilever signal 
+\begin_inset Formula $z(t)$
+\end_inset 
+
+ coming from the photodiode.
+ Hence:
+\layout Standard
+\align center 
+
+\begin_inset Formula \begin{equation}
+p(t)=z(t)\, A_{pll}\,\cos(\omega_{pll}(t)\, t+\varphi_{pll})\label{eProduct}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+In first approximation, if we consider 
+\begin_inset Formula $z(t)=A(t)\:\sin(\omega(t)\, t+\varphi)$
+\end_inset 
+
+, one obtains:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p(t)=\frac{A_{limited}\, A_{pll}}{2}\,\left[\sin((\omega(t)-\omega_{pll}(t))\, t+(\varphi-\varphi_{pll}))+\sin((\omega(t)+\omega_{pll}(t))\, t+(\varphi+\varphi_{pll}))\right]\label{eProduct2}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+with a limiter circuit, at the input of the PLL, that limits the signal
+ amplitude 
+\begin_inset Formula $A(t)$
+\end_inset 
+
+ to a constant level 
+\begin_inset Formula $A_{limited}$
+\end_inset 
+
+.
+ 
+\layout Standard
+
+This signal 
+\begin_inset Formula $p(t)$
+\end_inset 
+
+ then goes through a second order low-pass filter defined by two time constants
+ 
+\begin_inset Formula $\tau_{1}$
+\end_inset 
+
+ and 
+\begin_inset Formula $\tau_{2}$
+\end_inset 
+
+:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p_{1}(t)=\left[\frac{1}{\tau_{1}}\int^{t}p(t')\exp\left(\frac{t'}{\tau_{1}}\right)\; dt'\right]\exp\left(\frac{-t}{\tau_{1}}\right)\label{eLowPass1}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+u(t)=G\,\left[\frac{1}{\tau_{2}}\int^{t}p_{1}(t')\exp\left(\frac{t'}{\tau_{2}}\right)\; dt'\right]\exp\left(\frac{-t}{\tau_{2}}\right)\label{eLowPass2}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Thanks to this low-pass filter, the low frequency part, 
+\begin_inset Formula $\omega(t)-\omega_{pll}(t)$
+\end_inset 
+
+, of the signal 
+\begin_inset Formula $p(t)$
+\end_inset 
+
+ is extracted.
+ The parameter 
+\begin_inset Formula $G$
+\end_inset 
+
+ allows to adjust the loop gain of the PLL in order to find the good stability-p
+recision compromise 
+\begin_inset LatexCommand \cite{loppacher-dissertation}
+
+\end_inset 
+
+.
+ Hence:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+u(t)=G\,\frac{A_{limited}\, A_{pll}}{2}\,\sin((\omega(t)-\omega_{pll}(t))\, t+(\varphi-\varphi_{pll}))\label{eU}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+When 
+\begin_inset Formula $\omega_{pll}(t)=\omega(t)$
+\end_inset 
+
+, the PLL is locked on the cantilever frequency.
+ So, one can write, in the case of small changes 
+\begin_inset Formula $\Delta\varphi=\varphi-\varphi_{pll}$
+\end_inset 
+
+:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+u(t)\simeq G\,\frac{A_{limited}\, A_{pll}}{2}\,\Delta\varphi\label{eUphy}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+giving the frequency detuning 
+\begin_inset Formula $\Delta\omega(t)=K_{0}\, u(t)$
+\end_inset 
+
+.
+\layout Subsubsection
+
+Distance regulation
+\begin_inset LatexCommand \label{sub:Distance-regulation}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed true
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename pictures/adc.ps
+	lyxscale 50
+	height 7cm
+	keepAspectRatio
+
+\end_inset 
+
+
+\layout Caption
+
+Automatic Distance Control.
+ 
+\begin_inset LatexCommand \label{fADC}
+
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Standard
+
+The 
+\begin_inset Formula $\Delta f(t)=\frac{\Delta\omega(t)}{2\pi}$
+\end_inset 
+
+ signal coming from the frequency demodulator (see figure 
+\begin_inset LatexCommand \ref{fPLL}
+
+\end_inset 
+
+) is used to regulate the distance 
+\begin_inset Formula $D(t)$
+\end_inset 
+
+ between the cantilever and the surface in order to satisfy the frequency
+ setpoint 
+\begin_inset Formula $\Delta f_{c}$
+\end_inset 
+
+ (see figure 
+\begin_inset LatexCommand \ref{fADC}
+
+\end_inset 
+
+) defined by the user 
+\begin_inset LatexCommand \cite{albrecht-fmdemodul,durig-fmdemodul}
+
+\end_inset 
+
+.
+ Following this rule, one gets the following expression:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+D(t)=D_{1}+K_{P}^{ADC}\left[\Delta f(t)-\Delta f_{c}\right]+K_{I}^{ADC}\int_{-\infty}^{t}\left[\Delta f(t')-\Delta f_{c}\right]\; dt'\label{eADC}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+where we find, like in the AGC (see equation 
+\begin_inset LatexCommand \ref{eAGC}
+
+\end_inset 
+
+), a PI (Proportional-Integral) system with gains 
+\begin_inset Formula $K_{P}^{ADC}$
+\end_inset 
+
+ and 
+\begin_inset Formula $K_{I}^{ADC}$
+\end_inset 
+
+ defined by the user.
+ 
+\begin_inset Formula $D_{1}$
+\end_inset 
+
+ is an ajustable offset in distance.
+\layout Subsection
+
+Influence of experimental noises on AFM images
+\layout Standard
+
+Another useful application of the virtual AFM is the realistic evaluation
+ of the limitations imposed by the noise generated by the components of
+ the system.
+ Sources of noise in beam deflection AFM have been discussed in 
+\begin_inset LatexCommand \cite{sarid}
+
+\end_inset 
+
+.
+ The major ones are 
+\begin_inset LatexCommand \cite{yaralioglu-allnoises}
+
+\end_inset 
+
+:
+\layout Standard
+
+The thermal noise of the cantilever 
+\begin_inset LatexCommand \cite{cleland-cantilevernoise,albrecht-fmdemodul}
+
+\end_inset 
+
+, whose power spectral density reads: 
+\begin_inset Formula \begin{equation}
+S_{F}(f)=\frac{4\, k_{B}\, T\, k}{2\pi\, f_{0}\, Q}\qquad\textrm{in }N^{2}.Hz^{-1}\label{eForceNoise}\end{equation}
+
+\end_inset 
+
+ with the temperature 
+\begin_inset Formula $T$
+\end_inset 
+
+, the Boltzmann constant 
+\begin_inset Formula $k_{B}$
+\end_inset 
+
+.
+ In virtual AFM, this noise is implemented at left in equation 
+\begin_inset LatexCommand \ref{eq:eDynamic}
+
+\end_inset 
+
+ as a noise force.
+\layout Standard
+
+The amplitude shot noise 
+\begin_inset LatexCommand \cite{bacon-shotnoise,yaralioglu-allnoises}
+
+\end_inset 
+
+ of one photodiode quadrant detector: 
+\begin_inset Formula \begin{equation}
+S_{A}^{shot-noise}(f)=2\, q_{e}\, V_{ph}\, R_{trans}\, G_{opt}^{2}\qquad\textrm{in }m^{2}.Hz^{-1}\label{eAmplitudeShotNoise}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+with the elementary charge 
+\begin_inset Formula $q_{e}$
+\end_inset 
+
+, the photodiode voltage 
+\begin_inset Formula $V_{ph}$
+\end_inset 
+
+ (
+\begin_inset Formula $1\, Volt$
+\end_inset 
+
+ in our experimental conditions), the transimpedance resistor 
+\begin_inset Formula $R_{trans}$
+\end_inset 
+
+ (
+\begin_inset Formula $500\, k\Omega$
+\end_inset 
+
+ 
+\begin_inset LatexCommand \cite{Omicron}
+
+\end_inset 
+
+).
+ 
+\begin_inset Formula $G_{opt}$
+\end_inset 
+
+ is a factor to convert the cantilever oscillation in volts coming from
+ the photodiode in nanometers.
+ It depends of the geometrical design of the optical detection but also
+ of the kind of light source used (Laser, LED, ...).
+ In our case, we measured 
+\begin_inset Formula $G_{opt}=400\, nm.V^{-1}$
+\end_inset 
+
+.
+ 
+\layout Standard
+
+Finally, the Johnson noise of the resistor of the current-voltage converter
+ that monitors the photodiodes: 
+\begin_inset Formula \begin{equation}
+S_{A}^{Johnson}(f)=4\, k_{B}\, T\, R_{trans}\, G_{opt}^{2}\qquad\textrm{in }m^{2}.Hz^{-1}\label{eAmplitudeJohnsonNoise}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+The amplitude shot noise and Johnson noise are both used as amplitude noises
+ inside 
+\begin_inset Formula $z(t)$
+\end_inset 
+
+ the vertical displacement of the cantilever coming from the photodiode
+ signal.
+\layout Subsection
+
+How one can find parameters of the virtual AFM
+\layout Standard
+
+The aim of the virtual machine is to mimic the dynamic of a true experimental
+ AFM system.
+ In this subsection we shall briefly describe a response of the whole machine
+ (Omicron RT-AFM with an easyPLL Nanosurf Demodulator) on a square periodic
+ offset added to the distance signal 
+\begin_inset Formula $D(t)$
+\end_inset 
+
+.
+ This is an example of how one can experimentally find the correct parameters
+ needed to run the virtual AFM machine.
+\layout Standard
+
+Fig.
+ 
+\begin_inset LatexCommand \ref{fCompareExpNum}
+
+\end_inset 
+
+ (a) shows the frequency response to a periodic square excitation added
+ to the surface-tip distance 
+\begin_inset Formula $D$
+\end_inset 
+
+ while the microscope was in operation above a 
+\begin_inset Formula ${\rm MoS_{2}}$
+\end_inset 
+
+ substrate covered by silver clusters.
+ This measurement was performed for two different settings of the ADC feedback
+ loop.
+ A loop gain of 2% (slow response) corresponds to the typical value for
+ normal imaging while a loop gain of 20% (fast response) is only used when
+ approaching the surface at the beginning of the experiment.
+ The asymmetry of the response between a positive and negative 
+\begin_inset Formula $\Delta f$
+\end_inset 
+
+ (the positive peak is smaller and wider than the negative one) is a consequence
+ of the increase of the absolute value of the slope of the van der Waals
+ interaction when the tip approaches the surface.
+\layout Standard
+
+Fig.
+ 
+\begin_inset LatexCommand \ref{fCompareExpNum}
+
+\end_inset 
+
+ (b) shows the response calculated with the virtual AFM modelling the tip
+ by a sphere of the radius 20 nm and taking into account only the van der
+ Waals interaction between tyhe tip and sample, with a Hamaker constant
+ of 1 eV.
+ The experimental behaviour can be well reproduced by choosing the parameters
+ 
+\begin_inset Formula $K_{P}^{ADC}$
+\end_inset 
+
+ and 
+\begin_inset Formula $K_{I}^{ADC}$
+\end_inset 
+
+ 
+\begin_inset LatexCommand \cite{Wang-PI}
+
+\end_inset 
+
+.
+ The shape of the peaks is qualitatively correct while the time constants,
+ ranging from a few milliseconds at 20% to a few tens of milliseconds at
+ 2%, are of the same order of magnitude as in the experiment.
+ 
+\layout Standard
+\align center 
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename pictures/xfig.offset.eps
+	height 6cm
+
+\end_inset 
+
+
+\layout Caption
+
+Experimental (a) and calculated (b) response of the ADC.
+ Electrostatic forces have been compensated following Ref.
+ 
+\begin_inset LatexCommand \cite{guggisberg-electrostatic}
+
+\end_inset 
+
+.
+ 
+\begin_inset LatexCommand \label{fCompareExpNum}
+
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Section
+
+Installation
+\layout Standard
+\added_space_bottom bigskip 
+The code should be in the form of a zipped tarball, such as 
+\family typewriter 
+vafm_3.1.tgz
+\family default 
+.
+ Assuming this, type:
+\layout Standard
+\added_space_bottom bigskip 
+
+\family typewriter 
+tar -zxvf vafm_3.1.tgz
+\layout Standard
+\noindent 
+This will extract all the necessary files, including the directory DOC with
+ the documentation.
+ 
+\layout Standard
+\added_space_bottom smallskip 
+To compile the program, a 
+\family typewriter 
+Makefile
+\family default 
+ (included) should be used (you may need to edit it to meet your particular
+ platform, compiler, etc.).
+ Then type
+\family typewriter 
+ 
+\layout Standard
+\added_space_bottom smallskip 
+
+\family typewriter 
+make
+\family default 
+ 
+\layout Standard
+\noindent 
+This will produce the executable
+\family typewriter 
+ vafm
+\family default 
+.
+ 
+\layout Standard
+
+You can now run the code (see below how).
+ Make sure that you can reproduce the output from the example inputs provided
+ in the 
+\family typewriter 
+examples
+\family default 
+ directory (section 
+\begin_inset LatexCommand \ref{Sec::Example-Inputs}
+
+\end_inset 
+
+).
+\layout Subsection
+
+virtual_param.inc file
+\begin_inset LatexCommand \label{sub:virtual_param.inc-file}
+
+\end_inset 
+
+
+\layout Standard
+\added_space_bottom bigskip 
+The file 
+\family typewriter 
+virtual_param.inc
+\family default 
+ in contains all the matrix sizes for the calculation.
+ This file must be edited before compilation if changes are needed.
+ Below is an example:
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+parameter (pi=3.141592653589793d0, twopi=2.d0*pi)
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+c........
+ max number of steps/stages 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+parameter (N_of_stages_max=99)
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+c.........
+ scans: max number of scans allowed 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+parameter (N_of_scans_max=5)
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+c.........
+ units: distance, force double precision m_A,N_eVpA,J_eV
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+parameter (m_A=1.0d10,N_eVpA=6.2415d8,J_eV=6.2415d18)
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+c.........
+ threshold for the distance 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+parameter (threshold=1.0d-10) 
+\layout Standard
+\added_space_top smallskip \align left 
+The most important parameters are: 
+\layout Itemize
+
+
+\family typewriter 
+N_of_stages_max
+\family default 
+ - maximum number of elementary stages for the whole run
+\layout Itemize
+
+
+\family typewriter 
+N_of_scans_max 
+\family default 
+- maximum number of scans allowed during a single run
+\layout Section
+
+Input
+\layout Standard
+\added_space_bottom bigskip 
+The code is run without parameters in the command line:
+\layout Standard
+\added_space_bottom bigskip 
+
+\family typewriter 
+vafm 
+\layout Standard
+\noindent 
+The code reads in a single input file 
+\family typewriter 
+virtual.inp,
+\family default 
+and will produce a number of output files; the main one is called 
+\family typewriter 
+virtual.out
+\family default 
+, but some others are also produced
+\emph on 
+ 
+\emph default 
+depending on
+\emph on 
+ 
+\emph default 
+the calculation type (see section 
+\begin_inset LatexCommand \ref{sec:Output}
+
+\end_inset 
+
+).
+\layout Standard
+\added_space_bottom smallskip \noindent \align left 
+The input file is separated into specific boxes for each category of input
+ parameters.
+ Each box begins with the 
+\emph on 
+keyword
+\emph default 
+ name of the box in the format
+\family typewriter 
+ 
+\layout Standard
+\added_space_bottom smallskip \align left 
+
+\family typewriter 
+.<keyword>
+\emph on 
+ 
+\layout Standard
+\align left 
+and then the appropriate keywords and parameters for that box are listed
+ until the box end marker
+\layout Standard
+\added_space_top smallskip \added_space_bottom smallskip \align left 
+
+\family typewriter 
+.<End>
+\layout Standard
+\align left 
+is found.
+ Keywords must be placed in the input box they are classed in, they will
+ be ignored in other boxes.
+ All the keywords require another controlling word or parameter value.
+ After the example file, each box and its keywords are explained, along
+ with possible parameters which can be used.
+ All quantities are inputed in the SI units.
+\layout Standard
+
+Comments can be entered into the input file by placing ## before the line.
+ Empty lines will be ignored.
+ There is no specific order required for the boxes in the input file and
+ for the keywords within each box; however, in some rare cases there is
+ some order needed for specific keywords within the boxes.
+ These position dependent keywords will be highlighted below.
+\layout Subsection
+
+Example Input File
+\begin_inset LatexCommand \label{sub:Example-Input-File}
+
+\end_inset 
+
+
+\layout Standard
+
+This input file below runs altogether 29 stages of the virtual machine.
+ The first two stages are needed to stabilise the cantilever, they are not
+ shown in the box 
+\family typewriter 
+\size footnotesize 
+.<Elementary_Stages>
+\family default 
+\size default 
+ since are run anyway (default).
+ The 3rd stage corresponds to the approach of the tip to the surface to
+ get the -440 Hz frequency shift.
+ After this stage the tip scans along the 
+\begin_inset Formula $Y$
+\end_inset 
+
+ direction for 0.02 s.
+ Then a 2D scan starts which consists of 3 sequencies of 4 elementary line
+ scans (passages) each, 12 elementary line scans altogether.
+ The scan is performed keeping the same frequency shift and amplitude.
+ This first 2D scan is followed by a single stage in which the tip is not
+ moved laterally, but the amplitude is reduced by 10 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+AA 
+\end_inset 
+
+.
+ Finally, the second scan is performed, identical to the first one with
+ the original amplitude and frequency shift.
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+\SpecialChar ~
+
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+....<VirtualAFM>
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Q-factor 10000.0d0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Elastic_Constant 6.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Natural_Frequency 60406.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+SetPnt_Amplitude 5.0e-9
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+SetPnt_FreqShift -100.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Stabil_Time1 4
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Stabil_Time2 80.d-3
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+PLL_FMdem{t1,t2,gainPB,K1} 5.5d-5 1.6d-4 6.d0 500.d0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+AGC{P,I,tau} 0.1 50.0 450.d-6
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+PLL_ADC{P,I0,I} 1.d-13 1.d-9 1.d-9
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Debug F 100
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+noise{F,A,Temp} F F 300.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Print_Cycles 2
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Start{X,Y} 0.0d-10 0.0d-10
+\layout Standard
+\added_space_bottom smallskip 
+
+\family typewriter 
+\size footnotesize 
+.....<End>
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+....<Force_Field>
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Force_field_file 1.dat 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Pixels{1,2,z} 1 79 44 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+vdW{H,R} 0.99864 300.0 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Long-Range{bound,z0,g0,...,g6} 16.0 -5.0928 0.0 0.0 0.0 -0.40916 0.0 0.0 0.0 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Lattice{/A1(xy),/A2(xy)} 1.0 0.0 0.0 16.1 Force_Test T 0.1 
+\layout Standard
+\added_space_bottom smallskip 
+
+\family typewriter 
+\size footnotesize 
+.....<End>
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+....<Elementary_Stages>
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_ <approach>
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} freq
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 0.0 0.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Prt{T/F,how_often} T 100
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} time 0.02
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 0.0 1.0e-9
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Prt{T/F,how_often} T 100
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+==={begin_scan}===
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+No_of_sequences 3
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} time 0.01
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 0.0 1.0e-9
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} time 0.001
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 1.0e-9 0.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} time 0.01
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 0.0 -1.0e-9
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} time 0.001
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 1.0e-9 0.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+==={end_scan}===
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} amplt
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 0.0 0.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+AGC{T/F,A0} T 0.4e-8
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+==={begin_scan}===
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+No_of_sequences 3
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} time 0.01
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 0.0 1.0e-9
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} time 0.001
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 1.0e-9 0.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} time 0.01
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 0.0 -1.0e-9
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} time 0.001
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 1.0e-9 0.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+==={end_scan}===
+\layout Standard
+\added_space_bottom medskip 
+
+\family typewriter 
+\size footnotesize 
+.....<End>
+\layout Standard
+\noindent \align left 
+Three boxes are to be supplied to run the code which are described below.
+\layout Subsection
+
+Virtual AFM Box
+\begin_inset LatexCommand \label{sub:Virtual-AFM-Box}
+
+\end_inset 
+
+
+\layout Standard
+\added_space_bottom smallskip 
+
+\series bold 
+\emph on 
+Box Keyword
+\series default 
+\emph default 
+: 
+\family typewriter 
+.<VirtualAFM>
+\layout Standard
+
+This box contains all the main parameters of the cantilever, default values
+ for the electronic systems (ADC, AGC, PLL), including variables controlling
+ the amount of the output produced by the code.
+ Any input in the box is given using a keyword followed by one or more parameter
+s.
+ Every such entry can be positioned independently within the box.
+ The order of the parameters after the keyword is fixed; in most cases it
+ is hinted in the keyword itself.
+ 
+\layout Subsubsection
+
+General settings for the cantilever
+\layout Standard
+
+All correspond to the LHS of Eq.
+ (
+\begin_inset LatexCommand \ref{eq:eDynamic}
+
+\end_inset 
+
+).
+\layout Subsubsection*
+
+Elastic_Constant 
+\layout Standard
+
+The value of the cantilever elastic constant 
+\begin_inset Formula $k$
+\end_inset 
+
+ (in N/m).
+ 
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $k$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 6.0 N/m
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Elastic_Constant 6.5
+\layout Subsubsection*
+
+Natural_Frequency
+\layout Standard
+
+Natural frequency 
+\begin_inset Formula $f_{0}$
+\end_inset 
+
+ of the cantilever far away from the surface, in Hz.
+ 
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $f_{0}$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 60406.0 Hz
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Natural_Frequency 6.0500e5
+\layout Subsubsection*
+
+Q-factor
+\layout Standard
+
+Q factor (dimensionless) of the cantilever, 
+\begin_inset Formula $Q$
+\end_inset 
+
+.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $Q$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 10000.0
+\layout Standard
+\align left 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Q-factor 10000.0d0
+\layout Subsubsection
+
+Default set points
+\layout Standard
+
+Every stage of the virtual AFM is characterised by a number of set points.
+ If they do not change during the experiment, it is convenient to input
+ them here in this box as default variables.
+ 
+\layout Subsubsection*
+
+SetPnt_Amplitude
+\layout Standard
+
+The value for the oscillation amplitude (in m) for the AGC, 
+\begin_inset Formula $A_{0}$
+\end_inset 
+
+.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $A_{0}$
+\end_inset 
+
+ 
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 31.25d-9 m
+\layout Standard
+\align left 
+
+\emph on 
+Example
+\emph default 
+:
+\family typewriter 
+\size footnotesize 
+ SetPnt_Amplitude 5.0e-9
+\layout Subsubsection*
+
+SetPnt_FreqShift
+\layout Standard
+
+The value for the frequency shift, negative (in Hz), for the ADC, 
+\begin_inset Formula $\Delta f_{0}$
+\end_inset 
+
+.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $\Delta f_{0}$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: -100.0 Hz
+\layout Standard
+\align left 
+
+\emph on 
+Example
+\emph default 
+:
+\family typewriter 
+\size footnotesize 
+ SetPnt_FreqShift -100
+\layout Subsubsection*
+
+noise{F,A,Temp}
+\layout Standard
+
+This entry regulates the existence of the noise for the frequency and the
+ amplitude, and is also used to input the temperature 
+\begin_inset Formula $T$
+\end_inset 
+
+ (needed to calculate the variances for the two noises).
+ 
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $N_{F}$
+\end_inset 
+
+, 
+\begin_inset Formula $N_{A}$
+\end_inset 
+
+, 
+\begin_inset Formula $T$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: F, F, 300 K 
+\layout Standard
+\align left 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+noise{F,A,Temp} F T 350.0
+\layout Standard
+
+Here 
+\begin_inset Formula $N_{F}$
+\end_inset 
+
+ is either T (for .true.) or F (.false.), it switches on or off the noise for
+ the frequency, while 
+\begin_inset Formula $N_{A}$
+\end_inset 
+
+ similarly controls the amplitude noise.
+ 
+\layout Subsubsection*
+
+Debug
+\layout Standard
+
+A detailed printout every 
+\begin_inset Formula $N$
+\end_inset 
+
+ timesteps is controlled by this entry for each stage.
+ The printout is given into a file 
+\family typewriter 
+stageM.out
+\family default 
+, where 
+\begin_inset Formula $M$
+\end_inset 
+
+ is the stage number.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $N_{D}$
+\end_inset 
+
+, 
+\begin_inset Formula $N$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: F, 10 
+\layout Standard
+\align left 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Debug T 15
+\layout Subsubsection
+
+Initial position of the tip
+\layout Subsubsection*
+
+Start{X,Y}
+\layout Standard
+
+Sets initial coordinates 
+\begin_inset Formula $X_{0}$
+\end_inset 
+
+ and 
+\begin_inset Formula $Y_{0}$
+\end_inset 
+
+ for the tip (with respect to the force field file).
+ Zero values correspond to the first point 
+\begin_inset Formula $(0,0)$
+\end_inset 
+
+ of the force field file.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $X_{0}$
+\end_inset 
+
+, 
+\begin_inset Formula $Y_{0}$
+\end_inset 
+
+ 
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 0.0 0.0 (in m)
+\layout Standard
+\align left 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Start{X,Y} 1.0d-10 -1.0d-10
+\layout Subsubsection*
+
+Initial_Z
+\layout Standard
+
+Initial value of the vertical position of the tip (far from the surface),
+ 
+\begin_inset Formula $D_{1}$
+\end_inset 
+
+ (in m), Eq.
+ (
+\begin_inset LatexCommand \ref{eq:eADC}
+
+\end_inset 
+
+).
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $D_{1}$
+\end_inset 
+
+ 
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 34.25d-09 m
+\layout Standard
+\align left 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Initial_Z 40.0d-09
+\layout Subsubsection
+
+The frequency of the general printout
+\begin_inset LatexCommand \label{sub:The-frequency-of-gen-printout}
+
+\end_inset 
+
+
+\layout Subsubsection*
+
+Print_Cycles
+\layout Standard
+
+Presently, the printout to the file 
+\family typewriter 
+signals.dat
+\family default 
+ is provided at the end of each 
+\begin_inset Formula $N$
+\end_inset 
+
+-th oscillation cycle.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $N$
+\end_inset 
+
+ 
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 100
+\layout Standard
+\align left 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Print_Cycles 10
+\layout Subsubsection
+
+Parameters for the Automatic Gain Control (AGC)
+\layout Subsubsection*
+
+AGC{P,I,tau}
+\layout Standard
+
+Parameters of AGC: 
+\begin_inset Formula $K_{P}^{AGC}$
+\end_inset 
+
+ (in N/m), 
+\begin_inset Formula $K_{I}^{AGC}$
+\end_inset 
+
+ (in N/m*s) and 
+\begin_inset Formula $\tau_{D}$
+\end_inset 
+
+ (in s) as in Eqs.
+ (
+\begin_inset LatexCommand \ref{eq:ePeakDetection}
+
+\end_inset 
+
+) and (
+\begin_inset LatexCommand \ref{eq:eAGC}
+
+\end_inset 
+
+), section 
+\begin_inset LatexCommand \ref{sub:Amplitude-regulation}
+
+\end_inset 
+
+.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $K_{P}^{AGC}$
+\end_inset 
+
+, 
+\begin_inset Formula $K_{I}^{AGC}$
+\end_inset 
+
+ , 
+\begin_inset Formula $\tau_{D}$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 0.1, 2.0, 0.002
+\layout Standard
+\align left 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+AGC{P,I,tau} 0.1 50.0 450.d-6
+\layout Subsubsection
+
+Parameters for the Phase Lock Loop (PLL)
+\layout Subsubsection*
+
+PLL_FMdem{t1,t2,gainPB,K1}
+\layout Standard
+
+Parameters of PLL: 
+\begin_inset Formula $\tau_{1}$
+\end_inset 
+
+, 
+\begin_inset Formula $\tau_{2}$
+\end_inset 
+
+ (both in s), gain factors 
+\begin_inset Formula $G$
+\end_inset 
+
+ and 
+\begin_inset Formula $K_{1}$
+\end_inset 
+
+ (see Eqs.
+ (
+\begin_inset LatexCommand \ref{eq:eVCO}
+
+\end_inset 
+
+)-(
+\begin_inset LatexCommand \ref{eq:eLowPass2}
+
+\end_inset 
+
+) in section 
+\begin_inset LatexCommand \ref{sub:Frequency-demodulation}
+
+\end_inset 
+
+).
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $\tau_{1}$
+\end_inset 
+
+, 
+\begin_inset Formula $\tau_{2}$
+\end_inset 
+
+, 
+\begin_inset Formula $G$
+\end_inset 
+
+, 
+\begin_inset Formula $K_{1}$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 5.0d-5, 1.6d-4, 6.0, 220.0 
+\layout Standard
+\align left 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+PLL_FMdem{t1,t2,gainPB,K1} 5.5d-5 1.6d-4 6.d0 500.d0
+\layout Subsubsection
+
+Parameters for the Automatic Distance Control (ADC)
+\layout Subsubsection*
+
+PLL_ADC{P,I0,I}
+\layout Standard
+
+Parameters for the ADC: 
+\begin_inset Formula $K_{P}^{ADC}$
+\end_inset 
+
+ (in m*s), initial 
+\begin_inset Formula $K_{I_{0}}^{ADC}$
+\end_inset 
+
+ (in m, only for approach at stage 3), working 
+\begin_inset Formula $K_{I_{1}}^{ADC}$
+\end_inset 
+
+ (in m, for any other stage) as in Eq.
+ (
+\begin_inset LatexCommand \ref{eq:eADC}
+
+\end_inset 
+
+) of section 
+\begin_inset LatexCommand \ref{sub:Distance-regulation}
+
+\end_inset 
+
+.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $K_{P}^{ADC}$
+\end_inset 
+
+, 
+\begin_inset Formula $K_{I_{0}}^{ADC}$
+\end_inset 
+
+, 
+\begin_inset Formula $K_{I_{1}}^{ADC}$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 7.0d-11, 50.d-9, 5.d-9 
+\layout Standard
+\align left 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+PLL_ADC{P,I0,I} 1.d-13 1.d-9 1.d-9
+\layout Subsubsection
+
+Times
+\layout Standard
+
+A number of time-related parameters is specified using several keywords:
+\layout Subsubsection*
+
+t-steps_in_period
+\layout Standard
+
+Number of timesteps per oscillation period, 
+\begin_inset Formula $N_{osc}$
+\end_inset 
+
+; is used to calculate the timesteps itslef using 
+\begin_inset Formula $\Delta t=1/(f_{0}N_{osc})$
+\end_inset 
+
+.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $N_{osc}$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 400
+\layout Standard
+\align left 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+t-steps_in_period 500
+\layout Subsubsection*
+
+Stabil_Time1
+\layout Standard
+
+Duration time (in numbers of oscillation periods) of the first stabilisation
+ stage, 
+\begin_inset Formula $n_{1}$
+\end_inset 
+
+, when excitation is still switched off.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $n_{1}$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 4
+\layout Standard
+\align left 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Stabil_Time1 4
+\layout Subsubsection*
+
+Stabil_Time2
+\layout Standard
+
+Duration time (in s) of the second stabilisation period, 
+\begin_inset Formula $t_{2}$
+\end_inset 
+
+, when excitation is on, but the tip is still far away from the surface.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $t_{2}$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 15.0d-3
+\layout Standard
+\align left 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Stabil_Time2 15.0d-3
+\layout Subsection
+
+Force Field Box
+\begin_inset LatexCommand \label{sub:Force-Field-Box}
+
+\end_inset 
+
+
+\layout Standard
+\added_space_bottom smallskip \noindent \align left 
+
+\series bold 
+\emph on 
+Box Keyword
+\series default 
+\emph default 
+: 
+\family typewriter 
+.<Force_Field>
+\layout Standard
+
+This box contains all the ncessary information necessary to specify the
+ force field for the tip-surface interaction.
+ The force field consists of three components: the van der Waals force,
+ chemical short-range and long-range forces.
+ 
+\layout Standard
+
+Presently, the vdW force is given within the plane-sphere model, 
+\begin_inset Formula \begin{equation}
+F_{vdW}(z)=-\frac{HR}{6z^{2}}\label{eq:vdw}\end{equation}
+
+\end_inset 
+
+where 
+\begin_inset Formula $H$
+\end_inset 
+
+ is the Hamaker's constant, 
+\begin_inset Formula $R$
+\end_inset 
+
+ - the sphere radius, 
+\begin_inset Formula $z$
+\end_inset 
+
+ - distance of the sphere bottom from the surface plane.
+ 
+\layout Standard
+
+The long-range chemical component of the force, which works above some critical
+ vertical height 
+\begin_inset Formula $z_{bound}$
+\end_inset 
+
+, is generally given by the expression: 
+\begin_inset Formula \begin{equation}
+F_{lr}(z)=\sum_{n=0}^{6}\frac{g_{n}}{(z+z_{0})^{n}},\,\,\,\,\, z\geq z_{bound}\label{eq:long_range_force}\end{equation}
+
+\end_inset 
+
+where 
+\begin_inset Formula $g_{n}$
+\end_inset 
+
+ and 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+are fitting parameters.
+ 
+\layout Standard
+
+The short-range part of the chemical force is specified in a file on a lateral
+ grid with respect to the direct lattice vectors of the surface, 
+\begin_inset Formula $\mathbf{a}_{1}$
+\end_inset 
+
+ and 
+\begin_inset Formula $\mathbf{a}_{2}$
+\end_inset 
+
+.
+ At each grid point the force is specified for a number of 
+\begin_inset Formula $N_{z}$
+\end_inset 
+
+ (not necessarily equidistant) 
+\begin_inset Formula $z$
+\end_inset 
+
+ values below 
+\begin_inset Formula $z_{bound}$
+\end_inset 
+
+.
+ If the grid points along 
+\begin_inset Formula $\mathbf{a}_{1}$
+\end_inset 
+
+ are numbered by 
+\begin_inset Formula $0,1,\ldots,N_{1}$
+\end_inset 
+
+ and similarly for the points along the 
+\begin_inset Formula $\mathbf{a}_{2}$
+\end_inset 
+
+ direction, numbered as 
+\begin_inset Formula $0,1,\ldots,N_{2}$
+\end_inset 
+
+, then the force is provided for every 
+\begin_inset Formula $i$
+\end_inset 
+
+, 
+\begin_inset Formula $j$
+\end_inset 
+
+ 
+\begin_inset Formula $(i=0,\ldots,N_{1}\,\textrm{and}\, j=0,\ldots,N_{2})$
+\end_inset 
+
+.
+ To preserve periodicity of the lattice, the force fields for 
+\begin_inset Formula $i=0$
+\end_inset 
+
+ and 
+\begin_inset Formula $i=N_{1}$
+\end_inset 
+
+ (any 
+\begin_inset Formula $j$
+\end_inset 
+
+) should be identical; similarly for values of 
+\begin_inset Formula $j=0$
+\end_inset 
+
+ and 
+\begin_inset Formula $j=N_{2}$
+\end_inset 
+
+ (any 
+\begin_inset Formula $i$
+\end_inset 
+
+).
+ The format of the force field file is described in section 
+\begin_inset LatexCommand \ref{sub:Structure-of-the-force-file}
+
+\end_inset 
+
+ below.
+ 
+\layout Standard
+
+Two examples of the force field for the MgO (001) surface are given in Fig.
+ 
+\begin_inset LatexCommand \ref{cap:grid-for-force}
+
+\end_inset 
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename xfig.grid.eps
+	height 7cm
+
+\end_inset 
+
+
+\layout Caption
+
+How the force field can be specified for the MgO (001) surface: (a) in the
+ case of the 5x5 grid, the lattice vectors
+\begin_inset Formula $\mathbf{a}_{1}$
+\end_inset 
+
+and 
+\begin_inset Formula $\mathbf{a}_{2}$
+\end_inset 
+
+ correspond to the primitive unit cell; (b) in the case of the 9x9 grid,
+ a two times larger cell is chosen with the lattice vectors 
+\begin_inset Formula $\mathbf{a}_{1}^{\prime}=\mathbf{a}_{1}-\mathbf{a}_{2}$
+\end_inset 
+
+ and 
+\begin_inset Formula $\mathbf{a}_{2}^{\prime}=\mathbf{a}_{1}+\mathbf{a}_{2}$
+\end_inset 
+
+.
+ The original grid used to calculate the force field in non-equilvalent
+ points in the primitive cell is shown by dashed lines in (a).
+ 
+\begin_inset LatexCommand \label{cap:grid-for-force}
+
+\end_inset 
+
+
+\end_inset 
+
+.
+ In the directory 
+\family typewriter 
+examples/MgO/force_field
+\family default 
+ you can also find raw data for the MgO force field calculated using the
+ Sci-Fi code.
+ The calculations were performed using a 64 atom 4x4x4 MgO cube tip with
+ a Mg atom at the tip apex.
+ The raw data for the force field are set in directories 
+\layout Standard
+
+
+\family typewriter 
+
+\backslash 
+X=0,Y=0
+\family default 
+,
+\layout Standard
+
+
+\family typewriter 
+
+\backslash 
+X=0.5305,Y=0.5305,
+\layout Standard
+
+
+\family typewriter 
+
+\backslash 
+X=0,Y=2.122
+\family default 
+,
+\layout Standard
+\align left 
+etc., corresponding to different values of the 
+\begin_inset Formula $X$
+\end_inset 
+
+ and 
+\begin_inset Formula $Y$
+\end_inset 
+
+ within the primitive cell as shown by the dashed lines in Fig.
+ 
+\begin_inset LatexCommand \ref{cap:grid-for-force}
+
+\end_inset 
+
+ (a).
+ The coordinate axes are those shown in Fig.
+ 
+\begin_inset LatexCommand \ref{cap:grid-for-force}
+
+\end_inset 
+
+, and the Mg-O distance is equal to 2.122 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+AA
+\end_inset 
+
+.
+ The results of the calculation for a 2D scan using either of the force
+ field are collected in directories 
+\family typewriter 
+examples/MgO/results_5x5
+\family default 
+ and 
+\family typewriter 
+examples/MgO/results_9x9
+\family default 
+ (see also section 
+\begin_inset LatexCommand \ref{sub:2Dimage_S.dat}
+
+\end_inset 
+
+).
+\layout Standard
+
+The information in the box is provided in the same way as in the previous
+ case: each time a keyword is used which is followed by the necessary parameters.
+ The order of each input is arbitrary, the order within each input is fixed.
+ 
+\layout Standard
+
+
+\series bold 
+Important
+\series default 
+: contrary to all other boxes, all values here are provided using eV and
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+AA
+\end_inset 
+
+
+\begin_inset Formula $\,$
+\end_inset 
+
+ units!!!
+\layout Subsubsection
+
+How to specify the short-range force
+\begin_inset LatexCommand \label{sub:How-to-specify-short-range-force}
+
+\end_inset 
+
+
+\layout Subsubsection*
+\noindent 
+Force_field_file
+\layout Standard
+
+Name of the file containing the short-range component of the force field.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: filename (up to 50 characters)
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: empty name
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Force_field_file CaCO3.dat
+\layout Subsubsection*
+
+Pixels{1,2,z} 
+\layout Standard
+
+Number of grid points 
+\begin_inset Formula $N_{1}$
+\end_inset 
+
+ and 
+\begin_inset Formula $N_{2}$
+\end_inset 
+
+ along directions 
+\begin_inset Formula $\mathbf{a}_{1}$
+\end_inset 
+
+ and 
+\begin_inset Formula $\mathbf{a}_{2}$
+\end_inset 
+
+, respectively, followed by the number 
+\begin_inset Formula $N_{z}$
+\end_inset 
+
+ of points along 
+\begin_inset Formula $z$
+\end_inset 
+
+.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $N_{1}$
+\end_inset 
+
+, 
+\begin_inset Formula $N_{2}$
+\end_inset 
+
+, 
+\begin_inset Formula $N_{z}$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 1,1,44
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Pixels{1,2,z} 25 49 44
+\layout Subsubsection*
+
+Lattice{/A1(xy),/A2(xy)} 
+\layout Standard
+
+Components along 
+\begin_inset Formula $X$
+\end_inset 
+
+ and 
+\begin_inset Formula $Y$
+\end_inset 
+
+ axes of the laboratory Cartesian system of the lattice vectors 
+\begin_inset Formula $\mathbf{a}_{1}$
+\end_inset 
+
+ and 
+\begin_inset Formula $\mathbf{a}_{2}$
+\end_inset 
+
+ are given (in 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+AA
+\end_inset 
+
+) in two lines coming next after the keyword: 
+\begin_inset Formula $a_{1x}$
+\end_inset 
+
+, 
+\begin_inset Formula $a_{1y}$
+\end_inset 
+
+ on the first and 
+\begin_inset Formula $a_{2x}$
+\end_inset 
+
+, 
+\begin_inset Formula $a_{2y}$
+\end_inset 
+
+ on the second.
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: none
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: Lattice{/A1(xy),/A2(xy)}
+\layout Standard
+\noindent 
+
+\family typewriter 
+\size footnotesize 
+
+\begin_inset Formula $\,\,\,\,\,\,\,\,\,\,$
+\end_inset 
+
+ 1.0 0.0 
+\layout Standard
+\noindent 
+
+\family typewriter 
+\size footnotesize 
+
+\begin_inset Formula $\,\,\,\,\,\,\,\,\,\,$
+\end_inset 
+
+ 0.0 1.0 
+\layout Subsubsection
+
+Long-range part of the force
+\layout Subsubsection*
+
+Long-Range{bound,z0,g0,...,g6}
+\layout Standard
+
+The parameters of the long-range part of the chemical force, Eq.
+ (
+\begin_inset LatexCommand \ref{eq:long_range_force}
+
+\end_inset 
+
+), are given using the 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+AA
+\end_inset 
+
+/eV units, so that the force would be in eV/
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+AA
+\end_inset 
+
+
+\begin_inset Formula $\,$
+\end_inset 
+
+ and distances in 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+AA
+\end_inset 
+
+.
+ 
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $z_{bound}$
+\end_inset 
+
+, 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+, 
+\begin_inset Formula $g_{0}$
+\end_inset 
+
+, 
+\begin_inset Formula $g_{1}$
+\end_inset 
+
+,...,
+\begin_inset Formula $g_{6}$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 16.0, -5.0928, 0.0, 0.0, 0.0, -0.40916, 0.0, 0.0, 0.0 
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Long-Range{bound,z0,g0,...,g6}16.0 -5.0928 0.0 0.0 0.0 -0.40916 0.0 0.0 0.0
+\layout Subsubsection*
+
+vdW{H,R}
+\layout Standard
+
+Parameters for the vdW force (the force is in eV/
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+AA
+\end_inset 
+
+) as in Eq.
+ (
+\begin_inset LatexCommand \ref{eq:vdw}
+
+\end_inset 
+
+).
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $H$
+\end_inset 
+
+, 
+\begin_inset Formula $R$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 0.99864, 300.0
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+vdW{H,R} 0.99864 300.0 
+\layout Subsubsection
+
+Testing the whole range force field
+\begin_inset LatexCommand \label{sub:Testing-the-whole}
+
+\end_inset 
+
+
+\layout Subsubsection*
+
+Force_Test 
+\layout Standard
+
+The force field can be tested prior to (and instead of) any calculation
+ if 
+\begin_inset Formula $N_{ft}=$
+\end_inset 
+
+T is used as the first parameter; the second parameter in this case is a
+ step, 
+\begin_inset Formula $\Delta z$
+\end_inset 
+
+, along the 
+\begin_inset Formula $z$
+\end_inset 
+
+ direction (in 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+AA
+\end_inset 
+
+).
+ 
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $N_{ft}$
+\end_inset 
+
+, 
+\begin_inset Formula $\Delta z$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: F, 0.01
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Force_Test 0.01
+\layout Subsubsection
+
+Structure of the force-field file
+\begin_inset LatexCommand \label{sub:Structure-of-the-force-file}
+
+\end_inset 
+
+
+\layout Standard
+
+The short-range part of the force field is specified in a file as was mentioned
+ in section 
+\begin_inset LatexCommand \ref{sub:How-to-specify-short-range-force}
+
+\end_inset 
+
+ above.
+ Let us assume that the lateral grid is 
+\begin_inset Formula $N_{1}$
+\end_inset 
+
+, 
+\begin_inset Formula $N_{2}$
+\end_inset 
+
+ and the number of points along the 
+\begin_inset Formula $Z$
+\end_inset 
+
+ axis is 
+\begin_inset Formula $N_{z}$
+\end_inset 
+
+.
+ Then, the format of this file is as follows:
+\layout Itemize
+
+the 1st line: comment
+\layout Itemize
+
+
+\begin_inset Formula $N_{z}$
+\end_inset 
+
+ lines follow with the 
+\begin_inset Formula $z$
+\end_inset 
+
+ values (in the ascending order)
+\layout Itemize
+
+a comment line
+\layout Itemize
+
+then the force field for every 
+\begin_inset Formula $i$
+\end_inset 
+
+, 
+\begin_inset Formula $j$
+\end_inset 
+
+ along the lateral grid mesh follows in blocks as given by the following
+ FORTRAN statement: 
+\layout Standard
+\noindent \align center 
+
+\family typewriter 
+\size footnotesize 
+do i=0,N1
+\layout Standard
+\noindent \align center 
+
+\family typewriter 
+\size footnotesize 
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+do j=0,N2
+\layout Standard
+\noindent \align center 
+
+\family typewriter 
+\size footnotesize 
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+..................
+\layout Standard
+\noindent \align center 
+
+\family typewriter 
+\size footnotesize 
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+end do
+\layout Standard
+\noindent \align center 
+
+\family typewriter 
+\size footnotesize 
+end do
+\layout Itemize
+
+each block contains the values of the force for all values of 
+\begin_inset Formula $z$
+\end_inset 
+
+ (in the same order as the values of 
+\begin_inset Formula $z$
+\end_inset 
+
+ themselves, of course!), and it starts with a comment line.
+\layout Subsection
+
+Elementary Stages Box
+\begin_inset LatexCommand \label{sub:Elementary-Stages-Box}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\series bold 
+\emph on 
+Box Keyword
+\series default 
+\emph default 
+: 
+\family typewriter 
+.<Elementary_Stages>
+\layout Subsubsection
+
+What controls every elementary stage?
+\layout Standard
+
+Parameters controlling every elementary stage are listed below:
+\layout Itemize
+
+amplitude noise ON/OFF (logical);
+\layout Itemize
+
+force noise ON/OFF (logical)
+\layout Itemize
+
+ADC is ON/OFF (logical):
+\begin_deeper 
+\layout Itemize
+
+if ON, then the 
+\begin_inset Formula $z$
+\end_inset 
+
+ distance is adjusted so that the frequency shift 
+\begin_inset Formula $\Delta f$
+\end_inset 
+
+ could be maintained aproximately constant close to the set value,
+\begin_inset Formula $\Delta f$
+\end_inset 
+
+ (real);
+\layout Itemize
+
+if OFF, then the distance is kept exactly constant instead (constant height
+ mode); the frequency will change along the simulation, still kept at resonance;
+\end_deeper 
+\layout Itemize
+
+AGC is ON/OFF (logical):
+\begin_deeper 
+\layout Itemize
+
+if ON, then gain control allows to keep the oscillation amplitude approximately
+ constant close to the set value, 
+\begin_inset Formula $A$
+\end_inset 
+
+ (real), by constantly adjusting the excitation amplitude;
+\layout Itemize
+
+if OFF, then the excitation amplitude is kept exactly constant, whereas
+ the oscillation amplitude may change along the simulation;
+\end_deeper 
+\layout Itemize
+
+velocities 
+\begin_inset Formula $v_{x}$
+\end_inset 
+
+ and 
+\begin_inset Formula $v_{y}$
+\end_inset 
+
+ along the 
+\begin_inset Formula $X$
+\end_inset 
+
+ and 
+\begin_inset Formula $Y$
+\end_inset 
+
+ axes, kept constant during every elementary stage (two real);
+\layout Itemize
+
+a logical variable which switches ON/OFF the tip-surface force;
+\layout Itemize
+
+a logical variable which switches ON/OFF the excitation signal applied to
+ the cantilever;
+\layout Itemize
+
+a logical variable which switches ON/OFF the detailed printout during each
+ stage to be made into the file 
+\family typewriter 
+stageM.out
+\family default 
+ (
+\family typewriter 
+M
+\family default 
+ being the stage number); if ON, then there is also an integer vartiable
+ equal to the number of timesteps after which the printout will be made;
+\layout Itemize
+
+finally, presently there are three ways in which each stage can be terminated
+ (a character variable):
+\begin_deeper 
+\layout Itemize
+
+
+\family typewriter 
+'time'
+\family default 
+ followed by the time is seconds;
+\layout Itemize
+
+
+\family typewriter 
+'freq'
+\family default 
+: the stage will run to meet the frequency shift setpoint for this stage
+ (up to an error of 0.5 Hz);
+\layout Itemize
+
+
+\family typewriter 
+'ampl'
+\family default 
+: the stage will run to meet the oscillation amplitude setpoint for this
+ stage (up to an error of 0.1 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+AA
+\end_inset 
+
+).
+ 
+\end_deeper 
+\layout Subsubsection
+
+Specifying each elementary stage
+\begin_inset LatexCommand \label{sub:Specifying-each-elementary}
+
+\end_inset 
+
+
+\layout Standard
+
+Each elementary stage within the box is specified in a sub-box which is
+ started by a keyword:
+\layout Standard
+\added_space_top smallskip \added_space_bottom smallskip \noindent 
+
+\family typewriter 
+_{begin_stage}_
+\layout Standard
+\align left 
+followed by the 
+\begin_inset Quotes eld
+\end_inset 
+
+keyword + parameters
+\begin_inset Quotes erd
+\end_inset 
+
+ structure identical to other boxes; the sub-box ends if either the next
+ 
+\family typewriter 
+_{begin_stage}_
+\family default 
+ keyword is found (to start the next stage sub-box) or the 
+\layout Standard
+\added_space_top smallskip \added_space_bottom smallskip \noindent 
+
+\family typewriter 
+.<End>
+\layout Standard
+\align left 
+marker of the entire box is found.
+ All the parameters which control the execution of every stage are initially
+ set to the default values from the 
+\family typewriter 
+<VirtualAFM>
+\family default 
+ box of section 
+\begin_inset LatexCommand \ref{sub:Virtual-AFM-Box}
+
+\end_inset 
+
+.
+ Therefore, it is only necessary to give for each stage all those parameters
+ which are different from the default values.
+ All the keywords and their corresponding parameters are listed below.
+\layout Subsubsection*
+
+Finish{how,time}
+\layout Standard
+
+Three methods to finish the stage (as above).
+\layout Standard
+\align left 
+
+\emph on 
+Options
+\emph default 
+: 'time', 'freq', 'ampl'
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: time 
+\begin_inset Formula $t$
+\end_inset 
+
+ (in s) when option 'time' is used
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 'time' with 0.0 s
+\layout Standard
+\noindent 
+
+\emph on 
+Examples
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Finish{how,time} time 0.01
+\layout Standard
+\noindent 
+
+\family typewriter 
+\size footnotesize 
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+Finish{how,time} freq
+\layout Standard
+\noindent 
+
+\family typewriter 
+\size footnotesize 
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+Finish{how,time} ampl
+\layout Subsubsection*
+
+Excite{T/F}
+\layout Standard
+
+Switches ON/OFF the excitation signal applied to the cantilever.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: F/T
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: T
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+EXcite{T/F} T
+\layout Subsubsection*
+
+ADC{T/F,freq}
+\layout Standard
+
+Switches ON/OFF the ADC; if ON, then the set point frequency shift (negative)
+ is also provided (in Hz).
+ 
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: F/T, 
+\begin_inset Formula $\Delta f$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: T, 
+\begin_inset Formula $\Delta f_{0}$
+\end_inset 
+
+
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -100.0
+\layout Subsubsection*
+
+AGC{T/F,A0}
+\layout Standard
+
+Switches ON/OFF the AGC; if ON, then the set point amplitude 
+\begin_inset Formula $A$
+\end_inset 
+
+ is also provided (in m).
+ 
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: F/T, 
+\begin_inset Formula $A$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: T, 
+\begin_inset Formula $A_{0}$
+\end_inset 
+
+
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+AGC{T/F,A0} T 0.1e-9
+\layout Subsubsection*
+
+Noise{F,A}
+\layout Standard
+
+Switches ON/OFF the noise for the force and the amplitude (in this order).
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: F/T, F/T
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: as in 
+\family typewriter 
+<VirtualAFM>
+\family default 
+ box
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Noise{F,A} T T
+\layout Subsubsection*
+
+Prt{T/F,how_often}
+\layout Standard
+
+Switches the detailed printing ON/OFF; if ON, then it prints a number of
+ essential variables along the simulation into the file 
+\family typewriter 
+stageM.out
+\family default 
+ (
+\family typewriter 
+M
+\family default 
+ being the stage number) every 
+\begin_inset Formula $M_{dt}$
+\end_inset 
+
+ timesteps.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: F/T, 
+\begin_inset Formula $M_{dt}$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: as in 
+\family typewriter 
+<VirtualAFM>
+\family default 
+ box
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Prt{T/F,how_often} T 10
+\layout Subsubsection*
+
+Velocity{Vx,Vy}
+\layout Standard
+
+Sets velocities 
+\begin_inset Formula $v_{x}$
+\end_inset 
+
+ and 
+\begin_inset Formula $v_{y}$
+\end_inset 
+
+ along the 
+\begin_inset Formula $X$
+\end_inset 
+
+ and 
+\begin_inset Formula $Y$
+\end_inset 
+
+ directions (in m/s) for the given stage.
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: 
+\begin_inset Formula $v_{x}$
+\end_inset 
+
+, 
+\begin_inset Formula $v_{y}$
+\end_inset 
+
+
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: 0.0, 0.0
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 0.0e0 1.0e-9
+\layout Subsubsection*
+
+Tip_Force{T/F}
+\layout Standard
+
+Switches ON/OFF the tip-surface force.
+ 
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: T/F
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: T
+\layout Standard
+\noindent 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+Tip_Force{T/F} T
+\layout Subsubsection
+
+Doing a 2D scan
+\layout Standard
+
+Using elementary stages as described above one can program in any particular
+ movement of the cantilever across the surface including doing a 2D scan.
+ This last option may be tedious though since many times the same pattern
+ of line scans should be repeated.
+ To avoid this, the 2D scan can be automated using another sub-box structure
+ inside the 
+\family typewriter 
+<Elementary_Stages> 
+\family default 
+box.
+ 
+\layout Standard
+
+The basic idea is that a 2D scan can be simulated by repeating e.g.
+ 4 elementary stages: 
+\layout Enumerate
+
+a line scan along direction 
+\begin_inset Formula $\mathbf{b}_{1}$
+\end_inset 
+
+ during a long time 
+\begin_inset Formula $t_{1}$
+\end_inset 
+
+
+\layout Enumerate
+
+a line scan along the perpendicular direction 
+\begin_inset Formula $\mathbf{b}_{2}$
+\end_inset 
+
+ during a very short time 
+\begin_inset Formula $t_{2}$
+\end_inset 
+
+
+\layout Enumerate
+
+a line scan along direction 
+\begin_inset Formula $-\mathbf{b}_{1}$
+\end_inset 
+
+ during time 
+\begin_inset Formula $t_{1}$
+\end_inset 
+
+
+\layout Enumerate
+
+a line scan along the perpendicular direction 
+\begin_inset Formula $\mathbf{b}_{2}$
+\end_inset 
+
+ during a very short time 
+\begin_inset Formula $t_{2}$
+\end_inset 
+
+
+\layout Standard
+
+Some other possibilities for a 2D scan also exist, e.g.
+ by repeating only 3 stages:
+\layout Enumerate
+
+a line scan along direction 
+\begin_inset Formula $\mathbf{b}_{1}$
+\end_inset 
+
+ during a long time 
+\begin_inset Formula $t_{1}$
+\end_inset 
+
+
+\layout Enumerate
+
+a line scan along direction 
+\begin_inset Formula $-\mathbf{b}_{1}$
+\end_inset 
+
+ during the same time 
+\begin_inset Formula $t_{1}$
+\end_inset 
+
+
+\layout Enumerate
+
+a line scan along the perpendicular direction 
+\begin_inset Formula $\mathbf{b}_{2}$
+\end_inset 
+
+ during a very short time 
+\begin_inset Formula $t_{2}$
+\end_inset 
+
+
+\layout Standard
+
+Thus any scan can be viewed as an identical sequence of structures, each
+ consisting of several elementary stages.
+ The number of sequences determines the length of the scan in the direction
+ 
+\begin_inset Formula $\mathbf{b}_{2}$
+\end_inset 
+
+, whereas the length of the scan in the perpendicular direction 
+\begin_inset Formula $\mathbf{b}_{1}$
+\end_inset 
+
+ is determined by the time 
+\begin_inset Formula $t_{1}$
+\end_inset 
+
+ in the examples above.
+ 
+\layout Standard
+
+It is possible to position the scan sub-box arbitrarily between any stage
+ sub-boxes inside the 
+\family typewriter 
+<Elementary_Stages> 
+\family default 
+box as shown in the example in section 
+\begin_inset LatexCommand \ref{sub:Example-Input-File}
+
+\end_inset 
+
+.
+ Therefore, it is possible to do some number of elementary stages, then
+ a scan, then some other elementary stages, another scan, etc.
+ The total length of this chain of stages is only limited by the maximum
+ number of stages and scans allowed as given by the two parameters in the
+ 
+\family typewriter 
+virtual_param.inc
+\family default 
+ file (see section 
+\begin_inset LatexCommand \ref{sub:virtual_param.inc-file}
+
+\end_inset 
+
+).
+ Note that every scan is eventually constructed as a set of stages, so that
+ the parameter 
+\family typewriter 
+N_of_stages_max
+\family default 
+ can easily become too small and need to be increased, and the code recompiled.
+ 
+\layout Standard
+
+To start a scan, place the keyword 
+\layout Standard
+\added_space_top smallskip \added_space_bottom smallskip \noindent \align left 
+
+\family typewriter 
+==={begin_scan}===
+\layout Standard
+\noindent \align left 
+after a stage sub-box
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Note that you have to do the approach anyway, so that the stage sub-box
+ should always precede any of the scan boxes.
+\end_inset 
+
+.
+ The next line 
+\emph on 
+should
+\emph default 
+ contain the 
+\begin_inset Quotes eld
+\end_inset 
+
+keyword + parameter
+\begin_inset Quotes erd
+\end_inset 
+
+ structure: 
+\layout Subsubsection*
+\noindent 
+No_of_sequences
+\layout Standard
+\align left 
+
+\emph on 
+Parameters
+\emph default 
+: number of sequences
+\layout Standard
+\align left 
+
+\emph on 
+Default
+\emph default 
+: none
+\layout Standard
+\added_space_bottom smallskip \noindent \align left 
+
+\emph on 
+Example
+\emph default 
+: 
+\family typewriter 
+\size footnotesize 
+No_of_sequences 100
+\layout Standard
+\noindent \align left 
+This parameter defines the number of times each sequence is to be repeated.
+ After that, the elementary sequence, consisiting of elementary passages
+ (i.e.
+ stages) follows in the same way as described in section 
+\begin_inset LatexCommand \ref{sub:Specifying-each-elementary}
+
+\end_inset 
+
+.
+ The scan sub-box is terminated with the keyword
+\layout Standard
+\added_space_top smallskip \added_space_bottom smallskip \noindent \align left 
+
+\family typewriter 
+==={end_scan}===
+\layout Standard
+\added_space_bottom smallskip \noindent \align left 
+For instance, the 4-stage/passage scan structure to be repeated 10 times
+ along the 
+\begin_inset Formula $X$
+\end_inset 
+
+ direction is given by the following scan sub-box:
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+==={begin_scan}===
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+No_of_sequences 10
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} time 0.01
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 0.0 1.0e-9
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} time 0.001
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 1.0e-9 0.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} time 0.01
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 0.0 -1.0e-9
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+_{begin_stage}_
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Finish{how,time} time 0.001
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+Velocity{Vx,Vy} 1.0e-9 0.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+ADC{T/F,freq} T -440.0
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+==={end_scan}===
+\layout Standard
+\added_space_top smallskip \noindent 
+Here 
+\begin_inset Formula $\Delta f$
+\end_inset 
+
+ is set to -440 Hz during the whole scan.
+ 
+\layout Section
+
+Output
+\begin_inset LatexCommand \label{sec:Output}
+
+\end_inset 
+
+
+\layout Standard
+
+The output to the screen will tell you the main parameters for your calculation
+ and will also show the processing of each elementary stage.
+ In adition, a number of output files are produced.
+\layout Subsection
+
+
+\family typewriter 
+virtual.out
+\layout Standard
+
+This files starts with detailed information concerning with the current
+ calculation.
+ In particular, it contains a detailed account of all the stages made of
+ both individual stages and 2D scans, in a form of a table.
+ After the input part, it gives some useful information about each stage
+ in the process of the calculation, specifically about the setpoints and
+ the initial values of some variables.
+ An example of this file is given in the directory 
+\family typewriter 
+/examples
+\family default 
+ for the input file of section 
+\begin_inset LatexCommand \ref{sub:Example-Input-File}
+
+\end_inset 
+
+.
+ 
+\layout Subsection
+
+
+\family typewriter 
+\size normal 
+stageM.out
+\layout Standard
+\added_space_bottom smallskip \noindent 
+This type of file with 
+\family typewriter 
+M
+\family default 
+ being the stage number is created at every stage provided that the detailed
+ printing is ON.
+ The file starts from the heading which explains the variables it contains:
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# excite - excitation signal at timestep t 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# DEF - frequency shift (Hz) 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# ds - distance of closest approach (A) 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# dist - actual distance at time t (A)
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# ftip - force (eV/A)
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# A - oscillation amplitude 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+#
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# t \SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ z(t)\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ excite\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ DEF\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ ds\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ ftip\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ dist\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ A 
+\layout Standard
+\added_space_top smallskip \noindent 
+Note that variables printed out during the first two stages are slightly
+ different.
+\layout Subsection
+
+
+\family typewriter 
+\size normal 
+signals.dat
+\layout Standard
+\added_space_bottom smallskip \noindent 
+This single file contains the output (in the correct order of stages) in
+ the following form: 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# oscil - oscillation number
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# X,Y - lateral position (in A) 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# A - oscillation amplitude (in A) 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# DEF - frequency shift (Hz) 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# Ediss - dissipation energy per cycle (eV) 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# appr - distance of closest approach (A) 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# \SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+oscil\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ X\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ Y\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ A\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ DEF\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ Ediss\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ appr 
+\layout Standard
+\added_space_top smallskip \noindent 
+Variables printed into the file are calculated every 
+\begin_inset Formula $N$
+\end_inset 
+
+-th oscillation cycle at the end of the oscillation period (when the tip
+ is at the top most position).
+ Here 
+\begin_inset Formula $N$
+\end_inset 
+
+ is the parameter specified after the keyword 
+\family typewriter 
+Print_Cycles
+\family default 
+, section 
+\begin_inset LatexCommand \ref{sub:The-frequency-of-gen-printout}
+
+\end_inset 
+
+.
+\layout Subsection
+\noindent 
+
+\family typewriter 
+\size normal 
+2Dimage_S.dat
+\begin_inset LatexCommand \label{sub:2Dimage_S.dat}
+
+\end_inset 
+
+
+\layout Standard
+\added_space_bottom smallskip \noindent 
+For each scan a file with this name is produced (
+\family typewriter 
+S
+\family default 
+ is the scan number), which contains:
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# X,Y - lateral position (in A) 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# A - oscillation amplitude (in A) 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# DEF - frequency shift (Hz) 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# Ediss - dissipation energy per cycle (eV) 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# appr - distance of closest approach (A) 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# \SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ X\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ Y\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ A\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ DEF\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ Ediss\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ appr 
+\layout Standard
+
+Difference with the 
+\family typewriter 
+singnal.dat
+\family default 
+ file is two-fold: firstly, the oscillation number is not printed; secondly,
+ different files are produced for each stage.
+\layout Standard
+
+As an example, we show in Fig.
+ 
+\begin_inset LatexCommand \ref{cap:2D-topography-image}
+
+\end_inset 
+
+ the 2D topology image of the MgO (001) surface calculated by the code using
+ the 9x9 force field (section 
+\begin_inset LatexCommand \ref{sub:Force-Field-Box}
+
+\end_inset 
+
+).
+ 
+\begin_inset Float figure
+wide false
+collapsed true
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename 9x9.gif
+	height 8cm
+
+\end_inset 
+
+
+\layout Caption
+
+2D topography image of the MgO (001) surface calculate using the 9x9 grid
+ force field.
+\begin_inset LatexCommand \label{cap:2D-topography-image}
+
+\end_inset 
+
+
+\end_inset 
+
+ Black spots correspond to Mg atoms, while white ones - to O atoms.
+ The force field was obtained using a 64 atom 4x4x4 MgO cube with a Mg atom
+ at the tip apex.
+ This is in perfect qualitative agreement with the image shown.
+ 
+\layout Subsection
+
+
+\family typewriter 
+ftip.dat
+\layout Standard
+
+This file is produced if the tip force is tested (section 
+\begin_inset LatexCommand \ref{sub:Testing-the-whole}
+
+\end_inset 
+
+).
+ Its heading reflects its contents:
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+# force field for given X,Y=( 0.00000, 0.00000) 
+\layout Standard
+
+
+\family typewriter 
+\size footnotesize 
+#\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ z (in A) \SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+vdW (in eV/A)\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ chemical (in e/V)\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+\SpecialChar ~
+ total (in eV/A) 
+\layout Bibliography
+\bibitem {albrecht-fmdemodul}
+
+T.R.
+ Albrecht, P.
+ Grütter, D.
+ Horne, and D.
+ Rugar, J.
+ Appl.
+ Phys.
+ 
+\series bold 
+69
+\series default 
+ (2), 668-673 (1991) 
+\layout Bibliography
+\bibitem {Omicron}
+
+Omicron Nanotechnology, 
+\begin_inset LatexCommand \url{http://www.omicron.de}
+
+\end_inset 
+
+
+\layout Bibliography
+\bibitem {Nanosurf}
+
+easyPLL Nanosurf, 
+\begin_inset LatexCommand \url{http://www.nanosurf.com}
+
+\end_inset 
+
+
+\layout Bibliography
+\bibitem {durig-pll}
+
+U.
+ Dürig, H.R.
+ Steinauer, N.
+ Blanc, J.
+ Appl.
+ Phys.
+ 
+\series bold 
+82
+\series default 
+ (8), 3641-3651 (1997) 
+\layout Bibliography
+\bibitem {loppacher-phase}
+
+Ch.
+ Loppacher, M.
+ Bammerlin, M.
+ Guggisberg, F.
+ Battiston, R.
+ Bennewitz, S.
+ Rast, A.
+ Baratoff, E.
+ Meyer, H.-J.
+ Güntherodt, Appl.
+ Surf.
+ Sci.
+ 
+\series bold 
+140
+\series default 
+, 287-292 (1999) 
+\layout Bibliography
+\bibitem {pfeiffer-phase}
+
+O.
+ Pfeiffer, L.
+ Nony, R.
+ Bennewitz, A.
+ Baratoff and E.
+ Meyer, Nanotech.
+ 
+\series bold 
+15
+\series default 
+, S101-S107 (2004) 
+\layout Bibliography
+\bibitem {etique-automatique}
+
+M.
+ Etique, 
+\shape italic 
+Regulation Automatique,
+\shape default 
+ (Ecole d'Ingénieurs du Canton de Vaud, Switzerland, 2003) 
+\layout Bibliography
+\bibitem {silva-PI}
+
+G.J.
+ Silva, A.
+ Datta, S.P.
+ Bhattacharyya, Automatica 
+\series bold 
+37
+\series default 
+, 2025-2031 (2001) 
+\layout Bibliography
+\bibitem {Wang-PI}
+
+Y.-G.
+ Wang, H.-H.
+ Shao, Automatica 
+\series bold 
+36
+\series default 
+, 147-152 (2000) 
+\layout Bibliography
+\bibitem {loppacherPLL}
+
+Ch.
+ Loppacher, M.
+ Bammerlin, F.
+ Battiston, M.
+ Guggisberg, D.
+ Müller, H.R.
+ Hidber, R.
+ Lüthi, E.
+ Meyer, H.-J.
+ Güntherodt, Appl.
+ Phys.
+ A 
+\series bold 
+66
+\series default 
+, S215-S218 (1998) 
+\layout Bibliography
+\bibitem {loppacher-dissertation}
+
+Ch.
+ Loppacher, 
+\shape italic 
+Nichtkontaktrasterkraftmikroskopie Mit Digitalem Phasenregelkreis, Inauguraldiss
+ertation,
+\shape default 
+ (Basel, 2000) 
+\layout Bibliography
+\bibitem {durig-fmdemodul}
+
+U.
+ Dürig, O.
+ Züger, and A.
+ Stalder, J.
+ Appl.
+ Phys.
+ 
+\series bold 
+72
+\series default 
+ (5), 1778-1798 (1992) 
+\layout Bibliography
+\bibitem {verlet-algo}
+
+L.
+ Verlet, Phys.
+ Rev.
+
+\series bold 
+ 159
+\series default 
+ (1), 98-103 (1967)
+\layout Bibliography
+\bibitem {guggisberg-electrostatic}
+
+M.
+ Guggisberg, M.
+ Bammerlin, Ch.
+ Loppacher, O.
+ Pfeiffer, A.
+ Abdurixit, V.
+ Barwich, R.
+ Bennewitz, A.
+ Baratoff, E.
+ Meyer, and H.-J.
+ Güntherodt, Phys.
+ Rev.
+ B 
+\series bold 
+61
+\series default 
+, 11151-11155 (2000) 
+\layout Bibliography
+\bibitem {sarid}
+
+D.
+ Sarid, 
+\shape italic 
+Scanning Force Microscopy
+\shape default 
+, (Oxford University Press, Oxford, 1991) 
+\layout Bibliography
+\bibitem {yaralioglu-allnoises}
+
+G.G.
+ Yaralioglu, A.
+ Atalar, S.R.
+ Manalis, C.F.
+ Quate, J.
+ Appl.
+ Phys.
+ 
+\series bold 
+83
+\series default 
+ (12), 7405-7415 (1998) 
+\layout Bibliography
+\bibitem {cleland-cantilevernoise}
+
+A.N.
+ Cleland, M.L.
+ Roukes, J.
+ Appl.
+ Phys.
+ 
+\series bold 
+92
+\series default 
+ (5), 2758-2769 (2002) 
+\layout Bibliography
+\bibitem {bacon-shotnoise}
+
+A.M.
+ Bacon, H.Z.
+ Zhao, L.J.
+ Wang, and J.E.
+ Thomas, Appl.
+ Opt.
+ 
+\series bold 
+34
+\series default 
+ (24), 5326-5330 (1995) 
+\the_end

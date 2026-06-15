@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>General</TITLE>
+<META NAME="description" CONTENT="General">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node41.html">
+<LINK REL="previous" HREF="node39.html">
+<LINK REL="up" HREF="node39.html">
+<LINK REL="next" HREF="node41.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html801"
+  HREF="node41.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html797"
+  HREF="node39.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html791"
+  HREF="node39.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html799"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html802"
+  HREF="node41.html">SciFi input</A>
+<B> Up:</B> <A NAME="tex2html798"
+  HREF="node39.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html792"
+  HREF="node39.html">Input</A>
+ &nbsp <B>  <A NAME="tex2html800"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION04010000000000000000">
+General</A>
+</H1>
+
+<P>
+The code reads in a single unformatted input file which
+can be in one of two forms: either an initial file (<TT>name.INN</TT>)
+or a restart file (<TT>name.RST</TT>). The only difference is that
+a restart file has been produced by the code itself and normally contains
+relaxed positions of atoms and shell-polarization. A restart file
+will automatically be produced after every run of the code, regardless
+of the options selected. 
+
+<P>
+The code will use an initial (<TT>.INN</TT>) file of the appropriate
+name if no <TT>option</TT> is given. If the keyword 'restart' is given
+as an option then the program will open the restart file of the appropriate
+name as input. The code will also produce an input file <TT>input.img</TT>
+if the <TT>.&lt;IMAGE&gt;</TT> box is present. This contains all atomic
+positions (excluding <B>frozen-tip</B>), charges and general information
+about the system relevant to the image calculation, and can be ignored
+except for debugging purposes. The image part of the code runs independently
+of the main code, but is called automatically without requiring user
+intervention.
+
+<P>
+The input file itself is separated into specific boxes for each category
+of input parameters. Each box begins with the keyword name of the
+box in the format <I>.&lt;keyword&gt;</I> and then the appropriate keywords
+and parameters for that box are listed. Keywords must be placed in
+the input box they are classed in, they will be ignored in other boxes.
+Some keywords require another controlling word or parameter value,
+whereas others are activated by just being present. After the example
+file, each box and its keywords are explained, along with possible
+parameters which can be used.
+
+<P>
+Comments can be entered into the input file by placing ## before
+the line. Empty lines will be ignored. There is no specific order
+required for the boxes in the input file, but there is some order
+needed for specific keywords within the boxes. These position dependent
+keywords will be highlighted below.
+
+<P>
+Boxes described in Section <A HREF="node41.html#sec:SciFi-input">8</A> correspond to the
+SciFi part of the code. If an error is generated when reading those
+boxes (in particular, if some or all boxes are missing), then the
+SciFi part is switched off. Next, an vAFM input is read in. If there
+is no error, the vAFM part of the code is working relying on an existing
+force field. Otherwise, the code stops with an error message. Conversely,
+if there is only an error in the vAFM part, then the code works as
+a SciFi code. The vAFM input part is described separately in Section 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html801"
+  HREF="node41.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html797"
+  HREF="node39.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html791"
+  HREF="node39.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html799"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html802"
+  HREF="node41.html">SciFi input</A>
+<B> Up:</B> <A NAME="tex2html798"
+  HREF="node39.html">Input</A>
+<B> Previous:</B> <A NAME="tex2html792"
+  HREF="node39.html">Input</A>
+ &nbsp <B>  <A NAME="tex2html800"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,358 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Utility do_param </TITLE>
+<META NAME="description" CONTENT="Utility do_param ">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node82.html">
+<LINK REL="previous" HREF="node80.html">
+<LINK REL="up" HREF="node80.html">
+<LINK REL="next" HREF="node82.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1312"
+  HREF="node82.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1308"
+  HREF="node80.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1302"
+  HREF="node80.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1310"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1313"
+  HREF="node82.html">What to do for</A>
+<B> Up:</B> <A NAME="tex2html1309"
+  HREF="node80.html">lev00 and VASP</A>
+<B> Previous:</B> <A NAME="tex2html1303"
+  HREF="node80.html">lev00 and VASP</A>
+ &nbsp <B>  <A NAME="tex2html1311"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00521000000000000000"></A><A NAME="Sec::do_param"></A>
+<BR>
+Utility <I>do_param</I> 
+</H2>
+
+<P>
+The routine is required in order to set up the necessary storage for
+<B><I>lev00</I></B> and compile it. The routine is menu-driven (similar
+to <B><I>tetr</I></B>). It is compiled only ones in subdirectory
+<TT>VASP_Tools</TT>. Then, a logical link should be made to it in
+your <TT>/bin</TT> directory, e.g.
+
+<P>
+<TT>ln -s /TOOLS/VASP_Tools/get_param /bin/.</TT>
+
+<P>
+First, you run <B><I>VASP</I></B> which produces an <TT>OUTCAR</TT>
+output file. Then, you run <B><I>do_param</I></B> which
+opens the following menu:
+
+<P>
+<TT><FONT SIZE="-2">/==================================================&#92;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">|| HELP: read in parameters first! ||</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&#92;==================================================/</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Choose an option:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. Read in all the parameters: </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">------- g e n
+e r a l s e t t i n g s --------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">N1. Name of the VASP output file: OUTCAR</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">N2. Name of the original CONTCAR-like file: CONTCAR</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">N3. Name of the reference CONTCAR-like file: CONTCAR.ref</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">N4. Name of the to be corrected CONTCAR-like file: CONTCAR.new</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">N5. Name of the output file with displacements: CONTCAR.dspl</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Quit</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-----&gt; Choose the appropriate
+option:</FONT></TT>
+<P>
+
+
+<P>
+Use option <B>1</B>, that should examine the OUTCAR file and give
+a summary of various important parameters of the job. The menu will
+also change:
+
+<P>
+<TT><FONT SIZE="-2">/==================================================&#92;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">|| HELP: read in parameters first! ||</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&#92;==================================================/</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Choose an option:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. Read in all the parameters: &lt;=== Done!</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;Parameters found: NSPEC = 2</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NKPTS
+= 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NBANDS=
+8</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NIONS
+= 3</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ISPIN
+= 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid
+=&gt; 60 x 60 x 60</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. Produce &lt;param.inc&gt; file for lev00</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. Produce &lt;band.out&gt; file for lev00</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. Correct your CONTCAR-like file</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6. Calculate displacements</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">--------
+v i s u a l i s a t i o n ----------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Co. Show Cartesian coordinates</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">------- g e n
+e r a l&nbsp;&nbsp;s e t t i n g s --------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">N1. Name of the VASP output file: OUTCAR</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">N2. Name of the original CONTCAR-like file: CONTCAR</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">N3. Name of the reference CONTCAR-like file: CONTCAR.ref</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">N4. Name of the to be corrected CONTCAR-like file: CONTCAR.new</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">N5. Name of the output file with displacements: CONTCAR.dspl</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Quit</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-----&gt; Choose the appropriate
+option:</FONT></TT>
+<P>
+
+
+<P>
+The meaning of the variables <TT>NSPEC</TT>, <TT>NKPTS</TT>, <TT>NBANDS</TT>
+and <TT>ISPIN</TT> is given in Section <A HREF="node48.html#sec:Installation-info-lev00">3.2</A>.
+Check if these correspond to your actual calculation. 
+
+<P>
+Then, use option <B>2</B> to produce the <TT>param.inc</TT> file
+needed to compile <B><I>lev00</I></B>. This is the <I>main</I> purpose
+of this utility. 
+
+<P>
+If you did a band staructure calculation with <B><I>VASP</I></B>
+(i.e. with fixed density) using the <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-point DOS sampling
+from <B><I>tetr</I></B> , and would like to calculate the DOS/LDOS
+with <B><I>lev00</I></B>, you also <I>must</I> use option <B>3</B>.
+The file <TT>band.out</TT> with Kohn-Sham eigenvalues will then be
+written that <B><I>lev00</I></B> can understand. Note that <TT>KPOINTS</TT>
+and <TT>brill.dat</TT> will also be needed from your <B><I>tetr</I></B>
+run prior to the <B><I>VASP</I></B> one.
+
+<P>
+The other two options of the routine are redundant as tetr has them
+all: option <B>4</B> is equivalent to the option <B>M</B> <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\rightarrow$"><B>Rf</B>
+of the M-menu of Section <A HREF="node18.html#sub:M-option-tetr">2.6.5</A> and is to do with
+the VASP way of changing atomic positions to lie between 0 and 1 in
+fractional coordinates (which is sometimes confusing!), while option
+<B>6</B> calculates and shows atomic displacements. These two options
+refer to the initial geometry file under <B>N3</B>. The corrected
+file will be stored as in <B>N4</B>, while displacements - with
+the name under <B>N5</B>. All file names in <B>N1</B> - <B>N5</B>
+can be modified from the default values.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1312"
+  HREF="node82.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1308"
+  HREF="node80.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1302"
+  HREF="node80.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1310"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1313"
+  HREF="node82.html">What to do for</A>
+<B> Up:</B> <A NAME="tex2html1309"
+  HREF="node80.html">lev00 and VASP</A>
+<B> Previous:</B> <A NAME="tex2html1303"
+  HREF="node80.html">lev00 and VASP</A>
+ &nbsp <B>  <A NAME="tex2html1311"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

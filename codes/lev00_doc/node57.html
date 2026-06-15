@@ -1,0 +1,337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>3 - Total DOS: you need only -&gt; band.out, brill.dat</TITLE>
+<META NAME="description" CONTENT="3 - Total DOS: you need only -&gt; band.out, brill.dat">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node58.html">
+<LINK REL="previous" HREF="node56.html">
+<LINK REL="up" HREF="node54.html">
+<LINK REL="next" HREF="node58.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1008"
+  HREF="node58.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1004"
+  HREF="node54.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html998"
+  HREF="node56.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1006"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1009"
+  HREF="node58.html">1,2,11 - Projected (local)</A>
+<B> Up:</B> <A NAME="tex2html1005"
+  HREF="node54.html">Calculation of the DOS</A>
+<B> Previous:</B> <A NAME="tex2html999"
+  HREF="node56.html">0 - Choose dispersion</A>
+ &nbsp <B>  <A NAME="tex2html1007"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00462300000000000000"></A><A NAME="sub:DOS-3-lev00"></A>
+<BR>
+3 - Total DOS: you need only -&gt; band.out, brill.dat
+</H3>
+
+<P>
+This option works similarly to the previous one. It calculates the
+total DOS (both raw and the smeared one). To run this option, two
+additional files are necessary: <TT>band.out</TT> containing energies
+and produced after the DFT run, and <TT>brill.dat</TT> produced by
+<B><I>tetr</I></B> during the generation of the <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points
+for the DOS option, see Section <A HREF="node21.html#sub:KP-DOS-tetr">2.6.6.2</A>. 
+
+<P>
+The new functionality here is an ability to calculate and plot the
+DOS curves for individual groups of bands (states). In other words,
+the index <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$n$"> in Eqs. (<A HREF="node49.html#3">3.4</A>) and (<A HREF="node49.html#4">3.5</A>) runs over the chosen
+bands (states) only. 
+
+<P>
+The menu:
+
+<P>
+<TT><FONT SIZE="-2">..............MENU DOS/LDOS .......................</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">..... Change these parameters if necessary:...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">______________&gt; Only total DOS &lt;_______________</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">0. THE CURRENT PICTURE IS: 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. Maximum energy step for the plotting: 0.10000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&gt; Number of points for the DOS plot: 220</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&gt; Steps for each &#34;physical&#34;
+band:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.10000 0.10000 0.10000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. Smeared DOS/LDOS: DISABLED</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">7. Number of groups of bands: ... undefined ...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">8. Adopt present setting and calculate DOS/LDOS</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">11. Preview the current DOS/LDOS</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">12. PostScript file for the current DOS/LDOS</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">13. Upper limit to the energy-range of the plot: DISABLED</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">14. Quit: do not proceed.</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---&gt; Choose the item and press ENTER:</FONT></TT>
+<P>
+
+
+<P>
+The number of groups of bands is chosen in <B>7</B>. In the calculated
+plots the DOS curves associated with each group will be shown by a
+different colour on the same plot. This is useful if the states responsible
+for certain features in the DOS need to be known. 
+
+<P>
+If, say, out of all 8 bands three groups are chosen, namely 1-4, 5-6
+and 7-8, then <B><I>lev00</I></B> will first show (just before updating
+the menu) how the energy is split between the groups:
+
+<P>
+<TT><FONT SIZE="-2">... The group 1 covers bands from 1 - 4</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">... The group 2 covers bands from 5 - 6</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">... The group 3 covers bands from 7 - 8</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">..........&lt; Group 1 &gt;...........</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Energies E are between -.127706E+02 and 0.449350E+01
+eV</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">..........&lt; Group 2 &gt;...........</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Energies E are between 0.936580E+01 and 0.203830E+02
+eV</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">..........&lt; Group 3 &gt;...........</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Energies E are between 0.166957E+02 and 0.248751E+02
+eV</FONT></TT>
+<P>
+
+
+<P>
+The menu will then be updated with the option <B>7</B> changing
+into: 
+
+<P>
+<TT><FONT SIZE="-2">7. Number of groups of bands: 3</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt; The following groups of bands are defined:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">{1} 1_ 4; {2} 5_ 6; {3} 7_ 8; </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt; Files for the plot: dos.dat1_1 , ... , dos.dat3_1 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt; Names of the PostScript files: dos.dat1_1.ps
+, ... , dos.dat3_1.ps</FONT></TT>
+<P>
+
+
+<P>
+It now shows explicitly all the file names to be produced. After calculating
+the DOS (option <B>8</B>), the DOS curves for each group can be
+seen in different colours (option <B>11</B>) as shown in Fig. <A HREF="node57.html#cap:Total-DOS-of-MgO">3.2</A>.
+<DIV ALIGN="CENTER"><A NAME="cap:Total-DOS-of-MgO"></A><A NAME="9919"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.2:</STRONG>
+Total DOS of the MgO bulk: three groups of bands are shown by different
+colours.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="16" HEIGHT="36" ALIGN="BOTTOM" BORDER="0"
+ SRC="img139.png"
+ ALT="\includegraphics[%%
+height=8cm,
+angle=-90]{dos_groups.eps}">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Note that if the smearing is enabled (either slow or fast, option
+<B>3</B>, see Section <A HREF="node50.html#sec:note-on-DOS-lev00">3.4</A>), all calculations
+will be done using a single values for <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$\sigma $"> and <IMG
+ WIDTH="16" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$\gamma$">. Either
+original (raw) or smeared DOS can be previewed by controlling the
+option <B>6</B>. The calculation is performed using option <B>88</B>.
+If the smearing is on <I>before</I> option <B>8</B> is used, the
+calculation with smearing will also be performed automatically. Otherwise,
+it is necessary to apply option <B>88</B> directly.
+
+<P>
+Other options in the menu are similar or identical to those in the
+dispersion menu of Section <A HREF="node56.html#sub:DOS-0-lev00">3.6.2.2</A>, so that we will
+not consider them here.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1008"
+  HREF="node58.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1004"
+  HREF="node54.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html998"
+  HREF="node56.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1006"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1009"
+  HREF="node58.html">1,2,11 - Projected (local)</A>
+<B> Up:</B> <A NAME="tex2html1005"
+  HREF="node54.html">Calculation of the DOS</A>
+<B> Previous:</B> <A NAME="tex2html999"
+  HREF="node56.html">0 - Choose dispersion</A>
+ &nbsp <B>  <A NAME="tex2html1007"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

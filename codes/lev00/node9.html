@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Menus in tetr</TITLE>
+<META NAME="description" CONTENT="Menus in tetr">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node6.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html336"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html332"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html326"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html334"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html337"
+  HREF="node10.html">Getting started</A>
+<B> Up:</B> <A NAME="tex2html333"
+  HREF="node6.html">Utility tetr</A>
+<B> Previous:</B> <A NAME="tex2html327"
+  HREF="node8.html">Installation and general information</A>
+ &nbsp <B>  <A NAME="tex2html335"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00330000000000000000"></A><A NAME="sec:Menus-in-tetr"></A>
+<BR>
+Menus in <I>tetr</I>
+</H1>
+
+<P>
+Most of the menus have common options:
+
+<P>
+
+<UL>
+<LI><B>Co</B> - (info) show a table with Cartesian and fractional coordinates
+of all atoms in the unit cell
+</LI>
+<LI><B>S</B> - save the current geometry into an input file (the code
+format to be chosen next)
+</LI>
+<LI><B>Sy</B> - (info) show (usually, the point) symmetry of the current
+geometry; in most cases the lattice translations are also included,
+i.e. two points are thought to be equivalent if they are separated
+by a lattice translation
+</LI>
+<LI><B>U</B> - undo the last step
+</LI>
+<LI><B>An</B> - (setting) choose the format in which coordinates are
+to be specified for input in the menus: Angstrom, fractional or atom
+number (in order of atoms in the system)
+</LI>
+</UL>
+A number of options of the main menu allows a user to change the current
+geometry in various ways. Some options have similar meanings in different
+menus, although their actual work depends on where they are called
+from, for example:
+
+<P>
+
+<UL>
+<LI><B>Mv</B> - move one or more atoms in the cell
+</LI>
+<LI><B>Rt</B> - rotate one or more atoms
+</LI>
+</UL>
+In many menus when a change in geometry is done, the code allows the
+user to dump the geometry manually or automatically into a file <TT>geom.xyz</TT>
+that is written in the <TT>xyz</TT> format. If you run any <TT>xyz</TT>-file
+previewer (like <B><I>Xmol</I></B>), then you can preview the system
+during the modification process, and this is extremely useful! A number
+of options (mainly settings) control this:
+
+<P>
+
+<UL>
+<LI><B>XY</B> - (setting) the format of the <TT>geom.xyz</TT> file (either
+for <B><I>Xmol</I></B>, <B><I>Ymol</I></B> or disable);
+in the latter case the file will not be written after each change
+of the geometry 
+</LI>
+<LI><B>Hs</B> - (setting) either add or not H atoms to the <TT>geom.xyz</TT>
+file to preview x,y,z axes (necessary for <B><I>Xmol</I></B> as
+it does not have the axes facility)
+</LI>
+<LI><B>Bb</B> - (setting) breeding box is specified: this option allows
+you to preview not just the cell, but <!-- MATH
+ $N_{1}\times N_{2}\times N_{3}$
+ -->
+<IMG
+ WIDTH="119" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$N_{1}\times N_{2}\times N_{3}$">
+extention of it; note, that the actual cell is not changed, this option
+only affects the atoms written to the <TT>geom.xyz</TT> file 
+</LI>
+<LI><B>W</B> - force writing <TT>geom.xyz</TT> file for the current
+geometry
+</LI>
+</UL>
+Normally, when choosing a set of atoms, two integers are specified,
+so that all atoms with numbers between (and including) them are in
+the list. For instance, choosing 5 and 10 would include atoms 5,6,7,8,9
+and 10 into the list. In some cases a non-contagious list is required,
+e.g. 5, 7-10, 15 and 22. In this case you can ``tag'' atoms (option
+<B>T</B>) by naming all of them and using a dash if all numbers
+in between are to be included, e.g. 5 7-10 15 22 for the example above.
+Note that once atoms are tagged, pressing <B>T</B> again untages
+them. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html336"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html332"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html326"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html334"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html337"
+  HREF="node10.html">Getting started</A>
+<B> Up:</B> <A NAME="tex2html333"
+  HREF="node6.html">Utility tetr</A>
+<B> Previous:</B> <A NAME="tex2html327"
+  HREF="node8.html">Installation and general information</A>
+ &nbsp <B>  <A NAME="tex2html335"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

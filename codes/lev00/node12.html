@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A note about symmetry</TITLE>
+<META NAME="description" CONTENT="A note about symmetry">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html371"
+  HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html367"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html363"
+  HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html369"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html372"
+  HREF="node13.html">Detailed description of options</A>
+<B> Up:</B> <A NAME="tex2html368"
+  HREF="node11.html">Symmetry</A>
+<B> Previous:</B> <A NAME="tex2html364"
+  HREF="node11.html">Symmetry</A>
+ &nbsp <B>  <A NAME="tex2html370"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00351000000000000000"></A><A NAME="sub:A-note-about-symmetry"></A>
+<BR>
+A note about symmetry
+</H2>
+
+<P>
+The fact that the point group operations are rigidly related to the
+Cartesian axes, the symmetry determined by <B><I>tetr</I></B> may
+not be as rich as it should be. On the other hand, in many cases it
+is useful to have the maximum symmetry possible (e.g. when generating
+<IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points for the electronic DOS calculation). Therefore,
+it is advised to maximise the system symmetry by shifting and/or rotating
+the whole cell. This can be done in the M-menu, Section <A HREF="node18.html#sub:M-option-tetr">2.6.5</A>,
+where each time you change your system, the symmetry group is recalculated
+so that you can check the symmetry at every stage (option <B>Sy</B>).
+
+<P>
+In order to do a band-structure calculation, you should first relax
+your system and obtain the electronic density. Note that the ground
+state density can be left unchanged if you just <I>rotate</I> your
+coordinate system (we assume that it is written with respect to the
+fractional coordinates of the grid points in your cell; this supposed
+to be the case in both <B><I>VASP</I></B> and <B><I>SIESTA</I></B>).
+However, if you have to <I>shift</I> your system by some vector,
+then the density matrix should be recalculated and a new file must
+be produced. This option is provided by the utility <B><I>lev00</I></B>
+(see Section <A HREF="node73.html#sub:Ro-shifted-system-lev00">3.6.3.13</A>). Therefore, it is
+always wise to think about it <I>before</I> running the ground state
+calculation: choose the most symmetrical orientation of the system
+with respect to the Cartesian axes, use <B><I>tetr</I></B> to show
+the point group every time!
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html371"
+  HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html367"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html363"
+  HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html369"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html372"
+  HREF="node13.html">Detailed description of options</A>
+<B> Up:</B> <A NAME="tex2html368"
+  HREF="node11.html">Symmetry</A>
+<B> Previous:</B> <A NAME="tex2html364"
+  HREF="node11.html">Symmetry</A>
+ &nbsp <B>  <A NAME="tex2html370"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

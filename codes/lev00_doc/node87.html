@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Utility get_param_siesta </TITLE>
+<META NAME="description" CONTENT="Utility get_param_siesta ">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node88.html">
+<LINK REL="previous" HREF="node86.html">
+<LINK REL="up" HREF="node86.html">
+<LINK REL="next" HREF="node88.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1386"
+  HREF="node88.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1382"
+  HREF="node86.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1376"
+  HREF="node86.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1384"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1387"
+  HREF="node88.html">What to do for</A>
+<B> Up:</B> <A NAME="tex2html1383"
+  HREF="node86.html">lev00 and SIESTA</A>
+<B> Previous:</B> <A NAME="tex2html1377"
+  HREF="node86.html">lev00 and SIESTA</A>
+ &nbsp <B>  <A NAME="tex2html1385"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00621000000000000000"></A><A NAME="Sec:get_param_siesta"></A>
+<BR>
+Utility <I>get_param_siesta</I> 
+</H2>
+
+<P>
+The routine is required in order to set up the necessary storage for
+<B><I>lev00</I></B> and compile it. The routine is <I>not</I> menu-driven
+and is compiled only ones in subdirectory <TT>SIESTA_Tools</TT>.
+Then, a logical link should be made to it in your <TT>/bin</TT>
+directory, e.g.
+
+<P>
+<TT>ln -s /TOOLS/SIESTA_Tools/get_param_siesta
+/bin/.</TT>
+
+<P>
+When you run the routine, it will prompt you first to choose the name
+of your job by showing all <TT>*.XV</TT> type files in the current
+directory, e.g.
+
+<P>
+<TT><FONT SIZE="-2">Specify SYSTEM LABEL (char*20) for your SIESTA
+run:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">***** XV-files in the current directory: *****</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Ad_on_Au.XV</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">**********************************************</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">* Extention .XV should NOT be specified! *</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">**********************************************</FONT></TT>
+<P>
+
+
+<P>
+Specify one name and press <TT>ENTER</TT>. The routine will go through
+the output and density files, and the output like the one below will
+follow, after which the routine will stop:
+
+<P>
+<TT><FONT SIZE="-2">Reading from Ad_on_Au.XV ...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Reading from Ad_on_Au.XV geometry ...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">SIESTA: found lattice vectors:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[1] 14.78217 0.00000 0.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[2] 7.39108 12.80173 0.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[3] 0.00000 0.00000 27.00001</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">SIESTA: found NIONS = 140</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">SIESTA: found NSPEC = 4</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Done geometry!</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">SIESTA: setting NKPTS = 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">SIESTA: setting NBANDS = 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">O.K.! This Ad_on_Au.XV is fine! Let us proceed!</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">reading lattice vectors ...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">reading ngx ...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">YES! Found FORMATTED density file Ad_on_Au.RHO</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">14.7821682 0. 0.</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">7.39108414 12.8017333 0.</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">0. 0. 27.0000119</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">SIESTA: found NGX= 120,NGY= 120,NGZ= 240</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">SIESTA: file Ad_on_Au.RHO does not contain SPIN
+density</FONT></TT>
+<P>
+
+
+<P>
+You will find a <TT>param.inc</TT> file in the current directory corresponding
+to the chosen job. Run the <TT>lev00.comp</TT> script to get <B><I>lev00</I></B>
+in the same directory.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1386"
+  HREF="node88.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1382"
+  HREF="node86.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1376"
+  HREF="node86.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1384"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1387"
+  HREF="node88.html">What to do for</A>
+<B> Up:</B> <A NAME="tex2html1383"
+  HREF="node86.html">lev00 and SIESTA</A>
+<B> Previous:</B> <A NAME="tex2html1377"
+  HREF="node86.html">lev00 and SIESTA</A>
+ &nbsp <B>  <A NAME="tex2html1385"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

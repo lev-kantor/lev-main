@@ -1,0 +1,50 @@
+SystemLabel si-bulk
+
+# Optimisation
+MD.TypeOfRun CG
+MD.NumCGSteps 1
+MD.MaxForceTol 0.05 eV/Ang
+MD.VariableCell false
+MD.MaxStressTol 100 bar
+
+# SCF
+SolutionMethod diagon
+kgrid_cutoff 0.0 Ang
+MaxSCFIterations 150
+DM.MixingWeights 0.10
+DM.NumberPulay 3
+SpinPolarized false
+
+# Basis set
+MeshCutoff 150 Ry
+PAO.EnergyShift 0.01 Ry
+PAO.BasisSize DZP
+#PAO.SplitNorm 0.15
+
+# Functional
+XC.Functional GGA
+XC.Authors PBE
+
+# I/O
+LongOutput true
+UseSaveData false
+
+NumberOfSpecies     1
+NumberOfAtoms       2
+
+%block ChemicalSpeciesLabel
+    1 14 Si
+%endblock ChemicalSpeciesLabel
+
+LatticeConstant    1.00000 Ang
+%block LatticeVectors
+  0.000000000000000E+000   2.72040000000000        2.72040000000000     
+   2.72040000000000       0.000000000000000E+000   2.72040000000000     
+   2.72040000000000        2.72040000000000       0.000000000000000E+000
+%endblock LatticeVectors
+
+AtomicCoordinatesFormat Ang
+%block AtomicCoordinatesAndAtomicSpecies
+   0.00000    0.00000    0.00000     1 # Si    1
+   1.36020    1.36020    1.36020     1 # Si    2
+%endblock AtomicCoordinatesAndAtomicSpecies

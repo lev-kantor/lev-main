@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>NVT with Berendsen Thermostat</TITLE>
+<META NAME="description" CONTENT="NVT with Berendsen Thermostat">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node23.html">
+<LINK REL="previous" HREF="node21.html">
+<LINK REL="up" HREF="node19.html">
+<LINK REL="next" HREF="node23.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html449"
+  HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html445"
+  HREF="node19.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html439"
+  HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html447"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html450"
+  HREF="node23.html">NVT with Nose-Hoover Thermostat</A>
+<B> Up:</B> <A NAME="tex2html446"
+  HREF="node19.html">Molecular Dynamics Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html440"
+  HREF="node21.html">NVT with Gaussian Thermostat</A>
+ &nbsp <B>  <A NAME="tex2html448"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02018300000000000000">
+NVT with Berendsen Thermostat</A>
+</H3>
+
+<P>
+The Berendsen thermostat is essentially a cross between the NVE and
+Gaussian algorithms that uses a user defined relaxation constant that
+determines the degree of rescaling of the velocities. The Berendsen
+thermostat can be used to push a system towards a desired temperture
+as oppsed to enforcing it. The basic algorithm is detailed bellow:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\underline{v}(t+\frac{1}{2}\Delta t)\leftarrow\eta\left(\underline{v}(t-\frac{1}{2}\Delta t)+\Delta t\frac{\underline{f}(t)}{m}\right)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="279" HEIGHT="46" BORDER="0"
+ SRC="img245.png"
+ ALT="\begin{displaymath}
+\underline{v}(t+\frac{1}{2}\Delta t)\leftarrow\eta\left(\und...
+...-\frac{1}{2}\Delta t)+\Delta t\frac{\underline{f}(t)}{m}\right)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\underline{r}(t+\Delta t)\leftarrow\underline{r}(t)+\Delta t\underline{v}(t-\frac{1}{2}\Delta t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="228" HEIGHT="38" BORDER="0"
+ SRC="img238.png"
+ ALT="\begin{displaymath}
+\underline{r}(t+\Delta t)\leftarrow\underline{r}(t)+\Delta t\underline{v}(t-\frac{1}{2}\Delta t)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\eta\leftarrow\sqrt{\left[1+\frac{\Delta t}{\tau}\left(\frac{T_{ext}}{T}-1\right)\right]}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="202" HEIGHT="55" BORDER="0"
+ SRC="img246.png"
+ ALT="\begin{displaymath}
+\eta\leftarrow\sqrt{\left[1+\frac{\Delta t}{\tau}\left(\frac{T_{ext}}{T}-1\right)\right]}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Where <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img247.png"
+ ALT="$\tau$"> is the user defined time constant in units of <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img248.png"
+ ALT="$ps$">.
+As with the Gaussian thermostat, the temperature is calcaulted self
+consistently over three iterations. 
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

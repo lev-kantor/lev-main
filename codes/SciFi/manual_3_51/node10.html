@@ -1,0 +1,356 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Definition of the Instantaineous Force on the Tip (for MD)</TITLE>
+<META NAME="description" CONTENT="Definition of the Instantaineous Force on the Tip (for MD)">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html299"
+  HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html295"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html291"
+  HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html297"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html300"
+  HREF="node11.html">Interatomic Potentials</A>
+<B> Up:</B> <A NAME="tex2html296"
+  HREF="node9.html">The calculation of the</A>
+<B> Previous:</B> <A NAME="tex2html292"
+  HREF="node9.html">The calculation of the</A>
+ &nbsp <B>  <A NAME="tex2html298"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02015100000000000000">
+Definition of the Instantaineous Force on the Tip (for MD)</A>
+</H3>
+
+<P>
+In the case where the system is dynamic and atoms are given kinetic
+energy, it becomes obvious that the definition of the tip force given
+in the previous section no longer holds, since the forces on free
+atoms are no longer zero: <!-- MATH
+ $\frac{\partial U}{\partial\mathbf{r}}\neq0$
+ -->
+<IMG
+ WIDTH="54" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img156.png"
+ ALT="$\frac{\partial U}{\partial\mathbf{r}}\neq0$">.
+It is also clear that because of this when the entire tip is far from
+the surface, region 1 will experience large fluctuations in force
+of Eq. (<A HREF="node9.html#fin-prelast">14</A>) due to oscillating other tip atoms belonging
+to the adjacent region 2. Moreover, these fluctuations will not decay
+with the distance from the surface which is in clear contradiction
+with what one would expect from the tip force which is physically
+due to the interaction with the surface. Even for a completely isolated
+tip the force fluctuations are large although, since region 2 atoms
+vibrate around equilibrium positions, the average force fluctuates
+around zero value. Hence, we conclude that the final form of Eq. (<A HREF="node9.html#fin-prelast">14</A>)
+can only be used for calculating the force in mechanical equilibrium
+or when calculating the <I>average</I> force during MD simulations.
+If we are interested in the actual <I>fluctuations</I> of the tip
+force for any given tip position <IMG
+ WIDTH="17" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img157.png"
+ ALT="$Q$">, Eq. (<A HREF="node9.html#fin-prelast">14</A>) cannot
+be applied. 
+
+<P>
+What is needed in order to provide an alternative expression for the
+tip force which would work for both static and dynamic situations,
+is the definition of an <I>instantaneous</I> force for arbitrary positions
+of atoms in the junction. At first, one might be tempted to define
+the tip force as the partial derivative, <!-- MATH
+ $-\frac{\partial U}{\partial Q}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img158.png"
+ ALT="$-\frac{\partial U}{\partial Q}$">,
+of the total system energy <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img159.png"
+ ALT="$U$"> with respect to tip height <IMG
+ WIDTH="17" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img157.png"
+ ALT="$Q$"> at
+<I>arbitrary</I> positions of atoms, <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$\mathbf{r}$">, which are allowed
+to relax. However, this definition, as can easily be seen, leads to
+the same expression for the force, Eq. (<A HREF="node9.html#fin-prelast">14</A>), because
+only atoms in region 1 depend explicitly on <IMG
+ WIDTH="17" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img157.png"
+ ALT="$Q$">, and thus cannot
+be accepted.
+
+<P>
+In order to obtain an appropriate definition of the tip force, we
+invoke a general non-equilibrium microscopic consideration in which
+the total Hamiltonian of the ``tip - surface'' system was shown
+[<A
+ HREF="node188.html#KANT_QM_coarse-grained">11</A>] to be split as follows:
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+H=H_{s}+\Phi+H_{T}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="Hamiltonian"></A><IMG
+ WIDTH="128" HEIGHT="27" BORDER="0"
+ SRC="img160.png"
+ ALT="\begin{displaymath}
+H=H_{s}+\Phi+H_{T}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(16)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Here <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img161.png"
+ ALT="$H_{s}$"> is the sum of the independent <I>microscopic</I> Hamiltonians
+of the isolated surface and the isolated tip. Either of those contains
+kinetic and potential energies of the constituent atoms. Note that
+atomic positions in the tip part of <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img161.png"
+ ALT="$H_{s}$"> are defined <I>relatively</I>
+to the fixed part of the tip (e.g. using internal coordinates). Note
+also that there is <I>no</I> interaction between atoms in the surface
+and in the tip included in <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img161.png"
+ ALT="$H_{s}$">. This interaction is completely
+included in the second term, <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img162.png"
+ ALT="$\Phi$">, in Eq. (<A HREF="node10.html#Hamiltonian">16</A>).
+Since absolute positions of the tip atoms are to be used while specifying
+the tip-surface interaction, <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img162.png"
+ ALT="$\Phi$"> depends both on the atomic positions
+and the tip height, <IMG
+ WIDTH="17" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img157.png"
+ ALT="$Q$">. As the distance between the tip and surface
+increases, the tip-surface interaction <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img162.png"
+ ALT="$\Phi$"> tends to zero. Finally,
+<IMG
+ WIDTH="27" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img163.png"
+ ALT="$H_{T}$"> is the <I>macroscopic</I> Hamiltonian of the tip which contains
+kinetic and elastic energy of the cantilever as well as the excitation
+term. It depends exclusively on <IMG
+ WIDTH="17" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img157.png"
+ ALT="$Q$"> and also contributes to the conservative
+part of the tip force. Since we are not interested in the conservative
+contribution (it does not contribute to the force fluctuations), it
+will be ignored in this presentation. Note that the interaction term,
+<IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img162.png"
+ ALT="$\Phi$"> can always be defined for arbitrary complex many body interactions
+between the tip and surface, and thus our treatment is not limited
+to systems consisting only of pairwise interactions. 
+
+<P>
+It then follows from the microscopic non-equilibrium theory that the
+instantaneous microscopic force acting on the tip (which completely
+includes the <I>stochastic</I> contribution due to atomic vibrations
+[<A
+ HREF="node188.html#NC-AFM_book_my-contribution">12</A>]) should be defined as follows: 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F=-\frac{\partial\Phi}{\partial Q}=f_{13}+f_{23}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="force-correct-1"></A><IMG
+ WIDTH="154" HEIGHT="42" BORDER="0"
+ SRC="img164.png"
+ ALT="\begin{displaymath}
+F=-\frac{\partial\Phi}{\partial Q}=f_{13}+f_{23}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(17)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="23" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img165.png"
+ ALT="$f_{ij}$"> is the sum of the vertical forces acting on all the
+atoms in region <IMG
+ WIDTH="10" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img166.png"
+ ALT="$i$"> due to all of the atoms in region <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.png"
+ ALT="$j$"> [<A
+ HREF="node188.html#tip-force-def-Tom">13</A>].
+The important difference with the static definition of Eq. (<A HREF="node9.html#fin-prelast">14</A>)
+is that the force is defined as the partial derivative of the <I>interaction</I>
+energy <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img162.png"
+ ALT="$\Phi$"> rather than the <I>total</I> energy <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img159.png"
+ ALT="$U$">. We see that
+the microscopic force on the tip is given as the sum of the <I>partial
+forces</I> on <I>all</I> atoms of the tip due to all of the atoms in
+the surface. 
+
+<P>
+The above expression does not require that the system is in equilibrium,
+and, due to partitioning of the total Hamiltonian discussed above,
+Eq. (<A HREF="node10.html#Hamiltonian">16</A>), it naturally tends to zero when the tip
+and the surface are separated. It is also equivalent to the static
+definition (<A HREF="node9.html#fin-prelast">14</A>) if the system is in equilibrium. Indeed,
+since <!-- MATH
+ $f_{21}=-f_{12}$
+ -->
+<IMG
+ WIDTH="80" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img168.png"
+ ALT="$f_{21}=-f_{12}$">, <IMG
+ WIDTH="55" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img169.png"
+ ALT="$f_{22}=0$"> and <IMG
+ WIDTH="55" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img170.png"
+ ALT="$f_{11}=0$"> at any given
+time <IMG
+ WIDTH="10" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img171.png"
+ ALT="$t$">, we can also write <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img172.png"
+ ALT="$F$"> as <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F=\left(f_{23}+f_{22}+f_{21}\right)+\left(f_{13}+f_{12}+f_{11}\right)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="final-force"></A><IMG
+ WIDTH="282" HEIGHT="28" BORDER="0"
+ SRC="img173.png"
+ ALT="\begin{displaymath}
+F=\left(f_{23}+f_{22}+f_{21}\right)+\left(f_{13}+f_{12}+f_{11}\right)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(18)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The first term (all three terms in the first brackets) is equal to
+the sum of the total forces acting on atoms in region 2 due to all
+other atoms in the system; it is equal to zero in mechanical equilibrium.
+Thus, in this case <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img172.png"
+ ALT="$F$"> reduces to the second term (the second brackets)
+which is equal to the sum of forces acting on the frozen atoms of
+the tip comprising region 3 which is indeed identical to that given
+by Eq. (<A HREF="node9.html#fin-prelast">14</A>).
+
+<P>
+In practical calculations the expression for the force (<A HREF="node10.html#force-correct-1">17</A>)
+is not very convenient since it requires calculation of partial forces
+due to different regions to be recorded during each simulation step.
+The equivalent expression (<A HREF="node10.html#final-force">18</A>), which will be referred
+to as the <I>dynamic</I> definition of the tip force (as opposed to
+the <I>static</I> definition of Eq. (<A HREF="node9.html#fin-prelast">14</A>)) is much
+more convenient since it contains the sum of total forces acting on
+<I>all</I> atoms of the tip. This expresion is used in the code when
+calculating the continuous force on the tip during a simulaion. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html299"
+  HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html295"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html291"
+  HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html297"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html300"
+  HREF="node11.html">Interatomic Potentials</A>
+<B> Up:</B> <A NAME="tex2html296"
+  HREF="node9.html">The calculation of the</A>
+<B> Previous:</B> <A NAME="tex2html292"
+  HREF="node9.html">The calculation of the</A>
+ &nbsp <B>  <A NAME="tex2html298"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

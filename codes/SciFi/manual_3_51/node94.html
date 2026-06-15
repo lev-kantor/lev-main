@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Friction Box</TITLE>
+<META NAME="description" CONTENT="Friction Box">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="previous" HREF="node93.html">
+<LINK REL="up" HREF="node81.html">
+<LINK REL="next" HREF="node95.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1562"
+  HREF="node95.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1558"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1554"
+  HREF="node93.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1560"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1563"
+  HREF="node95.html">Dynamic Tip</A>
+<B> Up:</B> <A NAME="tex2html1559"
+  HREF="node81.html">Molecular Dynamics boxes</A>
+<B> Previous:</B> <A NAME="tex2html1555"
+  HREF="node93.html">Velocity Box</A>
+ &nbsp <B>  <A NAME="tex2html1561"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION040251300000000000000"></A><A NAME="Sec::friction_box"></A>
+<BR>
+Friction Box
+</H3>
+
+<P>
+<B><I>Box Keyword</I></B>: <TT>.&lt;Friction&gt;</TT>
+
+<P></P>
+
+
+<P>
+This box contains the friction coeffecients for all the components
+of all the atoms is the system for the stochastic thermostat, and
+is only read in if the stochastic integration algorithm is selected
+in the MDcontrol box. This box must contain an entry for each atom
+in the system, in the order given in the atomic coordinate box. Each
+entry constists of an integer flag followed by the x, y and z components
+of the friction coefficient for that atom. If the flag is set to 0,
+the atom will not be conected to the stochastic thermostat, and its
+motion will be integrated using the standard Verlet leapfrog algorithm,
+if the flag is set to 1, the atom will be connected to the thermostat.
+E.g.:
+
+<P>
+&nbsp;
+
+<P>
+1 <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img358.png"
+ ALT="$\gamma_{x}$"> <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img359.png"
+ ALT="$\gamma_{y}$"> <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img360.png"
+ ALT="$\gamma_{z}$">
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

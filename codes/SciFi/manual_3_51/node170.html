@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Doing a 2D scan</TITLE>
+<META NAME="description" CONTENT="Doing a 2D scan">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node171.html">
+<LINK REL="previous" HREF="node169.html">
+<LINK REL="up" HREF="node159.html">
+<LINK REL="next" HREF="node171.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2583"
+  HREF="node171.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2579"
+  HREF="node159.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2573"
+  HREF="node169.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2581"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2584"
+  HREF="node171.html">No_of_sequences</A>
+<B> Up:</B> <A NAME="tex2html2580"
+  HREF="node159.html">Elementary Stages Box</A>
+<B> Previous:</B> <A NAME="tex2html2574"
+  HREF="node169.html">Tip_Force{T/F}</A>
+ &nbsp <B>  <A NAME="tex2html2582"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION040341100000000000000">
+Doing a 2D scan</A>
+</H3>
+
+<P>
+Using elementary stages as described above one can program in any
+particular movement of the cantilever across the surface including
+doing a 2D scan. This last option may be tedious though since many
+times the same pattern of line scans should be repeated. To avoid
+this, the 2D scan can be automated using another sub-box structure
+inside the <TT>&lt;Elementary_Stages&gt;</TT> box. 
+
+<P>
+The basic idea is that a 2D scan can be simulated by repeating e.g.
+4 elementary stages: 
+
+<P>
+
+<OL>
+<LI>a line scan along direction <!-- MATH
+ $\mathbf{b}_{1}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img449.png"
+ ALT="$\mathbf{b}_{1}$"> during a long time <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img450.png"
+ ALT="$t_{1}$">
+</LI>
+<LI>a line scan along the perpendicular direction <!-- MATH
+ $\mathbf{b}_{2}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img451.png"
+ ALT="$\mathbf{b}_{2}$"> during
+a very short time <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img410.png"
+ ALT="$t_{2}$">
+</LI>
+<LI>a line scan along direction <!-- MATH
+ $-\mathbf{b}_{1}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img452.png"
+ ALT="$-\mathbf{b}_{1}$"> during time <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img450.png"
+ ALT="$t_{1}$">
+</LI>
+<LI>a line scan along the perpendicular direction <!-- MATH
+ $\mathbf{b}_{2}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img451.png"
+ ALT="$\mathbf{b}_{2}$"> during
+a very short time <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img410.png"
+ ALT="$t_{2}$">
+</LI>
+</OL>
+Some other possibilities for a 2D scan also exist, e.g. by repeating
+only 3 stages:
+
+<P>
+
+<OL>
+<LI>a line scan along direction <!-- MATH
+ $\mathbf{b}_{1}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img449.png"
+ ALT="$\mathbf{b}_{1}$"> during a long time <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img450.png"
+ ALT="$t_{1}$">
+</LI>
+<LI>a line scan along direction <!-- MATH
+ $-\mathbf{b}_{1}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img452.png"
+ ALT="$-\mathbf{b}_{1}$"> during the same time
+<IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img450.png"
+ ALT="$t_{1}$">
+</LI>
+<LI>a line scan along the perpendicular direction <!-- MATH
+ $\mathbf{b}_{2}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img451.png"
+ ALT="$\mathbf{b}_{2}$"> during
+a very short time <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img410.png"
+ ALT="$t_{2}$">
+</LI>
+</OL>
+Thus any scan can be viewed as an identical sequence of structures,
+each consisting of several elementary stages. The number of sequences
+determines the length of the scan in the direction <!-- MATH
+ $\mathbf{b}_{2}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img451.png"
+ ALT="$\mathbf{b}_{2}$">,
+whereas the length of the scan in the perpendicular direction <!-- MATH
+ $\mathbf{b}_{1}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img449.png"
+ ALT="$\mathbf{b}_{1}$">
+is determined by the time <IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img450.png"
+ ALT="$t_{1}$"> in the examples above. 
+
+<P>
+It is possible to position the scan sub-box arbitrarily between any
+stage sub-boxes inside the <TT>&lt;Elementary_Stages&gt;</TT> box as shown
+in the example in section <A HREF="node117.html#sub:Example-Input-File">9.1</A>. Therefore,
+it is possible to do some number of elementary stages, then a scan,
+then some other elementary stages, another scan, etc. The total length
+of this chain of stages is only limited by the maximum number of stages
+and scans allowed as given by the two parameters in the <TT>virtual_param.inc</TT>
+file (see section <A HREF="node37.html#sub:virtual_param.inc-file">5</A>). Note that every
+scan is eventually constructed as a set of stages, so that the parameter
+<TT>N_of_stages_max</TT> can easily become too small and need to
+be increased, and the code recompiled. 
+
+<P>
+To start a scan, place the keyword 
+
+<P>
+
+<P></P>
+
+<DIV ALIGN="LEFT">
+<TT>==={begin_scan}===</TT>
+</DIV>
+
+<P></P>
+
+
+<P>
+<DIV ALIGN="LEFT">
+after a stage sub-box<A NAME="tex2html17"
+  HREF="footnode.html#foot3425"><SUP>4</SUP></A>. The next line <I>should</I> contain the ``keyword + parameter''
+structure: 
+</DIV>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2583"
+  HREF="node171.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2579"
+  HREF="node159.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2573"
+  HREF="node169.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2581"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2584"
+  HREF="node171.html">No_of_sequences</A>
+<B> Up:</B> <A NAME="tex2html2580"
+  HREF="node159.html">Elementary Stages Box</A>
+<B> Previous:</B> <A NAME="tex2html2574"
+  HREF="node169.html">Tip_Force{T/F}</A>
+ &nbsp <B>  <A NAME="tex2html2582"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

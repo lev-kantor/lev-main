@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Amplitude regulation </TITLE>
+<META NAME="description" CONTENT="Amplitude regulation ">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node30.html">
+<LINK REL="previous" HREF="node28.html">
+<LINK REL="up" HREF="node27.html">
+<LINK REL="next" HREF="node30.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html540"
+  HREF="node30.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html536"
+  HREF="node27.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html530"
+  HREF="node28.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html538"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html541"
+  HREF="node30.html">Frequency demodulation and cantilever</A>
+<B> Up:</B> <A NAME="tex2html537"
+  HREF="node27.html">How the virtual machine</A>
+<B> Previous:</B> <A NAME="tex2html531"
+  HREF="node28.html">Equation of motion of</A>
+ &nbsp <B>  <A NAME="tex2html539"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02021200000000000000"></A><A NAME="sub:Amplitude-regulation"></A>
+<BR>
+Amplitude regulation 
+</H3>
+
+<P>
+Amplitude regulation is achieved by the Automatic Gain Control (see
+figure <A HREF="node29.html#fAGC">8</A>). The modulus <IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img269.png"
+ ALT="$A(t)$"> of the cantilever oscillation
+<IMG
+ WIDTH="30" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img261.png"
+ ALT="$z(t)$"> is extracted by a diode followed by a first-order low-pass
+filter, modelized by:
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+A(t)=\frac{\pi}{2\tau_{D}}e^{-t/\tau_{D}}\int_{0}^{t}\left|z(t^{\prime})\right|e^{t/\tau_{D}}\textrm{d}t^{\prime}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:ePeakDetection"></A><IMG
+ WIDTH="249" HEIGHT="46" BORDER="0"
+ SRC="img270.png"
+ ALT="\begin{displaymath}
+A(t)=\frac{\pi}{2\tau_{D}}e^{-t/\tau_{D}}\int_{0}^{t}\left\vert z(t^{\prime})\right\vert e^{t/\tau_{D}}\textrm{d}t^{\prime}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(23)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+with <IMG
+ WIDTH="23" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img271.png"
+ ALT="$\tau_{D}$"> being the time constant of the envelope detection. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fAGC"></A><A NAME="3763"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8:</STRONG>
+Automatic Gain Control.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="311" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img272.png"
+ ALT="\includegraphics[%%
+height=7cm,
+keepaspectratio]{pictures/agc.ps}">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img269.png"
+ ALT="$A(t)$"> is then compared to the amplitude setpoint <IMG
+ WIDTH="23" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img257.png"
+ ALT="$A_{0}$">. The error
+signal <IMG
+ WIDTH="73" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img273.png"
+ ALT="$A(t)-A_{0}$">, after being fed into a PI (Proportional-Integral)
+system [<A
+ HREF="node188.html#etique-automatique">27</A>,<A
+ HREF="node188.html#silva-PI">28</A>,<A
+ HREF="node188.html#Wang-PI">29</A>], is used to change
+the variable gain <IMG
+ WIDTH="35" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img274.png"
+ ALT="$R(t)$">. Both the Proportional gain <IMG
+ WIDTH="49" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img275.png"
+ ALT="$K_{P}^{AGC}$">
+(controlling the ``stiffness'' of the AGC loop) and the Integration
+gain <IMG
+ WIDTH="49" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img276.png"
+ ALT="$K_{I}^{AGC}$"> (controlling the ``viscosity'' of the AGC
+loop) can be set by the user. One obtains the dynamic gain <IMG
+ WIDTH="35" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img274.png"
+ ALT="$R(t)$">:
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R(t)=K_{P}^{AGC}\left[A(t)-A_{0}\right]+K_{I}^{AGC}\int_{-\infty}^{t}\left[A(t')-A_{0}\right]\; dt'
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:eAGC"></A><IMG
+ WIDTH="385" HEIGHT="47" BORDER="0"
+ SRC="img277.png"
+ ALT="\begin{displaymath}
+R(t)=K_{P}^{AGC}\left[A(t)-A_{0}\right]+K_{I}^{AGC}\int_{-\infty}^{t}\left[A(t')-A_{0}\right]\; dt'
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(24)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+Without tip-surface interaction, <!-- MATH
+ $R(D\rightarrow\infty)=\frac{k_{c}\, A_{0}}{Q_{c}}$
+ -->
+<IMG
+ WIDTH="139" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img278.png"
+ ALT="$R(D\rightarrow\infty)=\frac{k_{c}\, A_{0}}{Q_{c}}$">
+with <IMG
+ WIDTH="65" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img279.png"
+ ALT="$A_{pll}=1.$">
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html540"
+  HREF="node30.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html536"
+  HREF="node27.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html530"
+  HREF="node28.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html538"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html541"
+  HREF="node30.html">Frequency demodulation and cantilever</A>
+<B> Up:</B> <A NAME="tex2html537"
+  HREF="node27.html">How the virtual machine</A>
+<B> Previous:</B> <A NAME="tex2html531"
+  HREF="node28.html">Equation of motion of</A>
+ &nbsp <B>  <A NAME="tex2html539"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

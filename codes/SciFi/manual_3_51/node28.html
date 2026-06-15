@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Equation of motion of the cantilever</TITLE>
+<META NAME="description" CONTENT="Equation of motion of the cantilever">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node29.html">
+<LINK REL="previous" HREF="node27.html">
+<LINK REL="up" HREF="node27.html">
+<LINK REL="next" HREF="node29.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html528"
+  HREF="node29.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html524"
+  HREF="node27.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html518"
+  HREF="node27.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html526"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html529"
+  HREF="node29.html">Amplitude regulation</A>
+<B> Up:</B> <A NAME="tex2html525"
+  HREF="node27.html">How the virtual machine</A>
+<B> Previous:</B> <A NAME="tex2html519"
+  HREF="node27.html">How the virtual machine</A>
+ &nbsp <B>  <A NAME="tex2html527"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02021100000000000000"></A><A NAME="sub:Equation-of-motion"></A>
+<BR>
+Equation of motion of the cantilever
+</H3>
+
+<P>
+The dynamics of the cantilever is giverned by the following equation
+of motion: 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+M\ddot{z}(t)+\frac{M\omega_{0}}{Q}\dot{z}(t)+kz(t)=RA_{pll}\sin(\omega_{pll}t+\varphi)+F_{int}\left(z(t)+D(t);\dot{z}(t)\right)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:eDynamic"></A><IMG
+ WIDTH="510" HEIGHT="42" BORDER="0"
+ SRC="img260.png"
+ ALT="\begin{displaymath}
+M\ddot{z}(t)+\frac{M\omega_{0}}{Q}\dot{z}(t)+kz(t)=RA_{pll}\...
+...omega_{pll}t+\varphi)+F_{int}\left(z(t)+D(t);\dot{z}(t)\right)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(22)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+It is solved numericacally using the velocity Verlet algorithm[<A
+ HREF="node188.html#verlet-algo">26</A>].
+In this equation <IMG
+ WIDTH="30" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img261.png"
+ ALT="$z(t)$"> is the vertical displacement of the cantileved
+around its mean value. The actual distance of the cantilever from
+the surface plane is given by <IMG
+ WIDTH="81" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img262.png"
+ ALT="$z(t)+D(t)$"> as shown in Fig. <A HREF="node28.html#cap:tip-oscillations">7</A>.
+
+<DIV ALIGN="CENTER"><A NAME="cap:tip-oscillations"></A><A NAME="3758"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7:</STRONG>
+Schematic of the oscilating cantilever system.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="163" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img263.png"
+ ALT="\includegraphics[%%
+height=5cm]{xfig.tip.eps}">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Various terms in the above equation have the following meaning:
+
+<P>
+
+<UL>
+<LI>Terms in the LHS correspond to a damped harmonic oscillator: <!-- MATH
+ $M=k/\omega_{0}^{2}$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img264.png"
+ ALT="$M=k/\omega_{0}^{2}$">
+is the effective cantilever mass, where <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img208.png"
+ ALT="$k$"> is cantilever stiffness
+and <!-- MATH
+ $\omega_{0}=2\pi f_{0}$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img265.png"
+ ALT="$\omega_{0}=2\pi f_{0}$"> is the resonance frequency of the free
+cantilever; in addition, there is also a friction term in the LHS
+containing the dimensionless quality factor <IMG
+ WIDTH="17" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img157.png"
+ ALT="$Q$">; these are all intrinsic
+parameters of the probe. 
+</LI>
+<LI>The first term in the RHS is the excitation signal which is used to
+maintain the cantilever oscillation amplitude at a preset value <IMG
+ WIDTH="23" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img257.png"
+ ALT="$A_{0}$">.
+The first factor in the excitation amplitude <IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img266.png"
+ ALT="$R$"> is called a damping
+or dissipation term and is considered in section <A HREF="node29.html#sub:Amplitude-regulation">2.1.2</A>
+in more detail. It's just a variable gain. Note that the other part
+of the signal, <!-- MATH
+ $A_{pll}\sin(\omega_{pll}t+\varphi)$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img267.png"
+ ALT="$A_{pll}\sin(\omega_{pll}t+\varphi)$">, is produced
+by the PLL as described in more detail in sections <A HREF="node29.html#sub:Amplitude-regulation">2.1.2</A>
+and <A HREF="node30.html#sub:Frequency-demodulation">2.1.3</A>. It drives the piezo of the
+cantilever.
+</LI>
+<LI><!-- MATH
+ $F_{int}\left(z(t)+D(t);\dot{z}(t)\right)$
+ -->
+<IMG
+ WIDTH="158" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img268.png"
+ ALT="$F_{int}\left(z(t)+D(t);\dot{z}(t)\right)$"> corresponds to the conservative
+and dissipative interactions between the tip and the surface (the
+latter is not implemented presently).
+</LI>
+</UL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html528"
+  HREF="node29.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html524"
+  HREF="node27.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html518"
+  HREF="node27.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html526"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html529"
+  HREF="node29.html">Amplitude regulation</A>
+<B> Up:</B> <A NAME="tex2html525"
+  HREF="node27.html">How the virtual machine</A>
+<B> Previous:</B> <A NAME="tex2html519"
+  HREF="node27.html">How the virtual machine</A>
+ &nbsp <B>  <A NAME="tex2html527"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

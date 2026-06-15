@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Stochastic Boundary Conditions</TITLE>
+<META NAME="description" CONTENT="Stochastic Boundary Conditions">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node25.html">
+<LINK REL="previous" HREF="node23.html">
+<LINK REL="up" HREF="node19.html">
+<LINK REL="next" HREF="node25.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html473"
+  HREF="node25.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html469"
+  HREF="node19.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html463"
+  HREF="node23.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html471"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html474"
+  HREF="node25.html">Shells</A>
+<B> Up:</B> <A NAME="tex2html470"
+  HREF="node19.html">Molecular Dynamics Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html464"
+  HREF="node23.html">NVT with Nose-Hoover Thermostat</A>
+ &nbsp <B>  <A NAME="tex2html472"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02018500000000000000">
+Stochastic Boundary Conditions</A>
+</H3>
+
+<P>
+To simulate coupling to a heat bath and to physically allow energy
+gained by the system from a moving tip to be carried off to infinity,
+all or a subset (at the boundaries) of the atoms in a system can be
+subject to a random impulse and frictional force at every timestep,
+governed by the Langevin equation:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{\partial\underline{p}_{i}}{\partial t}=-\frac{\partial U}{\partial\underline{q}_{i}}-\gamma\underline{p}_{i}+F^{+}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="167" HEIGHT="49" BORDER="0"
+ SRC="img249.png"
+ ALT="\begin{displaymath}
+\frac{\partial\underline{p}_{i}}{\partial t}=-\frac{\partial U}{\partial\underline{q}_{i}}-\gamma\underline{p}_{i}+F^{+}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Where <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img250.png"
+ ALT="$p$"> and <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$q$"> and the atomic momentums and positions respectively,
+<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img159.png"
+ ALT="$U$"> is the total system energy, <IMG
+ WIDTH="13" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img251.png"
+ ALT="$\gamma$"> is the parametric friction
+coefficient and <IMG
+ WIDTH="27" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img252.png"
+ ALT="$F^{+}$">is a Gaussian distributed random force, the
+size of which is given by the second fluctuation-dissipation theorem:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\langle F_{i}^{+}(t_{1})F_{j}^{+}(t_{2})\right\rangle =2\gamma k_{B}T_{ext}\delta_{ij}\delta(t_{1}-t_{2})
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="279" HEIGHT="31" BORDER="0"
+ SRC="img253.png"
+ ALT="\begin{displaymath}
+\left\langle F_{i}^{+}(t_{1})F_{j}^{+}(t_{2})\right\rangle =2\gamma k_{B}T_{ext}\delta_{ij}\delta(t_{1}-t_{2})\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+The algorithm used to integrate the equations of motion is the same
+as the Verlet Leapfrog, except that the velocity proportional friction
+force and random impulse is added to the total systematic force prior
+to the integration. The larger the friction coefficient, <IMG
+ WIDTH="13" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img251.png"
+ ALT="$\gamma$">,
+the faster the system will react to a change in temperature and as
+<!-- MATH
+ $\gamma\rightarrow0$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img254.png"
+ ALT="$\gamma\rightarrow0$"> the system tends to the NVE ensemble. The code
+allows the friction coefficient of each degree of freedom in the system
+to be assigned individually by the user in the input file. 
+
+<P>
+It has been demostrated in [<A
+ HREF="node188.html#stochastic-md">18</A>] that this scheme
+is only valid when the decay time of the friction coefficient is much
+larger than the time step in the simualtion, i.e.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\Delta t\ll\frac{1}{\gamma}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="55" HEIGHT="42" BORDER="0"
+ SRC="img255.png"
+ ALT="\begin{displaymath}
+\Delta t\ll\frac{1}{\gamma}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+The code will not prevent or warn the user from using any value for
+the friction coefficient. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html473"
+  HREF="node25.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html469"
+  HREF="node19.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html463"
+  HREF="node23.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html471"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html474"
+  HREF="node25.html">Shells</A>
+<B> Up:</B> <A NAME="tex2html470"
+  HREF="node19.html">Molecular Dynamics Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html464"
+  HREF="node23.html">NVT with Nose-Hoover Thermostat</A>
+ &nbsp <B>  <A NAME="tex2html472"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

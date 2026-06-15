@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>CASTEP </TITLE>
+<META NAME="description" CONTENT="CASTEP ">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node91.html">
+<LINK REL="previous" HREF="node89.html">
+<LINK REL="up" HREF="node89.html">
+<LINK REL="next" HREF="node91.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1426"
+  HREF="node91.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1422"
+  HREF="node89.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1416"
+  HREF="node89.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1424"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1427"
+  HREF="node91.html">Utilities used by CASTEP</A>
+<B> Up:</B> <A NAME="tex2html1423"
+  HREF="node89.html">Working with old academic</A>
+<B> Previous:</B> <A NAME="tex2html1417"
+  HREF="node89.html">Working with old academic</A>
+ &nbsp <B>  <A NAME="tex2html1425"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00710000000000000000">
+<I>CASTEP</I> </A>
+</H1>
+
+<P>
+The <B><I>CASTEP</I></B> code used in this package is basically
+an old academic version. Several modifications are necessary: 
+
+<P>
+
+<UL>
+<LI>Wavefunctions (in reciprocal representation) are to be stored on a
+disk at the end of the band-structure run as a sequence of files <TT>fort.20</TT>,
+<TT>fort.21</TT>, <TT>fort.22</TT>, etc; one file per each <B>k</B>-point
+in the same order as they are given in the <TT>fort.15</TT> file.
+</LI>
+<LI>All eigenvalues ordered properly in ascending order should be collected
+after the band-structure run in the <TT>band.out</TT> file which has
+the following format: [k-point number, five eigenvalues] on every
+line. Note that this is optional as the utility <B><I>take</I></B>
+(see below) does it anyway. It is important to have, however, properly
+ordered eigenvalues on the last <B><I>CASTEP</I></B> iteration.
+</LI>
+<LI>The electronic density should be in <TT>fort.16</TT> file.
+</LI>
+</UL>
+To compile the code you must prepare a standard file <TT>param.inc</TT>
+in your <I><I>working</I></I> directory and then submit a
+shell-script <B><I>comp</I></B> (supplied). After the compilation
+is completed, you will find in your working directory two executables:
+<B><I>castepx</I></B> which is the <B><I>CASTEP</I></B> itself
+and <B><I>check</I></B> which is a check utility described below. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1426"
+  HREF="node91.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1422"
+  HREF="node89.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1416"
+  HREF="node89.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1424"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1427"
+  HREF="node91.html">Utilities used by CASTEP</A>
+<B> Up:</B> <A NAME="tex2html1423"
+  HREF="node89.html">Working with old academic</A>
+<B> Previous:</B> <A NAME="tex2html1417"
+  HREF="node89.html">Working with old academic</A>
+ &nbsp <B>  <A NAME="tex2html1425"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introduction</TITLE>
+<META NAME="description" CONTENT="Introduction">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="node4.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html240"
+  HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html236"
+  HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html230"
+  HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html238"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html241"
+  HREF="node6.html">Electrostatic energy of a</A>
+<B> Up:</B> <A NAME="tex2html237"
+  HREF="node4.html">Semi-classical part (SciFi)</A>
+<B> Previous:</B> <A NAME="tex2html231"
+  HREF="node4.html">Semi-classical part (SciFi)</A>
+ &nbsp <B>  <A NAME="tex2html239"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION02011000000000000000">
+Introduction</A>
+</H2>
+
+<P>
+Usually, the theoretical interpretation of AFM images is based on
+simple models in which the force imposed on the tip originates from
+the macroscopic long-range Van-der-Waals interaction and a microscopic
+interaction described using pair potentials between atoms simulating
+the tip apex and atoms of the sample. In this model only the direct
+electrostatic interaction between atoms of the tip apex and the sample
+is accounted for. However, the theoretical model used here takes account
+of the polarization of the conducting electrodes (i.e. of the tip
+and the substrate) by the charged atoms of the sample. This is important
+for any tip-surface (or just surface) setup containing conducting
+materials e.g. interaction of a conducting tip with an insulating
+surface or studying the properties of an insulating thin film on top
+of a metal substrate.
+
+<P>
+The potential on conducting electrodes is maintained by external sources
+(i.e. by the ``battery''). From the point of view of classical
+electrostatics the polarization of the conductors by external charges
+is caused by the additional potential on the conductors due to the
+charges. This extra potential is compensated by a charge flow from
+one electrode to another to keep the potential on the conductors fixed.
+This work is done by the battery. As a result, there will be some
+distribution of the net charge on the surfaces of conductors induced
+by the point charges situated in the free space between them. The
+net charge on each conducting electrode would interact with the total
+charge on other conductors and with the point charges. Hereafter this
+interaction is called the <I>image interaction</I>. A detailed discussion
+of the derivation and application of the image interaction to AFM
+systems can be found in refs. [<A
+ HREF="node188.html#my-image-energy">1</A>] and [<A
+ HREF="node188.html#our_imageforce">2</A>].
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="Tip_surf_schem"></A><A NAME="3615"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 1:</STRONG>
+Example schematic picture of the microscopic model used to simulate
+the interaction between the tip and the sample.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="191" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="\includegraphics[%%
+width=10cm]{xfig.model.eps}">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The program itself is designed to calculate the interactions in systems
+similar to that shown in fig. <A HREF="node5.html#Tip_surf_schem">1</A>, with an atomistic
+nano-tip embedded in a conducting macroscopic sphere interacting with
+an atomistic cluster on top of a metal substrate. This represents
+a very common experimental setup in modern AFM experiments using conducting
+tips to image thin insulating films on top of metal substrates. However,
+the code is very flexible in the types of setup it can study. The
+properties of insulating tips can be easily investigated by removing
+the conducting sphere from the system, and in fact the properties
+of thin films alone can be studied by removing the tip completely
+from the system. Some example input files at the end of this manual
+show the variety of different setups that can be studied. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html240"
+  HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html236"
+  HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html230"
+  HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html238"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html241"
+  HREF="node6.html">Electrostatic energy of a</A>
+<B> Up:</B> <A NAME="tex2html237"
+  HREF="node4.html">Semi-classical part (SciFi)</A>
+<B> Previous:</B> <A NAME="tex2html231"
+  HREF="node4.html">Semi-classical part (SciFi)</A>
+ &nbsp <B>  <A NAME="tex2html239"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

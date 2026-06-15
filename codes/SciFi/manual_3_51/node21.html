@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>NVT with Gaussian Thermostat</TITLE>
+<META NAME="description" CONTENT="NVT with Gaussian Thermostat">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node22.html">
+<LINK REL="previous" HREF="node20.html">
+<LINK REL="up" HREF="node19.html">
+<LINK REL="next" HREF="node22.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html437"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html433"
+  HREF="node19.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html427"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html435"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html438"
+  HREF="node22.html">NVT with Berendsen Thermostat</A>
+<B> Up:</B> <A NAME="tex2html434"
+  HREF="node19.html">Molecular Dynamics Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html428"
+  HREF="node20.html">NVE Verlet Leapfrog</A>
+ &nbsp <B>  <A NAME="tex2html436"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02018200000000000000">
+NVT with Gaussian Thermostat</A>
+</H3>
+
+<P>
+If the system is to be simulated in the NVT ensembe, then the user
+has the choice of four different algothims, the Gaussian thermostat
+[<A
+ HREF="node188.html#gauss-ts">16</A>], Berendsen thermostat, the Nose-Hoover thermostat
+[<A
+ HREF="node188.html#hoover-ts">17</A>] and stochastic boundary conditions [<A
+ HREF="node188.html#stochastic-md">18</A>].
+The first of these, the Gaussian constraint thermostat, rescales the
+velocities of atoms at each timestep to achieve a constant system
+temperature, however this algorithm will destroy dynamic correlations
+very quickly. The basic algorithm is detailed below: 
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\underline{v}(t+\frac{1}{2}\Delta t)\leftarrow(2\eta-1)\underline{v}(t-\frac{1}{2}\Delta t)+\eta\Delta t\frac{\underline{f}(t)}{m}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="312" HEIGHT="42" BORDER="0"
+ SRC="img241.png"
+ ALT="\begin{displaymath}
+\underline{v}(t+\frac{1}{2}\Delta t)\leftarrow(2\eta-1)\unde...
+...}(t-\frac{1}{2}\Delta t)+\eta\Delta t\frac{\underline{f}(t)}{m}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\underline{r}(t+\Delta t)\leftarrow\underline{r}(t)+\Delta t\underline{v}(t-\frac{1}{2}\Delta t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="228" HEIGHT="38" BORDER="0"
+ SRC="img238.png"
+ ALT="\begin{displaymath}
+\underline{r}(t+\Delta t)\leftarrow\underline{r}(t)+\Delta t\underline{v}(t-\frac{1}{2}\Delta t)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\eta=\sqrt{\frac{T_{ext}}{T}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="78" HEIGHT="45" BORDER="0"
+ SRC="img242.png"
+ ALT="\begin{displaymath}
+\eta=\sqrt{\frac{T_{ext}}{T}}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Where, <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img243.png"
+ ALT="$T$"> is the temperture at timestep <IMG
+ WIDTH="10" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img171.png"
+ ALT="$t$"> (that is calculated
+self consistently with three iterations) and <IMG
+ WIDTH="32" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img244.png"
+ ALT="$T_{ext}$"> is the given
+system temperature or bath temperature. 
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

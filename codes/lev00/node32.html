@@ -1,0 +1,307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>V2 - Vibrations =&gt; calculation [normal modes]</TITLE>
+<META NAME="description" CONTENT="V2 - Vibrations =&gt; calculation [normal modes]">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node33.html">
+<LINK REL="previous" HREF="node31.html">
+<LINK REL="up" HREF="node23.html">
+<LINK REL="next" HREF="node33.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html652"
+  HREF="node33.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html648"
+  HREF="node23.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html642"
+  HREF="node31.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html650"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html653"
+  HREF="node33.html">V3 - Vibrations =&gt;</A>
+<B> Up:</B> <A NAME="tex2html649"
+  HREF="node23.html">Calculation of phonons (atomic</A>
+<B> Previous:</B> <A NAME="tex2html643"
+  HREF="node31.html">Vs - Vibrations of</A>
+ &nbsp <B>  <A NAME="tex2html651"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00368900000000000000"></A><A NAME="sub:V2-tetr"></A>
+<BR>
+V2 - Vibrations =&gt; calculation [normal modes]
+</H3>
+
+<P>
+Here it is possible to calculate the phonon frequencies and the normal
+modes for every representation of the group. The V2-menu initially
+looks as follows:
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">MOLECULE: lattice translations IGNORED</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">========= CHOOSE an OPTION:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">FE. Current working algorithm: via Forces</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-------- E
+x i s t i n g -- I r r e p s --------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. irrep (A1 ) is 1D; dim = 2; G-files[ T],
+F_files[ T] W-files[ T] </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">--- A c t i o n s w i t h A c t i
+v e I r r e p -----</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">--------
+G e n e r a l S e t t i n g s --------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">XY. Format of &lt;movie.xyz&gt; file is for Xmol</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Hs. H atoms to be added to &lt;movie.xyz&gt; file: NO</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Da. Distortion amplitude for movies: 0.05000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Proceed/Quit</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-----&gt; Choose an appropriate
+option:</FONT></TT>
+<P>
+
+
+<P>
+The fist line reminds the user which option (<B>Vm</B>, <B>Vc</B>
+or <B>Vs</B> of the main menu) was used to generate the distirted
+geometries. In the example above, this was <B>Vm</B>. 
+
+<P>
+If any of the existing representations are displayed under ``<I>Existing
+Irreps</I>'', then all the necessary files exist and were read in successfully
+(including the forces on atoms calculated by running the <TT>run_DFT_script</TT>
+for distorted geometries). Otherwise, they will not be shown. At least
+one representation should be available to proceed.
+
+<P>
+Then, choose the representation number, <B>1</B> in the example
+above (A1). The dynamical matrix for this representation will be diagonalised
+and the corresponding eigenvalues and eigenvectors calculated. The
+precision of the calculation is checked and, if the relative difference
+between nondiagonal elements of the FCM is large, an warning will
+be given<A NAME="tex2html4"
+  HREF="footnode.html#foot9739"><SUP>2.2</SUP></A>. The menu changes into: 
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">MOLECULE: lattice translations IGNORED</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">========= CHOOSE an OPTION:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">FE. Current working algorithm: via Forces</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-------- E
+x i s t i n g -- I r r e p s --------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. irrep (A1) is 1D; dim = 2; G-files[T],
+F_files[T] W-files[T] &lt;=== now active</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">--- A c t i o n s w i t h A c t i
+v e I r r e p -----</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Sv. Show eigenvalues/vectors</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Sa. Show frequencies and normal modes</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Vs. Write xyz movie file for each mode</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">--------
+G e n e r a l S e t t i n g s --------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">XY. Format of &lt;movie.xyz&gt; file is for Xmol</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Hs. H atoms to be added to &lt;movie.xyz&gt; file: NO</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Da. Distortion amplitude for movies: 0.05000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Proceed/Quit</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-----&gt; Choose an appropriate
+option:</FONT></TT>
+<P>
+
+
+<P>
+Three new options appeared:
+
+<P>
+
+<UL>
+<LI><B>Sv</B> - shows the calculated eigenvalues (the squares of frequencies
+in inconvenient units) and eigenvectors (with respect to the symmetry
+adapted displacements); the displayed information is not very useful
+and may only be needed for an advance user; a file <TT>EIGEN_1.res</TT>
+will be written with the identical information;
+</LI>
+<LI><B>Sa</B> - this gives all phonon frequencies (in cm<IMG
+ WIDTH="23" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img101.png"
+ ALT="$^{-1}$">) and
+normal coordinates; the latter are given in terms of atomic diaplcements;
+a file <TT>N_MODES_1.res</TT> will be written with identical information;
+</LI>
+<LI><B>Vs</B> - each normal coordinate can be run sinusoidally, written
+into a movie file <TT>movie.xyz</TT> (controlled by options <B>Hs</B>,
+<B>Da</B> and <B>XY</B>) and then previewed with the <B><I>Xmol</I></B>
+or similar molecular viewer.
+</LI>
+</UL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html652"
+  HREF="node33.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html648"
+  HREF="node23.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html642"
+  HREF="node31.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html650"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html653"
+  HREF="node33.html">V3 - Vibrations =&gt;</A>
+<B> Up:</B> <A NAME="tex2html649"
+  HREF="node23.html">Calculation of phonons (atomic</A>
+<B> Previous:</B> <A NAME="tex2html643"
+  HREF="node31.html">Vs - Vibrations of</A>
+ &nbsp <B>  <A NAME="tex2html651"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

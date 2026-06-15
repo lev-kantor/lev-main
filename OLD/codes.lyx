@@ -1,0 +1,79 @@
+#This file was created by <lev> Sun Jul  4 00:58:21 1999
+#LyX 1.0 (C) 1995-1999 Matthias Ettrich and the LyX Team
+\lyxformat 2.15
+\textclass article
+\language default
+\inputencoding default
+\fontscheme default
+\graphics default
+\paperfontsize default
+\spacing single 
+\papersize Default
+\paperpackage a4
+\use_geometry 0
+\use_amsmath 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+
+\layout Title
+
+Scientific Computer Codes
+\layout Standard
+
+Over the years I have been developing a number of computer codes.
+ The most significant of those are listed below.
+ Almost all of them are available in a source format.
+ Contact me if you wnat to have a go!
+\layout Section
+
+SYM-SYM: full symmetry INDO Hartree-Fock electronic structure code for quantum
+ molecule, cluster or crystal
+\layout Standard
+
+This is still an ongoing project.
+ We started it back 10 years in Riga in Latvian University with an intention
+ to create something fast and flexible for electronic structure calculations
+ of molecules, clusters (a molecule in the 
+\begin_inset Quotes eld
+\end_inset 
+
+ligand
+\begin_inset Quotes erd
+\end_inset 
+
+ field of the crystal, e.g.
+ for a point defect calculation in a crystal) and periodic crystals (including
+ slabs for modelling surfaces).
+ To be fast, the code incorporates 
+\series bold 
+symmetry
+\series default 
+, to be flexible - a semiempirical 
+\series bold 
+INDO 
+\series default 
+scheme.
+ 
+\layout Section
+
+DYNAM: thermoelastic properties in quasiharmonic approximation
+\layout Section
+
+LEV00: a friendly companion to a plane-wave DFT code with data on the real-space
+ grid
+\layout Section
+
+IMAGE: image interaction in the metal plane - metal sphere junction
+\layout Section
+
+SHELLM: shell-model cluster under the spherical tip self-consistently with
+ the image interaction
+\the_end

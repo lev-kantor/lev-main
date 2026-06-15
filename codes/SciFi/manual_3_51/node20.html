@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>NVE Verlet Leapfrog</TITLE>
+<META NAME="description" CONTENT="NVE Verlet Leapfrog">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node21.html">
+<LINK REL="previous" HREF="node19.html">
+<LINK REL="up" HREF="node19.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html425"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html421"
+  HREF="node19.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html415"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html423"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html426"
+  HREF="node21.html">NVT with Gaussian Thermostat</A>
+<B> Up:</B> <A NAME="tex2html422"
+  HREF="node19.html">Molecular Dynamics Algorithms</A>
+<B> Previous:</B> <A NAME="tex2html416"
+  HREF="node19.html">Molecular Dynamics Algorithms</A>
+ &nbsp <B>  <A NAME="tex2html424"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02018100000000000000">
+NVE Verlet Leapfrog</A>
+</H3>
+
+<P>
+The standard Verlet Leapfrog algorithm first generates new velocities
+at timestep <IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img235.png"
+ ALT="$n+\frac{1}{2}$"> from the velocities at timestep <IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img236.png"
+ ALT="$n-\frac{1}{2}$">
+and the forces on all atoms as follows:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\underline{v}(t+\frac{1}{2}\Delta t)\leftarrow\underline{v}(t-\frac{1}{2}\Delta t)+\Delta t\frac{\underline{f}(t)}{m}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="246" HEIGHT="42" BORDER="0"
+ SRC="img237.png"
+ ALT="\begin{displaymath}
+\underline{v}(t+\frac{1}{2}\Delta t)\leftarrow\underline{v}(t-\frac{1}{2}\Delta t)+\Delta t\frac{\underline{f}(t)}{m}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Then the positions of all atoms are advanced one timestep based on
+the new velocities:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\underline{r}(t+\Delta t)\leftarrow\underline{r}(t)+\Delta t\underline{v}(t-\frac{1}{2}\Delta t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="228" HEIGHT="38" BORDER="0"
+ SRC="img238.png"
+ ALT="\begin{displaymath}
+\underline{r}(t+\Delta t)\leftarrow\underline{r}(t)+\Delta t\underline{v}(t-\frac{1}{2}\Delta t)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+The tempurature of the system at time <IMG
+ WIDTH="10" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img171.png"
+ ALT="$t$"> is then calculated as the
+average of the temperatures of the system at timestep <!-- MATH
+ $t-\frac{1}{2}\Delta t$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img239.png"
+ ALT="$t-\frac{1}{2}\Delta t$">
+and <!-- MATH
+ $t+\frac{1}{2}\Delta t$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img240.png"
+ ALT="$t+\frac{1}{2}\Delta t$">. 
+
+<P>
+The initial velocities for the system can optionally be provided by
+the user in the input file, however if they are not the program asigns
+randomly oriented velocites to each of the free atoms in the system
+based on the given system temperature, ensuring that the total translational
+and rotational angular momentum of the system is zero.
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

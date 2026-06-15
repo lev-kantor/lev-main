@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>How the virtual machine works</TITLE>
+<META NAME="description" CONTENT="How the virtual machine works">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node32.html">
+<LINK REL="previous" HREF="node26.html">
+<LINK REL="up" HREF="node26.html">
+<LINK REL="next" HREF="node28.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html512"
+  HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html508"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html502"
+  HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html510"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html513"
+  HREF="node28.html">Equation of motion of</A>
+<B> Up:</B> <A NAME="tex2html509"
+  HREF="node26.html">Virtual AFM</A>
+<B> Previous:</B> <A NAME="tex2html503"
+  HREF="node26.html">Virtual AFM</A>
+ &nbsp <B>  <A NAME="tex2html511"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION02021000000000000000">
+How the virtual machine works</A>
+</H2>
+
+<P>
+The virtual AFM was built on the basis of the precise experimental
+determination of the transfer function and impulse response of each
+element of the real AFM in order to reproduce as precisely as possible
+the experimental behaviours. A room temperature commercial AFM/STM
+[<A
+ HREF="node188.html#Omicron">21</A>] was used with its standard electronic control system,
+except for the frequency demodulator which was replaced by a digital
+Phase Locked Loop (PLL) based frequency demodulator [<A
+ HREF="node188.html#Nanosurf">22</A>].
+The block diagram of the system is shown in figure <A HREF="node27.html#fFMAFM">6</A>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fFMAFM"></A><A NAME="3755"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6:</STRONG>
+Schematic of the FM-AFM.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="332" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img256.png"
+ ALT="\includegraphics[%%
+height=7cm,
+keepaspectratio]{pictures/fmafm.ps}">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+FM-AFM involves two control loops: 
+
+<P>
+
+<UL>
+<LI>The first one is supposed to maintain the cantilever oscillation amplitude
+at a preset value <IMG
+ WIDTH="23" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img257.png"
+ ALT="$A_{0}$"> (typically from a few nm to tens of nm).
+This is achieved by an Automatic Gain Control block (AGC), which acts
+on the power delivered to the cantilever excitation piezoelectric
+ceramics. This power can be made proportional to the power dissipated
+by the tip-surface interaction by a proper setting of the phase of
+the excitation drive of the cantilever [<A
+ HREF="node188.html#durig-pll">23</A>,<A
+ HREF="node188.html#loppacher-phase">24</A>,<A
+ HREF="node188.html#pfeiffer-phase">25</A>].
+It is used to produce dissipation images.
+</LI>
+<LI>The second one is supposed to maintain the resonance frequency shift
+induced by the tip-surface interaction at a preset value <IMG
+ WIDTH="32" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img258.png"
+ ALT="$\Delta f_{c}$">
+(typically from a few Hz to hundreds of Hz). This is achieved by an
+Automatic Distance Control block (ADC), which adjusts the tip-surface
+distance <IMG
+ WIDTH="36" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img259.png"
+ ALT="$D(t)$">. It is used to produce &#34;topographic&#34;
+images. 
+</LI>
+</UL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html514"
+  HREF="node28.html">Equation of motion of the cantilever</A>
+<LI><A NAME="tex2html515"
+  HREF="node29.html">Amplitude regulation </A>
+<LI><A NAME="tex2html516"
+  HREF="node30.html">Frequency demodulation and cantilever excitation</A>
+<LI><A NAME="tex2html517"
+  HREF="node31.html">Distance regulation</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html512"
+  HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html508"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html502"
+  HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html510"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html513"
+  HREF="node28.html">Equation of motion of</A>
+<B> Up:</B> <A NAME="tex2html509"
+  HREF="node26.html">Virtual AFM</A>
+<B> Previous:</B> <A NAME="tex2html503"
+  HREF="node26.html">Virtual AFM</A>
+ &nbsp <B>  <A NAME="tex2html511"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Force Field</TITLE>
+<META NAME="description" CONTENT="Force Field">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node13.html">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html325"
+  HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html321"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html315"
+  HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html323"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html326"
+  HREF="node13.html">Internal Coordinates</A>
+<B> Up:</B> <A NAME="tex2html322"
+  HREF="node11.html">Interatomic Potentials</A>
+<B> Previous:</B> <A NAME="tex2html316"
+  HREF="node11.html">Interatomic Potentials</A>
+ &nbsp <B>  <A NAME="tex2html324"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02016100000000000000">
+Force Field</A>
+</H3>
+
+<P>
+The potential energy surface of the system is modelled by the following
+force field:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+E=\sum_{b}^{N_{b}}K_{b}(b-b_{0})^{2}+\sum_{\theta}^{N_{\theta}}K_{\theta}(\theta-\theta_{0})^{2}+\sum_{\phi}^{N_{\phi}}K_{\phi}\left[1+\cos(n\phi-\phi_{0})\right]+\sum_{\chi}^{N_{\chi}}K_{\chi}\left[1+\cos(n\chi-\chi_{0})\right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="620" HEIGHT="60" BORDER="0"
+ SRC="img174.png"
+ ALT="\begin{displaymath}
+E=\sum_{b}^{N_{b}}K_{b}(b-b_{0})^{2}+\sum_{\theta}^{N_{\thet...
+...um_{\chi}^{N_{\chi}}K_{\chi}\left[1+\cos(n\chi-\chi_{0})\right]\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
++\sum_{ij}\frac{q_{i}q_{j}}{\varepsilon r_{ij}}+\sum_{ij}C_{ij}r_{ij}^{-n_{ij}}+\sum_{ij}A_{ij}e^{-\frac{r_{ij}}{\rho_{ij}}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="force-field"></A><IMG
+ WIDTH="278" HEIGHT="50" BORDER="0"
+ SRC="img175.png"
+ ALT="\begin{displaymath}
++\sum_{ij}\frac{q_{i}q_{j}}{\varepsilon r_{ij}}+\sum_{ij}C_{ij}r_{ij}^{-n_{ij}}+\sum_{ij}A_{ij}e^{-\frac{r_{ij}}{\rho_{ij}}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(19)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+The first four terms in the above expression apply to the many body
+interactions in the system and summations only apply to the specified
+interactions, with the parameters suplied by the user and the values
+of the internal coordinates (bond lengths <IMG
+ WIDTH="11" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img176.png"
+ ALT="$b$">, angles between bonds
+<IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img177.png"
+ ALT="$\theta$">, torsions about bonds <IMG
+ WIDTH="14" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$\phi$"> and out-of-plane angles <IMG
+ WIDTH="14" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img178.png"
+ ALT="$\chi$">)
+calculated using the expressions in section 2.5.2. Many body interactions
+are used to model covalently bonded crystals and organic molecules
+in the system. 
+
+<P>
+The final three terms in the above expression are pairwise interactions,
+and are summed over all pairs of atoms in the system (except those
+exluded in covalent bond or angle interactions). The program implements
+the Shell Model to calculate pairwise interactions, first introduced
+in [<A
+ HREF="node188.html#shell-dick">14</A>]. In this scheme, atoms are represented by positively
+charged cores connected to negatively charged shells by harmonic springs,
+which represent nuclear and electron charge respectively. The equilibrium
+distance between the core and shell is a representation of the electronic
+polarization of that atom. Cores and shells of the same atom only
+interact via the harmonic spring, however each atomic core and shell
+interacts via colombic forces with all other cores and shells in the
+system. 
+
+<P>
+Short range repulsive and Van de Waals forces are descibed by pairwise
+Buckingham potentials (last two terms in the above expression), which
+act only between shells. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html325"
+  HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html321"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html315"
+  HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html323"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html326"
+  HREF="node13.html">Internal Coordinates</A>
+<B> Up:</B> <A NAME="tex2html322"
+  HREF="node11.html">Interatomic Potentials</A>
+<B> Previous:</B> <A NAME="tex2html316"
+  HREF="node11.html">Interatomic Potentials</A>
+ &nbsp <B>  <A NAME="tex2html324"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

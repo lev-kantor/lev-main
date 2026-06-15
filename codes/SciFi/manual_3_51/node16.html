@@ -1,0 +1,319 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Linear constraines</TITLE>
+<META NAME="description" CONTENT="Linear constraines">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node17.html">
+<LINK REL="previous" HREF="node15.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node17.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html375"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html371"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html365"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html373"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html376"
+  HREF="node17.html">Constant distance between two</A>
+<B> Up:</B> <A NAME="tex2html372"
+  HREF="node14.html">Constrained minimisation</A>
+<B> Previous:</B> <A NAME="tex2html366"
+  HREF="node15.html">How constrains are dealt</A>
+ &nbsp <B>  <A NAME="tex2html374"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02017200000000000000"></A><A NAME="sub:Linear-constraines"></A>
+<BR>
+Linear constraines
+</H3>
+
+<P>
+In the case of linear constraines atomic coordinates of atoms (either
+different, the same or both) may be related linearly to each other.
+Let us collect all those related atomic Cartesian coordinates into
+a set <IMG
+ WIDTH="29" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img205.png"
+ ALT="$(r_{i})$"> (<IMG
+ WIDTH="10" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img166.png"
+ ALT="$i$"> is not an atom number, but rather a number
+in the set). Then, the linear relationship between memebers of the
+set can be expressed as follows:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sum_{i}C_{i}r_{i}=0
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="Constraines-view"></A><IMG
+ WIDTH="83" HEIGHT="44" BORDER="0"
+ SRC="img206.png"
+ ALT="\begin{displaymath}
+\sum_{i}C_{i}r_{i}=0
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(20)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img207.png"
+ ALT="$C_{i}$"> are some constants defined by the nature of the specific
+constraint. Note that not all atoms and all <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img192.png"
+ ALT="$x$">, <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img202.png"
+ ALT="$y$">, <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$z$"> components
+of atomic coordinates may be present. In practice several equations
+like that given above can be supplied. Different constraints will
+be distinguished by an additional index <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img208.png"
+ ALT="$k$">. 
+
+<P>
+The simplest example is to allow atoms to move only along certain
+directions. Simply by specifying relaxation flags <TT>iRx</TT>, <TT>iRy</TT>,
+<TT>iRz</TT> in the input (opposite to atomic coordinates, see section
+<A HREF="node71.html#sub:Atomic-Coordinates">8.3.5</A>) one can already allow atoms to move
+only along <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img192.png"
+ ALT="$x$">, <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img202.png"
+ ALT="$y$"> or <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$z$"> axes or in <IMG
+ WIDTH="22" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img209.png"
+ ALT="$xy$">, <IMG
+ WIDTH="21" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img210.png"
+ ALT="$yz$"> or <IMG
+ WIDTH="21" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img130.png"
+ ALT="$xz$"> planes;
+additional constraines are not required in all those cases. However,
+imagine you would like to allow, say, atom 5 to move only along the
+(111) direction, i.e. to have <!-- MATH
+ $x_{5}=y_{5}=z_{5}$
+ -->
+<IMG
+ WIDTH="92" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img211.png"
+ ALT="$x_{5}=y_{5}=z_{5}$">. In this case you
+will have to specify the following 2 constraints: <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+x_{5}-y_{5}=0\,\,\,\textrm{and}\,\,\, z_{5}-y_{5}=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="199" HEIGHT="27" BORDER="0"
+ SRC="img212.png"
+ ALT="\begin{displaymath}
+x_{5}-y_{5}=0\,\,\,\textrm{and}\,\,\, z_{5}-y_{5}=0\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Obviously, there is only one independent coordinate in this case.
+If <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img213.png"
+ ALT="$x_{5}$"> is considered as the redundand coordinate from the first
+constraint and <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img214.png"
+ ALT="$z_{5}$"> - from the second (since the coordinate <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img215.png"
+ ALT="$y_{5}$">
+must not be chosen as a redundand coordinate as it appears in both
+conditions), the only ``active'' coordinate in this case will
+be <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img215.png"
+ ALT="$y_{5}$">. In more complicated cases different atoms may be involved
+as well.
+
+<P>
+The first coordinate in the constraints equations like Eq. (<A HREF="node16.html#Constraines-view">20</A>)
+with nonzero coefficient <!-- MATH
+ $C_{1}^{(k)}\neq0$
+ -->
+<IMG
+ WIDTH="64" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img216.png"
+ ALT="$C_{1}^{(k)}\neq0$">, as supplied in the input
+(section <A HREF="node114.html#Sec::constraint-box">8.8</A>), is treated automatically as
+the redundand variable <IMG
+ WIDTH="30" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img217.png"
+ ALT="$r_{1}^{(k)}$"> for the constraint <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img208.png"
+ ALT="$k$">. This
+allows to express the redundant variable via all others involved in
+the given constraint <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+r_{1}^{(k)}=-\sum_{i\neq1}^{(k)}\frac{C_{i}^{(k)}}{C_{1}^{(k)}}r_{i}^{(k)}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="Constraines-view1"></A><IMG
+ WIDTH="145" HEIGHT="61" BORDER="0"
+ SRC="img218.png"
+ ALT="\begin{displaymath}
+r_{1}^{(k)}=-\sum_{i\neq1}^{(k)}\frac{C_{i}^{(k)}}{C_{1}^{(k)}}r_{i}^{(k)}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(21)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+and then calculate the correction <!-- MATH
+ $\Delta_{j}^{(k)}$
+ -->
+<IMG
+ WIDTH="35" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img219.png"
+ ALT="$\Delta_{j}^{(k)}$"> to the ``force''
+<!-- MATH
+ $\widetilde{f}_{j}$
+ -->
+<IMG
+ WIDTH="19" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img220.png"
+ ALT="$\widetilde{f}_{j}$"> on any of the nonredundand atoms <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.png"
+ ALT="$j$"> due to
+the constraint <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img208.png"
+ ALT="$k$"> as: <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\Delta_{j}^{(k)}=\frac{\partial E}{\partial r_{1}^{(k)}}\frac{\partial r_{1}^{(k)}}{\partial r_{j}}=-f_{1}^{(k)}\frac{C_{i(j)}^{(k)}}{C_{1}^{(k)}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="226" HEIGHT="57" BORDER="0"
+ SRC="img221.png"
+ ALT="\begin{displaymath}
+\Delta_{j}^{(k)}=\frac{\partial E}{\partial r_{1}^{(k)}}\fra...
+...{\partial r_{j}}=-f_{1}^{(k)}\frac{C_{i(j)}^{(k)}}{C_{1}^{(k)}}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="56" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img222.png"
+ ALT="$i\equiv i(j)$"> is the position of atom <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.png"
+ ALT="$j$"> in the list of
+atoms involved in the constraint <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img208.png"
+ ALT="$k$">. The total ``force'' is
+obtained by adding corrections <!-- MATH
+ $\Delta_{j}^{(k)}$
+ -->
+<IMG
+ WIDTH="35" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img219.png"
+ ALT="$\Delta_{j}^{(k)}$"> due to all constraints
+to the physical force <IMG
+ WIDTH="19" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img223.png"
+ ALT="$f_{j}$">.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html375"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html371"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html365"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html373"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html376"
+  HREF="node17.html">Constant distance between two</A>
+<B> Up:</B> <A NAME="tex2html372"
+  HREF="node14.html">Constrained minimisation</A>
+<B> Previous:</B> <A NAME="tex2html366"
+  HREF="node15.html">How constrains are dealt</A>
+ &nbsp <B>  <A NAME="tex2html374"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

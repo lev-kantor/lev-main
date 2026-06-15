@@ -1,0 +1,761 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Example Input File</TITLE>
+<META NAME="description" CONTENT="Example Input File">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node43.html">
+<LINK REL="previous" HREF="node41.html">
+<LINK REL="up" HREF="node41.html">
+<LINK REL="next" HREF="node43.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html899"
+  HREF="node43.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html895"
+  HREF="node41.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html889"
+  HREF="node41.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html897"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html900"
+  HREF="node43.html">Tolerance Box</A>
+<B> Up:</B> <A NAME="tex2html896"
+  HREF="node41.html">SciFi input</A>
+<B> Previous:</B> <A NAME="tex2html890"
+  HREF="node41.html">SciFi input</A>
+ &nbsp <B>  <A NAME="tex2html898"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION04021000000000000000">
+Example Input File</A>
+</H2>
+
+<P>
+This input file contains a system where the tip consists of only one
+atom at the end of a conducting sphere interacting with a small defected
+cluster on top of a conducting substrate. 
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.&lt;Toleranc&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">do_md</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">printing tiny</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">shells frozen</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">xyz write</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">##g98-file write</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">max_opt&nbsp;&nbsp;&nbsp; 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">optim bfgs</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">en_tol 0.150000E-05</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">es_tol 0.500000E-01</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">frc_tol 0.100000E-01</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">crd_tol 0.500000E-01</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">##test 0.0001</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.&lt;End&gt;</FONT></TT>
+<P>
+
+
+<P>
+&nbsp;
+
+<P>
+<TT><FONT SIZE="-1">.&lt;MDcontrol&gt; </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">numsteps 2000 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">tstep 0.00001 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">dtemp 330.000 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">algorithm nve</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">shells dynamic </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">tau 0.2000 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">statistics 1 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">trajectory 20 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">traj_fmt 1 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">vel_key 0 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.&lt;End&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.&lt;ShellPar&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;O&nbsp; 0.400000E-01 -.204000E+01 0.143000E+02</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp; 0.200000E+01 0.000000E+00 0.000000E+00</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Cr&nbsp; 0.300000E+01 0.000000E+00 0.000000E+00</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.&lt;End&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.&lt;Coord&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">##move 1.0 1.0 1.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">##rotate 90.0 90.0 90.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">##centre 5.0 5.0 5.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">##scan 0.2</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">tip-atoms</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Cr&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp; 5.50000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">cluster-atoms </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Cr&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp; 2.12200&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp;&nbsp; 2.12200&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp;&nbsp; -2.12200&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp; 2.12200&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp;&nbsp;&nbsp; 2.12200&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp;&nbsp;&nbsp; 2.12200&nbsp;&nbsp;&nbsp; 2.12200&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp;&nbsp; -4.24400&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp; -4.24400&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp; 4.24400&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp;&nbsp;&nbsp; 4.24400&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp; -2.12200&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp; 2.12200&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp;&nbsp;&nbsp; 2.12200&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp; -4.24400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp; -2.12200&nbsp;&nbsp; -2.12200&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp; 2.12200&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp;&nbsp; 2.12200&nbsp;&nbsp; -2.12200&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp;&nbsp; 2.12200&nbsp;&nbsp;&nbsp; 2.12200&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp; -4.24400&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp; -4.24400&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp; -4.24400&nbsp;&nbsp;&nbsp; 2.12200&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0 0 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp; -2.12200&nbsp;&nbsp; -4.24400&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0 0 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp; -4.24400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0 0 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp; 4.24400&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0 0 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O&nbsp;&nbsp;&nbsp;&nbsp; 0.00000&nbsp;&nbsp; -4.24400&nbsp;&nbsp; -2.12200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0 0 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.&lt;End&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.&lt;BondToleranc&gt; </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">O O 0.000000000000000 0.000000000000000 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg O 0.000000000000000 0.000000000000000 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg Mg 0.000000000000000 0.000000000000000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Cr O 0.000000000000000 0.000000000000000 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg Cr 0.000000000000000 0.000000000000000 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Cr Cr 0.000000000000000 0.000000000000000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.&lt;End&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.&lt;PairPotenc&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">cutoff</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;O&nbsp;&nbsp; O&nbsp; 0.600000E+01</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;&nbsp; exp&nbsp; 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp; 9547.90000000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.219160000000000&nbsp;&nbsp;&nbsp;&nbsp; </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;&nbsp; pow&nbsp; 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp; -32.8000000000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.00000000000000&nbsp;&nbsp;&nbsp;&nbsp; </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp;&nbsp; O&nbsp; 0.600000E+01</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;&nbsp; exp&nbsp; 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp; 1284.38000000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.299690000000000&nbsp;&nbsp;&nbsp;&nbsp; </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;&nbsp; pow&nbsp; 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Mg&nbsp; Mg&nbsp; 0.100000E+00</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;&nbsp; exp&nbsp; 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;&nbsp; pow&nbsp; 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Cr&nbsp;&nbsp; O&nbsp; 0.600000E+01</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;&nbsp; exp&nbsp; 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp; 1284.38000000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.299690000000000&nbsp;&nbsp;&nbsp;&nbsp; </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;&nbsp; pow&nbsp; 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Cr&nbsp; Mg&nbsp; 0.100000E+00</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;&nbsp; exp&nbsp; 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;&nbsp; pow&nbsp; 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Cr&nbsp; Cr&nbsp; 0.100000E+00</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;&nbsp; exp&nbsp; 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;&nbsp; pow&nbsp; 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.&lt;End&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.&lt;Image&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">plane</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">sphere</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">decay</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">qwrite</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">printing tiny</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">precis&nbsp;&nbsp;&nbsp;&nbsp; 15</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Z_plane -.110000E+02</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">bottom_sph 0.000000E+00 0.000000E+00 5.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">bias 0.100000E+01</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">radius 0.100000E+03</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">smooth 0.3</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">buffer 2.0</FONT></TT>
+<P>
+
+
+<P>
+.&lt;End&gt;
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html899"
+  HREF="node43.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html895"
+  HREF="node41.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html889"
+  HREF="node41.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html897"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html900"
+  HREF="node43.html">Tolerance Box</A>
+<B> Up:</B> <A NAME="tex2html896"
+  HREF="node41.html">SciFi input</A>
+<B> Previous:</B> <A NAME="tex2html890"
+  HREF="node41.html">SciFi input</A>
+ &nbsp <B>  <A NAME="tex2html898"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

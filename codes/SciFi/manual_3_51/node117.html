@@ -1,0 +1,538 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Example Input File</TITLE>
+<META NAME="description" CONTENT="Example Input File">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node118.html">
+<LINK REL="previous" HREF="node116.html">
+<LINK REL="up" HREF="node116.html">
+<LINK REL="next" HREF="node118.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1902"
+  HREF="node118.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1898"
+  HREF="node116.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1892"
+  HREF="node116.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1900"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1903"
+  HREF="node118.html">Virtual AFM Box</A>
+<B> Up:</B> <A NAME="tex2html1899"
+  HREF="node116.html">vAFM input</A>
+<B> Previous:</B> <A NAME="tex2html1893"
+  HREF="node116.html">vAFM input</A>
+ &nbsp <B>  <A NAME="tex2html1901"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION04031000000000000000"></A><A NAME="sub:Example-Input-File"></A>
+<BR>
+Example Input File
+</H2>
+
+<P>
+This input file below runs altogether 29 stages of the virtual machine.
+The first two stages are needed to stabilise the cantilever, they
+are not shown in the box <TT><FONT SIZE="-1">.&lt;Elementary_Stages&gt;</FONT></TT>
+since are run anyway (default). The 3rd stage corresponds to the approach
+of the tip to the surface to get the -440 Hz frequency shift. After
+this stage the tip scans along the <IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img394.png"
+ ALT="$Y$"> direction for 0.02 s. Then
+a 2D scan starts which consists of 3 sequencies of 4 elementary line
+scans (passages) each, 12 elementary line scans altogether. The scan
+is performed keeping the same frequency shift and amplitude. This
+first 2D scan is followed by a single stage in which the tip is not
+moved laterally, but the amplitude is reduced by 10 &#197;. Finally,
+the second scan is performed, identical to the first one with the
+original amplitude and frequency shift.
+
+<P>
+<TT><FONT SIZE="-1">&nbsp;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">....&lt;VirtualAFM&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Q-factor 10000.0d0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Elastic_Constant 6.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Natural_Frequency 60406.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">SetPnt_Amplitude 5.0e-9</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">SetPnt_FreqShift -100.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Stabil_Time1 4</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Stabil_Time2 80.d-3</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">PLL_FMdem{t1,t2,gainPB,K1} 5.5d-5 1.6d-4
+6.d0 500.d0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">AGC{P,I,tau} 0.1 50.0 450.d-6</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">PLL_ADC{P,I0,I} 1.d-13 1.d-9 1.d-9</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Debug F 100</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">noise{F,A,Temp} F F 300.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Print_Cycles 2</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Start{X,Y} 0.0d-10 0.0d-10</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.....&lt;End&gt;</FONT></TT>
+<P>
+
+
+<P></P>
+
+
+<P>
+<TT><FONT SIZE="-1">....&lt;Force_Field&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Force_field_file 1.dat </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Pixels{1,2,z} 1 79 44 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">vdW{H,R} 0.99864 300.0 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Long-Range{bound,z0,g0,...,g6} 16.0 -5.0928
+0.0 0.0 0.0 -0.40916 0.0 0.0 0.0 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Lattice{/A1(xy),/A2(xy)} 1.0 0.0 0.0 16.1
+Force_Test T 0.1 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.....&lt;End&gt;</FONT></TT>
+<P>
+
+
+<P></P>
+
+
+<P>
+<TT><FONT SIZE="-1">....&lt;Elementary_Stages&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">_{begin_stage}_ &lt;approach&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Finish{how,time} freq</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Velocity{Vx,Vy} 0.0 0.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Prt{T/F,how_often} T 100</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">ADC{T/F,freq} T -440.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">_{begin_stage}_</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Finish{how,time} time 0.02</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Velocity{Vx,Vy} 0.0 1.0e-9</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Prt{T/F,how_often} T 100</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">ADC{T/F,freq} T -440.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">==={begin_scan}===</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">No_of_sequences 3</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">_{begin_stage}_</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Finish{how,time} time 0.01</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Velocity{Vx,Vy} 0.0 1.0e-9</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">ADC{T/F,freq} T -440.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">_{begin_stage}_</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Finish{how,time} time 0.001</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Velocity{Vx,Vy} 1.0e-9 0.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">ADC{T/F,freq} T -440.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">_{begin_stage}_</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Finish{how,time} time 0.01</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Velocity{Vx,Vy} 0.0 -1.0e-9</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">ADC{T/F,freq} T -440.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">_{begin_stage}_</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Finish{how,time} time 0.001</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Velocity{Vx,Vy} 1.0e-9 0.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">ADC{T/F,freq} T -440.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">==={end_scan}===</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">_{begin_stage}_</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Finish{how,time} amplt</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Velocity{Vx,Vy} 0.0 0.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">ADC{T/F,freq} T -440</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">AGC{T/F,A0} T 0.4e-8</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">==={begin_scan}===</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">No_of_sequences 3</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">_{begin_stage}_</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Finish{how,time} time 0.01</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Velocity{Vx,Vy} 0.0 1.0e-9</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">ADC{T/F,freq} T -440.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">_{begin_stage}_</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Finish{how,time} time 0.001</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Velocity{Vx,Vy} 1.0e-9 0.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">ADC{T/F,freq} T -440.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">_{begin_stage}_</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Finish{how,time} time 0.01</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Velocity{Vx,Vy} 0.0 -1.0e-9</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">ADC{T/F,freq} T -440.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">_{begin_stage}_</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Finish{how,time} time 0.001</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">Velocity{Vx,Vy} 1.0e-9 0.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">ADC{T/F,freq} T -440.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">==={end_scan}===</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">.....&lt;End&gt;</FONT></TT>
+<P>
+
+
+<P>
+<BR>
+
+
+<P>
+<DIV ALIGN="LEFT">
+Three boxes are to be supplied to run the
+code which are described below.
+</DIV>
+
+<P>
+Note that the box above corresponds to the vAFM run without SciFi.
+If, however, it is included into the SciFi input file and options
+necessary to run the two codes together are also specified, then both
+codes will be working at the same time.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1902"
+  HREF="node118.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1898"
+  HREF="node116.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1892"
+  HREF="node116.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1900"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1903"
+  HREF="node118.html">Virtual AFM Box</A>
+<B> Up:</B> <A NAME="tex2html1899"
+  HREF="node116.html">vAFM input</A>
+<B> Previous:</B> <A NAME="tex2html1893"
+  HREF="node116.html">vAFM input</A>
+ &nbsp <B>  <A NAME="tex2html1901"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

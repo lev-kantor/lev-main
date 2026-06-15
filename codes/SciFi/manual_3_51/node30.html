@@ -1,0 +1,402 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Frequency demodulation and cantilever excitation</TITLE>
+<META NAME="description" CONTENT="Frequency demodulation and cantilever excitation">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node31.html">
+<LINK REL="previous" HREF="node29.html">
+<LINK REL="up" HREF="node27.html">
+<LINK REL="next" HREF="node31.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html552"
+  HREF="node31.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html548"
+  HREF="node27.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html542"
+  HREF="node29.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html550"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html553"
+  HREF="node31.html">Distance regulation</A>
+<B> Up:</B> <A NAME="tex2html549"
+  HREF="node27.html">How the virtual machine</A>
+<B> Previous:</B> <A NAME="tex2html543"
+  HREF="node29.html">Amplitude regulation</A>
+ &nbsp <B>  <A NAME="tex2html551"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02021300000000000000"></A><A NAME="sub:Frequency-demodulation"></A>
+<BR>
+Frequency demodulation and cantilever excitation
+</H3>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fPLL"></A><A NAME="3767"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9:</STRONG>
+Phase Locked Loop</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="305" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img280.png"
+ ALT="\includegraphics[%%
+height=7cm,
+keepaspectratio]{pictures/pll.ps}">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Far from any tip-surface interaction, the pulsation <!-- MATH
+ $\omega_{pll}(t)$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img281.png"
+ ALT="$\omega_{pll}(t)$">
+of the PLL (see figure <A HREF="node30.html#fPLL">9</A>) reference signal is set by the
+user to the free frequency of the cantilever such as <!-- MATH
+ $\omega_{pll}(t)=\omega_{0}$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img282.png"
+ ALT="$\omega_{pll}(t)=\omega_{0}$">.
+The VCO (Voltage Controlled Oscillator), inside the PLL, produces
+this reference signal by the integration of the input voltage <IMG
+ WIDTH="31" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img283.png"
+ ALT="$u(t)$">: 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\omega_{pll}(t)\, t=\omega_{0}\, t+\int_{-\infty}^{t}\Delta\omega(t')\; dt'=\omega_{0}\, t+K_{0}\int_{-\infty}^{t}u(t')\; dt'
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:eVCO"></A><IMG
+ WIDTH="401" HEIGHT="47" BORDER="0"
+ SRC="img284.png"
+ ALT="\begin{displaymath}
+\omega_{pll}(t)\, t=\omega_{0}\, t+\int_{-\infty}^{t}\Delta\omega(t')\; dt'=\omega_{0}\, t+K_{0}\int_{-\infty}^{t}u(t')\; dt'
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(25)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+where <IMG
+ WIDTH="25" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img285.png"
+ ALT="$K_{0}$"> (in Hz) is the conversion factor (voltage to frequency)
+of the VCO [<A
+ HREF="node188.html#loppacherPLL">30</A>].
+
+<P>
+The signal <IMG
+ WIDTH="31" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img283.png"
+ ALT="$u(t)$"> which is proportional to the detuning, <!-- MATH
+ $\Delta\omega(t)=\omega(t)-\omega_{0}$
+ -->
+<IMG
+ WIDTH="132" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img286.png"
+ ALT="$\Delta\omega(t)=\omega(t)-\omega_{0}$">,
+of the cantilever frequency, is obtained by low-pass filtering the
+product <IMG
+ WIDTH="30" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img287.png"
+ ALT="$p(t)$"> of the reference signal by the cantilever signal <IMG
+ WIDTH="30" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img261.png"
+ ALT="$z(t)$">
+coming from the photodiode. Hence:
+
+<P>
+<DIV ALIGN="CENTER">
+</DIV>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+p(t)=z(t)\, A_{pll}\,\cos(\omega_{pll}(t)\, t+\varphi_{pll})
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:qProduct"></A><IMG
+ WIDTH="239" HEIGHT="29" BORDER="0"
+ SRC="img288.png"
+ ALT="\begin{displaymath}
+p(t)=z(t)\, A_{pll}\,\cos(\omega_{pll}(t)\, t+\varphi_{pll})
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(26)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+<DIV ALIGN="CENTER">
+</DIV>
+
+<P>
+In first approximation, if we consider <!-- MATH
+ $z(t)=A(t)\:\sin(\omega(t)\, t+\varphi)$
+ -->
+<IMG
+ WIDTH="187" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img289.png"
+ ALT="$z(t)=A(t)\:\sin(\omega(t)\, t+\varphi)$">,
+one obtains:
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+p(t)=\frac{A_{limited}\, A_{pll}}{2}\,\left[\sin((\omega(t)-\omega_{pll}(t))\, t+(\varphi-\varphi_{pll}))+\sin((\omega(t)+\omega_{pll}(t))\, t+(\varphi+\varphi_{pll}))\right]
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:eProduct2"></A><IMG
+ WIDTH="633" HEIGHT="39" BORDER="0"
+ SRC="img290.png"
+ ALT="\begin{displaymath}
+p(t)=\frac{A_{limited}\, A_{pll}}{2}\,\left[\sin((\omega(t)-...
+...\omega(t)+\omega_{pll}(t))\, t+(\varphi+\varphi_{pll}))\right]
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(27)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+with a limiter circuit, at the input of the PLL, that limits the signal
+amplitude <IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img269.png"
+ ALT="$A(t)$"> to a constant level <IMG
+ WIDTH="59" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img291.png"
+ ALT="$A_{limited}$">. 
+
+<P>
+This signal <IMG
+ WIDTH="30" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img287.png"
+ ALT="$p(t)$"> then goes through a second order low-pass filter
+defined by two time constants <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img292.png"
+ ALT="$\tau_{1}$"> and <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img293.png"
+ ALT="$\tau_{2}$">:
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+p_{1}(t)=\left[\frac{1}{\tau_{1}}\int^{t}p(t')\exp\left(\frac{t'}{\tau_{1}}\right)\; dt'\right]\exp\left(\frac{-t}{\tau_{1}}\right)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:eLowPass1"></A><IMG
+ WIDTH="316" HEIGHT="46" BORDER="0"
+ SRC="img294.png"
+ ALT="\begin{displaymath}
+p_{1}(t)=\left[\frac{1}{\tau_{1}}\int^{t}p(t')\exp\left(\fra...
+...u_{1}}\right)\; dt'\right]\exp\left(\frac{-t}{\tau_{1}}\right)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(28)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+u(t)=G\,\left[\frac{1}{\tau_{2}}\int^{t}p_{1}(t')\exp\left(\frac{t'}{\tau_{2}}\right)\; dt'\right]\exp\left(\frac{-t}{\tau_{2}}\right)
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:eLowPass2"></A><IMG
+ WIDTH="335" HEIGHT="46" BORDER="0"
+ SRC="img295.png"
+ ALT="\begin{displaymath}
+u(t)=G\,\left[\frac{1}{\tau_{2}}\int^{t}p_{1}(t')\exp\left(\...
+...u_{2}}\right)\; dt'\right]\exp\left(\frac{-t}{\tau_{2}}\right)
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(29)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+Thanks to this low-pass filter, the low frequency part, <!-- MATH
+ $\omega(t)-\omega_{pll}(t)$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img296.png"
+ ALT="$\omega(t)-\omega_{pll}(t)$">,
+of the signal <IMG
+ WIDTH="30" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img287.png"
+ ALT="$p(t)$"> is extracted. The parameter <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img297.png"
+ ALT="$G$"> allows to adjust
+the loop gain of the PLL in order to find the good stability-precision
+compromise [<A
+ HREF="node188.html#loppacher-dissertation">31</A>]. Hence:
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+u(t)=G\,\frac{A_{limited}\, A_{pll}}{2}\,\sin((\omega(t)-\omega_{pll}(t))\, t+(\varphi-\varphi_{pll}))
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:eU"></A><IMG
+ WIDTH="388" HEIGHT="39" BORDER="0"
+ SRC="img298.png"
+ ALT="\begin{displaymath}
+u(t)=G\,\frac{A_{limited}\, A_{pll}}{2}\,\sin((\omega(t)-\omega_{pll}(t))\, t+(\varphi-\varphi_{pll}))
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(30)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+When <!-- MATH
+ $\omega_{pll}(t)=\omega(t)$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img299.png"
+ ALT="$\omega_{pll}(t)=\omega(t)$">, the PLL is locked on the cantilever
+frequency. So, one can write, in the case of small changes <!-- MATH
+ $\Delta\varphi=\varphi-\varphi_{pll}$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img300.png"
+ ALT="$\Delta\varphi=\varphi-\varphi_{pll}$">:
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+u(t)\simeq G\,\frac{A_{limited}\, A_{pll}}{2}\,\Delta\varphi
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:eUphy"></A><IMG
+ WIDTH="177" HEIGHT="39" BORDER="0"
+ SRC="img301.png"
+ ALT="\begin{displaymath}
+u(t)\simeq G\,\frac{A_{limited}\, A_{pll}}{2}\,\Delta\varphi
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(31)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+giving the frequency detuning <!-- MATH
+ $\Delta\omega(t)=K_{0}\, u(t)$
+ -->
+<IMG
+ WIDTH="118" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img302.png"
+ ALT="$\Delta\omega(t)=K_{0}\, u(t)$">.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html552"
+  HREF="node31.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html548"
+  HREF="node27.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html542"
+  HREF="node29.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html550"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html553"
+  HREF="node31.html">Distance regulation</A>
+<B> Up:</B> <A NAME="tex2html549"
+  HREF="node27.html">How the virtual machine</A>
+<B> Previous:</B> <A NAME="tex2html543"
+  HREF="node29.html">Amplitude regulation</A>
+ &nbsp <B>  <A NAME="tex2html551"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

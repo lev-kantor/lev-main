@@ -1,0 +1,395 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Theory: method of displacements and forces </TITLE>
+<META NAME="description" CONTENT="Theory: method of displacements and forces ">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node25.html">
+<LINK REL="previous" HREF="node23.html">
+<LINK REL="up" HREF="node23.html">
+<LINK REL="next" HREF="node25.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html556"
+  HREF="node25.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html552"
+  HREF="node23.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html546"
+  HREF="node23.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html554"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html557"
+  HREF="node25.html">Theory: practical side</A>
+<B> Up:</B> <A NAME="tex2html553"
+  HREF="node23.html">Calculation of phonons (atomic</A>
+<B> Previous:</B> <A NAME="tex2html547"
+  HREF="node23.html">Calculation of phonons (atomic</A>
+ &nbsp <B>  <A NAME="tex2html555"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00368100000000000000"></A><A NAME="sub:Theory-vibr-idea-tetr"></A>
+<BR>
+Theory: method of displacements and forces 
+</H3>
+
+<P>
+The group theory is heavily used in all options related to vibrations
+which are described in this Section. Let <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$G$"> be a symmetry group
+of the system of interest. Three cases are pressently distinguished
+here: 
+
+<P>
+
+<UL>
+<LI><B>Vm</B> - a molecule, in which case translations are completely
+ignored and only point group operations <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$g\in G$"> are used, Section
+<A HREF="node28.html#sub:Vm-tetr">2.6.8.5</A> 
+</LI>
+<LI><B>Vc</B> - a crystal, in which translations are taken into account
+only when checking equivalence of atoms; however, still the point
+group <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$G$"> is used, Section <A HREF="node30.html#sub:Vc-tetr">2.6.8.6</A>
+</LI>
+<LI><B>Vs</B> - a crystal, in which translations are taken into account
+when checking equivalence of atoms and in builing up the group <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$G$">,
+Section <A HREF="node31.html#sub:Vs-tetr">2.6.8.7</A>; in this special case so-called internal
+translations that make internal atoms of a supercell equivalent are
+used in <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$G$">; <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$G$"> is an <I>Abel</I> group; if the supercell was constructed
+by extending (``breeding'', see Section <A HREF="node18.html#sub:M-option-tetr">2.6.5</A>)
+the primitive cell <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$N$"> times, the group of internal translations
+<IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$G$"> will contain <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$N$"> elements including the zero translation (as
+unity); note that point group operations are not considered here (if
+they were, it would have been nearly a real space group then!); however,
+using this option it is possible to assign the phonons to the <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">
+points in the original BZ of the crystal (corresponding to the small
+primitive unit cell).
+</LI>
+</UL>
+A consideration below is not based on any particular choice of the
+group <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$G$">. The main idea of the method used is based on the expansion
+of the total system energy (per cell) in atomic displacements:
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E=E_{0}+\sum_{i}f_{i}u_{i}+\frac{1}{2}\sum_{i,j}\Phi_{ij}u_{i}u_{j}+\frac{1}{3!}\sum_{i,jk}\Phi_{ijk}u_{i}u_{j}u_{k}+\frac{1}{4!}\sum_{i,jkl}\Phi_{ijkl}u_{i}u_{j}u_{k}u_{l}+\ldots
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:energy-expansion"></A><IMG
+ WIDTH="602" HEIGHT="56" BORDER="0"
+ SRC="img41.png"
+ ALT="\begin{displaymath}
+E=E_{0}+\sum_{i}f_{i}u_{i}+\frac{1}{2}\sum_{i,j}\Phi_{ij}u_{...
+...\frac{1}{4!}\sum_{i,jkl}\Phi_{ijkl}u_{i}u_{j}u_{k}u_{l}+\ldots
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="26" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$E_{0}$">is the total energy at zero displacements <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$u_{i}$">.
+Here the index <IMG
+ WIDTH="11" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$i$"> refers to all degrees of freedom of the atoms
+in the cell (their Cartesian coordinates). The matrices <IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$\Phi_{ij}$">,
+<IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$\Phi_{ijk}$">, etc. characterise the system response to the atomic
+displacements. Note that in spite of the fact that summation over
+<IMG
+ WIDTH="11" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$i$">, <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$j$">, etc. is performed within the cell, the method that follows
+gives exact phonons (see [<A
+ HREF="node100.html#Lazewski-Jochym-Parlinski-2001">1</A>,<A
+ HREF="node100.html#Parlinski-Li-Kawazoe-1997">2</A>,<A
+ HREF="node100.html#LevKant-book">3</A>])
+in the <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$"> points corresponding to the given extention unit
+cell <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\rightarrow$"> supercell. 
+
+<P>
+The matrix <!-- MATH
+ $\Phi=\left\Vert \Phi_{ij}\right\Vert$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$\Phi=\left\Vert \Phi_{ij}\right\Vert $"> is the force constant
+matrix (FCM) sought for. If we know it, the dynamical matrix can be
+calculated as <!-- MATH
+ $\mathbf{D}=\left\Vert M_{i}^{-1/2}\Phi_{ij}M_{j}^{-1/2}\right\Vert$
+ -->
+<IMG
+ WIDTH="192" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$\mathbf{D}=\left\Vert M_{i}^{-1/2}\Phi_{ij}M_{j}^{-1/2}\right\Vert $">,
+where <IMG
+ WIDTH="28" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$M_{i}$"> is the mass associated with <IMG
+ WIDTH="11" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$i$">. To find <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$\Phi$">,
+we use the method of finite displacements: atoms in the unit cell
+are displaced by small amounts <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$u_{i}$">, the forces on all atoms are
+calculated, and these are used to obtain elements of <IMG
+ WIDTH="18" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$\Phi$">. 
+
+<P>
+Three methods are presently implemented that require various amount
+of calculation. In the first method, only one displacement per degree
+of freedom (e.g. atomic displacement alonf some Cartesian axis) is
+used. Then, ignoring all anharmonic terms in Eq. (<A HREF="node24.html#eq:energy-expansion">2.2</A>)
+and assuming that all atoms are in mechanical equilibrium (<IMG
+ WIDTH="54" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$f_{i}=0$">
+for <IMG
+ WIDTH="22" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="$\forall i$">), one obtains for the forces on atoms for a single
+displacement <IMG
+ WIDTH="22" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$u_{j}$">:
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F_{i}=-\frac{\partial E}{\partial u_{i}}=-\Phi_{ij}u_{j}\,\,\,\textrm{and\,\,\, thus}\,\,\,\Phi_{ij}=-\frac{F_{i}}{u_{j}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:force-1-displ"></A><IMG
+ WIDTH="355" HEIGHT="51" BORDER="0"
+ SRC="img56.png"
+ ALT="\begin{displaymath}
+F_{i}=-\frac{\partial E}{\partial u_{i}}=-\Phi_{ij}u_{j}\,\,\,\textrm{and\,\,\, thus}\,\,\,\Phi_{ij}=-\frac{F_{i}}{u_{j}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Therefore, in this method, in order to obtain the <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$ij$"> element of
+the FCM, one can displace the degree of freedom <IMG
+ WIDTH="11" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$i$"> and calculate
+the force on the degree <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$j$">; alternatively, since the FCM is symmetric,
+one can displace <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$j$"> and calculate the force on <IMG
+ WIDTH="11" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$i$">. The first method
+requires very small displacements since anharmonic terms are not included.
+
+<P>
+In the second method one uses two displacements, <IMG
+ WIDTH="22" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$u_{j}$"> and <IMG
+ WIDTH="37" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.png"
+ ALT="$-u_{j}$">
+for each degree of freedom. In this case the system may not be at
+equilibrium (i.e. <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$f_{i}$"> may be non-zero), and one can keep all
+odd terms in the energy expression (<A HREF="node24.html#eq:energy-expansion">2.2</A>). Denoting
+by <IMG
+ WIDTH="31" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$F_{i}^{+}$"> and <IMG
+ WIDTH="31" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$F_{i}^{-}$"> the forces on <IMG
+ WIDTH="11" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$i$"> due to both displacements
+of <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$j$">, one obtains:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\Phi_{ij}=-\frac{F_{i}^{+}-F_{i}^{-}}{2u_{j}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:force-2-displ"></A><IMG
+ WIDTH="142" HEIGHT="54" BORDER="0"
+ SRC="img62.png"
+ ALT="\begin{displaymath}
+\Phi_{ij}=-\frac{F_{i}^{+}-F_{i}^{-}}{2u_{j}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Finally, it is also possible to take into account the term of the
+4th order with respect to the atomic displacements in the energy expression
+(<A HREF="node24.html#eq:energy-expansion">2.2</A>). This would require to use four displacements
+<IMG
+ WIDTH="37" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$\pm u_{j}$"> and <IMG
+ WIDTH="36" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$\pm v_{j}$">. In this case the elements <IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$\Phi_{ij}$">can
+also be obtained, we do not give the final expression. 
+
+<P>
+The method described above is referred to in the code as the ``<I>Force
+method</I>''. There is also another method implemented, called the ``<I>Energy
+method</I>'' that requires many more DFT runs. Historically, this method
+was implemented first in <B><I>tetr</I></B> and still remains in
+the code; we shall not consider it here (see <TT>README</TT> file
+for details on this method).
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html556"
+  HREF="node25.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html552"
+  HREF="node23.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html546"
+  HREF="node23.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html554"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html557"
+  HREF="node25.html">Theory: practical side</A>
+<B> Up:</B> <A NAME="tex2html553"
+  HREF="node23.html">Calculation of phonons (atomic</A>
+<B> Previous:</B> <A NAME="tex2html547"
+  HREF="node23.html">Calculation of phonons (atomic</A>
+ &nbsp <B>  <A NAME="tex2html555"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

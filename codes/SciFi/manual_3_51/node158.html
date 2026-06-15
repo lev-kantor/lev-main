@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Structure of the force-field file</TITLE>
+<META NAME="description" CONTENT="Structure of the force-field file">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="previous" HREF="node157.html">
+<LINK REL="up" HREF="node143.html">
+<LINK REL="next" HREF="node159.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2429"
+  HREF="node159.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2425"
+  HREF="node143.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2421"
+  HREF="node157.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2427"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2430"
+  HREF="node159.html">Elementary Stages Box</A>
+<B> Up:</B> <A NAME="tex2html2426"
+  HREF="node143.html">Force Field Box</A>
+<B> Previous:</B> <A NAME="tex2html2422"
+  HREF="node157.html">Force_Test</A>
+ &nbsp <B>  <A NAME="tex2html2428"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION040331500000000000000"></A><A NAME="sub:Structure-of-the-force-file"></A>
+<BR>
+Structure of the force-field file
+</H3>
+
+<P>
+Only relelvant if the force field file is specified, i.e. if the SciFi
+part is switched off.
+
+<P>
+The short-range part of the force field is specified in a file as
+was mentioned in section <A HREF="node144.html#sub:How-to-specify-short-range-force">9.3.1</A>
+above. Let us assume that the lateral grid is <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img385.png"
+ ALT="$N_{1}$">, <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img386.png"
+ ALT="$N_{2}$"> and
+the number of points along the <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img447.png"
+ ALT="$Z$"> axis is <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img419.png"
+ ALT="$N_{z}$">. Then, the format
+of this file is as follows:
+
+<P>
+
+<UL>
+<LI>the 1st line: comment
+</LI>
+<LI><IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img419.png"
+ ALT="$N_{z}$"> lines follow with the <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$z$"> values (in the ascending order)
+</LI>
+<LI>a comment line
+</LI>
+<LI>then the force field for every <IMG
+ WIDTH="10" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img166.png"
+ ALT="$i$">, <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.png"
+ ALT="$j$"> along the lateral grid mesh
+follows in blocks as given by the following FORTRAN statement: 
+</LI>
+</UL>
+<DIV ALIGN="CENTER">
+<TT><FONT SIZE="-1">do i=0,N1</FONT></TT>
+</DIV>
+<P>
+
+
+<P>
+<DIV ALIGN="CENTER">
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;do j=0,N2</FONT></TT>
+</DIV>
+<P>
+
+
+<P>
+<DIV ALIGN="CENTER">
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..................</FONT></TT>
+</DIV>
+<P>
+
+
+<P>
+<DIV ALIGN="CENTER">
+<TT><FONT SIZE="-1">&nbsp;&nbsp;&nbsp;end do</FONT></TT>
+</DIV>
+<P>
+
+
+<P>
+<DIV ALIGN="CENTER">
+<TT><FONT SIZE="-1">end do</FONT></TT>
+</DIV>
+<P>
+
+
+<P>
+
+<UL>
+<LI>each block contains the values of the force for all values of <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$z$">
+(in the same order as the values of <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$z$"> themselves, of course!),
+and it starts with a comment line.
+</LI>
+</UL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2429"
+  HREF="node159.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2425"
+  HREF="node143.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2421"
+  HREF="node157.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2427"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2430"
+  HREF="node159.html">Elementary Stages Box</A>
+<B> Up:</B> <A NAME="tex2html2426"
+  HREF="node143.html">Force Field Box</A>
+<B> Previous:</B> <A NAME="tex2html2422"
+  HREF="node157.html">Force_Test</A>
+ &nbsp <B>  <A NAME="tex2html2428"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

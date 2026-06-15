@@ -1,0 +1,46 @@
+Theory of Metastable Impact Electron Spectroscopy (MIES) 
+
+http://www.cmmp.ucl.ac.uk/~lev/researc4/node17.html
+
+In MIES experiments a beam of slow excited (or "metastable") He atoms is
+used to probe the electronic structure of crystal surfaces: due to interaction of
+the projectiles with the surface a number of Auger transitions is taking place
+which are responsible for the observed electron emission. We are developing a theory
+of MIES based on state-of-the-art electronc structure methods. 
+
+---------------------
+
+
+Energy dissipation in Atomic Force Microscopy 
+
+http://www.cmmp.ucl.ac.uk/~lev/researc4/node18.html
+
+Using methods of non-equilibrium statistical mechanics (such as Zubarev's
+Non_Equilibrium Staistical Operator Method) we study theoretically
+energy dissipation mechanisms in the Atomic Force Microscopy. 
+
+
+----------------------
+
+Diagrammatic methods in the Theory of Electronic Separability 
+and cluster embedding                           
+
+http://www.cmmp.ucl.ac.uk/~lev/researc4/node3.html
+
+
+We develop diagrammatic methods to study electronic and phonon structure of systems
+which can be represented as a set of weakly overlapping units (e.g. atoms, molecules, bonds).
+This theory is applied to derive "interatomic" interaction in such materials as well as 
+in formulating "rigorous" embedding schemes which could be used in materials of various
+chemical bonding to study point defects.
+
+----------------------
+
+LEV00: User-friendly package for plane-waved DFT codes CASTEP/CETEP/VASP
+
+http://www.cmmp.ucl.ac.uk/~lev/codes/lev00/index.html
+
+This is a set of menu-driven programs which help to work with 
+a number of plane wave Density Functional Theory computer codes like CASTEP,
+CETEP and VASP. One can produce contour maps of electronic and spin densities,
+calculated charges, total, projected DOS and a lot more.

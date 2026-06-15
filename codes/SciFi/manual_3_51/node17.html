@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Constant distance between two atoms</TITLE>
+<META NAME="description" CONTENT="Constant distance between two atoms">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node18.html">
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html387"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html383"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html377"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html385"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html388"
+  HREF="node18.html">Constant angle between three</A>
+<B> Up:</B> <A NAME="tex2html384"
+  HREF="node14.html">Constrained minimisation</A>
+<B> Previous:</B> <A NAME="tex2html378"
+  HREF="node16.html">Linear constraines</A>
+ &nbsp <B>  <A NAME="tex2html386"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02017300000000000000">
+Constant distance between two atoms</A>
+</H3>
+
+<P>
+Another simple (but nonlinear) constraint which has been implemented
+is to keep a distance, <IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$d$">, between two atoms constant. If, say,
+atoms 1 and 2 are involved, then the <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img192.png"
+ ALT="$x$"> component of the first atom
+specified in the input (section <A HREF="node114.html#Sec::constraint-box">8.8</A>) is considered
+as redundant. It is expressed via other coordinates as follows:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+x_{1}=x_{2}\pm\sqrt{d^{2}-(y_{1}-y_{2})^{2}-(z_{1}-z_{2})^{2}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="281" HEIGHT="28" BORDER="0"
+ SRC="img225.png"
+ ALT="\begin{displaymath}
+x_{1}=x_{2}\pm\sqrt{d^{2}-(y_{1}-y_{2})^{2}-(z_{1}-z_{2})^{2}}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where two choices of the sign are possible. The correction to the
+``force'' associated with nonredundand coordinates <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img226.png"
+ ALT="$y_{1}$">, <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img196.png"
+ ALT="$z_{1}$">
+and <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img197.png"
+ ALT="$x_{2}$">, <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img227.png"
+ ALT="$y_{2}$">, <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img228.png"
+ ALT="$z_{2}$"> is calculated correspondingly.
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

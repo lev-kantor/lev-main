@@ -1,0 +1,198 @@
+\begin{thebibliography}{10}
+
+\bibitem{my-image-energy}
+L.~N. Kantorovich, A.~I. Livshits, and A.~M. Stoneham.
+\newblock Electrostatic energy calculation for the interpretation of surface
+  probe microscopy experiments.
+\newblock {\em J. Phys.: Condens. Matter}, 12:795--814, 2000.
+
+\bibitem{our_imageforce}
+L.~N. Kantorovich, A.~Foster, A.~L. Shluger, and A.~M. Stoneham.
+\newblock Role of image forces in nc-sfm images of ionic surfaces.
+\newblock {\em Surface Sci.}, 445:283, 2000.
+
+\bibitem{Stratton}
+J.~A. Stratton.
+\newblock {\em Electromagnetic Theory}.
+\newblock McGraw-Hill, 1941.
+
+\bibitem{Landau-8}
+L.~D. Landau, E.~M. Lifshitz, and L.~P. Pitaevskii.
+\newblock {\em Electrodynamics Of Continuous Media}.
+\newblock Pergamon Press, Oxford, 1993.
+
+\bibitem{Jackson}
+J.D. Jackson.
+\newblock {\em Classical Electrodynamics}.
+\newblock John Wiley, N. Y., 1999.
+
+\bibitem{Finnis-1}
+M.~W. Finnis.
+\newblock The interaction of a point charge with an aluminium (111) surface.
+\newblock {\em Surface Sci.}, 241:61, 1991.
+
+\bibitem{Finnis-2}
+M.~W. Finnis, R.~Kaschner, C.~Kruse, J.~Furthm\"uller, and M.~Scheffler.
+\newblock The interaction of a point charge with a metal surface: theory and
+  calculations for (111), (100) and (110) aluminium surfaces.
+\newblock {\em J. Phys.: Condens. Matter}, 7:2001, 1995.
+
+\bibitem{Garcia-Bagus}
+M.~Garc\'{\i}a-Hern\'andez, P.~S. Bagus, and F.~Illas.
+\newblock A new analysis of image charge theory.
+\newblock {\em Surface Sci.}, 409:69, 1998.
+
+\bibitem{Smythe}
+W.~R. Smythe.
+\newblock {\em Static and Dynamic Electricity}.
+\newblock McGraw-Hill, N. Y., 1968.
+
+\bibitem{French}
+C.~Argento and R.~H. French.
+\newblock Parametric tip model and force-distance relation for hamaker constant
+  determination from atomic force microscopy.
+\newblock {\em J. Appl. Phys.}, 80:6081, 1996.
+
+\bibitem{KANT_QM_coarse-grained}
+L.~N. Kantorovich.
+\newblock Quantum theory of energy dissipation in non-contact atomic force
+  microscopy in markovian approximation.
+\newblock {\em Surface Science}, 521:117--128, 2002.
+
+\bibitem{NC-AFM_book_my-contribution}
+M.~Gauthier, L.~Kantorovich, and M.~Tsukada.
+\newblock {\em Non-Contact Atomic Force Microscopy}, chapter 19. Theory of
+  energy dissipation into surface vibrations.
+\newblock Nanoscience and Technology. Springer, 2002.
+
+\bibitem{tip-force-def-Tom}
+T.~Trevethan and L.~Kantorovich.
+\newblock Tip models and force definitions in molecular mynamics simualtions of
+  scanning force microscopy.
+\newblock {\em Surface Science}, 540:497--503, 2003.
+
+\bibitem{shell-dick}
+B.~G. Dick and A.~W. Overhauser.
+\newblock {\em Phys. Rev.}, 112:603, 1958.
+
+\bibitem{Allen-tildesley}
+M.~Allen and D.~Tildesley.
+\newblock {\em Computer simulation of liquids}.
+\newblock Oxford Press, 1989.
+
+\bibitem{gauss-ts}
+J.~Clarke D.~Brown.
+\newblock {\em Mol. Phys.}, 51:1243, 1983.
+
+\bibitem{hoover-ts}
+W.~Hoover.
+\newblock {\em Phys. Rev. A}, 31:1695, 1985.
+
+\bibitem{stochastic-md}
+J.~Rullmann W.~Gunsteren, H.~Berendsen.
+\newblock Stochastic dynamics for molecules with contraints, brownian dynamics
+  of n-alkanes.
+\newblock {\em Mol. Phys.}, 44:69, 1981.
+
+\bibitem{shells-dynamic}
+D.~Fincham P.~Mitchell.
+\newblock Shell model simulations by adiabatic dynamics.
+\newblock {\em J. Phys. Cond. Matt.}, 5:1031, 1993.
+
+\bibitem{shell-relax}
+M.~Gillan P.~Lidan.
+\newblock Shell-model molecular dynamics simulations of superionic conduction
+  in caf2.
+\newblock {\em J. Phys. Cond. Matt.}, 5:1019, 1993.
+
+\bibitem{Omicron}
+{\em Omicron Nanotechnology}.
+
+\bibitem{Nanosurf}
+{\em easyPLL Nanosurf}.
+
+\bibitem{durig-pll}
+U.~Dürig, H.~R. Steinauer, and N.~Blanc.
+\newblock ?
+\newblock {\em J. Appl. Phys.}, 82:3841--3651, 1997.
+
+\bibitem{loppacher-phase}
+Ch. Loppacher, M.~Bammerlin, M.~Guggisberg, F.~Battiston, R.~Bennewitz,
+  S.~Rast, A.~Baratoff, E.~Meyer, and H.-J. Güntherodt.
+\newblock ?
+\newblock {\em Appl. Surf. Sci.}, 140:287--292, 1999.
+
+\bibitem{pfeiffer-phase}
+O.~Pfeiffer, L.~Nony, R.~Bennewitz, A.~Baratoff, and E.~Meyer.
+\newblock ?
+\newblock {\em Nanotechnology}, pages S101--S107, 2004.
+
+\bibitem{verlet-algo}
+L.~Verlet.
+\newblock ?
+\newblock {\em Phys. Rev.}, 159(1):98--103, 1967.
+
+\bibitem{etique-automatique}
+M.~Etique.
+\newblock {\em Regulation Automatique}.
+\newblock Ecole d'Ingénieurs du Canton de Vaud, Switzerland, 2003.
+
+\bibitem{silva-PI}
+G.~J. Silva, A.~Datta, and S.~P. Bhattacharyya.
+\newblock ?
+\newblock {\em Automatica}, 37:2025--2031, 2001.
+
+\bibitem{Wang-PI}
+Y.-G. Wang and H.-H. Shao.
+\newblock ?
+\newblock {\em Automatica}, 36:147--152, 2000.
+
+\bibitem{loppacherPLL}
+Ch. Loppacher, M.~Bammerlin, F.~Battiston, M.~Guggisberg, D.~Müller, H.~R.
+  Hidber, E.~Lüthi, R.~andMeyer, and H.-J. Güntherodt.
+\newblock ?
+\newblock {\em Appl. Phys. A}, 66:S215--S218, 1998.
+
+\bibitem{loppacher-dissertation}
+Ch. Loppacher.
+\newblock {\em Nichtkontaktrasterkraftmikroskopie Mit Digitalem
+  Phasenregelkreis, PhD. Thesis}.
+\newblock PhD thesis, Basel University, Basel, 2000.
+
+\bibitem{albrecht-fmdemodul}
+T.~R. Albrecht, P.~Grütter, D.~Horne, and D.~Rugar.
+\newblock ?
+\newblock {\em J. Appl. Phys}, 69(2), 1991.
+
+\bibitem{durig-fmdemodul}
+U.~Dürig, O.~Züger, and A.~Stalder.
+\newblock ?
+\newblock {\em J. Appl. Phys.}, 72(5):1778--1798, 1992.
+
+\bibitem{sarid}
+D.~Sarid.
+\newblock {\em Scanning Force Microscopy}.
+\newblock Oxford University Press, Oxford, 1991.
+
+\bibitem{yaralioglu-allnoises}
+G.~G. Yaralioglu, A.~Atalar, S.~R. Manalis, and C.~F. Quate.
+\newblock ?
+\newblock {\em J. Appl. Phys.}, 83:7405--7415, 1998.
+
+\bibitem{cleland-cantilevernoise}
+A.~N. Cleland and N.~L. Roukes.
+\newblock ?
+\newblock {\em J. Appl. Phys.}, 92:2758--2769, 2002.
+
+\bibitem{bacon-shotnoise}
+A.~M. Bacon, H.~Z. Zhao, L.~J. Wang, and J.~E. Thomas.
+\newblock ?
+\newblock {\em Appl. Optics}, 34(24):5326--5330, 1995.
+
+\bibitem{guggisberg-electrostatic}
+M.~Guggisberg, M.~Bammerlin, Ch. Loppacher, O.~Pfeiffer, A.~Abdurixit,
+  W.~Barwich, R.~Bennewitz, A.~Baratoff, E.~Meyer, and H.-J. Güntherodt.
+\newblock ?
+\newblock {\em Phys. Rev. B}, 61:11151--11155, 2000.
+
+\end{thebibliography}

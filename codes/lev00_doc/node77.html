@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Search for the surface states </TITLE>
+<META NAME="description" CONTENT="Search for the surface states ">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="previous" HREF="node76.html">
+<LINK REL="up" HREF="node52.html">
+<LINK REL="next" HREF="node78.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1258"
+  HREF="node78.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1254"
+  HREF="node52.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1250"
+  HREF="node76.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1256"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1259"
+  HREF="node78.html">Working with VASP</A>
+<B> Up:</B> <A NAME="tex2html1255"
+  HREF="node52.html">Detailed description of options</A>
+<B> Previous:</B> <A NAME="tex2html1251"
+  HREF="node76.html">General linear combination of</A>
+ &nbsp <B>  <A NAME="tex2html1257"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00465000000000000000"></A><A NAME="sub:Search-for-surface-states"></A>
+<BR>
+Search for the surface states 
+</H2>
+
+<P>
+This is option <B>7</B> of the main menu. It only works with <B><I>CASTEP</I></B>,
+see also Section <A HREF="node89.html#cha:Working-with-CASTEP">6</A>.
+
+<P>
+You need a file <TT>psi2.SRF</TT> produced by <B><I>lev1</I></B>.
+The routine is interactive. First of all, a number of groups of states
+as well as states within each group should be specified. Then, the
+routine goes through states in each group one after another. Once
+the file <TT>psi2.SRF</TT> is read in for the current group, <IMG
+ WIDTH="61" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img136.png"
+ ALT="$[n_{1},n_{2}]$">,
+the total charge contained in it is shown for your examination. Then,
+you have the following options: 
+
+<P>
+
+<UL>
+<LI>plot the <I>sum</I> of the <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$z$">-densities taken over all states
+<IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$n$"> in the group <IMG
+ WIDTH="61" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img136.png"
+ ALT="$[n_{1},n_{2}]$">; a plot of the density along the
+lattice vector <!-- MATH
+ $\mathbf{a}_{3}$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$\mathbf{a}_{3}$"> will be shown on the screen; the
+width of the plot corresponds to the length of the vector;
+</LI>
+<LI>plot every <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$z$">-density for each state <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$n$"> separately; this option
+works in the same way as the previous one; due to technical reasons,
+only 8 states are shown simultaneously on one picture; if you have
+more than 8 states in your current group, all of them will be shown
+by portions of 8, one after another; the last portion may contain
+less curves.
+</LI>
+</UL>
+You can then start a new session. Data and Postscript files produced
+during one run have the following names: <TT>zdr.datN_M.K</TT> and
+<TT>zdr.datN_M.K.ps</TT>, where <TT>N</TT> is the group number, <TT>M</TT>
+is the session number and <TT>K</TT> is either the number of the plot
+(if every <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$z$">-density is shown separately) or just <TT>0</TT> for
+the sum of <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$z$">-densities.
+
+<P>
+Note that if the lattice vector <!-- MATH
+ $\mathbf{a}_{3}$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$\mathbf{a}_{3}$"> is perpendicular
+to the terraces of the slab, then these plots give you insight into
+how wavefunctions <!-- MATH
+ $\psi_{n\mathbf{k}}(\mathbf{r})$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.png"
+ ALT="$\psi_{n\mathbf{k}}(\mathbf{r})$"> for each band
+<IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$n$"> (or for a set of bands) are distributed along the width of the
+slab. If a wavefunction is concentrated mostly near edges of the slab,
+it corresponds to <I>surface</I> states; otherwise, it makes up
+one of the <I>bulk</I> states. Once you know exactly which states
+are surface states, then you can study the DOS of your slab paying
+special attention to the features in the DOS associated with these
+states.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1258"
+  HREF="node78.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1254"
+  HREF="node52.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1250"
+  HREF="node76.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1256"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1259"
+  HREF="node78.html">Working with VASP</A>
+<B> Up:</B> <A NAME="tex2html1255"
+  HREF="node52.html">Detailed description of options</A>
+<B> Previous:</B> <A NAME="tex2html1251"
+  HREF="node76.html">General linear combination of</A>
+ &nbsp <B>  <A NAME="tex2html1257"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

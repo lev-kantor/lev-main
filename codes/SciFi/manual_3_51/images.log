@@ -1,0 +1,2694 @@
+This is TeX, Version 3.14159 (Web2C 7.3.1) (format=latex 2005.4.4)  4 AUG 2005 14:19
+**./images.tex
+(./images.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, i
+talian, nohyphenation, loaded.
+
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texmf/tex/latex/base/fontenc.sty
+Package: fontenc 2001/06/05 v1.94 Standard LaTeX package
+(/usr/share/texmf/tex/latex/base/t1enc.def
+File: t1enc.def 2001/06/05 v1.94 Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 38.
+)) (/usr/share/texmf/tex/latex/base/inputenc.sty
+Package: inputenc 2001/07/10 v0.99a Input encoding file 
+(/usr/share/texmf/tex/latex/base/latin1.def
+File: latin1.def 2001/07/10 v0.99a Input encoding file 
+)) (/usr/share/texmf/tex/latex/misc/geometry.sty
+Package: geometry 1999/10/07 v2.2 Page Geometry
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\geom@cnth=\count87
+\geom@cntv=\count88
+(/usr/share/texmf/tex/latex/config/geometry.cfg)) (/usr/share/texmf/tex/latex/g
+raphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/usr/share/texmf/tex/latex/config/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 80.
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/usr/share/texmf/tex/latex/ae/ae.sty
+Package: ae 1998/11/17 1.0 Almost European Computer Modern
+(/usr/share/texmf/tex/latex/base/fontenc.sty
+Package: fontenc 2001/06/05 v1.94 Standard LaTeX package
+(/usr/share/texmf/tex/latex/base/t1enc.def
+File: t1enc.def 2001/06/05 v1.94 Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 38.
+)
+LaTeX Font Info:    Try loading font information for T1+aer on input line 95.
+(/usr/share/texmf/tex/latex/ae/t1aer.fd
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+))) (/usr/share/texmf/tex/latex/ae/aecompl.sty
+Package: aecompl 1998/07/23 0.9 T1 Complements for AE fonts (D. Roegel)
+) (/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 2001/03/01 v3.7h The Babel package
+(/usr/share/texmf/tex/generic/babel/english.ldf
+Language: english 2001/04/15 v3.3l English support from the babel system
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 2001/03/01 v3.7h Babel common definitions
+\babel@savecnt=\count89
+\U@D=\dimen105
+)
+\l@canadian = a dialect from \language\l@english 
+)) (/usr/share/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+(/usr/share/texmf/tex/latex/config/color.cfg)
+Package color Info: Driver file: dvips.def on input line 125.
+(/usr/share/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\sizebox=\box26
+\lthtmlwrite=\write3
+(images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+----------------------- Geometry parameters
+mode: letterpaper 
+h-parts: 2cm, 500.484pt, 2cm
+v-parts: 2cm, 681.15898pt, 2cm
+----------------------- Page layout dimensions
+\paperwidth  614.295pt
+\paperheight 794.96999pt
+\textwidth  349.0pt
+\textheight 665.7945pt
+\oddsidemargin  -15.36449pt
+\evensidemargin -15.36449pt
+\topmargin  0.0pt
+\headheight 0.0pt
+\headsep    0.0pt
+\footskip   0.0pt
+\hoffset 0.0pt
+\voffset 0.0pt
+\mag 1000
+(1in=72.27pt, 1cm=28.45pt)
+-----------------------
+
+latex2htmlLength hsize=349.0pt
+
+latex2htmlLength vsize=665.7945pt
+
+latex2htmlLength hoffset=0.0pt
+
+latex2htmlLength voffset=0.0pt
+
+latex2htmlLength topmargin=0.0pt
+
+latex2htmlLength topskip=0.00003pt
+
+latex2htmlLength headheight=0.0pt
+
+latex2htmlLength headsep=0.0pt
+
+latex2htmlLength parskip=0.0pt plus 1.0pt
+
+latex2htmlLength oddsidemargin=-15.36449pt
+
+latex2htmlLength evensidemargin=-15.36449pt
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 159.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 159.
+l2hSize :tex2html_wrap_inline11075:6.94989pt::6.94989pt::5.32294pt.
+[1
+
+
+
+]
+! You can't use `\spacefactor' in math mode.
+\@->\spacefactor 
+                 \@m 
+l.165 $\@
+         mathbf {a}_{1}$%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no ^^e8 in font cmex10!
+l2hSize :tex2html_wrap_inline11078:7.44444pt::7.44444pt::43.97469pt.
+[2
+
+
+]
+! You can't use `\spacefactor' in math mode.
+\@->\spacefactor 
+                 \@m 
+l.171 $\@
+         mathbf {a}_{2}$%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no ^^e8 in font cmex10!
+l2hSize :tex2html_wrap_inline11080:7.44444pt::7.44444pt::43.97469pt.
+[3
+
+
+]
+! You can't use `\spacefactor' in math mode.
+\@->\spacefactor 
+                 \@m 
+l.177 $\@
+         mathbf {a}_{1}^{\prime }=\@mathbf {a}_{1}-\@mathbf {a}_{2}$%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+\@->\spacefactor 
+                 \@m 
+l.177 $\@mathbf {a}_{1}^{\prime }=\@
+                                    mathbf {a}_{1}-\@mathbf {a}_{2}$%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+\@->\spacefactor 
+                 \@m 
+l.177 ...hbf {a}_{1}^{\prime }=\@mathbf {a}_{1}-\@
+                                                  mathbf {a}_{2}$%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no ^^e8 in font cmex10!
+Missing character: There is no ^^e8 in font cmex10!
+Missing character: There is no ^^e8 in font cmex10!
+l2hSize :tex2html_wrap_inline11082:8.01782pt::8.01782pt::156.47935pt.
+[4
+
+
+]
+! You can't use `\spacefactor' in math mode.
+\@->\spacefactor 
+                 \@m 
+l.183 $\@
+         mathbf {a}_{2}^{\prime }=\@mathbf {a}_{1}+\@mathbf {a}_{2}$%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+\@->\spacefactor 
+                 \@m 
+l.183 $\@mathbf {a}_{2}^{\prime }=\@
+                                    mathbf {a}_{1}+\@mathbf {a}_{2}$%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `\spacefactor' in math mode.
+\@->\spacefactor 
+                 \@m 
+l.183 ...hbf {a}_{2}^{\prime }=\@mathbf {a}_{1}+\@
+                                                  mathbf {a}_{2}$%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Missing character: There is no ^^e8 in font cmex10!
+Missing character: There is no ^^e8 in font cmex10!
+Missing character: There is no ^^e8 in font cmex10!
+l2hSize :tex2html_wrap_inline11084:8.01782pt::8.01782pt::156.47935pt.
+[5
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.193 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap11099:7.40495pt::2.5pt::349.0pt.
+[6
+
+
+]
+l2hSize :tex2html_wrap_inline3951:8.0pt::8.0pt::18.29347pt.
+[7
+
+
+]
+l2hSize :tex2html_wrap_inline3953:8.0pt::8.0pt::18.56544pt.
+[8
+
+
+]
+l2hSize :tex2html_wrap_inline3955:8.01782pt::8.01782pt::25.31027pt.
+[9
+
+
+]
+l2hSize :tex2html_wrap_inline3957:7.44444pt::7.44444pt::14.05449pt.
+[10
+
+
+]
+l2hSize :tex2html_wrap_inline3959:6.86111pt::0.0pt::8.05554pt.
+[11
+
+
+]
+l2hSize :tex2html_wrap_inline3961:8.94843pt::8.94843pt::70.04744pt.
+[12
+
+
+]
+l2hSize :tex2html_wrap_inline3963:6.83331pt::0.0pt::8.55559pt.
+[13
+
+
+]
+l2hSize :tex2html_wrap_inline3965:6.86111pt::0.0pt::26.38878pt.
+[14
+
+
+]
+l2hSize :displaymath72:27.00816pt::0.0pt::349.0pt.
+[15
+
+
+]
+l2hSize :tex2html_wrap_inline3967:9.82217pt::9.82217pt::100.46902pt.
+[16
+
+
+]
+l2hSize :tex2html_wrap_inline3969:6.44989pt::0.0pt::9.28017pt.
+[17
+
+
+]
+l2hSize :tex2html_wrap_inline3971:7.33331pt::7.33331pt::14.22809pt.
+[18
+
+
+]
+l2hSize :tex2html_wrap_inline3975:6.94989pt::6.94989pt::9.65247pt.
+[19
+
+
+]
+l2hSize :tex2html_wrap_inline3977:8.94843pt::8.94843pt::34.59764pt.
+[20
+
+
+]
+l2hSize :tex2html_wrap_inline3979:8.94843pt::8.94843pt::6.88615pt.
+[21
+
+
+]
+l2hSize :tex2html_wrap_inline3981:8.0pt::8.0pt::18.97227pt.
+[22
+
+
+]
+l2hSize :tex2html_wrap_inline3983:8.0pt::8.0pt::22.30156pt.
+[23
+
+
+]
+l2hSize :tex2html_wrap_inline3985:7.33331pt::7.33331pt::16.0017pt.
+[24
+
+
+]
+l2hSize :tex2html_wrap_inline3989:6.94444pt::0.0pt::10.05904pt.
+[25
+
+
+]
+l2hSize :tex2html_wrap_inline3991:7.44444pt::7.44444pt::50.72905pt.
+[26
+
+
+]
+l2hSize :tex2html_wrap_inline3993:6.86111pt::0.0pt::7.7361pt.
+[27
+
+
+]
+l2hSize :tex2html_wrap_inline3997:8.0pt::8.0pt::23.79518pt.
+[28
+
+
+]
+l2hSize :tex2html_wrap_inline4003:6.94444pt::0.0pt::12.82295pt.
+[29
+
+
+]
+l2hSize :displaymath3885:27.00816pt::0.0pt::349.0pt.
+[30
+
+
+]
+l2hSize :tex2html_wrap_inline4005:7.44444pt::7.44444pt::16.83961pt.
+[31
+
+
+]
+l2hSize :tex2html_wrap_inline4009:7.44444pt::7.44444pt::75.23663pt.
+[32
+
+
+]
+l2hSize :tex2html_wrap_inline4011:7.44444pt::7.44444pt::20.8246pt.
+[33
+
+
+]
+l2hSize :tex2html_wrap_inline4015:8.00006pt::8.00006pt::83.8702pt.
+[34
+
+
+]
+l2hSize :tex2html_wrap_inline4017:8.00006pt::8.00006pt::58.97617pt.
+[35
+
+
+]
+l2hSize :displaymath3886:24.50006pt::0.0pt::349.0pt.
+[36
+
+
+]
+l2hSize :displaymath150:23.11461pt::0.0pt::349.0pt.
+[37
+
+
+]
+l2hSize :displaymath157:27.00816pt::0.0pt::349.0pt.
+[38
+
+
+]
+l2hSize :displaymath173:28.36926pt::0.0pt::349.0pt.
+[39
+
+
+]
+l2hSize :tex2html_wrap_inline4023:6.94989pt::6.94989pt::12.3901pt.
+[40
+
+
+]
+l2hSize :tex2html_wrap_inline4025:7.09525pt::7.09525pt::13.08006pt.
+[41
+
+
+]
+l2hSize :tex2html_wrap_inline4027:6.94989pt::6.94989pt::9.42485pt.
+[42
+
+
+]
+l2hSize :tex2html_wrap_inline4029:6.94989pt::6.94989pt::8.56541pt.
+[43
+
+
+]
+l2hSize :tex2html_wrap_inline4031:7.33331pt::7.33331pt::24.83911pt.
+[44
+
+
+]
+l2hSize :tex2html_wrap_inline4035:7.33331pt::7.33331pt::14.19138pt.
+[45
+
+
+]
+l2hSize :displaymath193:28.36926pt::0.0pt::349.0pt.
+[46
+
+
+]
+l2hSize :tex2html_wrap_inline4041:7.44444pt::7.44444pt::6.45837pt.
+[47
+
+
+]
+l2hSize :tex2html_wrap_inline4043:7.44444pt::7.44444pt::27.84715pt.
+[48
+
+
+]
+l2hSize :tex2html_wrap_inline4045:8.01782pt::8.01782pt::34.20132pt.
+[49
+
+
+]
+l2hSize :tex2html_wrap_inline4047:9.37892pt::9.37892pt::19.14174pt.
+[50
+
+
+]
+l2hSize :tex2html_wrap_inline4049:9.37892pt::9.37892pt::29.70844pt.
+[51
+
+
+]
+l2hSize :tex2html_wrap_inline4061:11.72887pt::11.72887pt::102.68748pt.
+[52
+
+
+]
+l2hSize :tex2html_wrap_inline4065:6.44989pt::0.0pt::6.88889pt.
+[53
+
+
+]
+l2hSize :tex2html_wrap_inline4067:6.94989pt::6.94989pt::8.29344pt.
+[54
+
+
+]
+l2hSize :tex2html_wrap_inline4071:8.01782pt::8.01782pt::43.39383pt.
+[55
+
+
+]
+l2hSize :tex2html_wrap_inline4073:6.44989pt::0.0pt::5.23613pt.
+[56
+
+
+]
+l2hSize :tex2html_wrap_inline4075:7.51782pt::0.0pt::8.04169pt.
+[57
+
+
+]
+l2hSize :tex2html_wrap_inline4077:8.01782pt::8.01782pt::32.86249pt.
+[58
+
+
+]
+l2hSize :tex2html_wrap_inline4079:8.94843pt::8.94843pt::124.89984pt.
+[59
+
+
+]
+l2hSize :tex2html_wrap_inline4081:8.01782pt::8.01782pt::99.62085pt.
+[60
+
+
+]
+l2hSize :displaymath273:24.79865pt::0.0pt::349.0pt.
+[61
+
+
+]
+l2hSize :tex2html_wrap_inline4087:7.09525pt::7.09525pt::21.96887pt.
+[62
+
+
+]
+l2hSize :tex2html_wrap_inline4093:8.0pt::8.0pt::31.40776pt.
+[63
+
+
+]
+l2hSize :displaymath295:14.5pt::0.0pt::349.0pt.
+[64
+
+
+]
+l2hSize :tex2html_wrap_inline4097:8.01782pt::8.01782pt::51.19572pt.
+[65
+
+
+]
+l2hSize :tex2html_wrap_inline4105:8.0pt::8.0pt::19.44972pt.
+[66
+
+
+]
+l2hSize :tex2html_wrap_inline4115:9.37892pt::9.37892pt::35.52777pt.
+[67
+
+
+]
+l2hSize :tex2html_wrap_inline4117:9.37892pt::9.37892pt::38.58331pt.
+[68
+
+
+]
+l2hSize :tex2html_wrap_inline4121:7.33331pt::7.33331pt::37.67357pt.
+[69
+
+
+]
+l2hSize :tex2html_wrap_inline4123:7.67497pt::7.67497pt::45.817pt.
+[70
+
+
+]
+l2hSize :tex2html_wrap_inline4125:7.44444pt::7.44444pt::55.46513pt.
+[71
+
+
+]
+l2hSize :tex2html_wrap_inline4127:7.33331pt::7.33331pt::13.69936pt.
+[72
+
+
+]
+l2hSize :tex2html_wrap_inline4129:8.94843pt::8.94843pt::73.5232pt.
+[73
+
+
+]
+l2hSize :tex2html_wrap_inline4131:7.44444pt::7.44444pt::37.43192pt.
+[74
+
+
+]
+l2hSize :tex2html_wrap_inline4133:7.61386pt::7.61386pt::48.07121pt.
+[75
+
+
+]
+l2hSize :tex2html_wrap_inline4137:8.0pt::8.0pt::19.0487pt.
+[76
+
+
+]
+l2hSize :tex2html_wrap_inline4139:6.44989pt::0.0pt::5.59033pt.
+[77
+
+
+]
+l2hSize :tex2html_wrap_inline4141:6.94989pt::6.94989pt::31.8947pt.
+[78
+
+
+]
+l2hSize :tex2html_wrap_inline4143:12.00008pt::12.00008pt::156.33679pt.
+[79
+
+
+]
+l2hSize :tex2html_wrap_inline4147:8.01782pt::8.01782pt::19.0487pt.
+[80
+
+
+]
+l2hSize :tex2html_wrap_inline4149:8.01782pt::8.01782pt::38.70834pt.
+[81
+
+
+]
+l2hSize :tex2html_wrap_inline4151:8.01782pt::8.01782pt::40.75238pt.
+[82
+
+
+]
+l2hSize :tex2html_wrap_inline4155:9.63329pt::9.63329pt::70.50114pt.
+[83
+
+
+]
+l2hSize :tex2html_wrap_inline4157:6.94989pt::6.94989pt::38.74887pt.
+[84
+
+
+]
+l2hSize :tex2html_wrap_inline4159:6.94444pt::0.0pt::31.57632pt.
+[85
+
+
+]
+l2hSize :tex2html_wrap_inline4161:6.94989pt::6.94989pt::43.09962pt.
+[86
+
+
+]
+l2hSize :tex2html_wrap_inline4163:6.94444pt::0.0pt::11.57645pt.
+[87
+
+
+]
+l2hSize :tex2html_wrap_inline4167:9.63329pt::9.63329pt::84.51515pt.
+[88
+
+
+]
+l2hSize :tex2html_wrap_inline4169:8.94843pt::8.94843pt::69.88431pt.
+[89
+
+
+]
+l2hSize :tex2html_wrap_inline4177:7.44444pt::7.44444pt::46.26842pt.
+[90
+
+
+]
+l2hSize :tex2html_wrap_inline4179:10.94443pt::10.94443pt::164.1313pt.
+[91
+
+
+]
+l2hSize :tex2html_wrap_inline4181:6.94989pt::6.94989pt::13.62277pt.
+[92
+
+
+]
+l2hSize :displaymath389:32.50009pt::0.0pt::349.0pt.
+[93
+
+
+]
+l2hSize :tex2html_wrap_inline4183:6.94989pt::6.94989pt::31.72913pt.
+[94
+
+
+]
+l2hSize :tex2html_wrap_inline4185:7.44444pt::7.44444pt::29.04626pt.
+[95
+
+
+]
+l2hSize :tex2html_wrap_inline4187:6.94989pt::6.94989pt::39.01506pt.
+[96
+
+
+]
+l2hSize :tex2html_wrap_inline4189:8.0pt::8.0pt::62.7529pt.
+[97
+
+
+]
+l2hSize :tex2html_wrap_inline4191:6.94989pt::6.94989pt::9.04868pt.
+[98
+
+
+]
+l2hSize :tex2html_wrap_inline4193:8.0pt::8.0pt::102.61916pt.
+[99
+
+
+]
+l2hSize :tex2html_wrap_inline4195:8.01782pt::8.01782pt::9.04868pt.
+[100
+
+
+]
+l2hSize :tex2html_wrap_inline4197:7.22223pt::0.0pt::6.57294pt.
+[101
+
+
+]
+l2hSize :tex2html_wrap_inline4199:6.44989pt::0.0pt::23.92357pt.
+[102
+
+
+]
+l2hSize :displaymath434:32.50009pt::0.0pt::349.0pt.
+[103
+
+
+]
+l2hSize :tex2html_wrap_inline4213:6.94989pt::6.94989pt::13.18236pt.
+[104
+
+
+]
+l2hSize :tex2html_wrap_inline4225:6.94989pt::6.94989pt::23.65617pt.
+[105
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.818 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap11256:7.40495pt::2.5pt::349.0pt.
+[106
+
+
+]
+l2hSize :tex2html_wrap_inline4231:6.94989pt::6.94989pt::13.10074pt.
+[107
+
+
+]
+l2hSize :tex2html_wrap_inline4233:8.01782pt::8.01782pt::38.21103pt.
+[108
+
+
+]
+l2hSize :tex2html_wrap_inline4237:6.94989pt::6.94989pt::39.21178pt.
+[109
+
+
+]
+l2hSize :tex2html_wrap_inline4239:9.22066pt::9.22066pt::62.15799pt.
+[110
+
+
+]
+l2hSize :tex2html_wrap_inline4241:9.22066pt::9.22066pt::59.26529pt.
+[111
+
+
+]
+l2hSize :tex2html_wrap_inline4243:8.0pt::8.0pt::62.324pt.
+[112
+
+
+]
+l2hSize :tex2html_wrap_inline4245:9.40276pt::9.40276pt::99.84363pt.
+[113
+
+
+]
+l2hSize :tex2html_wrap_inline4247:8.0pt::8.0pt::48.14545pt.
+[114
+
+
+]
+l2hSize :tex2html_wrap_inline4249:8.0pt::8.0pt::54.21835pt.
+[115
+
+
+]
+l2hSize :tex2html_wrap_inline4251:8.01782pt::8.01782pt::39.33334pt.
+[116
+
+
+]
+l2hSize :tex2html_wrap_inline4253:8.01782pt::8.01782pt::39.33334pt.
+[117
+
+
+]
+l2hSize :tex2html_wrap_inline4255:7.44444pt::7.44444pt::9.36118pt.
+[118
+
+
+]
+l2hSize :tex2html_wrap_inline4257:7.44444pt::7.44444pt::9.36118pt.
+[119
+
+
+]
+l2hSize :tex2html_wrap_inline4259:7.72223pt::7.72223pt::19.35077pt.
+[120
+
+
+]
+l2hSize :tex2html_wrap_inline4261:7.72223pt::7.72223pt::19.35077pt.
+[121
+
+
+]
+l2hSize :displaymath531:39.1206pt::0.0pt::349.0pt.
+[122
+
+
+]
+l2hSize :tex2html_wrap_inline4263:7.44444pt::7.44444pt::49.90956pt.
+[123
+
+
+]
+l2hSize :tex2html_wrap_inline4265:7.44444pt::7.44444pt::5.61288pt.
+[124
+
+
+]
+l2hSize :tex2html_wrap_inline4267:7.44444pt::7.44444pt::5.33511pt.
+[125
+
+
+]
+l2hSize :tex2html_wrap_inline4275:8.0pt::8.0pt::19.79524pt.
+[126
+
+
+]
+l2hSize :tex2html_wrap_inline4277:8.0pt::8.0pt::19.79524pt.
+[127
+
+
+]
+l2hSize :tex2html_wrap_inline4279:8.01782pt::8.01782pt::19.79524pt.
+[128
+
+
+]
+l2hSize :tex2html_wrap_inline4281:8.01782pt::8.01782pt::19.79524pt.
+[129
+
+
+]
+l2hSize :tex2html_wrap_inline4287:6.44989pt::0.0pt::11.3056pt.
+[130
+
+
+]
+l2hSize :tex2html_wrap_inline4289:6.94989pt::6.94989pt::50.82654pt.
+[131
+
+
+]
+l2hSize :tex2html_wrap_inline4291:6.94989pt::6.94989pt::35.28122pt.
+[132
+
+
+]
+l2hSize :tex2html_wrap_inline4293:9.63329pt::9.63329pt::99.21754pt.
+[133
+
+
+]
+l2hSize :tex2html_wrap_inline4301:7.44444pt::7.44444pt::29.04626pt.
+[134
+
+
+]
+Overfull \hbox (39.76422pt too wide) detected at line 999
+\OML/cmm/m/it/10 ^^^[]\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 r\OML/cmm/m/it/10 ; \OT
+1/cmr/bx/n/10 r[]\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@[] \OT1/cmr/m/n/10 + [
+] []
+ []
+
+l2hSize :displaymath584:32.50009pt::0.0pt::349.0pt.
+[135
+
+
+]
+l2hSize :tex2html_wrap_inline4307:9.44434pt::9.44434pt::32.88368pt.
+[136
+
+
+]
+l2hSize :tex2html_wrap_inline4311:9.44434pt::9.44434pt::93.01216pt.
+[137
+
+
+]
+l2hSize :tex2html_wrap_inline4315:7.33331pt::7.33331pt::17.25143pt.
+[138
+
+
+]
+l2hSize :tex2html_wrap_inline4317:8.0pt::8.0pt::45.00461pt.
+[139
+
+
+]
+l2hSize :tex2html_wrap_inline4321:7.36111pt::7.36111pt::13.3993pt.
+[140
+
+
+]
+l2hSize :displaymath648:23.06902pt::0.0pt::349.0pt.
+[141
+
+
+]
+l2hSize :tex2html_wrap_inline4327:8.94843pt::8.94843pt::73.29716pt.
+[142
+
+
+]
+l2hSize :tex2html_wrap_inline4331:10.94443pt::10.94443pt::15.97229pt.
+[143
+
+
+]
+l2hSize :tex2html_wrap_inline4335:10.94443pt::10.94443pt::61.4804pt.
+[144
+
+
+]
+l2hSize :tex2html_wrap_inline4341:8.0pt::8.0pt::66.68036pt.
+[145
+
+
+]
+l2hSize :tex2html_wrap_inline4343:8.0pt::8.0pt::56.88576pt.
+[146
+
+
+]
+l2hSize :tex2html_wrap_inline4347:7.33331pt::7.33331pt::16.28387pt.
+[147
+
+
+]
+l2hSize :displaymath690:26.50021pt::0.0pt::349.0pt.
+[148
+
+
+]
+l2hSize :tex2html_wrap_inline4353:10.94443pt::10.94443pt::83.66655pt.
+[149
+
+
+]
+l2hSize :tex2html_wrap_inline4355:8.0pt::8.0pt::51.64696pt.
+[150
+
+
+]
+l2hSize :displaymath711:26.50021pt::0.0pt::349.0pt.
+[151
+
+
+]
+l2hSize :tex2html_wrap_inline4357:9.52219pt::9.52219pt::28.8149pt.
+[152
+
+
+]
+l2hSize :displaymath740:28.82848pt::0.0pt::349.0pt.
+[153
+
+
+]
+l2hSize :tex2html_wrap_inline4367:7.33331pt::7.33331pt::42.19736pt.
+[154
+
+
+]
+l2hSize :tex2html_wrap_inline4369:10.94443pt::10.94443pt::23.52559pt.
+[155
+
+
+]
+l2hSize :tex2html_wrap_inline4375:9.29842pt::9.29842pt::32.13249pt.
+[156
+
+
+]
+l2hSize :tex2html_wrap_inline4377:7.33331pt::7.33331pt::8.40558pt.
+[157
+
+
+]
+l2hSize :tex2html_wrap_inline4379:9.29842pt::9.29842pt::21.67664pt.
+[158
+
+
+]
+l2hSize :tex2html_wrap_inline4381:6.83331pt::0.0pt::8.41806pt.
+[159
+
+
+]
+l2hSize :displaymath779:13.49998pt::0.0pt::349.0pt.
+[160
+
+
+]
+l2hSize :tex2html_wrap_inline4389:7.33331pt::7.33331pt::13.08685pt.
+[161
+
+
+]
+l2hSize :tex2html_wrap_inline4395:6.83331pt::0.0pt::7.72226pt.
+[162
+
+
+]
+l2hSize :tex2html_wrap_inline4403:7.33331pt::7.33331pt::15.11218pt.
+[163
+
+
+]
+l2hSize :displaymath795:23.51347pt::0.0pt::349.0pt.
+[164
+
+
+]
+l2hSize :tex2html_wrap_inline4409:7.44444pt::7.44444pt::12.43874pt.
+[165
+
+
+]
+l2hSize :tex2html_wrap_inline4411:6.59525pt::0.0pt::3.94516pt.
+[166
+
+
+]
+l2hSize :tex2html_wrap_inline4413:7.09525pt::7.09525pt::5.19052pt.
+[167
+
+
+]
+l2hSize :tex2html_wrap_inline4419:7.44444pt::7.44444pt::48.34729pt.
+[168
+
+
+]
+l2hSize :tex2html_wrap_inline4421:7.44444pt::7.44444pt::32.20139pt.
+[169
+
+
+]
+l2hSize :tex2html_wrap_inline4423:7.44444pt::7.44444pt::32.20139pt.
+[170
+
+
+]
+l2hSize :tex2html_wrap_inline4425:6.44989pt::0.0pt::4.11115pt.
+[171
+
+
+]
+l2hSize :tex2html_wrap_inline4427:6.83331pt::0.0pt::8.31949pt.
+[172
+
+
+]
+l2hSize :displaymath815:14.5pt::0.0pt::349.0pt.
+[173
+
+
+]
+Overfull \hbox (41.76694pt too wide) detected at line 1252
+\OML/cmm/m/it/10 E \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 K[]\OT1/cmr/m/n/10 (\O
+ML/cmm/m/it/10 b \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 b[]\OT1/cmr/m/n/10 )[] +
+ [] \OML/cmm/m/it/10 K[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R \OMS/cmsy/m/n/10 
+^^@ \OML/cmm/m/it/10 ^^R[]\OT1/cmr/m/n/10 )[] + [] \OML/cmm/m/it/10 K[] [] \OT1
+/cmr/m/n/10 + [] \OML/cmm/m/it/10 K[] []
+ []
+
+l2hSize :displaymath3887:34.81676pt::0.0pt::349.0pt.
+[174
+
+
+]
+l2hSize :displaymath851:28.31305pt::0.0pt::349.0pt.
+[175
+
+
+]
+l2hSize :tex2html_wrap_inline4431:6.94444pt::0.0pt::4.79169pt.
+[176
+
+
+]
+l2hSize :tex2html_wrap_inline4433:6.94444pt::0.0pt::5.47226pt.
+[177
+
+
+]
+l2hSize :tex2html_wrap_inline4437:6.94989pt::6.94989pt::6.75694pt.
+[178
+
+
+]
+l2hSize :tex2html_wrap_inline4439:9.66946pt::9.66946pt::204.60966pt.
+[179
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.1292 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap11383:7.40495pt::2.5pt::349.0pt.
+[180
+
+
+]
+l2hSize :tex2html_wrap_inline4441:6.94989pt::6.94989pt::12.05446pt.
+[181
+
+
+]
+l2hSize :tex2html_wrap_inline4443:6.94989pt::6.94989pt::13.64534pt.
+[182
+
+
+]
+l2hSize :tex2html_wrap_inline4445:15.0001pt::15.0001pt::108.50842pt.
+[183
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.1318 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap11390:7.40495pt::2.5pt::349.0pt.
+[184
+
+
+]
+l2hSize :tex2html_wrap_inline4447:7.44444pt::7.44444pt::16.65749pt.
+[185
+
+
+]
+l2hSize :tex2html_wrap_inline4449:7.44444pt::7.44444pt::16.39766pt.
+[186
+
+
+]
+l2hSize :tex2html_wrap_inline4451:6.94989pt::6.94989pt::12.33224pt.
+[187
+
+
+]
+l2hSize :tex2html_wrap_inline4453:6.94989pt::6.94989pt::13.92313pt.
+[188
+
+
+]
+l2hSize :tex2html_wrap_inline4457:6.94989pt::6.94989pt::12.77902pt.
+[189
+
+
+]
+l2hSize :tex2html_wrap_inline4459:15.0001pt::15.0001pt::148.3984pt.
+[190
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.1362 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap11401:7.40495pt::2.5pt::349.0pt.
+[191
+
+
+]
+l2hSize :tex2html_wrap_inline4463:6.44989pt::0.0pt::6.2153pt.
+[192
+
+
+]
+l2hSize :tex2html_wrap_inline4465:6.94989pt::6.94989pt::10.70143pt.
+[193
+
+
+]
+l2hSize :tex2html_wrap_inline4467:8.0pt::8.0pt::74.26334pt.
+[194
+
+
+]
+l2hSize :tex2html_wrap_inline4471:6.94989pt::6.94989pt::9.88898pt.
+[195
+
+
+]
+l2hSize :tex2html_wrap_inline4473:6.94989pt::6.94989pt::9.63666pt.
+[196
+
+
+]
+l2hSize :tex2html_wrap_inline4475:6.94989pt::6.94989pt::10.70143pt.
+[197
+
+
+]
+l2hSize :displaymath3888:14.5pt::0.0pt::349.0pt.
+[198
+
+
+]
+l2hSize :displaymath3889:26.31903pt::0.0pt::349.0pt.
+[199
+
+
+]
+l2hSize :tex2html_wrap_inline4481:7.44444pt::7.44444pt::14.18877pt.
+[200
+
+
+]
+l2hSize :tex2html_wrap_inline4483:7.44444pt::7.44444pt::14.41675pt.
+[201
+
+
+]
+l2hSize :tex2html_wrap_inline4485:6.94989pt::6.94989pt::5.76163pt.
+[202
+
+
+]
+l2hSize :tex2html_wrap_inline4489:9.82217pt::9.82217pt::15.55948pt.
+[203
+
+
+]
+l2hSize :tex2html_wrap_inline4491:10.36113pt::10.36113pt::14.18877pt.
+[204
+
+
+]
+l2hSize :tex2html_wrap_inline4495:8.0pt::8.0pt::16.1187pt.
+[205
+
+
+]
+l2hSize :displaymath1066:24.79865pt::0.0pt::349.0pt.
+[206
+
+
+]
+l2hSize :tex2html_wrap_inline4499:7.33331pt::7.33331pt::10.97653pt.
+[207
+
+
+]
+l2hSize :tex2html_wrap_inline4507:6.94444pt::0.0pt::6.02087pt.
+[208
+
+
+]
+l2hSize :tex2html_wrap_inline4515:6.94989pt::6.94989pt::11.4769pt.
+[209
+
+
+]
+l2hSize :tex2html_wrap_inline4517:6.94989pt::6.94989pt::10.85193pt.
+[210
+
+
+]
+l2hSize :tex2html_wrap_inline4521:6.94989pt::6.94989pt::55.89345pt.
+[211
+
+
+]
+l2hSize :displaymath3890:13.94444pt::0.0pt::349.0pt.
+[212
+
+
+]
+l2hSize :tex2html_wrap_inline4523:6.94989pt::6.94989pt::10.70143pt.
+[213
+
+
+]
+l2hSize :tex2html_wrap_inline4525:6.94989pt::6.94989pt::9.63666pt.
+[214
+
+
+]
+l2hSize :tex2html_wrap_inline4527:6.94989pt::6.94989pt::9.88898pt.
+[215
+
+
+]
+l2hSize :tex2html_wrap_inline4531:10.94443pt::10.94443pt::37.86595pt.
+[216
+
+
+]
+l2hSize :tex2html_wrap_inline4533:10.94443pt::10.94443pt::16.4596pt.
+[217
+
+
+]
+l2hSize :displaymath1096:35.00009pt::0.0pt::349.0pt.
+[218
+
+
+]
+l2hSize :tex2html_wrap_inline4537:10.94443pt::10.94443pt::20.00359pt.
+[219
+
+
+]
+l2hSize :tex2html_wrap_inline4539:10.36113pt::10.36113pt::9.60945pt.
+[220
+
+
+]
+l2hSize :displaymath3891:32.5108pt::0.0pt::349.0pt.
+[221
+
+
+]
+l2hSize :tex2html_wrap_inline4545:8.0pt::8.0pt::33.1918pt.
+[222
+
+
+]
+l2hSize :tex2html_wrap_inline4553:7.44444pt::7.44444pt::9.60945pt.
+[223
+
+
+]
+l2hSize :tex2html_wrap_inline4555:6.94444pt::0.0pt::5.7049pt.
+[224
+
+
+]
+l2hSize :displaymath3892:14.56187pt::0.0pt::349.0pt.
+[225
+
+
+]
+l2hSize :tex2html_wrap_inline4559:6.94989pt::6.94989pt::9.88898pt.
+[226
+
+
+]
+l2hSize :tex2html_wrap_inline4565:6.94989pt::6.94989pt::9.88898pt.
+[227
+
+
+]
+l2hSize :tex2html_wrap_inline4567:6.94989pt::6.94989pt::9.63666pt.
+[228
+
+
+]
+l2hSize :tex2html_wrap_inline4569:6.44989pt::0.0pt::6.93407pt.
+[229
+
+
+]
+Overfull \hbox (35.49008pt too wide) detected at line 1612
+\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + [
+] []
+ []
+
+l2hSize :displaymath3893:25.02621pt::0.0pt::349.0pt.
+[230
+
+
+]
+l2hSize :tex2html_wrap_inline4573:7.44444pt::7.44444pt::84.25592pt.
+[231
+
+
+]
+l2hSize :tex2html_wrap_inline4575:8.64003pt::8.64003pt::69.35884pt.
+[232
+
+
+]
+l2hSize :tex2html_wrap_inline4577:8.64003pt::8.64003pt::91.94673pt.
+[233
+
+
+]
+l2hSize :tex2html_wrap_inline4579:6.94989pt::6.94989pt::60.64572pt.
+[234
+
+
+]
+l2hSize :tex2html_wrap_inline4581:8.94843pt::8.94843pt::25.11064pt.
+[235
+
+
+]
+l2hSize :tex2html_wrap_inline4583:8.94843pt::8.94843pt::25.11064pt.
+[236
+
+
+]
+l2hSize :displaymath3894:23.20378pt::0.0pt::349.0pt.
+[237
+
+
+]
+l2hSize :displaymath3895:21.06903pt::0.0pt::349.0pt.
+[238
+
+
+]
+l2hSize :tex2html_wrap_inline4587:8.94843pt::8.94843pt::34.66388pt.
+[239
+
+
+]
+l2hSize :tex2html_wrap_inline4589:8.94843pt::8.94843pt::34.66388pt.
+[240
+
+
+]
+l2hSize :displaymath3896:23.20378pt::0.0pt::349.0pt.
+[241
+
+
+]
+l2hSize :displaymath3898:25.4002pt::0.0pt::349.0pt.
+[242
+
+
+]
+l2hSize :tex2html_wrap_inline4591:6.83331pt::0.0pt::7.73268pt.
+[243
+
+
+]
+l2hSize :tex2html_wrap_inline4595:7.33331pt::7.33331pt::18.19347pt.
+[244
+
+
+]
+l2hSize :displaymath3899:25.84439pt::0.0pt::349.0pt.
+[245
+
+
+]
+l2hSize :displaymath3901:31.40027pt::0.0pt::349.0pt.
+[246
+
+
+]
+l2hSize :tex2html_wrap_inline4597:6.44989pt::0.0pt::6.00351pt.
+[247
+
+
+]
+l2hSize :tex2html_wrap_inline4599:6.94989pt::6.94989pt::10.21878pt.
+[248
+
+
+]
+l2hSize :displaymath3902:27.59253pt::0.0pt::349.0pt.
+[249
+
+
+]
+l2hSize :tex2html_wrap_inline4601:6.94989pt::6.94989pt::5.53128pt.
+[250
+
+
+]
+l2hSize :tex2html_wrap_inline4607:6.94989pt::6.94989pt::6.23288pt.
+[251
+
+
+]
+l2hSize :tex2html_wrap_inline4609:7.96227pt::0.0pt::14.9584pt.
+[252
+
+
+]
+l2hSize :displaymath3903:16.14851pt::0.0pt::349.0pt.
+[253
+
+
+]
+l2hSize :tex2html_wrap_inline4613:6.94989pt::6.94989pt::26.78833pt.
+[254
+
+
+]
+l2hSize :displaymath3904:23.01347pt::0.0pt::349.0pt.
+[255
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.1787 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap11556:7.40495pt::2.5pt::349.0pt.
+[256
+
+
+]
+l2hSize :tex2html_wrap_inline4615:7.33331pt::7.33331pt::12.48618pt.
+[257
+
+
+]
+l2hSize :tex2html_wrap_inline4617:7.44444pt::7.44444pt::17.803pt.
+[258
+
+
+]
+l2hSize :tex2html_wrap_inline4619:8.0pt::8.0pt::20.44589pt.
+[259
+
+
+]
+l2hSize :displaymath1308:23.40234pt::0.0pt::349.0pt.
+[260
+
+
+]
+l2hSize :tex2html_wrap_inline4621:8.0pt::8.0pt::16.97925pt.
+[261
+
+
+]
+l2hSize :tex2html_wrap_inline4623:8.0pt::8.0pt::49.14725pt.
+[262
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.1835 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap11567:7.40495pt::2.5pt::349.0pt.
+[263
+
+
+]
+l2hSize :tex2html_wrap_inline4625:8.64003pt::8.64003pt::46.21521pt.
+[264
+
+
+]
+l2hSize :tex2html_wrap_inline4629:7.44444pt::7.44444pt::44.98497pt.
+[265
+
+
+]
+l2hSize :tex2html_wrap_inline4635:6.83331pt::0.0pt::8.17018pt.
+[266
+
+
+]
+l2hSize :tex2html_wrap_inline4637:8.0pt::8.0pt::77.84425pt.
+[267
+
+
+]
+l2hSize :tex2html_wrap_inline4639:8.0pt::8.0pt::97.23932pt.
+[268
+
+
+]
+l2hSize :tex2html_wrap_inline4641:8.0pt::8.0pt::19.38896pt.
+[269
+
+
+]
+l2hSize :displaymath1343:25.5558pt::0.0pt::349.0pt.
+[270
+
+
+]
+l2hSize :tex2html_wrap_inline4645:6.94989pt::6.94989pt::12.12534pt.
+[271
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.1894 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap11584:7.40495pt::2.5pt::349.0pt.
+[272
+
+
+]
+l2hSize :tex2html_wrap_inline4651:8.0pt::8.0pt::43.59724pt.
+[273
+
+
+]
+l2hSize :tex2html_wrap_inline4653:8.0pt::8.0pt::19.5591pt.
+[274
+
+
+]
+l2hSize :tex2html_wrap_inline4655:8.91226pt::8.91226pt::28.67424pt.
+[275
+
+
+]
+l2hSize :tex2html_wrap_inline4657:8.91226pt::8.91226pt::28.67424pt.
+[276
+
+
+]
+l2hSize :displaymath1371:26.38914pt::0.0pt::349.0pt.
+[277
+
+
+]
+l2hSize :tex2html_wrap_inline4661:9.46107pt::9.46107pt::85.0744pt.
+[278
+
+
+]
+l2hSize :tex2html_wrap_inline4663:7.33331pt::7.33331pt::38.87233pt.
+[279
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.1948 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap11599:7.40495pt::2.5pt::349.0pt.
+[280
+
+
+]
+l2hSize :tex2html_wrap_inline4665:8.0pt::8.0pt::27.87474pt.
+[281
+
+
+]
+l2hSize :tex2html_wrap_inline4667:8.0pt::8.0pt::51.91862pt.
+[282
+
+
+]
+l2hSize :tex2html_wrap_inline4669:8.0pt::8.0pt::17.61353pt.
+[283
+
+
+]
+l2hSize :displaymath1397:26.38914pt::0.0pt::349.0pt.
+[284
+
+
+]
+l2hSize :tex2html_wrap_inline4671:7.33331pt::7.33331pt::13.47922pt.
+[285
+
+
+]
+l2hSize :tex2html_wrap_inline4675:8.0pt::8.0pt::81.04387pt.
+[286
+
+
+]
+l2hSize :tex2html_wrap_inline4677:8.0pt::8.0pt::16.9202pt.
+[287
+
+
+]
+l2hSize :displaymath1412:14.86108pt::0.0pt::349.0pt.
+[288
+
+
+]
+l2hSize :tex2html_wrap_inline4681:8.0pt::8.0pt::115.15958pt.
+[289
+
+
+]
+Overfull \hbox (48.98804pt too wide) detected at line 2016
+\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = []  []
+
+ []
+
+l2hSize :displaymath1419:21.4579pt::0.0pt::349.0pt.
+[290
+
+
+]
+l2hSize :tex2html_wrap_inline4685:7.33331pt::7.33331pt::34.80202pt.
+[291
+
+
+]
+l2hSize :tex2html_wrap_inline4689:6.94989pt::6.94989pt::9.3577pt.
+[292
+
+
+]
+l2hSize :tex2html_wrap_inline4691:6.94989pt::6.94989pt::9.3577pt.
+[293
+
+
+]
+l2hSize :displaymath1432:25.9447pt::0.0pt::349.0pt.
+[294
+
+
+]
+l2hSize :displaymath1443:25.9447pt::0.0pt::349.0pt.
+[295
+
+
+]
+l2hSize :tex2html_wrap_inline4693:8.0pt::8.0pt::58.0691pt.
+[296
+
+
+]
+l2hSize :tex2html_wrap_inline4697:6.83331pt::0.0pt::8.36252pt.
+[297
+
+
+]
+l2hSize :displaymath1456:21.4579pt::0.0pt::349.0pt.
+[298
+
+
+]
+l2hSize :tex2html_wrap_inline4699:8.0pt::8.0pt::59.18019pt.
+[299
+
+
+]
+l2hSize :tex2html_wrap_inline4701:7.33331pt::7.33331pt::63.77502pt.
+[300
+
+
+]
+l2hSize :displaymath1466:21.4579pt::0.0pt::349.0pt.
+[301
+
+
+]
+l2hSize :tex2html_wrap_inline4703:8.0pt::8.0pt::71.89815pt.
+[302
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.2104 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap11631:7.40495pt::2.5pt::349.0pt.
+[303
+
+
+]
+l2hSize :tex2html_wrap_inline4705:10.59998pt::10.59998pt::63.05705pt.
+[304
+
+
+]
+l2hSize :displaymath1486:26.38914pt::0.0pt::349.0pt.
+[305
+
+
+]
+l2hSize :tex2html_wrap_inline4711:8.91226pt::8.91226pt::29.20203pt.
+[306
+
+
+]
+l2hSize :tex2html_wrap_inline4713:8.91226pt::8.91226pt::29.20203pt.
+[307
+
+
+]
+l2hSize :tex2html_wrap_inline4715:7.33331pt::7.33331pt::13.26532pt.
+[308
+
+
+]
+l2hSize :displaymath1508:23.51347pt::0.0pt::349.0pt.
+[309
+
+
+]
+l2hSize :tex2html_wrap_inline4719:7.44444pt::7.44444pt::12.58907pt.
+[310
+
+
+]
+l2hSize :displaymath1520:15.83327pt::0.0pt::349.0pt.
+[311
+
+
+]
+l2hSize :tex2html_wrap_inline4721:6.94989pt::6.94989pt::9.25827pt.
+[312
+
+
+]
+l2hSize :tex2html_wrap_inline4723:7.33331pt::7.33331pt::15.63745pt.
+[313
+
+
+]
+l2hSize :tex2html_wrap_inline4725:6.94444pt::0.0pt::26.86115pt.
+[314
+
+
+]
+l2hSize :tex2html_wrap_inline4727:7.33331pt::7.33331pt::28.59732pt.
+[315
+
+
+]
+l2hSize :tex2html_wrap_inline4729:6.94444pt::0.0pt::29.90977pt.
+[316
+
+
+]
+l2hSize :tex2html_wrap_inline4731:7.33331pt::7.33331pt::19.95293pt.
+[317
+
+
+]
+l2hSize :tex2html_wrap_inline4733:8.64003pt::8.64003pt::86.3048pt.
+[318
+
+
+]
+l2hSize :displaymath1540:15.83327pt::0.0pt::349.0pt.
+[319
+
+
+]
+l2hSize :tex2html_wrap_inline4739:6.83331pt::0.0pt::9.05698pt.
+[320
+
+
+]
+l2hSize :tex2html_wrap_inline4741:7.33331pt::7.33331pt::24.70844pt.
+[321
+
+
+]
+l2hSize :tex2html_wrap_inline4743:7.44444pt::7.44444pt::14.80565pt.
+[322
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.2237 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap11663:7.40495pt::2.5pt::349.0pt.
+[323
+
+
+]
+l2hSize :tex2html_wrap_inline4759:8.14003pt::0.0pt::11.23618pt.
+[324
+
+
+]
+l2hSize :tex2html_wrap_inline4761:8.14003pt::0.0pt::11.23618pt.
+[325
+
+
+]
+l2hSize :tex2html_wrap_inline4763:6.94989pt::6.94989pt::26.56696pt.
+[326
+
+
+]
+l2hSize :tex2html_wrap_inline4765:6.44989pt::0.0pt::16.77081pt.
+[327
+
+
+]
+l2hSize :tex2html_wrap_inline4767:6.94989pt::6.94989pt::16.31714pt.
+[328
+
+
+]
+l2hSize :tex2html_wrap_inline4769:6.44989pt::0.0pt::16.14584pt.
+[329
+
+
+]
+l2hSize :tex2html_wrap_inline4771:7.44444pt::7.44444pt::32.1841pt.
+[330
+
+
+]
+l2hSize :tex2html_wrap_inline4773:7.44444pt::7.44444pt::23.29527pt.
+[331
+
+
+]
+l2hSize :tex2html_wrap_inline4775:7.44444pt::7.44444pt::63.85062pt.
+[332
+
+
+]
+l2hSize :tex2html_wrap_inline4791:7.33331pt::7.33331pt::27.03502pt.
+[333
+
+
+]
+l2hSize :tex2html_wrap_inline4793:7.33331pt::7.33331pt::24.14891pt.
+[334
+
+
+]
+l2hSize :tex2html_wrap_inline4795:7.33331pt::7.33331pt::29.18079pt.
+[335
+
+
+]
+l2hSize :tex2html_wrap_inline4797:7.33331pt::7.33331pt::26.29468pt.
+[336
+
+
+]
+l2hSize :displaymath2223:26.15974pt::0.0pt::349.0pt.
+[337
+
+
+]
+l2hSize :tex2html_wrap_inline4817:7.33331pt::7.33331pt::24.37503pt.
+[338
+
+
+]
+l2hSize :tex2html_wrap_inline4819:7.33331pt::7.33331pt::23.08588pt.
+[339
+
+
+]
+l2hSize :tex2html_wrap_inline4821:6.94989pt::6.94989pt::15.86876pt.
+[340
+
+
+]
+l2hSize :tex2html_wrap_inline4823:6.94989pt::6.94989pt::16.96852pt.
+[341
+
+
+]
+l2hSize :tex2html_wrap_inline4825:8.64003pt::8.64003pt::75.30203pt.
+[342
+
+
+]
+l2hSize :tex2html_wrap_inline4827:7.33331pt::7.33331pt::10.81949pt.
+[343
+
+
+]
+l2hSize :tex2html_wrap_inline4829:6.94989pt::6.94989pt::9.49774pt.
+[344
+
+
+]
+l2hSize :displaymath3905:14.86108pt::0.0pt::349.0pt.
+[345
+
+
+]
+l2hSize :tex2html_wrap_inline4833:7.44444pt::7.44444pt::9.6806pt.
+[346
+
+
+]
+l2hSize :displaymath3906:14.86108pt::0.0pt::349.0pt.
+[347
+
+
+]
+l2hSize :tex2html_wrap_inline4837:7.44444pt::7.44444pt::10.9445pt.
+[348
+
+
+]
+l2hSize :displaymath3907:14.86108pt::0.0pt::349.0pt.
+[349
+
+
+]
+l2hSize :tex2html_wrap_inline4847:6.94989pt::6.94989pt::11.24307pt.
+[350
+
+
+]
+l2hSize :tex2html_wrap_inline4849:6.44989pt::0.0pt::6.50238pt.
+[351
+
+
+]
+l2hSize :tex2html_wrap_inline4851:6.94989pt::6.94989pt::25.54895pt.
+[352
+
+
+]
+l2hSize :tex2html_wrap_inline4853:6.94989pt::6.94989pt::25.42279pt.
+[353
+
+
+]
+l2hSize :tex2html_wrap_inline4855:6.94989pt::6.94989pt::25.21907pt.
+[354
+
+
+]
+l2hSize :tex2html_wrap_inline4857:6.94989pt::6.94989pt::27.65419pt.
+[355
+
+
+]
+l2hSize :tex2html_wrap_inline4859:6.94989pt::6.94989pt::27.52803pt.
+[356
+
+
+]
+l2hSize :tex2html_wrap_inline4861:6.94989pt::6.94989pt::27.32431pt.
+[357
+
+
+]
+l2hSize :tex2html_wrap_inline4863:6.94989pt::6.94989pt::10.71207pt.
+[358
+
+
+]
+l2hSize :tex2html_wrap_inline4865:6.94989pt::6.94989pt::10.48409pt.
+[359
+
+
+]
+l2hSize :tex2html_wrap_inline4867:6.94989pt::6.94989pt::10.28502pt.
+[360
+
+
+]
+l2hSize :tex2html_wrap_inline4869:7.33331pt::7.33331pt::49.76826pt.
+[361
+
+
+]
+l2hSize :displaymath3908:13.49998pt::0.0pt::349.0pt.
+[362
+
+
+]
+l2hSize :displaymath3909:14.86108pt::0.0pt::349.0pt.
+[363
+
+
+]
+l2hSize :displaymath3910:25.00023pt::0.0pt::349.0pt.
+[364
+
+
+]
+l2hSize :tex2html_wrap_inline4873:6.83331pt::0.0pt::12.4445pt.
+[365
+
+
+]
+l2hSize :tex2html_wrap_inline4875:6.83331pt::0.0pt::8.00005pt.
+[366
+
+
+]
+l2hSize :tex2html_wrap_inline4879:6.94989pt::6.94989pt::10.38199pt.
+[367
+
+
+]
+l2hSize :tex2html_wrap_inline4881:6.94989pt::6.94989pt::10.154pt.
+[368
+
+
+]
+l2hSize :tex2html_wrap_inline4891:7.33331pt::7.33331pt::63.5191pt.
+[369
+
+
+]
+l2hSize :tex2html_wrap_inline4893:7.33331pt::7.33331pt::13.12766pt.
+[370
+
+
+]
+l2hSize :tex2html_wrap_inline4895:7.33331pt::7.33331pt::12.89967pt.
+[371
+
+
+]
+l2hSize :tex2html_wrap_inline4897:7.33331pt::7.33331pt::12.7006pt.
+[372
+
+
+]
+l2hSize :tex2html_wrap_inline4899:6.86111pt::0.0pt::9.12498pt.
+[373
+
+
+]
+l2hSize :tex2html_wrap_inline4901:6.83331pt::0.0pt::9.625pt.
+[374
+
+
+]
+l2hSize :tex2html_wrap_inline4907:6.83331pt::0.0pt::14.62502pt.
+[375
+
+
+]
+l2hSize :displaymath3911:13.49998pt::0.0pt::349.0pt.
+[376
+
+
+]
+l2hSize :tex2html_wrap_inline4911:7.33331pt::7.33331pt::9.382pt.
+[377
+
+
+]
+l2hSize :tex2html_wrap_inline4913:7.33331pt::7.33331pt::9.382pt.
+[378
+
+
+]
+l2hSize :tex2html_wrap_inline4915:7.33331pt::7.33331pt::12.13338pt.
+[379
+
+
+]
+l2hSize :tex2html_wrap_inline4917:7.33331pt::7.33331pt::12.13338pt.
+[380
+
+
+]
+l2hSize :displaymath3912:12.83333pt::0.0pt::349.0pt.
+[381
+
+
+]
+l2hSize :displaymath3913:13.49998pt::0.0pt::349.0pt.
+[382
+
+
+]
+l2hSize :tex2html_wrap_inline4919:6.94989pt::6.94989pt::14.68756pt.
+[383
+
+
+]
+l2hSize :displaymath3914:13.49998pt::0.0pt::349.0pt.
+[384
+
+
+]
+l2hSize :tex2html_wrap_inline4921:7.33331pt::7.33331pt::13.02087pt.
+[385
+
+
+]
+l2hSize :tex2html_wrap_inline4923:7.33331pt::7.33331pt::13.02087pt.
+[386
+
+
+]
+l2hSize :tex2html_wrap_inline4927:6.94989pt::6.94989pt::8.27783pt.
+[387
+
+
+]
+l2hSize :tex2html_wrap_inline4929:6.94989pt::6.94989pt::8.27783pt.
+[388
+
+
+]
+l2hSize :tex2html_wrap_inline4931:6.94989pt::6.94989pt::8.27783pt.
+[389
+
+
+]
+l2hSize :displaymath3915:13.49998pt::0.0pt::349.0pt.
+[390
+
+
+]
+l2hSize :tex2html_wrap_inline4943:7.33331pt::7.33331pt::13.02087pt.
+[391
+
+
+]
+l2hSize :displaymath3916:13.49998pt::0.0pt::349.0pt.
+[392
+
+
+]
+l2hSize :tex2html_wrap_inline4975:8.14003pt::0.0pt::11.12508pt.
+[393
+
+
+]
+l2hSize :tex2html_wrap_inline4977:6.83331pt::0.0pt::8.52782pt.
+[394
+
+
+]
+l2hSize :tex2html_wrap_inline4983:7.44444pt::7.44444pt::9.88202pt.
+[395
+
+
+]
+l2hSize :tex2html_wrap_inline4995:7.44444pt::7.44444pt::18.21538pt.
+[396
+
+
+]
+l2hSize :tex2html_wrap_inline5001:7.33331pt::7.33331pt::15.1827pt.
+[397
+
+
+]
+l2hSize :tex2html_wrap_inline5003:7.33331pt::7.33331pt::15.04866pt.
+[398
+
+
+]
+l2hSize :tex2html_wrap_inline5013:6.83331pt::0.0pt::11.29169pt.
+[399
+
+
+]
+l2hSize :tex2html_wrap_inline5015:7.33331pt::7.33331pt::15.78851pt.
+[400
+
+
+]
+l2hSize :tex2html_wrap_inline5019:7.33331pt::7.33331pt::13.27089pt.
+[401
+
+
+]
+l2hSize :tex2html_wrap_inline5021:7.33331pt::7.33331pt::10.79172pt.
+[402
+
+
+]
+l2hSize :tex2html_wrap_inline5023:8.0pt::8.0pt::22.72227pt.
+[403
+
+
+]
+l2hSize :tex2html_wrap_inline5055:7.33331pt::7.33331pt::13.47922pt.
+[404
+
+
+]
+l2hSize :tex2html_wrap_inline5067:8.91226pt::8.91226pt::29.20203pt.
+[405
+
+
+]
+l2hSize :tex2html_wrap_inline5069:8.91226pt::8.91226pt::29.20203pt.
+[406
+
+
+]
+l2hSize :tex2html_wrap_inline5077:7.33331pt::7.33331pt::20.33003pt.
+[407
+
+
+]
+l2hSize :tex2html_wrap_inline5079:8.0pt::8.0pt::72.76755pt.
+[408
+
+
+]
+l2hSize :tex2html_wrap_inline5083:6.94989pt::6.94989pt::10.98851pt.
+[409
+
+
+]
+l2hSize :tex2html_wrap_inline5087:6.94989pt::6.94989pt::8.59727pt.
+[410
+
+
+]
+l2hSize :displaymath3005:21.4579pt::0.0pt::349.0pt.
+[411
+
+
+]
+l2hSize :tex2html_wrap_inline5091:6.83331pt::0.0pt::9.625pt.
+[412
+
+
+]
+l2hSize :tex2html_wrap_inline5097:6.94989pt::6.94989pt::26.94867pt.
+[413
+
+
+]
+l2hSize :displaymath3012:31.68898pt::0.0pt::349.0pt.
+[414
+
+
+]
+l2hSize :tex2html_wrap_inline5099:6.94989pt::6.94989pt::10.71304pt.
+[415
+
+
+]
+l2hSize :tex2html_wrap_inline5101:6.94989pt::6.94989pt::9.63666pt.
+[416
+
+
+]
+l2hSize :tex2html_wrap_inline5103:6.94989pt::6.94989pt::10.57639pt.
+[417
+
+
+]
+l2hSize :tex2html_wrap_inline5105:6.94989pt::6.94989pt::10.57639pt.
+[418
+
+
+]
+l2hSize :tex2html_wrap_inline5107:7.33331pt::7.33331pt::13.14243pt.
+[419
+
+
+]
+l2hSize :tex2html_wrap_inline5115:7.33331pt::7.33331pt::49.68738pt.
+[420
+
+
+]
+l2hSize :tex2html_wrap_inline5119:7.33331pt::7.33331pt::49.68738pt.
+[421
+
+
+]
+l2hSize :tex2html_wrap_inline5125:8.0pt::8.0pt::141.99884pt.
+[422
+
+
+]
+l2hSize :tex2html_wrap_inline5127:6.59525pt::0.0pt::22.2784pt.
+[423
+
+
+]
+l2hSize :tex2html_wrap_inline5129:7.33331pt::7.33331pt::29.79922pt.
+[424
+
+
+]
+l2hSize :tex2html_wrap_inline5133:7.09525pt::7.09525pt::23.52376pt.
+[425
+
+
+]
+l2hSize :tex2html_wrap_inline5135:7.33331pt::7.33331pt::31.04459pt.
+[426
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.2944 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap11992:7.40495pt::2.5pt::349.0pt.
+[427
+
+
+]
+l2hSize :tex2html_wrap_inline5143:8.01782pt::8.01782pt::56.28445pt.
+[428
+
+
+]
+l2hSize :tex2html_wrap_inline5145:8.01782pt::8.01782pt::56.28445pt.
+[429
+
+
+]
+l2hSize :tex2html_wrap_inline5147:6.83331pt::0.0pt::9.56946pt.
+[430
+
+
+]
+l2hSize :tex2html_wrap_inline5151:6.44989pt::0.0pt::2.16666pt.
+[431
+
+
+]
+l2hSize :tex2html_wrap_inline5179:6.94989pt::6.94989pt::14.80678pt.
+[432
+
+
+]
+l2hSize :tex2html_wrap_inline5181:6.94989pt::6.94989pt::14.5788pt.
+[433
+
+
+]
+l2hSize :tex2html_wrap_inline5183:6.94989pt::6.94989pt::14.80678pt.
+[434
+
+
+]
+l2hSize :tex2html_wrap_inline5185:6.94989pt::6.94989pt::14.5788pt.
+[435
+
+
+]
+l2hSize :tex2html_wrap_inline5187:6.44989pt::0.0pt::17.16629pt.
+[436
+
+
+]
+l2hSize :tex2html_wrap_inline5197:6.94989pt::6.94989pt::9.75584pt.
+[437
+
+
+]
+l2hSize :tex2html_wrap_inline5199:6.94989pt::6.94989pt::9.75584pt.
+[438
+
+
+]
+l2hSize :tex2html_wrap_inline5201:6.94989pt::6.94989pt::9.75584pt.
+[439
+
+
+]
+l2hSize :tex2html_wrap_inline5207:6.83331pt::0.0pt::5.68057pt.
+[440
+
+
+]
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3032 $\textrm{^^c3^^83^^c2^^85}
+                                 $%
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3032 $\textrm{^^c3^^83^^c2^^85}
+                                 $%
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+l2hSize :tex2html_wrap_inline5211:9.52496pt::0.0pt::15.50003pt.
+[441
+
+
+]
+l2hSize :tex2html_wrap_inline5221:6.83331pt::0.0pt::27.95824pt.
+[442
+
+
+]
+l2hSize :tex2html_wrap_inline5239:7.33331pt::7.33331pt::12.80907pt.
+[443
+
+
+]
+l2hSize :tex2html_wrap_inline5245:7.33331pt::7.33331pt::27.29518pt.
+[444
+
+
+]
+l2hSize :tex2html_wrap_inline5247:6.83331pt::0.0pt::13.92369pt.
+[445
+
+
+]
+l2hSize :tex2html_wrap_inline5251:7.33331pt::7.33331pt::16.73967pt.
+[446
+
+
+]
+l2hSize :tex2html_wrap_inline5259:6.83331pt::0.0pt::8.0417pt.
+[447
+
+
+]
+l2hSize :tex2html_wrap_inline5303:7.33331pt::7.33331pt::17.88515pt.
+[448
+
+
+]
+l2hSize :tex2html_wrap_inline5319:7.44444pt::7.44444pt::11.37502pt.
+[449
+
+
+]
+l2hSize :tex2html_wrap_inline5321:6.94989pt::6.94989pt::8.59727pt.
+[450
+
+
+]
+l2hSize :tex2html_wrap_inline5323:7.44444pt::7.44444pt::11.37502pt.
+[451
+
+
+]
+l2hSize :tex2html_wrap_inline5327:7.44444pt::7.44444pt::19.15282pt.
+[452
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.3125 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap12155:7.40495pt::2.5pt::349.0pt.
+[453
+
+
+] (images.aux) ) 
+Here is how much of TeX's memory you used:
+ 1668 strings out of 20880
+ 20374 string characters out of 197307
+ 67276 words of memory out of 350001
+ 4644 multiletter control sequences out of 10000+15000
+ 6825 words of font info for 19 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 10000
+ 28i,10n,19p,662b,219s stack positions out of 3000i,100n,1500p,50000b,4000s
+
+Output written on images.dvi (453 pages, 116272 bytes).

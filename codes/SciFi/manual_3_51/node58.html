@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>optim</TITLE>
+<META NAME="description" CONTENT="optim">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node59.html">
+<LINK REL="previous" HREF="node57.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node59.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1113"
+  HREF="node59.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1109"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1103"
+  HREF="node57.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1111"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1114"
+  HREF="node59.html">en_tol</A>
+<B> Up:</B> <A NAME="tex2html1110"
+  HREF="node43.html">Tolerance Box</A>
+<B> Previous:</B> <A NAME="tex2html1104"
+  HREF="node57.html">max_opt</A>
+ &nbsp <B>  <A NAME="tex2html1112"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION040221500000000000000">
+optim</A>
+</H3>
+
+<P>
+The energy minimisation which is specified using this keyword
+is the default algorithm. Note that if the <TT>.&lt;MDcontrol&gt;</TT> box
+is found (section <A HREF="node82.html#Sec::MDcontrol-Box">8.5.1</A>), then the Molecular Dynamic
+simulation is performed in which case this option is either ignored
+when fictious dynamics with shells is assumed, or used to optimise
+shells positions in the case of the only-cores dynamics (more details
+in section <A HREF="node82.html#Sec::MDcontrol-Box">8.5.1</A>).
+
+<P>
+Controls the relaxation algorithm used, at present either
+steepest descent, bfgs, conjugate gradient or both. In the latter
+case the conjugate gradient method is applied during the first 3 iterations
+after which the bfgs is applied to finish the relaxation calculation.
+To use both bfgs and conjugate gradient just put the optim flag twice
+in the input, once with bfgs and once with conj. The conj option can
+also take an additional parameter which changes the default conjugate
+gradient algorithm from fl_reeves to polak_rib. 
+
+<P>
+<I>Options</I>: <B>steep, bfgs, conj (polak</B> or <B>fl_reeves
+(</B><I>default</I><B>))</B>
+
+<P>
+<I>Default</I>: off
+
+<P>
+<I>Example 1</I>: <B>optim conj polak</B>
+
+<P>
+<I>Example 2</I>: <B>optim conj </B>
+
+<P>
+<I>Example 3</I>: <B>optim bfgs</B>
+
+<P>
+<DIV ALIGN="LEFT">
+<I>Example 4</I>: <B>optim bfgs</B>
+</DIV>
+
+<P>
+<DIV ALIGN="LEFT">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;optim conj</B>
+</DIV>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1113"
+  HREF="node59.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1109"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1103"
+  HREF="node57.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1111"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1114"
+  HREF="node59.html">en_tol</A>
+<B> Up:</B> <A NAME="tex2html1110"
+  HREF="node43.html">Tolerance Box</A>
+<B> Previous:</B> <A NAME="tex2html1104"
+  HREF="node57.html">max_opt</A>
+ &nbsp <B>  <A NAME="tex2html1112"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

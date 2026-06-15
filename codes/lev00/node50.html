@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A note on calculating electronic DOS</TITLE>
+<META NAME="description" CONTENT="A note on calculating electronic DOS">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node51.html">
+<LINK REL="previous" HREF="node49.html">
+<LINK REL="up" HREF="node46.html">
+<LINK REL="next" HREF="node51.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html897"
+  HREF="node51.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html893"
+  HREF="node46.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html887"
+  HREF="node49.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html895"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html898"
+  HREF="node51.html">A note on calculating</A>
+<B> Up:</B> <A NAME="tex2html894"
+  HREF="node46.html">Utility lev00</A>
+<B> Previous:</B> <A NAME="tex2html888"
+  HREF="node49.html">Main definitions</A>
+ &nbsp <B>  <A NAME="tex2html896"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00440000000000000000"></A><A NAME="sec:note-on-DOS-lev00"></A>
+<BR>
+A note on calculating electronic DOS
+</H1>
+
+<P>
+The calculation of the total/local/projected DOS is performed using
+the method of tetrahedra. In this method the whole Brillouin zone
+(BZ) is split into tetrahedra, the energies <!-- MATH
+ $\varepsilon_{n\mathbf{k}}$
+ -->
+<IMG
+ WIDTH="31" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img129.png"
+ ALT="$\varepsilon_{n\mathbf{k}}$">
+at the vertices of which are to be calculated by the DFT code. These
+energies are collected in a file <TT>band.out</TT> (Sections <A HREF="node78.html#cha:Working-with-VASP">4</A>
+- <A HREF="node89.html#cha:Working-with-CASTEP">6</A>) and then (together with the information
+contained in the file <TT>brill.dat</TT> written by <B><I>tetr</I></B>)
+are used by <B><I>lev00</I></B> to calculate the DOS. 
+
+<P>
+Calculation of the volume integrals in the reciprocal space in Eqs.
+(<A HREF="node49.html#3">3.4</A>), (<A HREF="node49.html#4">3.5</A>) is done analytically in the method of tetrahedra.
+It is also possible to do a <I>smearing</I> (convolution) of your
+original (raw) DOS curves for every band, <!-- MATH
+ $N_{n}(\epsilon)$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img130.png"
+ ALT="$N_{n}(\epsilon)$">, by calculating
+instead the integral <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\bar{N}_{n}(\epsilon)=\int_{E_{bot}-\gamma\sigma}^{E_{top}+\gamma\sigma}g(\epsilon-\varepsilon)N_{n}(\varepsilon)d\varepsilon,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:smeared-DOS-lev00"></A><IMG
+ WIDTH="279" HEIGHT="49" BORDER="0"
+ SRC="img131.png"
+ ALT="\begin{displaymath}
+\bar{N}_{n}(\epsilon)=\int_{E_{bot}-\gamma\sigma}^{E_{top}+\...
+...a\sigma}g(\epsilon-\varepsilon)N_{n}(\varepsilon)d\varepsilon,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Here <!-- MATH
+ $g(\epsilon-\varepsilon)$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img132.png"
+ ALT="$g(\epsilon-\varepsilon)$"> is a Gaussian function with some
+dispersion <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$\sigma $">; <IMG
+ WIDTH="37" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img133.png"
+ ALT="$E_{bot}$"> and <IMG
+ WIDTH="38" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img134.png"
+ ALT="$E_{top}$"> define the ``raw''
+boundaries for each physical band and the factor <IMG
+ WIDTH="16" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$\gamma$"> allows
+you to broaden them. The energy integral in Eq. (<A HREF="node50.html#eq:smeared-DOS-lev00">3.9</A>)
+can be calculated in two ways leading to <I>slow</I> and <I>fast</I>
+methods: 
+
+<P>
+
+<UL>
+<LI><I>slow</I> - since in the method of tetrahedra the raw DOS is always
+a set of continuous functions of energy in finite intervals (within
+each tetrahedron), the integration can also be worked out analytically
+and the result be expressed via exponentials and error functions;
+this method is slow, but yet exact on many occasions.
+</LI>
+<LI><I>fast</I> - alternatively, the integral in Eq. (<A HREF="node50.html#eq:smeared-DOS-lev00">3.9</A>)
+can aslo be calculated numerically.
+</LI>
+</UL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html897"
+  HREF="node51.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html893"
+  HREF="node46.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html887"
+  HREF="node49.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html895"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html898"
+  HREF="node51.html">A note on calculating</A>
+<B> Up:</B> <A NAME="tex2html894"
+  HREF="node46.html">Utility lev00</A>
+<B> Previous:</B> <A NAME="tex2html888"
+  HREF="node49.html">Main definitions</A>
+ &nbsp <B>  <A NAME="tex2html896"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

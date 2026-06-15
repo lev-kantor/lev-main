@@ -1,0 +1,402 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Force Field Box</TITLE>
+<META NAME="description" CONTENT="Force Field Box">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node159.html">
+<LINK REL="previous" HREF="node118.html">
+<LINK REL="up" HREF="node116.html">
+<LINK REL="next" HREF="node144.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2236"
+  HREF="node144.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2232"
+  HREF="node116.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2226"
+  HREF="node142.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2234"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2237"
+  HREF="node144.html">How to specify the</A>
+<B> Up:</B> <A NAME="tex2html2233"
+  HREF="node116.html">vAFM input</A>
+<B> Previous:</B> <A NAME="tex2html2227"
+  HREF="node142.html">Stabil_Time2</A>
+ &nbsp <B>  <A NAME="tex2html2235"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION04033000000000000000"></A><A NAME="sub:Force-Field-Box"></A>
+<BR>
+Force Field Box
+</H2>
+
+<P>
+<DIV ALIGN="LEFT">
+<B><I>Box Keyword</I></B>: <TT>.&lt;Force_Field&gt;</TT>
+</DIV>
+
+<P></P>
+
+
+<P>
+This box contains all the ncessary information necessary to specify
+the force field for the tip-surface interaction. The force field consists
+of three components: the van der Waals force, chemical short-range
+and long-range forces. 
+
+<P>
+Presently, the vdW force is given within the plane-sphere model, <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F_{vdW}(z)=-\frac{HR}{6z^{2}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:vdw"></A><IMG
+ WIDTH="122" HEIGHT="39" BORDER="0"
+ SRC="img411.png"
+ ALT="\begin{displaymath}
+F_{vdW}(z)=-\frac{HR}{6z^{2}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(37)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img412.png"
+ ALT="$H$"> is the Hamaker's constant, <IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img266.png"
+ ALT="$R$"> - the sphere radius, <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$z$">
+- distance of the sphere bottom from the surface plane. 
+
+<P>
+The long-range chemical component of the force, which works above
+some critical vertical height <IMG
+ WIDTH="46" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img413.png"
+ ALT="$z_{bound}$">, is generally given by
+the expression: <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+F_{lr}(z)=\sum_{n=0}^{6}\frac{g_{n}}{(z+z_{0})^{n}},\,\,\,\,\, z\geq z_{bound}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:long_range_force"></A><IMG
+ WIDTH="248" HEIGHT="55" BORDER="0"
+ SRC="img414.png"
+ ALT="\begin{displaymath}
+F_{lr}(z)=\sum_{n=0}^{6}\frac{g_{n}}{(z+z_{0})^{n}},\,\,\,\,\, z\geq z_{bound}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(38)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img415.png"
+ ALT="$g_{n}$"> and <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img416.png"
+ ALT="$z_{0}$">are fitting parameters. 
+
+<P>
+The short-range part of the chemical force is specified in a file
+on a lateral grid with respect to the direct lattice vectors of the
+surface, <!-- MATH
+ $\mathbf{a}_{1}$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img417.png"
+ ALT="$\mathbf{a}_{1}$"> and <!-- MATH
+ $\mathbf{a}_{2}$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img418.png"
+ ALT="$\mathbf{a}_{2}$">. At each grid point
+the force is specified for a number of <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img419.png"
+ ALT="$N_{z}$"> (not necessarily equidistant)
+<IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$z$"> values below <IMG
+ WIDTH="46" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img413.png"
+ ALT="$z_{bound}$">. If the grid points along <!-- MATH
+ $\mathbf{a}_{1}$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img417.png"
+ ALT="$\mathbf{a}_{1}$">
+are numbered by <!-- MATH
+ $0,1,\ldots,N_{1}$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img420.png"
+ ALT="$0,1,\ldots,N_{1}$"> and similarly for the points along
+the <!-- MATH
+ $\mathbf{a}_{2}$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img418.png"
+ ALT="$\mathbf{a}_{2}$"> direction, numbered as <!-- MATH
+ $0,1,\ldots,N_{2}$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img421.png"
+ ALT="$0,1,\ldots,N_{2}$">,
+then the force is provided for every <IMG
+ WIDTH="10" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img166.png"
+ ALT="$i$">, <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.png"
+ ALT="$j$"> <!-- MATH
+ $(i=0,\ldots,N_{1}\,\textrm{and}\, j=0,\ldots,N_{2})$
+ -->
+<IMG
+ WIDTH="229" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img422.png"
+ ALT="$(i=0,\ldots,N_{1}\,\textrm{and}\, j=0,\ldots,N_{2})$">.
+To preserve periodicity of the lattice, the force fields for <IMG
+ WIDTH="39" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img423.png"
+ ALT="$i=0$">
+and <IMG
+ WIDTH="51" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img424.png"
+ ALT="$i=N_{1}$"> (any <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.png"
+ ALT="$j$">) should be identical; similarly for values
+of <IMG
+ WIDTH="41" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img425.png"
+ ALT="$j=0$"> and <IMG
+ WIDTH="53" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img426.png"
+ ALT="$j=N_{2}$"> (any <IMG
+ WIDTH="10" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img166.png"
+ ALT="$i$">). The format of the force field
+file is described in section <A HREF="node158.html#sub:Structure-of-the-force-file">9.3.5</A>
+below. 
+
+<P>
+Two examples of the force field for the MgO (001) surface are given
+in Fig. <A HREF="node143.html#cap:grid-for-force">12</A>
+<DIV ALIGN="CENTER"><A NAME="cap:grid-for-force"></A><A NAME="3844"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+How the force field can be specified for the MgO (001) surface: (a)
+in the case of the 5x5 grid, the lattice vectors<!-- MATH
+ $\mathbf{a}_{1}$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img417.png"
+ ALT="$\mathbf{a}_{1}$">and
+<!-- MATH
+ $\mathbf{a}_{2}$
+ -->
+<IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img418.png"
+ ALT="$\mathbf{a}_{2}$"> correspond to the primitive unit cell; (b) in the
+case of the 9x9 grid, a two times larger cell is chosen with the lattice
+vectors <!-- MATH
+ $\mathbf{a}_{1}^{\prime}=\mathbf{a}_{1}-\mathbf{a}_{2}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img428.png"
+ ALT="$\mathbf{a}_{1}^{\prime}=\mathbf{a}_{1}-\mathbf{a}_{2}$"> and
+<!-- MATH
+ $\mathbf{a}_{2}^{\prime}=\mathbf{a}_{1}+\mathbf{a}_{2}$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img429.png"
+ ALT="$\mathbf{a}_{2}^{\prime}=\mathbf{a}_{1}+\mathbf{a}_{2}$">. The original
+grid used to calculate the force field in non-equilvalent points in
+the primitive cell is shown by dashed lines in (a).</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="171" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img427.png"
+ ALT="\includegraphics[%%
+height=7cm]{xfig.grid.eps}">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+. In the directory <TT>examples/MgO/force_field</TT> you can also
+find raw data for the MgO force field calculated using the Sci-Fi
+code. The calculations were performed using a 64 atom 4x4x4 MgO cube
+tip with a Mg atom at the tip apex. The raw data for the force field
+are set in directories 
+
+<P>
+<TT>&#92;X=0,Y=0</TT>,
+
+<P>
+<TT>&#92;X=0.5305,Y=0.5305,</TT>
+
+<P>
+<TT>&#92;X=0,Y=2.122</TT>,
+
+<P>
+<DIV ALIGN="LEFT">
+etc., corresponding to different values of the <IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img430.png"
+ ALT="$X$">
+and <IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img394.png"
+ ALT="$Y$"> within the primitive cell as shown by the dashed lines in
+Fig. <A HREF="node143.html#cap:grid-for-force">12</A> (a). The coordinate axes are those
+shown in Fig. <A HREF="node143.html#cap:grid-for-force">12</A>, and the Mg-O distance is
+equal to 2.122 &#197;. The results of the calculation for a 2D scan
+using either of the force field are collected in directories <TT>examples/MgO/results_5x5</TT>
+and <TT>examples/MgO/results_9x9</TT> (see also section <A HREF="node185.html#sub:2Dimage_S.dat">11.4</A>).
+</DIV>
+
+<P>
+The information in the box is provided in the same way as in the previous
+case: each time a keyword is used which is followed by the necessary
+parameters. The order of each input is arbitrary, the order within
+each input is fixed. 
+
+<P>
+<B>Important</B>: contrary to all other boxes, all values here are
+provided using eV and &#197;<IMG
+ WIDTH="7" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img431.png"
+ ALT="$\,$"> units!!!
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html2238"
+  HREF="node144.html">How to specify the short-range force</A>
+<LI><A NAME="tex2html2239"
+  HREF="node145.html">Force_field_file</A>
+<LI><A NAME="tex2html2240"
+  HREF="node146.html">Pixels{1,2,z} </A>
+<LI><A NAME="tex2html2241"
+  HREF="node147.html">Lattice{/A1(xy),/A2(xy)} </A>
+<LI><A NAME="tex2html2242"
+  HREF="node148.html">Long-range part of the force</A>
+<LI><A NAME="tex2html2243"
+  HREF="node149.html">Long-Range{bound,z0,g0,...,g6}</A>
+<LI><A NAME="tex2html2244"
+  HREF="node150.html">vdW{H,R}</A>
+<LI><A NAME="tex2html2245"
+  HREF="node151.html">*Parameters necessary to run vAFM and SciFi together</A>
+<LI><A NAME="tex2html2246"
+  HREF="node152.html">Atom_Sphere{#,dist}</A>
+<LI><A NAME="tex2html2247"
+  HREF="node153.html">interpolate{F/T,points}</A>
+<LI><A NAME="tex2html2248"
+  HREF="node154.html">extrapolate{F/T,polyn,points}</A>
+<LI><A NAME="tex2html2249"
+  HREF="node155.html">smooth{F/T,points}</A>
+<LI><A NAME="tex2html2250"
+  HREF="node156.html">Testing the whole range force field</A>
+<LI><A NAME="tex2html2251"
+  HREF="node157.html">Force_Test </A>
+<LI><A NAME="tex2html2252"
+  HREF="node158.html">Structure of the force-field file</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2236"
+  HREF="node144.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html2232"
+  HREF="node116.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html2226"
+  HREF="node142.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html2234"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html2237"
+  HREF="node144.html">How to specify the</A>
+<B> Up:</B> <A NAME="tex2html2233"
+  HREF="node116.html">vAFM input</A>
+<B> Previous:</B> <A NAME="tex2html2227"
+  HREF="node142.html">Stabil_Time2</A>
+ &nbsp <B>  <A NAME="tex2html2235"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

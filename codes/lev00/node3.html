@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>What is this all about?</TITLE>
+<META NAME="description" CONTENT="What is this all about?">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html227"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html223"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html217"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html225"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html228"
+  HREF="node4.html">Menus</A>
+<B> Up:</B> <A NAME="tex2html224"
+  HREF="node2.html">Introduction</A>
+<B> Previous:</B> <A NAME="tex2html218"
+  HREF="node2.html">Introduction</A>
+ &nbsp <B>  <A NAME="tex2html226"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00210000000000000000">
+What is this all about?</A>
+</H1>
+
+<P>
+Most of the modern condensed matter computer codes implement <I>periodic
+boundary conditions</I> (PBC). These are used not only in calculating
+the crystal bulk, but also for calculating single molecules, surfaces,
+molecules adsorbed on surfaces, and so on. Care is needed when working
+in PBC, especially if complex structures are to be modelled, such
+e.g. as steps, kinks, dislocations. On the other hand, a calculation
+of the electronic DOS or previewing electronic densities require specific
+tools that understand PBC and the way the DFT codes output their data. 
+
+<P>
+Many workers in the field have their own little routines that do the
+job. I also started from those. However, I quickly realised that I
+cannot remember what was in each of the routines let along their names,
+input file formats, etc. That is why it became apparent that there
+is a need for a single user-friendly code that would do everything
+you might want in a way that would not require input files and remembering
+how to run it, would understand the input and output files of the
+DFT codes and would have a lot of useful features.
+
+<P>
+Initially, I combined all my little codes into a package that included
+<IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-point and unit cell generator and a DOS calculator.
+At the time, only the <B><I>CASTEP</I></B> code was supported. As
+the new features being developed and new problems arose, a lot of
+useful functrionality have been added. Most importantly, the interface
+in the package codes has been completely rewritten to allow for different
+formats. This way support for <B><I>VASP</I></B> and <B><I>SIESTA</I></B>
+has been allowed and was eventually added. I can now say that the
+real purpose of the package is to accompany any grid based plane wave
+or local basis set DFT code that utilise periodic boundary conditions,
+the codes like thos ementioned above. 
+
+<P>
+The two most important codes in the package are <B><I>tetr</I></B>
+and <B><I>lev00</I></B>. The first one is mainly to be used for
+<I>pre-processing</I> of the input data, e.g. complex modifications
+of your geometry input files, including the <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points,
+i.e. <I>before</I> a DFT run. The second code is used for the <I>post-processing</I>,
+i.e. calculating electronic DOS and charge density maps <I>after</I>
+the DFT run. As one particular application has been recently added,
+namely the phonon calculation engine, the <B><I>tetr</I></B> has
+gone long way beyond its initial simple pre-processing purpose and
+now does both things: it creates the necessary input files for <B><I>VASP</I></B>
+and <B><I>SIESTA</I></B>, and then, after the calculation is performed
+with those codes, the <B><I>tetr</I></B> is run again to calculate
+the frequencies, eigenvectors and phonon DOS.
+
+<P>
+The most sophisticated support is provided for the old <B>CASTEP/CETEP</B>
+code. These are now redundant and their support was stopped a while
+ago. Presently, <B><I>VASP</I></B> and <B><I>SIESTA</I></B> are
+supported only. Still, at the end of this manual some information
+on CASTEP is also provided (may be not working though), mainly for
+historical purposes.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html227"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html223"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html217"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html225"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html228"
+  HREF="node4.html">Menus</A>
+<B> Up:</B> <A NAME="tex2html224"
+  HREF="node2.html">Introduction</A>
+<B> Previous:</B> <A NAME="tex2html218"
+  HREF="node2.html">Introduction</A>
+ &nbsp <B>  <A NAME="tex2html226"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

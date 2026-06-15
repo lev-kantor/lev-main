@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A note on calculating volume integrals</TITLE>
+<META NAME="description" CONTENT="A note on calculating volume integrals">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node52.html">
+<LINK REL="previous" HREF="node50.html">
+<LINK REL="up" HREF="node46.html">
+<LINK REL="next" HREF="node52.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html909"
+  HREF="node52.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html905"
+  HREF="node46.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html899"
+  HREF="node50.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html907"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html910"
+  HREF="node52.html">Detailed description of options</A>
+<B> Up:</B> <A NAME="tex2html906"
+  HREF="node46.html">Utility lev00</A>
+<B> Previous:</B> <A NAME="tex2html900"
+  HREF="node50.html">A note on calculating</A>
+ &nbsp <B>  <A NAME="tex2html908"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00450000000000000000"></A><A NAME="sec:volume-integrals-lev00"></A>
+<BR>
+A note on calculating volume integrals
+</H1>
+
+<P>
+In many cases (e.g. when calculating a projected DOS (LDOS), atomic
+charges or when analysing the density as to be described in later
+sections) real space integrals are calculated numerically. Two methods
+are implemented for those which are referred to as ``<I>conserving</I>''
+and ``<I>non-conserving</I>'' algorithms: 
+
+<P>
+
+<UL>
+<LI><I>the conserving</I> <I>method</I>: provides the correct charge
+inside a sphere or a layer, each grid point in the cell is scanned
+once and only those grid points contribute which are positioned inside
+the volume; when checking whether a grid point is inside the volume,
+lattice translations are also applied. As the region of integration
+increases (e.g. the radius of a sphere), the integration volume approaches
+that of the cell. Still, the integration volume will never exceed
+that of the cell. Thus, this method ``conserves'' the volume of
+the cell. 
+</LI>
+<LI><I>the non-conserving</I> <I>method</I>: a finer grid is constructed
+in the region of interest (a sphere or a layer) and the integrals
+are calculated by summing up contributions on this finer grid (an
+interpolation is used). This method does not give the volume conservation
+as the volume increases, howewer, it is more efficient provided the
+integration volumes are sufficiently small.
+</LI>
+</UL>
+If the size of the cell is large enough with respect to the region
+of integration, than both methods should give close results. 
+
+<P>
+The conserving method is extremely demanding and scales linearly with
+the size of the system. The non-conserving method scales linearly
+with the size of its own grid. However, since this grid is limited
+to the size of the integration region, the time of the calculation
+does not depend on the size of the system at all, so that this method
+is extremely efficient.
+
+<P>
+In the conserving method the original grid is used with the directions
+along the cell basic vectors <!-- MATH
+ $\mathbf{a}_{i}$
+ -->
+<IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img135.png"
+ ALT="$\mathbf{a}_{i}$">. That is why this method
+is inappropriate for calculations of the angular momenta projected
+DOS for non-simple-cubic cells or for the calculation of the dipole/quadrupole
+momenta of a molecule. On the contrary, the non-conserving method
+has its own grid which is always cubic (along the Cartesian axes)
+so that it has the atomic symmetry and is ideal for these calculations.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html909"
+  HREF="node52.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html905"
+  HREF="node46.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html899"
+  HREF="node50.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html907"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html910"
+  HREF="node52.html">Detailed description of options</A>
+<B> Up:</B> <A NAME="tex2html906"
+  HREF="node46.html">Utility lev00</A>
+<B> Previous:</B> <A NAME="tex2html900"
+  HREF="node50.html">A note on calculating</A>
+ &nbsp <B>  <A NAME="tex2html908"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

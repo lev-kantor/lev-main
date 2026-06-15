@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>How to compile the code</TITLE>
+<META NAME="description" CONTENT="How to compile the code">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node36.html">
+<LINK REL="previous" HREF="node34.html">
+<LINK REL="up" HREF="node34.html">
+<LINK REL="next" HREF="node36.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html612"
+  HREF="node36.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html608"
+  HREF="node34.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html602"
+  HREF="node34.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html610"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html613"
+  HREF="node36.html">parameter file</A>
+<B> Up:</B> <A NAME="tex2html609"
+  HREF="node34.html">Installation</A>
+<B> Previous:</B> <A NAME="tex2html603"
+  HREF="node34.html">Installation</A>
+ &nbsp <B>  <A NAME="tex2html611"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION03010000000000000000">
+How to compile the code</A>
+</H1>
+
+<P>
+The code should be in the form of a gzipped tarball, such as <TT>scifi_3.51.tgz</TT>.
+Assuming this, then type:
+
+<P><P>
+<BR>
+
+
+<P>
+<TT>tar -zxvf scifi_3.51.tgz</TT>
+
+<P><P>
+<BR>
+
+
+<P>
+this will extract all the necessary files, including directories
+<TT>SHELLM</TT> (the main code including the vAFM part) and <TT>IMAGE</TT>
+(the image part of the code), a directory <TT>examples</TT> containing
+three example input files and the corresponding output files. 
+
+<P>
+To compile the program, a <TT>Makefile</TT> in either of the directories
+<TT>SHELLM</TT> and <TT>IMAGE,</TT> should be edited to include the
+command of your Fortran 77 or Fortran 90 compiler (g77 is the default),
+along with any compiler options (-o (optimised) is default). 
+
+<P>
+The code can be compiled into either a serial execultable or a MPICH
+parallel version, via the <TT>cpp</TT> precompiler. To compile a parallel
+version, the <TT>MPIFLAG = -DMPI</TT> must be added to the <TT>Makefile</TT>,
+as well as the MPICH flags to your compiler and the path of your <TT>mpich.h</TT>
+header file. 
+
+<P>
+To compile the code, type 
+
+<P></P>
+
+
+<P>
+<TT>make</TT> 
+
+<P></P>
+
+
+<P>
+in either of the two directories; this will produce the
+executables <TT>shellm</TT> and <TT>image</TT>, respectively. Make
+sure that you have access to both executables, i.e. that the directories
+are included in the <TT>$path</TT> variable. 
+
+<P>
+You can now run the code (see below how). Make sure that you can reproduce
+the output from the the example inputs provided in the <TT>examples</TT>
+directory (section <A HREF="node187.html#Sec::Example-Inputs">V</A>).
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html612"
+  HREF="node36.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html608"
+  HREF="node34.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html602"
+  HREF="node34.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html610"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html613"
+  HREF="node36.html">parameter file</A>
+<B> Up:</B> <A NAME="tex2html609"
+  HREF="node34.html">Installation</A>
+<B> Previous:</B> <A NAME="tex2html603"
+  HREF="node34.html">Installation</A>
+ &nbsp <B>  <A NAME="tex2html611"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

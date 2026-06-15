@@ -1,0 +1,432 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Theory: use of symmetry</TITLE>
+<META NAME="description" CONTENT="Theory: use of symmetry">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node27.html">
+<LINK REL="previous" HREF="node25.html">
+<LINK REL="up" HREF="node23.html">
+<LINK REL="next" HREF="node27.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html580"
+  HREF="node27.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html576"
+  HREF="node23.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html570"
+  HREF="node25.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html578"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html581"
+  HREF="node27.html">Theory: Elimination of translations</A>
+<B> Up:</B> <A NAME="tex2html577"
+  HREF="node23.html">Calculation of phonons (atomic</A>
+<B> Previous:</B> <A NAME="tex2html571"
+  HREF="node25.html">Theory: practical side</A>
+ &nbsp <B>  <A NAME="tex2html579"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00368300000000000000"></A><A NAME="sub:Theory-vibr-symmetry-tetr"></A>
+<BR>
+Theory: use of symmetry
+</H3>
+
+<P>
+The usage of symmetry may substantially reduce the number of DFT runs
+required to obtain all elements of the FCM. The idea is the following:
+
+<P>
+For the given group <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$G$">, all cell atoms can be split into ``orbits''
+or ``stars'' of atoms, <IMG
+ WIDTH="14" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\xi$">. Atoms within an orbit can be obtained
+from each other by applying an appropriate symmetry operation <IMG
+ WIDTH="53" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$g\in G$">;
+atoms from different orbits cannot be related to each other in this
+way. The idea is to find appropriate linear combinations of the atomic
+displacements so that the number of degrees of freedom be reduced.
+
+<P>
+This is done, first, by finding symmetry-adapted displacements for
+each orbit separately:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\eta_{\Gamma\xi f\alpha}=\sum_{i}U_{\xi f\alpha,i}^{(\Gamma)}u_{\xi i}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:symm-adapted-displ"></A><IMG
+ WIDTH="159" HEIGHT="49" BORDER="0"
+ SRC="img72.png"
+ ALT="\begin{displaymath}
+\eta_{\Gamma\xi f\alpha}=\sum_{i}U_{\xi f\alpha,i}^{(\Gamma)}u_{\xi i}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="27" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.png"
+ ALT="$u_{\xi i}$"> are atomic Cartesian displacements for all atoms
+belonging to the orbit <IMG
+ WIDTH="14" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\xi$">, <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img74.png"
+ ALT="$\Gamma$"> is an irreducible representation,
+<IMG
+ WIDTH="16" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$f$"> - its repetition and <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="$\alpha$">- dimension index (for 2D and 3D
+representations). Combining all symmetry-adapted displacements (for
+all orbits and all represnetations), we get the same number of degrees
+of freedom as originally, when Cartesian displacements <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$u_{i}$"> were
+used. Therefore, one can write <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\eta_{\nu}=\sum_{i}U_{\nu i}u_{i}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:symm-adapt-displ-matrix-form"></A><IMG
+ WIDTH="109" HEIGHT="49" BORDER="0"
+ SRC="img76.png"
+ ALT="\begin{displaymath}
+\eta_{\nu}=\sum_{i}U_{\nu i}u_{i}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where the transformation matrix <!-- MATH
+ $U=\left\Vert U_{\nu i}\right\Vert$
+ -->
+<IMG
+ WIDTH="89" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$U=\left\Vert U_{\nu i}\right\Vert $">
+is a square matrix. This matrix can be constructed using the projection
+operator method well known in the group theory (see, e.g. Ref. [L.
+Kantorovich and Livshits- Phys. Stat. Sol. (b) <B>174</B> (1992)
+79]). It can also be constructed as a unitary and real matrix. The
+latter property is obtained by combining 1D complex conjugate irreducible
+representation into a single real 2D representation, see details in
+the same paper. Thus, one can relate atomic displacements back to
+the symmetry-adapted ones via <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+u_{i}=\sum_{\nu}U_{\nu i}\eta_{\nu}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:displ-via-symm-adapted"></A><IMG
+ WIDTH="109" HEIGHT="47" BORDER="0"
+ SRC="img78.png"
+ ALT="\begin{displaymath}
+u_{i}=\sum_{\nu}U_{\nu i}\eta_{\nu}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+or <!-- MATH
+ $\mathbf{u}=\mathbf{U}^{T}\eta$
+ -->
+<IMG
+ WIDTH="79" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.png"
+ ALT="$\mathbf{u}=\mathbf{U}^{T}\eta$"> in the matrix form. Inserting
+these expansions into the energy expression (<A HREF="node24.html#eq:energy-expansion">2.2</A>),
+one obtains an important result:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+E-E_{0}=\sum_{\Gamma\xi f\alpha}F_{\Gamma\xi f\alpha}\eta_{\Gamma\xi f\alpha}+\frac{1}{2}\sum_{\Gamma\alpha}\sum_{\xi f\xi^{\prime}f^{\prime}}\Phi_{\xi f,\xi^{\prime}f^{\prime}}^{(\Gamma)}\eta_{\Gamma\xi f\alpha}\eta_{\Gamma\xi^{\prime}f^{\prime}\alpha}+\ldots
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:energy-expan-symmetry"></A><IMG
+ WIDTH="501" HEIGHT="56" BORDER="0"
+ SRC="img80.png"
+ ALT="\begin{displaymath}
+E-E_{0}=\sum_{\Gamma\xi f\alpha}F_{\Gamma\xi f\alpha}\eta_{\...
+...ma\xi f\alpha}\eta_{\Gamma\xi^{\prime}f^{\prime}\alpha}+\ldots
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.8)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Importantly, the sum <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\sum_{i\in\xi}\sum_{j\in\xi^{\prime}}U_{\xi f\alpha,i}^{(\Gamma)}\Phi_{ij}U_{\xi^{\prime}f^{\prime}\alpha^{\prime},j}^{(\Gamma^{\prime})}=\delta_{\Gamma\Gamma^{\prime}}\delta_{\alpha\alpha^{\prime}}\Phi_{\xi f,\xi^{\prime}f^{\prime}}^{(\Gamma)}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:Fij-to-symm-adapted-FCM"></A><IMG
+ WIDTH="323" HEIGHT="52" BORDER="0"
+ SRC="img81.png"
+ ALT="\begin{displaymath}
+\sum_{i\in\xi}\sum_{j\in\xi^{\prime}}U_{\xi f\alpha,i}^{(\Ga...
+...\alpha^{\prime}}\Phi_{\xi f,\xi^{\prime}f^{\prime}}^{(\Gamma)}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.9)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+is diaginal in <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img74.png"
+ ALT="$\Gamma$"> and does not depend on the dimension index
+<IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="$\alpha$">. It is here where the simplification comes. 
+
+<P>
+Therefore, the method works in the following way (again, for simplicity,
+the method of a single displacement is considered):
+
+<P>
+
+<UL>
+<LI>firstly, a representation <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img74.png"
+ ALT="$\Gamma$"> is chosen for the given orbit
+<IMG
+ WIDTH="14" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\xi$">
+</LI>
+<LI>then, atomic displacements are obtained for all atoms in the orbit
+using Eq. (<A HREF="node26.html#eq:displ-via-symm-adapted">2.7</A>) (atoms of other orbits
+will not be displaced in this case)
+</LI>
+<LI>a DFT code is run for the new geometry and the Cartesian forces on
+<I>all</I> atoms of the cell are obtained
+</LI>
+<LI>the Cartesian forces <IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$F_{i}$"> behave similarly to atomic displacements;
+therefore, from all <IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$F_{i}$"> one can obtain their symmetry-adapted
+counterparts using <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+F_{\Gamma\xi f\alpha}=\sum_{i}U_{\xi f\alpha,i}^{(\Gamma)}F_{i}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="157" HEIGHT="49" BORDER="0"
+ SRC="img82.png"
+ ALT="\begin{displaymath}
+F_{\Gamma\xi f\alpha}=\sum_{i}U_{\xi f\alpha,i}^{(\Gamma)}F_{i}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI>using these forces, the symmetry adapted elements of the FCM, <!-- MATH
+ $\Phi_{\xi f,\xi^{\prime}f^{\prime}}^{(\Gamma)}$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.png"
+ ALT="$\Phi_{\xi f,\xi^{\prime}f^{\prime}}^{(\Gamma)}$">,
+can be obtained as explained in Section <A HREF="node24.html#sub:Theory-vibr-idea-tetr">2.6.8.1</A>;
+note that the matrix does not depend on index <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="$\alpha$">; therefore,
+it is sufficient to use <IMG
+ WIDTH="51" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img84.png"
+ ALT="$\alpha=1$">, which also reduces the number
+of DFT runs
+</LI>
+<LI>diagonalising the matrix <!-- MATH
+ $\Phi^{(\Gamma)}=\left\Vert \Phi_{\xi f,\xi^{\prime}f^{\prime}}^{(\Gamma)}\right\Vert$
+ -->
+<IMG
+ WIDTH="135" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.png"
+ ALT="$\Phi^{(\Gamma)}=\left\Vert \Phi_{\xi f,\xi^{\prime}f^{\prime}}^{(\Gamma)}\right\Vert $">,
+one obtains squares of all phonon frequencies, <!-- MATH
+ $\omega_{\Gamma\lambda}^{2}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.png"
+ ALT="$\omega_{\Gamma\lambda}^{2}$">,
+for the given representation <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img74.png"
+ ALT="$\Gamma$">, the index <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img87.png"
+ ALT="$\lambda$"> numbering
+all solutions
+</LI>
+<LI>the eigenvectors, <!-- MATH
+ $\eta_{\Gamma\xi f\alpha}$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.png"
+ ALT="$\eta_{\Gamma\xi f\alpha}$">, can be turned into
+actual displacements via Eq. (<A HREF="node26.html#eq:displ-via-symm-adapted">2.7</A>); thus,
+normal coordinates for each mode <!-- MATH
+ $(\Gamma\lambda)$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.png"
+ ALT="$(\Gamma\lambda)$"> can be obtained
+</LI>
+<LI>the procedure is repeated for another orbit <IMG
+ WIDTH="14" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\xi$"> and/or another
+<IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img74.png"
+ ALT="$\Gamma$">
+</LI>
+</UL>
+Note that the FCM in Cartesian atomic displacements, <IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$\Phi_{ij}$">,
+can be restored from the matrices <!-- MATH
+ $\Phi^{(\Gamma)}$
+ -->
+<IMG
+ WIDTH="38" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img90.png"
+ ALT="$\Phi^{(\Gamma)}$"> using the inverse
+to the Eq. (<A HREF="node26.html#eq:Fij-to-symm-adapted-FCM">2.9</A>) transformation: 
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\Phi_{ij}=\sum_{\Gamma\alpha}\sum_{f\in\xi}\sum_{f^{\prime}\in\xi^{\prime}}U_{\xi f\alpha,i}^{(\Gamma)}\Phi_{\xi f,\xi^{\prime}f^{\prime}}^{(\Gamma)}U_{\xi^{\prime}f^{\prime}\alpha,j}^{(\Gamma)}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:symm-adapted-FCM-to-Fij"></A><IMG
+ WIDTH="290" HEIGHT="52" BORDER="0"
+ SRC="img91.png"
+ ALT="\begin{displaymath}
+\Phi_{ij}=\sum_{\Gamma\alpha}\sum_{f\in\xi}\sum_{f^{\prime}\...
+...rime}}^{(\Gamma)}U_{\xi^{\prime}f^{\prime}\alpha,j}^{(\Gamma)}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.10)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+This transformation will prove useful if other atomic masses should
+be tried (isotops) and it will be used in option <B>V3</B> of the
+main menu, Section <A HREF="node33.html#sub:V3-tetr">2.6.8.9</A>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html580"
+  HREF="node27.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html576"
+  HREF="node23.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html570"
+  HREF="node25.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html578"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html581"
+  HREF="node27.html">Theory: Elimination of translations</A>
+<B> Up:</B> <A NAME="tex2html577"
+  HREF="node23.html">Calculation of phonons (atomic</A>
+<B> Previous:</B> <A NAME="tex2html571"
+  HREF="node25.html">Theory: practical side</A>
+ &nbsp <B>  <A NAME="tex2html579"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

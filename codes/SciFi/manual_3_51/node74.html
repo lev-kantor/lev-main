@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>PairPotenc Box</TITLE>
+<META NAME="description" CONTENT="PairPotenc Box">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node75.html">
+<LINK REL="previous" HREF="node73.html">
+<LINK REL="up" HREF="node72.html">
+<LINK REL="next" HREF="node75.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1314"
+  HREF="node75.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1310"
+  HREF="node72.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1304"
+  HREF="node73.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1312"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1315"
+  HREF="node75.html">BondTolerance Box</A>
+<B> Up:</B> <A NAME="tex2html1311"
+  HREF="node72.html">Interactions between atoms</A>
+<B> Previous:</B> <A NAME="tex2html1305"
+  HREF="node73.html">ShellPar Box</A>
+ &nbsp <B>  <A NAME="tex2html1313"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION04024200000000000000">
+PairPotenc Box</A>
+</H3>
+
+<P>
+<B><I>Box Keyword</I></B>: <TT>.&lt;PairPotenc&gt;</TT>
+
+<P></P>
+
+
+<P>
+This box contains the parameters which control the interactions (excluding
+electrostatic charge-charge interactions which are calculated implicitly)
+between atoms in the system. It must contain an entry for each pair
+of elements including itself. If a pair is entered twice, only the
+first pair will be used. The following general short-range interaction
+can be used:
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+V(r)=\sum_{i}C_{i}r^{-n_{i}}+\sum_{j}A_{j}e^{-\frac{r}{\rho_{j}}}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="potential_eq"></A><IMG
+ WIDTH="223" HEIGHT="47" BORDER="0"
+ SRC="img337.png"
+ ALT="\begin{displaymath}
+V(r)=\sum_{i}C_{i}r^{-n_{i}}+\sum_{j}A_{j}e^{-\frac{r}{\rho_{j}}}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(36)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+If you wish to use a cutoff (in &#197;) for the interactions,
+then the keyword <B>cutoff</B> must be the first entry in the pairpotenc
+box. If this keyword is not present then the cutoffs entered in the
+pair interactions will be ignored (in other words you do not need
+to enter any) and the interaction will be across the entire system.
+However, an error will be produced if the <B>cutoff</B> keyword
+is used, but cutoff values for every pair are not present. The parameters
+of the one pair's interaction are entered in the following format:
+
+<P><P>
+<BR>
+
+
+<P>
+Element1 Element2 (cutoff)
+
+<P>
+<B>exp</B> #
+
+<P>
+<!-- MATH
+ $A_{j}\;\rho_{j}$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img338.png"
+ ALT="$A_{j}\;\rho_{j}$"> 
+
+<P>
+<B>pow</B> #
+
+<P>
+<IMG
+ WIDTH="40" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img339.png"
+ ALT="$C_{i}\; n_{i}$"> 
+
+<P><P>
+<BR>
+
+
+<P>
+The number # after <B>exp</B> and <B>pow</B> specifies
+the number of exponential and power terms in the interaction respectively.
+The appropriate number of parameters must then follow below, remembering
+that all values should be entered in units of &#197; of distance and
+eV of energy.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1314"
+  HREF="node75.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1310"
+  HREF="node72.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1304"
+  HREF="node73.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1312"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1315"
+  HREF="node75.html">BondTolerance Box</A>
+<B> Up:</B> <A NAME="tex2html1311"
+  HREF="node72.html">Interactions between atoms</A>
+<B> Previous:</B> <A NAME="tex2html1305"
+  HREF="node73.html">ShellPar Box</A>
+ &nbsp <B>  <A NAME="tex2html1313"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

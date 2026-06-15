@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>virtual_param.inc file</TITLE>
+<META NAME="description" CONTENT="virtual_param.inc file">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node38.html">
+<LINK REL="previous" HREF="node36.html">
+<LINK REL="up" HREF="node34.html">
+<LINK REL="next" HREF="node38.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html636"
+  HREF="node38.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html632"
+  HREF="node34.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html626"
+  HREF="node36.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html634"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html637"
+  HREF="node38.html">How to run the</A>
+<B> Up:</B> <A NAME="tex2html633"
+  HREF="node34.html">Installation</A>
+<B> Previous:</B> <A NAME="tex2html627"
+  HREF="node36.html">parameter file</A>
+ &nbsp <B>  <A NAME="tex2html635"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION03030000000000000000"></A><A NAME="sub:virtual_param.inc-file"></A>
+<BR>
+virtual_param.inc file
+</H1>
+
+<P>
+The file <TT>virtual_param.inc</TT> contains all the matrix sizes
+for the calculation. This file must be edited and a compilation performed
+if changes are needed. Below is an example:
+
+<P><P>
+<BR>
+
+
+<P>
+<TT><FONT SIZE="-1">parameter (pi=3.141592653589793d0, twopi=2.d0*pi)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">c........ max number of steps/stages </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">parameter (N_of_stages_max=99)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">c......... scans: max number of scans allowed </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">parameter (N_of_scans_max=5)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">c......... units: distance, force double precision
+m_A,N_eVpA,J_eV</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">parameter (m_A=1.0d10,N_eVpA=6.2415d8,J_eV=6.2415d18)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">c......... threshold for the distance </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-1">parameter (threshold=1.0d-10) </FONT></TT>
+<P>
+
+
+<P>
+
+<P></P>
+
+<DIV ALIGN="LEFT">
+The most important parameters are: 
+</DIV>
+
+<P>
+
+<UL>
+<LI><TT>N_of_stages_max</TT> - maximum number of elementary stages
+for the whole run
+</LI>
+<LI><TT>N_of_scans_max</TT> - maximum number of scans allowed during
+a single run
+</LI>
+</UL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html636"
+  HREF="node38.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html632"
+  HREF="node34.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html626"
+  HREF="node36.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html634"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html637"
+  HREF="node38.html">How to run the</A>
+<B> Up:</B> <A NAME="tex2html633"
+  HREF="node34.html">Installation</A>
+<B> Previous:</B> <A NAME="tex2html627"
+  HREF="node36.html">parameter file</A>
+ &nbsp <B>  <A NAME="tex2html635"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

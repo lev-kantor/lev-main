@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Distance regulation</TITLE>
+<META NAME="description" CONTENT="Distance regulation">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="previous" HREF="node30.html">
+<LINK REL="up" HREF="node27.html">
+<LINK REL="next" HREF="node32.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html562"
+  HREF="node32.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html558"
+  HREF="node27.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html554"
+  HREF="node30.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html560"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html563"
+  HREF="node32.html">Influence of experimental noises</A>
+<B> Up:</B> <A NAME="tex2html559"
+  HREF="node27.html">How the virtual machine</A>
+<B> Previous:</B> <A NAME="tex2html555"
+  HREF="node30.html">Frequency demodulation and cantilever</A>
+ &nbsp <B>  <A NAME="tex2html561"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02021400000000000000"></A><A NAME="sub:Distance-regulation"></A>
+<BR>
+Distance regulation
+</H3>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fADC"></A><A NAME="3778"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 10:</STRONG>
+Automatic Distance Control.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="311" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img303.png"
+ ALT="\includegraphics[%%
+height=7cm,
+keepaspectratio]{pictures/adc.ps}">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The <!-- MATH
+ $\Delta f(t)=\frac{\Delta\omega(t)}{2\pi}$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img304.png"
+ ALT="$\Delta f(t)=\frac{\Delta\omega(t)}{2\pi}$"> signal coming from
+the frequency demodulator (see figure <A HREF="node30.html#fPLL">9</A>) is used to regulate
+the distance <IMG
+ WIDTH="36" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img259.png"
+ ALT="$D(t)$"> between the cantilever and the surface in order
+to satisfy the frequency setpoint <IMG
+ WIDTH="32" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img258.png"
+ ALT="$\Delta f_{c}$"> (see figure <A HREF="node31.html#fADC">10</A>)
+defined by the user [<A
+ HREF="node188.html#albrecht-fmdemodul">32</A>,<A
+ HREF="node188.html#durig-fmdemodul">33</A>]. Following
+this rule, one gets the following expression:
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+D(t)=D_{1}+K_{P}^{ADC}\left[\Delta f(t)-\Delta f_{c}\right]+K_{I}^{ADC}\int_{-\infty}^{t}\left[\Delta f(t')-\Delta f_{c}\right]\; dt'
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:eADC"></A><IMG
+ WIDTH="467" HEIGHT="47" BORDER="0"
+ SRC="img305.png"
+ ALT="\begin{displaymath}
+D(t)=D_{1}+K_{P}^{ADC}\left[\Delta f(t)-\Delta f_{c}\right]+...
+...\int_{-\infty}^{t}\left[\Delta f(t')-\Delta f_{c}\right]\; dt'
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(32)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+where we find, like in the AGC (see equation <A HREF="node29.html#eq:eAGC">24</A>), a PI
+(Proportional-Integral) system with gains <IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img306.png"
+ ALT="$K_{P}^{ADC}$"> and <IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img307.png"
+ ALT="$K_{I}^{ADC}$">
+defined by the user. <IMG
+ WIDTH="24" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img308.png"
+ ALT="$D_{1}$"> is an ajustable offset in distance.
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

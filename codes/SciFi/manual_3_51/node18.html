@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Constant angle between three atoms</TITLE>
+<META NAME="description" CONTENT="Constant angle between three atoms">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node19.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html397"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html393"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html389"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html395"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html398"
+  HREF="node19.html">Molecular Dynamics Algorithms</A>
+<B> Up:</B> <A NAME="tex2html394"
+  HREF="node14.html">Constrained minimisation</A>
+<B> Previous:</B> <A NAME="tex2html390"
+  HREF="node17.html">Constant distance between two</A>
+ &nbsp <B>  <A NAME="tex2html396"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION02017400000000000000">
+Constant angle between three atoms</A>
+</H3>
+
+<P>
+If angle <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img229.png"
+ ALT="$\alpha$"> between three atoms, say atoms 1, 2 and 3, is to
+be kept constant, then the redundand coordinate is choisen to be the
+<IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img192.png"
+ ALT="$x$"> coordinate of the first atom in the input (section <A HREF="node114.html#Sec::constraint-box">8.8</A>).
+It is expressed via other 8 coordinates as follows:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+x_{1}=x_{2}+\frac{1}{x_{32}^{2}-r_{32}^{2}\cos^{2}\alpha}\left\{ -x_{32}d\pm\sqrt{\left(x_{32}d\right)^{2}-\left(x_{32}^{2}-r_{32}^{2}\cos^{2}\alpha\right)\left(d^{2}-\Delta_{12}^{2}r_{32}^{2}\cos^{2}\alpha\right)}\right\}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="610" HEIGHT="45" BORDER="0"
+ SRC="img230.png"
+ ALT="\begin{displaymath}
+x_{1}=x_{2}+\frac{1}{x_{32}^{2}-r_{32}^{2}\cos^{2}\alpha}\le...
+...(d^{2}-\Delta_{12}^{2}r_{32}^{2}\cos^{2}\alpha\right)}\right\} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $d=y_{12}y_{32}+z_{12}z_{32}$
+ -->
+<IMG
+ WIDTH="137" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img231.png"
+ ALT="$d=y_{12}y_{32}+z_{12}z_{32}$">, <!-- MATH
+ $\Delta_{12}^{2}=y_{12}^{2}+z_{12}^{2}$
+ -->
+<IMG
+ WIDTH="114" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img232.png"
+ ALT="$\Delta_{12}^{2}=y_{12}^{2}+z_{12}^{2}$">,
+<!-- MATH
+ $r_{32}^{2}=x_{32}^{2}+y_{32}^{2}+z_{32}^{2}$
+ -->
+<IMG
+ WIDTH="150" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img233.png"
+ ALT="$r_{32}^{2}=x_{32}^{2}+y_{32}^{2}+z_{32}^{2}$"> and <!-- MATH
+ $x_{32}=x_{3}-x_{2}$
+ -->
+<IMG
+ WIDTH="100" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img234.png"
+ ALT="$x_{32}=x_{3}-x_{2}$">
+, etc. The correction to ``forces'' are straighforward to calculate;
+they look very cumbersome and not yet implemented. 
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>How to split a large job into a set of smaller jobs. Utility sum</TITLE>
+<META NAME="description" CONTENT="How to split a large job into a set of smaller jobs. Utility sum">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="previous" HREF="node94.html">
+<LINK REL="up" HREF="node91.html">
+<LINK REL="next" HREF="node96.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1486"
+  HREF="node96.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1482"
+  HREF="node91.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1478"
+  HREF="node94.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1484"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1487"
+  HREF="node96.html">Miscellaneous</A>
+<B> Up:</B> <A NAME="tex2html1483"
+  HREF="node91.html">Utilities used by CASTEP</A>
+<B> Previous:</B> <A NAME="tex2html1479"
+  HREF="node94.html">Utilities lev1 (old) and</A>
+ &nbsp <B>  <A NAME="tex2html1485"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00724000000000000000">
+How to split a large job into a set of smaller jobs. Utility <I>sum</I></A>
+</H2>
+
+<P>
+If your <B><I>CASTEP</I></B> job is estimated to be too
+large to run with all <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points simultaneously, you can
+split it into parts. Final files <TT>band.out</TT> and <TT>psi2.[option]</TT>
+are then compiled together by a special utility <B><I>sum</I></B>
+(hopefully, it works although it has been long time ago!).
+
+<P>
+Let us consider this case in detail: 
+
+<P>
+
+<UL>
+<LI>First of all, you should split the <B>k</B>-point sampling into
+subsets. For example, a 10 <B>k</B>-points job can be split into
+a set of 10 jobs with 1 <B>k</B>-point each or into a set of 3 jobs
+with 3, 3 and 4 <B>k</B>-points each, etc.
+</LI>
+<LI>Run <B><I>CASTEP</I></B> for each <B>k</B>-point subset and then
+rename all the output files, namely <TT>band.out</TT> and <TT>psi2.[option]</TT>,
+as follows: <TT>band.out.1, band.out.2,</TT> etc. and <TT>psi2.DOS.1</TT>,
+<TT>psi2.DOS.</TT>2, etc.
+</LI>
+<LI>Compile the <B><I>sum</I></B> routine using a shell-script <TT>sum.comp</TT>
+(provided) from your working directory and then run it as <PRE>
+ sum  [number of subsets]
+</PRE> The number of subsets is optional and will be asked if not given.
+To compile the <B><I>sum</I></B> utility you can use any of the
+<TT>param.inc</TT> files used to compile any of your <B><I>CASTEP</I></B>
+codes since the number of <B>k</B>-points, <TT>NKPTS</TT>, does
+not matter; only the grid size and the number of bands do matter.
+</LI>
+</UL>
+In the case that the option MAP is on, you should be a bit more careful.
+It is a good idea to refrain from running <I>all</I> <B><I>CASTEP</I></B>
+jobs one after another because this may lead to a collection of very
+large {<TT>psi2.MAP.N</TT>} files. To save the disk space, you can
+run the first two jobs, then <B><I>sum</I></B> them, delete files
+with the extensions <TT>.1</TT> and <TT>.2</TT> and move files <TT>psi2.[option]</TT>
+and <TT>band.out</TT> into <TT>psi2.[option].1</TT> and <TT>band.out.1</TT>,
+respectively. Then, you can run <B><I>CASTEP</I></B> for the 3rd
+subset, rename the files produced by attaching the extension <TT>.2</TT>
+and then run the <B><I>sum</I></B> again. This process must be repeated
+as many times as necessary for each sequential pair of subsets.
+
+<P>
+The <B><I>sum</I></B>-ming can be done automatically by constructing
+a shell-script. Suppose, we have 5 subsets of the <B>k</B>-points
+and the corresponding <TT>fort.15</TT> files for them are <TT>fort.15.1</TT>,
+<TT>fort.15.2</TT>, ..., <TT>fort.15.5</TT>, while the corresponding
+<B><I>CASTEP</I></B> codes are <B><I>castepx.1</I></B>, <B><I>castepx.2</I></B>,
+..., <B><I>castepx.5</I></B> (note that some of them may coincide
+but should have different names anyway; use symbolic link in this
+case). Then, the following script can be used: <PRE>
+ #! /bin/csh -f
+foreach num (1 2 3 4 5)
+if( $num == '1' ) then
+  set ext='1'
+elseif
+  set ext='2'
+endif
+ /bin/cp fort.15.$num fort.15
+castepx.$num &gt; problem.$num
+if( -e band.out )  mv band.out band.out.$ext 
+if ( -e psi2.DOS ) mv psi2.DOS psi2.DOS.$ext
+if ( -e psi2.DOp ) mv psi2.DOp psi2.DOp.$ext
+if ( -e psi2.SRF ) mv psi2.SRF psi2.SRF.$ext
+if ( -e psi2.MAP ) mv psi2.MAP psi2.MAP.$ext
+if( $ext == '2') then
+  sum 2 &gt; sum.$num
+  mv band.out band.out.1
+  if ( -e psi2.DOS ) mv psi2.DOS psi2.DOS.1
+  if ( -e psi2.DOp ) mv psi2.DOp psi2.DOp.1
+  if ( -e psi2.SRF ) mv psi2.SRF psi2.SRF.1
+  if ( -e psi2.MAP ) mv psi2.MAP psi2.MAP.1
+  if ( -e psi2.DOS.2 ) /bin/rm psi2.DOS.2
+  if ( -e psi2.DOp.2 ) /bin/rm psi2.DOp.2
+  if ( -e psi2.MAP.2 ) /bin/rm psi2.MAP.2
+  if ( -e psi2.SRF.2 ) /bin/rm psi2.SRF.2
+endif
+end
+#
+mv band.out.1 band.out
+if ( -e psi2.DOS.1 ) mv psi2.DOS.1 psi2.DOS
+if ( -e psi2.DOp.1 ) mv psi2.DOp.1 psi2.DOp
+if ( -e psi2.SRF.1 ) mv psi2.SRF.1 psi2.SRF
+if ( -e psi2.MAP.1 ) mv psi2.MAP.1 psi2.MAP
+</PRE>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1486"
+  HREF="node96.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1482"
+  HREF="node91.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1478"
+  HREF="node94.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1484"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1487"
+  HREF="node96.html">Miscellaneous</A>
+<B> Up:</B> <A NAME="tex2html1483"
+  HREF="node91.html">Utilities used by CASTEP</A>
+<B> Previous:</B> <A NAME="tex2html1479"
+  HREF="node94.html">Utilities lev1 (old) and</A>
+ &nbsp <B>  <A NAME="tex2html1485"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

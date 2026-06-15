@@ -1,0 +1,521 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>M - Complex cell modifications</TITLE>
+<META NAME="description" CONTENT="M - Complex cell modifications">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node19.html">
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="node13.html">
+<LINK REL="next" HREF="node19.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html474"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html470"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html464"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html472"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html475"
+  HREF="node19.html">KP - k-points generation</A>
+<B> Up:</B> <A NAME="tex2html471"
+  HREF="node13.html">Detailed description of options</A>
+<B> Previous:</B> <A NAME="tex2html465"
+  HREF="node17.html">Cl - Build up</A>
+ &nbsp <B>  <A NAME="tex2html473"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00365000000000000000"></A><A NAME="sub:M-option-tetr"></A>
+<BR>
+M - Complex cell modifications
+</H2>
+
+<P>
+An extremely powerful option! It allows you to modify your existing
+geometry in a number of ways and build up your final periodic cell.
+You will be given an extended menu with self-explanatory options.
+You should be able to change your lattice vectors; extend your cell;
+rotate, shift the system; add, remove, shift atoms; change their species;
+construct a slab for the surface calculation using e.g. Millers indices,
+etc. What is more, after every step a <TT>geom.xyz</TT> (xyz-format)
+file with the system geometry is written in the current directory
+so that you can preview your cell on the fly as you build it using
+a molecular viewer (e.g. <B><I>Xmol</I></B>)! In fact, you can even
+preview it as an extended cell (the option <B>Bb</B>). Every step
+can also be undone. 
+
+<P>
+The M-menu looks like this:
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">... CURRENT lattice vectors for the supercell
+ARE...</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">AJ(1): 10.88160 0.00000 0.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">AJ(2): 0.00000 10.88160 0.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">AJ(3): 0.00000 0.00000 10.88160</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+Current species are: &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Si O</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">========= CHOOSE AN OPTION:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">/==================================================&#92;&#92;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">|| HELP: a complex transformation is obtained
+by ||</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">|| applying elementary operations one after another||</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&#92;&#92;==================================================/</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. General shift of the system (new origin)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. Shift the system to the center of mass</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. Rotate the system (the same origin)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. Move an atom to an equivalent position</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Rf. Choose equivalent positions wrt reference
+input file</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">44. Cluster atoms around particular point</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6. Choose unit cell with respect to Miller indices:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1st 2 lattice vectors will be in the (hkl) plane</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Ex. Diagonal &#34;breeding&#34;: construct
+a supercell</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Su. General &#34;breeding&#34;: construct
+a supercell</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">8. Create/modify SLAB: change the 3rd(z) lattice
+vector</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">9. Arbitrarily change lattice vectors (e.g. for
+molecules)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">10. Manually add an atom to the cell</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Ad. Add atoms from another file</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">/11. Remove a range of atoms from the cell</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&#92;12. Keep a range of atoms in the
+cell: remove the rest</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">13. Rename a range of atoms: change species</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Mv. Move a range of atoms to another general position</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Rt. Rotate a range of atoms about the X,Y,Z axes</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">----- operations with multiple
+lists of atoms ------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">T. Tag atoms (specify multiple lists): currently
+OFF</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">------- g e n
+e r a l s e t t i n g s --------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">UU. ****** RESTORE the original serting
+******</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">U. ********** UNDO the last
+step *************</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">XY. Produce &lt;geom.xyz&gt; file after every change
+for Xmol</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Hs. H atoms to be added to &lt;geom.xyz&gt; file: NO</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">An. [For input] Coordinates are specified
+in: &lt;AtomNumber&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Co. Show current atomic positions in fractional/Cartesian</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Sy. Show the point symmetry</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Bb. Set the size of the breeding box for visualisation</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;
+Current setting for the breeding box: &lt;&lt;&lt;&lt;&lt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 0... 0] x [ 0... 0] x [ 0... 0]</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;
+extension = 1, # of atoms= 65</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">W. Write &lt;geom.xyz&gt; file to preview using current
+breeding</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">S. Save.</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Proceed/Quit</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-----&gt; Choose an appropriate
+option:</FONT></TT>
+<P>
+
+
+<P>
+<DIV ALIGN="LEFT">
+At the top, the current lattice vectors and species
+are shown. What you can do is explained below: 
+</DIV>
+
+<P>
+
+<UL>
+<LI><B>1</B> - all atoms in the cell will be displaced to a new position,
+the displacement vector will be asked in units corresponding to the
+setting <B>An</B> 
+</LI>
+<LI><B>2</B> - similar, but the displacement vector will be calculated
+from the atomic masses
+</LI>
+<LI><B>3</B> - a rotation of the coordinate system is specified by giving
+new directions for a pair of two existing primitive lattice vectors
+using the <I>existing coordinate system</I>; of course, the angle
+between them should be preserved! This may be an inconvenience, but
+in some cases the choice is obvious
+</LI>
+<LI><B>4</B> - move an atom to an equivalent position by adding lattice
+vectors to its current coordinate; this may be e.g. useful when building
+up a slab
+</LI>
+<LI><B>Rf</B> - some codes such as <B><I>VASP</I></B> change atomic
+positions in the cell in such a way that their fractional coordinates
+become between 0 and 1; this may be not really wanted since after
+the relaxation (with <B><I>VASP</I></B>) it may be very difficult
+to recognise the cell; a cure is here: in this option upi will be
+prompted again to the Input-menu (Section <A HREF="node10.html#sec:Getting-started-tetr">2.4</A>)
+to read in another input file (e.g. before the relaxation) the atomic
+coordinates in the two geometries will be compared and proper lattice
+vectors applied to the relaxed atoms to ``return'' them to the
+original unit cell
+</LI>
+<LI><B>44</B> - atoms in the system around a given point (atom) are
+shown that cluster around it; more specifically, the displayed atoms
+have fractional coordinates between -0.5 and 0.5 if the centre of
+the coordinate system is positioned at the chosen atom
+</LI>
+<LI><B>6</B> - after specifying three Miller indices, a new equivalent
+set of primitive translations for the cell is given in which the first
+two vectors <!-- MATH
+ $\mathbf{A}_{1}$
+ -->
+<IMG
+ WIDTH="29" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$\mathbf{A}_{1}$">and <!-- MATH
+ $\mathbf{A}_{2}$
+ -->
+<IMG
+ WIDTH="29" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$\mathbf{A}_{2}$"> lie within the
+plane characterised by the Miller indices; use the option <B>3</B>
+above to rotate the whole cell so that your plane becomes perpendicular
+to the <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$z$"> axes (if desired)
+</LI>
+<LI><B>Ex</B> - extend you cell by elongating the three current primitive
+translations, i.e. the transformation matrix of Eq. (<A HREF="node17.html#sub:Cl-option-tetr">2.6.4</A>)
+is diagonal: <!-- MATH
+ $T_{ij}=\delta_{ij}n_{i}$
+ -->
+<IMG
+ WIDTH="89" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$T_{ij}=\delta_{ij}n_{i}$">; the three integers <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$n_{i}$">are
+to be specified 
+</LI>
+<LI><B>Su</B> - the current cell is extended using a general transformation
+matrix <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$\mathbf{T}$"> 
+</LI>
+<LI><B>8</B> - the third lattice vector can be arbitrarily changed here;
+this is necessary in creating a slab out of a bulk cell assuming that
+the vacuum gap is opened via the third lattice vector; note that atomic
+positions in the cell will not change
+</LI>
+<LI><B>9</B> - all three lattice vectors can be changed; this may be
+useful in calculating a molecule or a cluster, if the distance between
+images must be changed; of course, atomic positions inside the cell
+do not change
+</LI>
+<LI><B>10</B> - an additional atom is added to the cell; its position
+must be unique, otherwise, the atom is not added
+</LI>
+<LI><B>Ad</B> - similar, but in this case all atoms from another file
+(that may be written even in a different format) can be added to the
+current system; the Input-menu (Section <A HREF="node10.html#sec:Getting-started-tetr">2.4</A>)
+is called here
+</LI>
+<LI><B>11</B>, <B>12</B> - these two options remove a set of atoms
+from the cell 
+</LI>
+<LI><B>13</B> - this renames a set of atoms, i.e. it changes their species
+into another species; this may be useful, e.g. in changing the lowermost
+atoms of the slab into hydrogens to terminate properly the slab and
+thus simulate the bulk at the lower surface
+</LI>
+<LI><B>Mv</B> - move a set of atoms to another position (Section <A HREF="node42.html#sub:Mv-Move-atoms">2.6.11.2</A>)
+</LI>
+<LI><B>Rt</B> - rotate a set of atoms (Section <A HREF="node43.html#sub:Rt-Rotate-atoms">2.6.11.3</A>)
+</LI>
+</UL>
+Normally, a set of atoms is chosen by two atomic numbers, in which
+case all atoms with the numbers in between are also chosen.
+If it is required to have a more complex non-contagious set of atoms
+in the list, use the option <B>T</B>, that allows you to do this
+(see Section <A HREF="node4.html#sec:Menus">1.2</A>). Note that all atoms added to the system
+from another file (option <B>Ad</B>) are tagged automatically, so
+that you can move and/or rotate them.
+
+<P>
+Other useful options (in seetings) include:
+
+<P>
+
+<UL>
+<LI><B>U</B> - undo the last transformation
+</LI>
+<LI><B>UU</B> - restore the original geometry (the one with which you
+entered the M-menu initially)
+</LI>
+</UL>
+Once the necessary geometry is created (the lattice vectors, number
+of atoms in species and their positions in space), it can be saved
+using option <B>S</B> (Section <A HREF="node41.html#sub:Save-Read-tetr">2.6.11.1</A>).
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html474"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html470"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html464"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html472"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html475"
+  HREF="node19.html">KP - k-points generation</A>
+<B> Up:</B> <A NAME="tex2html471"
+  HREF="node13.html">Detailed description of options</A>
+<B> Previous:</B> <A NAME="tex2html465"
+  HREF="node17.html">Cl - Build up</A>
+ &nbsp <B>  <A NAME="tex2html473"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,315 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>6 - Quadrupole moment</TITLE>
+<META NAME="description" CONTENT="6 - Quadrupole moment">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node67.html">
+<LINK REL="previous" HREF="node65.html">
+<LINK REL="up" HREF="node59.html">
+<LINK REL="next" HREF="node67.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1130"
+  HREF="node67.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1126"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1120"
+  HREF="node65.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1128"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1131"
+  HREF="node67.html">7 - Get density</A>
+<B> Up:</B> <A NAME="tex2html1127"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1121"
+  HREF="node65.html">5 - Dipole moment</A>
+ &nbsp <B>  <A NAME="tex2html1129"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00463700000000000000"></A><A NAME="sub:5-Quadr-lev00"></A>
+<BR>
+6 - Quadrupole moment
+</H3>
+
+<P>
+Calculates the second multipole moment of the density. This is also
+meant for molecules inside a big cell. The first menu looks like this:
+
+<P>
+<TT><FONT SIZE="-2">..............MENU for QUADRUPOLE ....................</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">......... Change these parameters if necessary:.......</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. Charges of nucleii by species: </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;6 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. The center of your sphere:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;A=&gt; ( 0.000, 0.000, 0.000), fr=&gt; ( 0.000,
+0.000, 0.000)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. The sphere radius (Angstroms): 5.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6. Calculate quadrupole tensor.</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---- G e n e r a l&nbsp;&nbsp;&nbsp;s e t
+t i n g s -----</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">0. Coordinates are specified in: &lt;Angstroms&gt; </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. Algorithm for charge integration is FIXED to: &lt;nonconserv&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. X,Y,Z integration grid inside the sphere: 40</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">--- L e a v e&nbsp;&nbsp;t h e&nbsp;&nbsp;m e n
+u -------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">8. Return to the previous menu</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---&gt; Choose the item and press ENTER:</FONT></TT>
+<P>
+
+
+<P>
+As in the dipole menu (Section <A HREF="node65.html#sub:5-Dipole-lev00">3.6.3.6</A>), the nuclei
+charges and the sphere centre are specified. Only one radius is chosen,
+this can be selected e.g. from the dipole calculation. Once the calculation
+is done (option <B>6</B>), it is possible to obtain principal axes
+of the tensor in a new option <B>7</B> as shown below:
+
+<P>
+<TT><FONT SIZE="-2">..............MENU for QUADRUPOLE ....................</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">......... Change these parameters if necessary:.......</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. Charges of nucleii by species: </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;6 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. The center of your sphere:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;A=&gt; ( 0.000, 0.000, 0.000), fr=&gt; ( 0.000,
+0.000, 0.000)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. The sphere radius (Angstroms): 5.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6. Calculate quadrupole tensor. &lt;= DONE!</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;Quadrupole tensor is [in Electron*Angstrem2]:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14.55748 0.00000 3.52430</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.00000 -31.66499 0.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.52430 0.00000 17.10751</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">7. Calculate principal axes of the quadrupole
+tensor</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;Eigenvalues: -31.66499 12.08465 19.58034</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;Eigenvectors: 0.00000 0.81860 0.57437</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.00000 0.00000
+0.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.00000 -0.57437
+0.81860</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---- G e n e r a l&nbsp;&nbsp; s e t t
+i n g s -----</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">0. Coordinates are specified in: &lt;Angstroms&gt; </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4. Algorithm for charge integration is FIXED to: &lt;nonconserv&gt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. X,Y,Z integration grid inside the sphere: 40</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">--- L e a v e&nbsp;&nbsp;t h e&nbsp;&nbsp;m e n
+u -------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">8. Return to the previous menu</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">---&gt; Choose the item and press ENTER:</FONT></TT>
+<P>
+
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1130"
+  HREF="node67.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1126"
+  HREF="node59.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1120"
+  HREF="node65.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1128"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1131"
+  HREF="node67.html">7 - Get density</A>
+<B> Up:</B> <A NAME="tex2html1127"
+  HREF="node59.html">Studying the partial or</A>
+<B> Previous:</B> <A NAME="tex2html1121"
+  HREF="node65.html">5 - Dipole moment</A>
+ &nbsp <B>  <A NAME="tex2html1129"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

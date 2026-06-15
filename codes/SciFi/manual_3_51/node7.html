@@ -1,0 +1,441 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Tip-surface Interaction</TITLE>
+<META NAME="description" CONTENT="Tip-surface Interaction">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="node4.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html264"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html260"
+  HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html254"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html262"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html265"
+  HREF="node8.html">Solution of the electrostatic</A>
+<B> Up:</B> <A NAME="tex2html261"
+  HREF="node4.html">Semi-classical part (SciFi)</A>
+<B> Previous:</B> <A NAME="tex2html255"
+  HREF="node6.html">Electrostatic energy of a</A>
+ &nbsp <B>  <A NAME="tex2html263"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION02013000000000000000">
+Tip-surface Interaction</A>
+</H2>
+
+<P>
+In order to calculate the force imposed on the tip we used the following
+expression for the total energy of the system: <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+U=\frac{1}{2}\sum_{ij}\,^{\prime}v_{ij}+U_{vdW}+U_{el}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="1"></A><IMG
+ WIDTH="198" HEIGHT="50" BORDER="0"
+ SRC="img39.png"
+ ALT="\begin{displaymath}
+U=\frac{1}{2}\sum_{ij}\,^{\prime}v_{ij}+U_{vdW}+U_{el}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="23" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$v_{ij}$"> is the interatomic potential between atoms <IMG
+ WIDTH="24" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$i,j$">.
+This interaction energy is a function of both the tip position <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$z_{s}$">
+and the coordinates <!-- MATH
+ $\mathbf{r}_{i}$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$\mathbf{r}_{i}$"> of all atoms (and shells) involved.
+The energy <IMG
+ WIDTH="43" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$U_{vdW}$"> represents the van der Waals interaction between
+the macroscopic tip and substrate and depends only on the tip height
+<IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$z_{s}$"> with respect to the substrate (see Fig. 1). Note that in
+the present model the macroscopic van der Waals interaction does not
+effect atomic positions.
+
+<P>
+The last term in Eq. (<A HREF="node7.html#1">4</A>) represents the total electrostatic
+energy of the whole system. We assume that the Coulomb and covalent
+interactions between all atoms is included in the first term in Eq.
+(<A HREF="node7.html#1">4</A>) and hence should be excluded from <IMG
+ WIDTH="26" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$U_{el}$">. Therefore,
+the energy <IMG
+ WIDTH="26" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$U_{el}$"> includes the interaction of the atoms in the
+system with the macroscopic tip and substrate. As has been demonstrated,
+the correct electrostatic energy should incorporate the work done
+by the battery to maintain the constant potential on the electrodes.
+It can be written in the following form: <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+U_{el}=-\frac{1}{2}Q^{(0)}V+\sum_{i}q_{i}\phi^{(0)}(\mathbf{r}_{i})+\frac{1}{2}\sum_{i,j}q_{i}q_{j}\phi_{ind}(\mathbf{r}_{i},\mathbf{r}_{j})
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="el-energy"></A><IMG
+ WIDTH="378" HEIGHT="50" BORDER="0"
+ SRC="img46.png"
+ ALT="\begin{displaymath}
+U_{el}=-\frac{1}{2}Q^{(0)}V+\sum_{i}q_{i}\phi^{(0)}(\mathbf{...
+...}\sum_{i,j}q_{i}q_{j}\phi_{ind}(\mathbf{r}_{i},\mathbf{r}_{j})
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Here <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$V$"> is the potential difference applied to the metal electrodes.
+Without loss of generality, one can choose the potential <IMG
+ WIDTH="14" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$\phi$"> on
+the metal plane to be zero, so that the potential on the macroscopic
+part of the tip will be <IMG
+ WIDTH="48" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$\phi=V$">. We also note that the substrate
+is considered in the limit of a sphere of a very big radius <!-- MATH
+ $R^{\prime}\gg R$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$R^{\prime}\gg R$">
+since the metal electrodes formally cannot be infinite. The charge
+on the tip <I>without</I> charges outside the metals (i.e. when there
+are only bare electrodes and the polarization effects can be neglected)
+is <IMG
+ WIDTH="34" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$Q^{(0)}$"> and the electrostatic potential of the bare electrodes
+anywhere outside the metals is <!-- MATH
+ $\phi^{(0)}(\mathbf{r})$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\phi^{(0)}(\mathbf{r})$">. The charge
+<IMG
+ WIDTH="34" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$Q^{(0)}$"> and the potential <!-- MATH
+ $\phi^{(0)}(\mathbf{r})$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\phi^{(0)}(\mathbf{r})$"> depend only
+on the geometry of the capacitor formed by the two electrodes and
+on the bias <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$V$">. The charge <IMG
+ WIDTH="34" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$Q^{(0)}$"> can be calculated from the
+potential <!-- MATH
+ $\phi^{(0)}(\mathbf{r})$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\phi^{(0)}(\mathbf{r})$"> as follows [<A
+ HREF="node188.html#Landau-8">4</A>]: <!-- MATH
+ $Q^{(0)}=-\frac{1}{4\pi}\int\int\,\frac{\partial\phi^{(0)}}{\partial n}ds$
+ -->
+<IMG
+ WIDTH="167" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$Q^{(0)}=-\frac{1}{4\pi}\int\int\,\frac{\partial\phi^{(0)}}{\partial n}ds$">
+where the integration is performed over the entire surface of the
+macroscopic part of the tip with the integrand being the normal derivative
+of the potential <!-- MATH
+ $\phi^{(0)}(\mathbf{r})$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\phi^{(0)}(\mathbf{r})$">; the normal <IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img53.png"
+ ALT="$\mathbf{n}$">
+is directed outside the metal. Summation in the second term of Eq.
+(<A HREF="node7.html#el-energy">5</A>) is performed over the atoms and shells of the sample
+and those of the tip apex which are represented by point charges <IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$q_{i}$">
+at positions <!-- MATH
+ $\mathbf{r}_{i}$
+ -->
+<IMG
+ WIDTH="17" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$\mathbf{r}_{i}$">. 
+
+<P>
+Finally, <!-- MATH
+ $\phi_{ind}(\mathbf{r},\mathbf{r}^{\prime})$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$\phi_{ind}(\mathbf{r},\mathbf{r}^{\prime})$"> in Eq. (<A HREF="node7.html#el-energy">5</A>)
+is the potential at <I><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$\mathbf{r}$"></I> due to image charges <I>induced</I>
+on all the metals by a unit point charge at <!-- MATH
+ $\mathbf{r}^{\prime}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$\mathbf{r}^{\prime}$">.
+This function is directly related to the Green function <B><!-- MATH
+ $G(\mathbf{r},\mathbf{r}^{\prime})$
+ -->
+<IMG
+ WIDTH="56" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.png"
+ ALT="$G(\mathbf{r},\mathbf{r}^{\prime})$"></B>
+of the Laplace equation, <B><!-- MATH
+ $\phi_{ind}(\mathbf{r},\mathbf{r}^{\prime})=G(\mathbf{r},\mathbf{r}^{\prime})-\frac{1}{\mid\mathbf{r}-\mathbf{r}^{\prime}\mid}$
+ -->
+<IMG
+ WIDTH="202" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$\phi_{ind}(\mathbf{r},\mathbf{r}^{\prime})=G(\mathbf{r},\mathbf{r}^{\prime})-\frac{1}{\mid\mathbf{r}-\mathbf{r}^{\prime}\mid}$"></B>,
+and is symmetric, i.e. <!-- MATH
+ $\phi_{ind}(\mathbf{r},\mathbf{r}^{\prime})=\phi_{ind}(\mathbf{r}^{\prime},\mathbf{r})$
+ -->
+<IMG
+ WIDTH="162" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$\phi_{ind}(\mathbf{r},\mathbf{r}^{\prime})=\phi_{ind}(\mathbf{r}^{\prime},\mathbf{r})$">,
+due to the symmetry of the Green function itself [<A
+ HREF="node188.html#Jackson">5</A>].
+The total potential at <B><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$\mathbf{r}$"></B> due to a net charge
+induced on all conductors present in the system by all the point charges
+<IMG
+ WIDTH="32" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$\{ q_{i}\}$">, <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\phi_{ind}(\mathbf{r})=\sum_{i}q_{i}\phi_{ind}(\mathbf{r},\mathbf{r}_{i})
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="fi-ind-nwe"></A><IMG
+ WIDTH="176" HEIGHT="44" BORDER="0"
+ SRC="img61.png"
+ ALT="\begin{displaymath}
+\phi_{ind}(\mathbf{r})=\sum_{i}q_{i}\phi_{ind}(\mathbf{r},\mathbf{r}_{i})
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+is the <I>image potential</I>. Note that the last double summation
+in Eq. (<A HREF="node7.html#el-energy">5</A>) includes the <IMG
+ WIDTH="38" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$i=j$"> term as well. This term
+corresponds to the interaction of the charge <IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$q_{i}$"> with its own
+polarization (similar to the polaronic effect in solid-state physics). 
+
+<P>
+The function <!-- MATH
+ $\phi_{ind}(\mathbf{r},\mathbf{r}^{\prime})$
+ -->
+<IMG
+ WIDTH="72" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$\phi_{ind}(\mathbf{r},\mathbf{r}^{\prime})$"> and, therefore,
+the image potential, <!-- MATH
+ $\phi_{ind}(\mathbf{r})$
+ -->
+<IMG
+ WIDTH="53" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$\phi_{ind}(\mathbf{r})$">, together with the
+potential <!-- MATH
+ $\phi^{(0)}(\mathbf{r})$
+ -->
+<IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\phi^{(0)}(\mathbf{r})$"> of the bare electrodes could be
+calculated if we knew the exact Green function of the electrostatic
+problem <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\Delta_{\mathbf{r}^{\prime}}G(\mathbf{r},\mathbf{r}^{\prime})=-4\pi\delta(\mathbf{r}-\mathbf{r}^{\prime})
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="Poisson"></A><IMG
+ WIDTH="184" HEIGHT="28" BORDER="0"
+ SRC="img64.png"
+ ALT="\begin{displaymath}
+\Delta_{\mathbf{r}^{\prime}}G(\mathbf{r},\mathbf{r}^{\prime})=-4\pi\delta(\mathbf{r}-\mathbf{r}^{\prime})
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+with the corresponding boundary conditions (<!-- MATH
+ $G(\mathbf{r},\mathbf{r}^{\prime})=0$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$G(\mathbf{r},\mathbf{r}^{\prime})=0$">
+when <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$\mathbf{r}$"> or <!-- MATH
+ $\mathbf{r}^{\prime}$
+ -->
+<IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$\mathbf{r}^{\prime}$"> belong to either the
+substrate or the tip surface) [<A
+ HREF="node188.html#Jackson">5</A>]. Therefore, given the
+applied bias <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$V$">, the geometric characteristics of the capacitor
+and the positions <!-- MATH
+ $\{\mathbf{r}_{j}\}$
+ -->
+<IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$\{\mathbf{r}_{j}\}$"> of the point charges <IMG
+ WIDTH="32" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$\{ q_{i}\}$">
+between the tip and sample, one can calculate the electrostatic energy
+<IMG
+ WIDTH="26" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$U_{el}$">. The problem is that the Green function for real tip-sample
+shapes and arrangements is difficult to calculate. In this study we
+use the planar-spherical geometry of the junction as depicted in Fig.
+<A HREF="node5.html#Tip_surf_schem">1</A>. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html264"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html260"
+  HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html254"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html262"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html265"
+  HREF="node8.html">Solution of the electrostatic</A>
+<B> Up:</B> <A NAME="tex2html261"
+  HREF="node4.html">Semi-classical part (SciFi)</A>
+<B> Previous:</B> <A NAME="tex2html255"
+  HREF="node6.html">Electrostatic energy of a</A>
+ &nbsp <B>  <A NAME="tex2html263"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

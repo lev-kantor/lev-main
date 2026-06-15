@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Velocity Box</TITLE>
+<META NAME="description" CONTENT="Velocity Box">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node94.html">
+<LINK REL="previous" HREF="node92.html">
+<LINK REL="up" HREF="node81.html">
+<LINK REL="next" HREF="node94.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1552"
+  HREF="node94.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1548"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1542"
+  HREF="node92.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1550"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1553"
+  HREF="node94.html">Friction Box</A>
+<B> Up:</B> <A NAME="tex2html1549"
+  HREF="node81.html">Molecular Dynamics boxes</A>
+<B> Previous:</B> <A NAME="tex2html1543"
+  HREF="node92.html">vel_key</A>
+ &nbsp <B>  <A NAME="tex2html1551"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION040251200000000000000"></A><A NAME="Sec::Velocity-Box"></A>
+<BR>
+Velocity Box
+</H3>
+
+<P>
+<B><I>Box Keyword</I></B>: <TT>.&lt;Velocity&gt;</TT>
+
+<P></P>
+
+
+<P>
+This box contains the initial velocities of all the free atoms in
+the system, and is only read in if <B>vel_key</B> in the MDcontrol
+box is set to 1, otherwise velocities are generated according to the
+given system temperature. The velocities given in this box must be
+in exactly the same order as the atomic coordinates in order to correspond
+to the correct atoms, if atoms have shells shell velocities can be
+given, otherwise the shell velocities are set equal to the atomic
+velocities. The units are &#197;/ps, and the format is as follows:
+
+<P>
+&nbsp;
+
+<P>
+<IMG
+ WIDTH="44" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img352.png"
+ ALT="$v_{core_{x}}$"> <IMG
+ WIDTH="44" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img353.png"
+ ALT="$v_{core_{y}}$"> <IMG
+ WIDTH="44" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img354.png"
+ ALT="$v_{core_{z}}$"> <IMG
+ WIDTH="47" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img355.png"
+ ALT="$v_{shell_{x}}$"> <IMG
+ WIDTH="47" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img356.png"
+ ALT="$v_{shell_{y}}$">
+<IMG
+ WIDTH="47" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img357.png"
+ ALT="$v_{shell_{z}}$"> 
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,323 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Scripting capabilities of tetr</TITLE>
+<META NAME="description" CONTENT="Scripting capabilities of tetr">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="up" HREF="node6.html">
+<LINK REL="next" HREF="node46.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html806"
+  HREF="node46.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html802"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html798"
+  HREF="node44.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html804"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html807"
+  HREF="node46.html">Utility lev00</A>
+<B> Up:</B> <A NAME="tex2html803"
+  HREF="node6.html">Utility tetr</A>
+<B> Previous:</B> <A NAME="tex2html799"
+  HREF="node44.html">Point group generator</A>
+ &nbsp <B>  <A NAME="tex2html805"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00370000000000000000">
+Scripting capabilities of <I>tetr</I></A>
+</H1>
+
+<P>
+Since <B><I>tetr</I></B> uses the Text User Interface (TUI), it
+can easily be used in scripts as a general UNIX routine. This can
+be done by using a file with the <B><I>tetr</I></B> commands in
+the right order. 
+
+<P>
+To illustrate the idea, let us consider a simple problem in which
+it is necessary to calculate a potential energy surface of a water
+molecule in which a single atom #2 (one of its hydrogens) is moved
+by small steps of <IMG
+ WIDTH="58" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.png"
+ ALT="$\sqrt{2}/10$"> <IMG
+ WIDTH="19" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img98.png"
+ ALT="$\textrm{Ã}$"> along the <IMG
+ WIDTH="50" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.png"
+ ALT="$x=y$"> direction
+in the cell. The <B><I>VASP</I></B> code is used. The initial geometry
+is contained in the file <TT>POSCAR.cm</TT>, given below:
+
+<P>
+<TT><FONT SIZE="-2">made by tetr; -&gt; species: O H </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1.00000000000000 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5.00000000000000 0.00000000000000D+000 0.00000000000000D+000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">0.00000000000000D+000 5.00000000000000 0.00000000000000D+000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">0.00000000000000D+000 0.00000000000000D+000 5.00000000000000 </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1 2</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Selective dynamics</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Direct</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">0.000000000000 0.000000000000 -0.013266064393
+T T T</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">0.152276020145 0.000000000000 0.105285414074 T
+T T</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-0.152276020145 0.000000000000 0.105285414074
+T T T</FONT></TT>
+<P>
+
+
+<P>
+All other <B><I>VASP</I></B> files are the same for this calculation.
+Then, the following <B><I>tetr</I></B> commands will do a single
+step:
+
+<P>
+<TT><FONT SIZE="-2">3</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">POSCAR.cm</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">O</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">H</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">M</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Mv</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2 2</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">0.1 0.1 0.0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">S</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">POSCAR.1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q</FONT></TT>
+<P>
+
+
+<P>
+Collect all these commands in a file <TT>inp_for_tetr</TT>. Now,
+if <B><I>tetr</I></B> is executed with this input file read in from
+the standart input, e.g. <PRE>
+ tetr &lt; inp_for_script &gt; out
+</PRE>, then the following will happen: first of all, the <B><I>VASP</I></B>
+input file <TT>POSCAR.cm</TT> will be read in, then a chain <B>M</B><IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\rightarrow$"><B>Mv</B>
+commands is executed, and the atom #2 is moved by a vector (0.1,0.1,0.0).
+Finally, the new geometry is saved in a file <TT>POSCAR.1</TT>, after
+which <B><I>tetr</I></B> is stopped. The following <TT>sch</TT>
+script will then run the required calculation for 10 steps:
+
+<P>
+<TT><FONT SIZE="-2">#!/bin/csh </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">cp POSCAR.cm POSCAR.ref</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">foreach step ( 1 2 3 4 5 6 7 8 9 10 )</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;tetr &lt; inp_for_script &gt; out</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;mv POSCAR.1 POSCAR</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;vasp</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;mv OUTCAR OUTCAR.$step</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;mv CONTCAR POSCAR.cm</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">end</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">mv POSCAR.ref POSCAR.cm</FONT></TT>
+<P>
+
+
+<P>
+At the end of the calculation, the current directory will contain
+ten <TT>OUTCAR.1,...,OUTCAR.10</TT> files for each point of the calculation.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html806"
+  HREF="node46.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html802"
+  HREF="node6.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html798"
+  HREF="node44.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html804"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html807"
+  HREF="node46.html">Utility lev00</A>
+<B> Up:</B> <A NAME="tex2html803"
+  HREF="node6.html">Utility tetr</A>
+<B> Previous:</B> <A NAME="tex2html799"
+  HREF="node44.html">Point group generator</A>
+ &nbsp <B>  <A NAME="tex2html805"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

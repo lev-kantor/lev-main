@@ -1,0 +1,472 @@
+Tutori!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updted by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>manual_lev00_2-45c+tetr_3-94h7</TITLE>
+<META NAME="description" CONTENT="manul_lev00_2-45c+tetr_3-94h6">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY BGCOLOR="#ccffff">
+<!--Navigation Panel-->
+<A NAME="tex2html29"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev_g.png"> 
+<A NAME="tex2html27"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html30"
+  HREF="node1.html">Contents</A>
+ &nbsp <B>  <A NAME="tex2html28"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+<P>
+
+<P>
+<H1 ALIGN="CENTER"><B><I><FONT COLOR="FF3300">LEV00</FONT></I></B> &amp; <B><I><FONT COLOR="008080">TETR</FONT></I></B>: 
+<BR>
+user-friendly packages
+for DFT codes <TT><B>
+<BR></B>
+</TT><B><I> <FONT COLOR="ff0999">VASP </FONT></I></B><B>/
+</TT><B><I> <FONT COLOR="00FF00"> SIESTA </FONT></I></B><B>/
+</TT><B><I> <FONT COLOR="3300ff"> QUICKSTEP </FONT></I></B><B>/
+</TT><B><I> <FONT COLOR="808000"> CRYSTAL </FONT></I></B><B>/
+</TT><B><I> <FONT COLOR="660099"> Quantum Espresso </FONT></I></B> </H1>
+
+<P ALIGN="CENTER"><STRONG><FONT COLOR="808000">L. N. Kantorovich </FONT></STRONG></P>
+This is a documentation for a package of utilities which have been
+written (initially at Keele and then continued in London at UCL and
+KCL) as pre- and post-processing tools for DFT codes working with
+periodic boundary conditions. At the beginning, DFT codes <B><I>CASTEP</I></B>
+and <B><I>CETEP</I></B> were supported. At a later stage a complete
+support for the <B><I>VASP</I></B> code has also been added. Then,
+the whole structure of the two codes has been reshuffled in order
+to allow for a more flexible support for other codes and input/output
+formats. An almost complete support for the <B><I>SIESTA</I></B>
+code has also been added. Recently, as of version 4.1, some basic support for <B><I>QUICKSTEP</I></B> has also been
+added! From version 4.70 partial support for <B><I>Quantum Espresso</I></B> was also added in TETR. No manual has been updated yet, I'll do it some time. Hopefully, this is self-explanatory and there is no hurry!
+
+<P>
+The applications (i.e. offered functionality) include:
+<P>
+
+<UL>
+<LI>various modifications of the system geometry (e.g. changing lattice
+vectors, breeding the system (supercells), merging geometries from
+several files of different formats (e.g. adding a molecule from another
+file to the surface), constructing a surface cell from a bulk one,
+terminating it with H atoms, etc.); 
+</LI>
+<LI>construction of molecular clusters with specific boundary conditions
+out of a bulk unit cell; 
+</LI>
+<LI>a powerful engine for phonons calculations (molecules and crystals), IR intensity via Born charges; 
+</LI>
+<LI>calculations of the electronic Density of States (DOS), 
+</LI>
+<LI>plotting of charge and spin total and partial densities, calculating
+atomic charges, saving the <TT>cube</TT> format file for <B><I>gOpenMol</I></B>
+contour plotting, etc.
+</LI>
+<LI>
+<DIV ALIGN="LEFT">
+an intelligent search for surface states, exploration
+of the (partial) electronic (spin) density
+</DIV>
+</LI>
+<LI>
+<DIV ALIGN="LEFT">
+and a lot more!
+</LI>
+<LI> all these options can be run inside a <font color="000080">shellscript</font>, listing all the commands in a file, e.g., 'inp' and then e.g. running 
+<P>
+<font COLOR="008080">tetr < inp > out</font>
+<P>
+<font COLOR="FF3300">lev00 < inp > out</font>
+<P>
+This way all the instructions given in the file 'inp' will be executed (e.g. a moleule or AFM tip moved by some distance along a particular direction),
+a new input file for a DFT calculation saved, so that this DFT calculation can be run for a new geometry. Very useful when many similar task are to be performed automatically,
+e.g. in a loop. 
+</DIV>
+</LI>
+</UL>
+<BR><HR>
+Please, send me a short note about your current interest in the codes. I would also much appreciate it if you can 
+give me any feedback on the codes: were they useful to you, and if not, why. If you did find the codes useful,
+do not forget to cite them as it is suggested in the manual as:
+<br>
+<br> L. N. Kantorovich, User-friendly visualisation program for ab initio DFT codes VASP, SIESTA, QE and QUICKSTEP, 1996-2012, unpublished.
+<br>
+<br> Many thanks!
+
+<BR><HR><HR><HR>
+The codes can be <font color="000080">downloaded below</font> (the latest versions, updated <B>18.12.2015</B>): 
+<br>
+For all NEW features see the README file in the distribution. 
+<BR><HR>
+<H1 ALIGN="CENTER"><B><I><FONT COLOR="008080">TETR</FONT></I></B> </H1> 
+<br><a href="tetr_4.95-forusers.tgz">tetr</a> version 4.95 (for all NEW features see the README file in the distribution as well
+as the manual file below)
+<BR>
+<h2 ALIGN="CENTER"><B><I>TUTORIALS for <FONT COLOR="008080">TETR</FONT></I></B> </h2> 
+<LI><A HREF="Getting_started/index.html">Getting started </A>. You need a graphene SIESTA file which is <A HREF="graphene.fdf">here</a>.
+<LI><A HREF="6-ZGNR/index.html">Graphene nanoribbon 6-ZGNR </A>. You need a graphene SIESTA file which is <A HREF="graphene.fdf">here</a>. 
+<LI><A HREF="11-AGNR/index.html">Graphene nanoribbon 11-AGNR </A>. You need a graphene SIESTA file which is <A HREF="graphene.fdf">here</a>.
+<LI><A HREF="H2O_vibrations/index.html">Vibrations of the H2O molecule </A>. You need a H2O molecule VASP input file which is <A HREF="CONTCAR_H2O">here</a>.
+<LI><A HREF="MgO_vibrations/index.html">Vibrations of the MgO crystal</A>. You need a VASP input file which is <A HREF="CONTCAR_MgO">here</a>.
+<LI><A HREF="BSSE_correction__Cytosin_on_gold/index.html"> BSSE correction for the adsorption energy of a cytosine molecule on the gold surface</A>. You need a SIESTA input file which is <A HREF="INPUT_FILE_C_on_Au.fdf">here</a>.
+<LI><A HREF="Si001_surface/index.html">Construction of a c(4x2) Si(001) surface</A>. You need a SIESTA input file for the Si bulk which is <A HREF="INPUT_FILE_Si_bulk.fdf">here</a>.
+<LI><A HREF="calcitebulk/index.html">Construction of the calcite bulk </A> primitive cell and a supercell using information from the International Tables for Crystallography (created by <FONT COLOR="FF3300">Chiara Paris</FONT>). 
+<LI><A HREF="calcite-104-surface/1.html">Construction of the calcite (104) surface </A> using Miller indices (created by <FONT COLOR="FF3300">Chiara Paris</FONT>). 
+<LI><A HREF="NiAl3_bulk/1.html">Construction of the NiAl3 bulk unit cell</A>  (created by <FONT COLOR="FF3300">Chiara Paris</FONT>). 
+<LI> Construction of a cluster from the bulk (e.g. an AFM tip) terminated with H atoms (planned)
+<LI> Construction of a bulk cell from its space group symbol (planned)
+<LI> Forcing symmetry for a SIESTA calculation (constr.f file) (planned)
+
+<BR><HR>
+<H1 ALIGN="CENTER"><B><I><FONT COLOR="FF3300">LEV00</FONT></I></B> </H1> 
+<br><a href="lev00_3.46-forusers.tgz">lev00</a> version 3.46 - please, UPDATE! 
+Note that since version 3.12 there was a bug affecting
+atomic positions read in from SIESTA input files. 
+<P>
+Since version 3.0 this is a F90 version delivering a lot of
+convenience as it only needs to be compiled once! AT LAST!!!
+<P>
+From v. 3.30 lev00 acquired a nice <B><I>STM plotter</I></B>, pease try! 
+<P>
+One can also use <B><I>gOpenmol</I></B> option
+for the constant LDOS image in which case atoms can be viewed underneath the LDOS surface as well,
+which is cool!
+<P>
+From version 3.21, lev00 is supposed to work with the new version of <B><I>vasp v.5.2</I></B> .
+However, as this version is fairly new, there could be still some problems. 
+If you experience anything unusual
+or the code crashes, please send me: lev00 output, POSCAR, INCAR, OUTCAR, CHGCAR, KPOINTS. tar and gzip these files into a single tar-ball and email to me.
+If you tried to run a DOS or PDOS calculation, then send brill.dat (generated with tetr), band.out and any other files needed as described in the manual. 
+Your help will be greatly appreciated! 
+By the way, to get directly the output from lev00 you may run it like this: 
+<P>
+lev00 | tee output
+
+
+<BR><HR>
+<H1 ALIGN="CENTER"><B><I>MANUAL for <FONT COLOR="008080">TETR</FONT> and <FONT COLOR="FF3300">LEV00</FONT></I></B> </H1> 
+<br>You can get it <a href="manual_lev00_tetr_7.07.11.pdf">here</a> for both codes. The last update: 07.07.11. The menus changed in some parts, so the manual is not exactly up-to-date, but it should give you an idea of what you should do and how.  There are specific sections (which were updated) on SIESTA and VASP. QUICKSTEP and QE sections are not yet written, although many features of TETR work.
+<BR><HR>
+The online manual below is NOT updated, however, it may give you some idea of what this is all about. Please, use the 
+pdf file above for the complete (and up-to-date) description of all features. 
+<BR><HR>
+<br><LI> <a href="../../index.html">Go back</a> to my home page 
+<br><LI> <a href="../index.html">Go back</a> to the page of the codes <BR>
+<HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html31"
+  HREF="node1.html">Contents</A>
+<LI><A NAME="tex2html32"
+  HREF="node2.html">Introduction</A>
+<UL>
+<LI><A NAME="tex2html33"
+  HREF="node3.html">What is this all about?</A>
+<LI><A NAME="tex2html34"
+  HREF="node4.html">Menus</A>
+<LI><A NAME="tex2html35"
+  HREF="node5.html">Miscellaneous</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html36"
+  HREF="node6.html"><I><I>Utility</I></I> <I>tetr</I></A>
+<UL>
+<LI><A NAME="tex2html37"
+  HREF="node7.html">What it can do</A>
+<LI><A NAME="tex2html38"
+  HREF="node8.html">Installation and general information</A>
+<LI><A NAME="tex2html39"
+  HREF="node9.html">Menus in <I>tetr</I></A>
+<LI><A NAME="tex2html40"
+  HREF="node10.html">Getting started</A>
+<LI><A NAME="tex2html41"
+  HREF="node11.html">Symmetry</A>
+<UL>
+<LI><A NAME="tex2html42"
+  HREF="node12.html">A note about symmetry</A>
+</UL>
+<LI><A NAME="tex2html43"
+  HREF="node13.html">Detailed description of options in <I>tetr</I></A>
+<UL>
+<LI><A NAME="tex2html44"
+  HREF="node14.html">Main menu</A>
+<LI><A NAME="tex2html45"
+  HREF="node15.html">B - Generate supercell geometry from scratch</A>
+<LI><A NAME="tex2html46"
+  HREF="node16.html">Pc - Generate primitive cell from space group symbol</A>
+<LI><A NAME="tex2html47"
+  HREF="node17.html">Cl - Build up a cluster from the lattice</A>
+<LI><A NAME="tex2html48"
+  HREF="node18.html">M - Complex cell modifications</A>
+<LI><A NAME="tex2html49"
+  HREF="node19.html">KP - k-points generation </A>
+<UL>
+<LI><A NAME="tex2html50"
+  HREF="node20.html">KP-menu</A>
+<LI><A NAME="tex2html51"
+  HREF="node21.html">DOS</A>
+</UL>
+<LI><A NAME="tex2html52"
+  HREF="node22.html">Ew - Coulomb potential inside the unit cell</A>
+<LI><A NAME="tex2html53"
+  HREF="node23.html">Calculation of phonons (atomic vibrations)</A>
+<UL>
+<LI><A NAME="tex2html54"
+  HREF="node24.html">Theory: method of displacements and forces </A>
+<LI><A NAME="tex2html55"
+  HREF="node25.html">Theory: practical side</A>
+<LI><A NAME="tex2html56"
+  HREF="node26.html">Theory: use of symmetry</A>
+<LI><A NAME="tex2html57"
+  HREF="node27.html">Theory: Elimination of translations and rotations in the case of
+molecules</A>
+<LI><A NAME="tex2html58"
+  HREF="node28.html">Vm - Vibrations of molecules =&gt; preparation</A>
+<LI><A NAME="tex2html59"
+  HREF="node29.html">A short note on advanced options</A>
+<LI><A NAME="tex2html60"
+  HREF="node30.html">Vc - Vibrations of crystals (point group) =&gt; preparation</A>
+<LI><A NAME="tex2html61"
+  HREF="node31.html">Vs - Vibrations of crystals (space group) =&gt; preparation</A>
+<LI><A NAME="tex2html62"
+  HREF="node32.html">V2 - Vibrations =&gt; calculation [normal modes]</A>
+<LI><A NAME="tex2html63"
+  HREF="node33.html">V3 - Vibrations =&gt; application [DOS, masses]</A>
+</UL>
+<LI><A NAME="tex2html64"
+  HREF="node34.html">Representation/visualisation</A>
+<UL>
+<LI><A NAME="tex2html65"
+  HREF="node35.html">Cm - Compare geometry with the one in another file</A>
+<LI><A NAME="tex2html66"
+  HREF="node36.html">D - Distances between atoms</A>
+<LI><A NAME="tex2html67"
+  HREF="node37.html">Ch - Check specified point in the cell</A>
+<LI><A NAME="tex2html68"
+  HREF="node38.html">Sb - Save in a box running across adjacent cells</A>
+</UL>
+<LI><A NAME="tex2html69"
+  HREF="node39.html">PE - PES: move atoms keeping the symmetry</A>
+<LI><A NAME="tex2html70"
+  HREF="node40.html">Miscellaneous menus</A>
+<UL>
+<LI><A NAME="tex2html71"
+  HREF="node41.html">S/R - Save/Read menu</A>
+<LI><A NAME="tex2html72"
+  HREF="node42.html">Mv - Move atoms</A>
+<LI><A NAME="tex2html73"
+  HREF="node43.html">Rt - Rotate atoms</A>
+<LI><A NAME="tex2html74"
+  HREF="node44.html">Point group generator</A>
+</UL>
+</UL>
+<LI><A NAME="tex2html75"
+  HREF="node45.html">Scripting capabilities of <I>tetr</I></A>
+</UL>
+<BR>
+<LI><A NAME="tex2html76"
+  HREF="node46.html">Utility <I>lev00</I></A>
+<UL>
+<LI><A NAME="tex2html77"
+  HREF="node47.html">What it can do</A>
+<LI><A NAME="tex2html78"
+  HREF="node48.html">Installation and general information</A>
+<LI><A NAME="tex2html79"
+  HREF="node49.html">Main definitions</A>
+<LI><A NAME="tex2html80"
+  HREF="node50.html">A note on calculating electronic DOS</A>
+<LI><A NAME="tex2html81"
+  HREF="node51.html">A note on calculating volume integrals</A>
+<LI><A NAME="tex2html82"
+  HREF="node52.html">Detailed description of options of <I>lev00</I></A>
+<UL>
+<LI><A NAME="tex2html83"
+  HREF="node53.html">Main menu</A>
+<LI><A NAME="tex2html84"
+  HREF="node54.html">Calculation of the DOS</A>
+<UL>
+<LI><A NAME="tex2html85"
+  HREF="node55.html">Physical bands</A>
+<LI><A NAME="tex2html86"
+  HREF="node56.html">0 - Choose dispersion for the DOS smearing</A>
+<LI><A NAME="tex2html87"
+  HREF="node57.html">3 - Total DOS: you need only -&gt; band.out, brill.dat</A>
+<LI><A NAME="tex2html88"
+  HREF="node58.html">1,2,11 - Projected (local) DOS calculations</A>
+</UL>
+<LI><A NAME="tex2html89"
+  HREF="node59.html">Studying the partial or total charge/spin density</A>
+<UL>
+<LI><A NAME="tex2html90"
+  HREF="node60.html">General remarks</A>
+<LI><A NAME="tex2html91"
+  HREF="node61.html">1 - Plot density along a line </A>
+<LI><A NAME="tex2html92"
+  HREF="node62.html">2 - Plot density in a plane </A>
+<LI><A NAME="tex2html93"
+  HREF="node63.html">3 - Amount of charge inside a sphere</A>
+<LI><A NAME="tex2html94"
+  HREF="node64.html">4 - Exploration of the density</A>
+<LI><A NAME="tex2html95"
+  HREF="node65.html">5 - Dipole moment </A>
+<LI><A NAME="tex2html96"
+  HREF="node66.html">6 - Quadrupole moment</A>
+<LI><A NAME="tex2html97"
+  HREF="node67.html">7 - Get density via point charges: match moments &amp; potential</A>
+<LI><A NAME="tex2html98"
+  HREF="node68.html">8 - Cutting atoms out of the density</A>
+<LI><A NAME="tex2html99"
+  HREF="node69.html">9 - Write non-zero density as NAME.new</A>
+<LI><A NAME="tex2html100"
+  HREF="node70.html">10 - Write density in gOpenMol cube format</A>
+<LI><A NAME="tex2html101"
+  HREF="node71.html">A short note on how to use gOpenMol</A>
+<LI><A NAME="tex2html102"
+  HREF="node72.html">11 - Get density via point charges: match density</A>
+<LI><A NAME="tex2html103"
+  HREF="node73.html">12 - Transform the charge density for a shifted system</A>
+<LI><A NAME="tex2html104"
+  HREF="node74.html">Option 55 of the density menu</A>
+<LI><A NAME="tex2html105"
+  HREF="node75.html">Option 4 of the density menu</A>
+</UL>
+<LI><A NAME="tex2html106"
+  HREF="node76.html">General linear combination of charge densities</A>
+<LI><A NAME="tex2html107"
+  HREF="node77.html">Search for the surface states </A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html108"
+  HREF="node78.html">Working with <I>VASP</I></A>
+<UL>
+<LI><A NAME="tex2html109"
+  HREF="node79.html"><I>tetr</I> and <I>VASP</I></A>
+<LI><A NAME="tex2html110"
+  HREF="node80.html"><I>lev00</I> and <I>VASP</I></A>
+<UL>
+<LI><A NAME="tex2html111"
+  HREF="node81.html">Utility <I>do_param</I> </A>
+<LI><A NAME="tex2html112"
+  HREF="node82.html">What to do for the proper DOS/LDOS calculation ?</A>
+<LI><A NAME="tex2html113"
+  HREF="node83.html">What to do for processing the electronic/spin/partial density or
+electrostatic potential?</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html114"
+  HREF="node84.html">Working with SIESTA</A>
+<UL>
+<LI><A NAME="tex2html115"
+  HREF="node85.html"><I>tetr</I> and <I>SIESTA</I></A>
+<LI><A NAME="tex2html116"
+  HREF="node86.html"><I>lev00</I> and <I>SIESTA</I></A>
+<UL>
+<LI><A NAME="tex2html117"
+  HREF="node87.html">Utility <I>get_param_siesta</I> </A>
+<LI><A NAME="tex2html118"
+  HREF="node88.html">What to do for processing the electronic/spin density?</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html119"
+  HREF="node89.html">Working with old academic version of <I>CASTEP</I></A>
+<UL>
+<LI><A NAME="tex2html120"
+  HREF="node90.html"><I>CASTEP</I> </A>
+<LI><A NAME="tex2html121"
+  HREF="node91.html">Utilities used by <I>CASTEP</I></A>
+<UL>
+<LI><A NAME="tex2html122"
+  HREF="node92.html">Utility <I>check</I></A>
+<LI><A NAME="tex2html123"
+  HREF="node93.html">Utility <I>take</I></A>
+<LI><A NAME="tex2html124"
+  HREF="node94.html">Utilities <I>lev1</I> (old) and <I>lev2</I> (new) </A>
+<LI><A NAME="tex2html125"
+  HREF="node95.html">How to split a large job into a set of smaller jobs. Utility <I>sum</I></A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html126"
+  HREF="node96.html">Miscellaneous</A>
+<UL>
+<LI><A NAME="tex2html127"
+  HREF="node97.html">Limitations and parameters of the package</A>
+<LI><A NAME="tex2html128"
+  HREF="node98.html">Bugs and comments</A>
+<LI><A NAME="tex2html129"
+  HREF="node99.html">Enjoyed?</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html130"
+  HREF="node100.html">Bibliography</A>
+<LI><A NAME="tex2html131"
+  HREF="node101.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html29"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev_g.png"> 
+<A NAME="tex2html27"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html30"
+  HREF="node1.html">Contents</A>
+ &nbsp <B>  <A NAME="tex2html28"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

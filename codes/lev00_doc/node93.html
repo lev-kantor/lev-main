@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Utility take</TITLE>
+<META NAME="description" CONTENT="Utility take">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node94.html">
+<LINK REL="previous" HREF="node92.html">
+<LINK REL="up" HREF="node91.html">
+<LINK REL="next" HREF="node94.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1464"
+  HREF="node94.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1460"
+  HREF="node91.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1454"
+  HREF="node92.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1462"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1465"
+  HREF="node94.html">Utilities lev1 (old) and</A>
+<B> Up:</B> <A NAME="tex2html1461"
+  HREF="node91.html">Utilities used by CASTEP</A>
+<B> Previous:</B> <A NAME="tex2html1455"
+  HREF="node92.html">Utility check</A>
+ &nbsp <B>  <A NAME="tex2html1463"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00722000000000000000">
+Utility <I>take</I></A>
+</H2>
+
+<P>
+This utility <I><I>is used to assess the convergence of the
+band-structure run of</I></I> <B><I>CASTEP</I></B> <I><I>and</I></I>
+is compiled from your current working directory using a shell-script
+<B><I>take.comp</I></B>. Then, you can either run it with the name
+of the <B><I>CASTEP</I></B> output in the command line or without
+it in which case you will be asked to specify this name explicitly:
+
+<P>
+<PRE>
+ take   [name of the CASTEP output file]
+</PRE> 
+
+<P>
+The utility gives the following information about each <B><I>CASTEP</I></B>
+band-structure iteration: 
+
+<P>
+
+<UL>
+<LI>actual iteration number <I>in the file</I> and the <B><I>CASTEP</I></B>
+iteration number; the former number differs from the latter if you
+keep not all of the output information in your output file (e.g.,
+only several last iterations);
+</LI>
+<LI>then, for each <B><IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$"></B>-point (<TT>NKP</TT>) per line
+it gives <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+delta=\frac{1}{{\texttt{NBANDS}}}\sum_{n=1}^{{\texttt{NBANDS}}}\left|\epsilon_{n\mathbf{k}}^{{\texttt{NKP}}}-\epsilon_{n\mathbf{k}}^{{\texttt{NKP-1}}}\right|
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="9"></A><IMG
+ WIDTH="16" HEIGHT="33" BORDER="0"
+ SRC="img160.png"
+ ALT="\begin{displaymath}
+delta=\frac{1}{{\texttt{NBANDS}}}\sum_{n=1}^{{\texttt{NBANDS...
+...tt{NKP}}}-\epsilon_{n\mathbf{k}}^{{\texttt{NKP-1}}}\right\vert
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(6.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which shows the convergence of the eigenvalues <!-- MATH
+ $\epsilon_{n\mathbf{k}}^{{\texttt{NKP}}}$
+ -->
+<IMG
+ WIDTH="425" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img161.png"
+ ALT="$\epsilon_{n\mathbf{k}}^{{\texttt{NKP}}}$">
+on the current (<TT>NKP</TT>-th) iteration with respect to the previous
+one ((<TT>NKP-1</TT>)-th); it also compares the criteria with the
+previous iteration and checks if all the eigenvalues are properly
+ordered. If they are not ordered properly, it tells you how many weird
+eigenvalues have been met. Note that if <B><I>CASTEP</I></B> does
+the subspace rotation, this information is redundant. 
+</LI>
+</UL>
+Usually, <IMG
+ WIDTH="27" HEIGHT="34" ALIGN="BOTTOM" BORDER="0"
+ SRC="img162.png"
+ ALT="$delta=10^{-3}$"> is fine.
+
+<P>
+At the end of the output you are asked to produce a file <TT>band.0</TT>
+with eigenvalues (of the same format as <TT>band.out</TT>) from <I>any</I>
+desired iteration. This option allows you to check the convergence
+of the DOS with the iteration number by preparing <TT>band.out</TT>
+files from different iterations and subsequently running <B><I>lev00</I></B>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1464"
+  HREF="node94.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1460"
+  HREF="node91.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1454"
+  HREF="node92.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1462"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1465"
+  HREF="node94.html">Utilities lev1 (old) and</A>
+<B> Up:</B> <A NAME="tex2html1461"
+  HREF="node91.html">Utilities used by CASTEP</A>
+<B> Previous:</B> <A NAME="tex2html1455"
+  HREF="node92.html">Utility check</A>
+ &nbsp <B>  <A NAME="tex2html1463"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

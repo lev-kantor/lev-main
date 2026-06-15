@@ -1,0 +1,1514 @@
+This is TeX, Version 3.14159 (Web2C 7.3.1) (format=latex 2006.1.19)  8 MAY 2006 11:42
+**./images.tex
+(./images.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, i
+talian, nohyphenation, loaded.
+
+(/usr/share/texmf/tex/latex/base/book.cls
+Document Class: book 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/bk12.clo
+File: bk12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texmf/tex/latex/base/fontenc.sty
+Package: fontenc 2001/06/05 v1.94 Standard LaTeX package
+(/usr/share/texmf/tex/latex/base/t1enc.def
+File: t1enc.def 2001/06/05 v1.94 Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 38.
+)) (/usr/share/texmf/tex/latex/misc/geometry.sty
+Package: geometry 1999/10/07 v2.2 Page Geometry
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+\geom@cnth=\count88
+\geom@cntv=\count89
+(/usr/share/texmf/tex/latex/config/geometry.cfg)) (/usr/share/texmf/tex/latex/g
+raphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/usr/share/texmf/tex/latex/config/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 80.
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/usr/share/texmf/tex/latex/ae/ae.sty
+Package: ae 1998/11/17 1.0 Almost European Computer Modern
+(/usr/share/texmf/tex/latex/base/fontenc.sty
+Package: fontenc 2001/06/05 v1.94 Standard LaTeX package
+(/usr/share/texmf/tex/latex/base/t1enc.def
+File: t1enc.def 2001/06/05 v1.94 Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 38.
+)
+LaTeX Font Info:    Try loading font information for T1+aer on input line 95.
+(/usr/share/texmf/tex/latex/ae/t1aer.fd
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+))) (/usr/share/texmf/tex/latex/ae/aecompl.sty
+Package: aecompl 1998/07/23 0.9 T1 Complements for AE fonts (D. Roegel)
+) (/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 2001/03/01 v3.7h The Babel package
+(/usr/share/texmf/tex/generic/babel/english.ldf
+Language: english 2001/04/15 v3.3l English support from the babel system
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 2001/03/01 v3.7h Babel common definitions
+\babel@savecnt=\count90
+\U@D=\dimen105
+)
+\l@canadian = a dialect from \language\l@english 
+)) (/usr/share/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+(/usr/share/texmf/tex/latex/config/color.cfg)
+Package color Info: Driver file: dvips.def on input line 125.
+(/usr/share/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)) (/usr/share/texmf/tex/latex/base/inputenc.sty
+Package: inputenc 2001/07/10 v0.99a Input encoding file 
+(/usr/share/texmf/tex/latex/base/latin1.def
+File: latin1.def 2001/07/10 v0.99a Input encoding file 
+))
+\sizebox=\box26
+\lthtmlwrite=\write3
+
+LaTeX Warning: Unused global option(s):
+    [epsf].
+
+(images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+----------------------- Geometry parameters
+mode: letterpaper 
+h-parts: 2cm, 500.484pt, 2cm
+v-parts: 2cm, 681.15898pt, 2cm
+----------------------- Page layout dimensions
+\paperwidth  614.295pt
+\paperheight 794.96999pt
+\textwidth  349.0pt
+\textheight 659.38167pt
+\oddsidemargin  28.45274pt
+\evensidemargin 28.45274pt
+\topmargin  0.0pt
+\headheight 0.0pt
+\headsep    0.0pt
+\footskip   0.0pt
+\hoffset 0.0pt
+\voffset 0.0pt
+\mag 1000
+(1in=72.27pt, 1cm=28.45pt)
+-----------------------
+
+latex2htmlLength hsize=349.0pt
+
+latex2htmlLength vsize=659.38167pt
+
+latex2htmlLength hoffset=0.0pt
+
+latex2htmlLength voffset=0.0pt
+
+latex2htmlLength topmargin=0.0pt
+
+latex2htmlLength topskip=0.00003pt
+
+latex2htmlLength headheight=0.0pt
+
+latex2htmlLength headsep=0.0pt
+
+latex2htmlLength parskip=0.0pt plus 1.0pt
+
+latex2htmlLength oddsidemargin=28.45274pt
+
+latex2htmlLength evensidemargin=28.45274pt
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 158.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 158.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 158.
+l2hSize :tex2html_wrap_inline24091:8.7pt::8.7pt::14.96526pt.
+[1
+
+
+
+]
+l2hSize :tex2html_wrap_inline24094:8.23987pt::8.23987pt::10.23569pt.
+[2
+
+
+]
+l2hSize :tex2html_wrap_inline24097:7.73987pt::0.0pt::7.69638pt.
+[3
+
+
+]
+l2hSize :tex2html_wrap_inline24100:7.73987pt::0.0pt::20.16846pt.
+[4
+
+
+]
+l2hSize :tex2html_wrap_inline24103:11.36389pt::0.0pt::9.39539pt.
+[5
+
+
+]
+l2hSize :tex2html_wrap_inline10287:8.33331pt::0.0pt::7.71242pt.
+[6
+
+
+]
+l2hSize :tex2html_wrap_inline10293:8.7pt::8.7pt::72.39772pt.
+[7
+
+
+]
+l2hSize :tex2html_wrap_inline10295:8.73334pt::8.73334pt::119.344pt.
+[8
+
+
+]
+l2hSize :tex2html_wrap_inline10297:8.23987pt::8.23987pt::10.99518pt.
+[9
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.225 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap24123:8.88597pt::3.0pt::349.0pt.
+[10
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.233 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap24129:8.88597pt::3.0pt::349.0pt.
+[11
+
+
+]
+l2hSize :tex2html_wrap_inline10305:8.23987pt::8.23987pt::45.05275pt.
+[12
+
+
+]
+l2hSize :displaymath1300:34.66658pt::0.0pt::349.0pt.
+[13
+
+
+]
+l2hSize :tex2html_wrap_inline10307:8.23334pt::0.0pt::9.97629pt.
+[14
+
+
+]
+l2hSize :tex2html_wrap_inline10309:8.23987pt::8.23987pt::27.0039pt.
+[15
+
+
+]
+l2hSize :tex2html_wrap_inline10311:8.73334pt::8.73334pt::39.93762pt.
+[16
+
+
+]
+l2hSize :tex2html_wrap_inline10315:8.73334pt::8.73334pt::14.17581pt.
+[17
+
+
+]
+l2hSize :tex2html_wrap_inline10321:7.73987pt::0.0pt::6.7554pt.
+[18
+
+
+]
+l2hSize :tex2html_wrap_inline10323:8.33331pt::0.0pt::5.58318pt.
+[19
+
+
+]
+l2hSize :tex2html_wrap_inline10325:7.73987pt::0.0pt::5.64429pt.
+[20
+
+
+]
+l2hSize :tex2html_wrap_inline10327:7.73987pt::0.0pt::8.13734pt.
+[21
+
+
+]
+l2hSize :tex2html_wrap_inline10329:8.83331pt::8.83331pt::7.88596pt.
+[22
+
+
+]
+l2hSize :tex2html_wrap_inline10331:8.23987pt::8.23987pt::7.33485pt.
+[23
+
+
+]
+l2hSize :tex2html_wrap_inline10333:10.01027pt::10.01027pt::19.99144pt.
+[24
+
+
+]
+l2hSize :tex2html_wrap_inline10335:9.5pt::9.5pt::28.5559pt.
+[25
+
+
+]
+l2hSize :tex2html_wrap_inline10337:8.73334pt::8.73334pt::15.53192pt.
+[26
+
+
+]
+l2hSize :tex2html_wrap_inline10339:8.73334pt::8.73334pt::15.53192pt.
+[27
+
+
+]
+l2hSize :tex2html_wrap_inline10341:7.73987pt::0.0pt::6.58041pt.
+[28
+
+
+]
+l2hSize :tex2html_wrap_inline10343:8.83331pt::8.83331pt::53.47644pt.
+[29
+
+
+]
+l2hSize :tex2html_wrap_inline10351:8.23987pt::8.23987pt::11.89998pt.
+[30
+
+
+]
+l2hSize :tex2html_wrap_inline10355:8.83331pt::8.83331pt::12.83748pt.
+[31
+
+
+]
+l2hSize :tex2html_wrap_inline10357:8.83331pt::8.83331pt::66.07631pt.
+[32
+
+
+]
+l2hSize :tex2html_wrap_inline10359:8.83331pt::8.83331pt::12.83748pt.
+[33
+
+
+]
+l2hSize :tex2html_wrap_inline10361:8.83331pt::8.83331pt::12.83748pt.
+[34
+
+
+]
+l2hSize :tex2html_wrap_inline10367:9.5pt::9.5pt::28.00725pt.
+[35
+
+
+]
+l2hSize :tex2html_wrap_inline10369:7.73987pt::0.0pt::7.60123pt.
+[36
+
+
+]
+l2hSize :tex2html_wrap_inline10375:8.83331pt::8.83331pt::17.04578pt.
+[37
+
+
+]
+l2hSize :tex2html_wrap_inline10389:8.2pt::0.0pt::9.85567pt.
+[38
+
+
+]
+l2hSize :tex2html_wrap_inline10391:8.7pt::8.7pt::30.57913pt.
+[39
+
+
+]
+l2hSize :tex2html_wrap_inline10401:8.2pt::0.0pt::11.24986pt.
+[40
+
+
+]
+Overfull \hbox (29.73712pt too wide) detected at line 431
+\OML/cmm/m/it/12 E \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 E[] \OT1/cmr/m/n/12 + [] 
+\OML/cmm/m/it/12 f[]u[] \OT1/cmr/m/n/12 + [] [] ^^H[]\OML/cmm/m/it/12 u[]u[] \O
+T1/cmr/m/n/12 + [] [] ^^H[]\OML/cmm/m/it/12 u[]u[]u[] \OT1/cmr/m/n/12 + [] [] ^
+^H[]\OML/cmm/m/it/12 u[]u[]u[]u[] \OT1/cmr/m/n/12 + []
+ []
+
+l2hSize :displaymath3412:31.62924pt::0.0pt::349.0pt.
+[41
+
+
+]
+l2hSize :tex2html_wrap_inline10411:8.7pt::8.7pt::14.03531pt.
+[42
+
+
+]
+l2hSize :tex2html_wrap_inline10413:8.23987pt::8.23987pt::10.6688pt.
+[43
+
+
+]
+l2hSize :tex2html_wrap_inline10415:7.86708pt::0.0pt::4.59583pt.
+[44
+
+
+]
+l2hSize :tex2html_wrap_inline10417:8.7pt::8.7pt::16.36598pt.
+[45
+
+
+]
+l2hSize :tex2html_wrap_inline10419:8.7pt::8.7pt::21.00493pt.
+[46
+
+
+]
+l2hSize :tex2html_wrap_inline10423:8.36708pt::8.36708pt::6.1236pt.
+[47
+
+
+]
+l2hSize :tex2html_wrap_inline10427:7.73987pt::0.0pt::12.58745pt.
+[48
+
+
+]
+l2hSize :tex2html_wrap_inline10429:9.5pt::9.5pt::52.6574pt.
+[49
+
+
+]
+l2hSize :tex2html_wrap_inline10431:12.63332pt::12.63332pt::118.59401pt.
+[50
+
+
+]
+l2hSize :tex2html_wrap_inline10433:8.7pt::8.7pt::15.34865pt.
+[51
+
+
+]
+l2hSize :tex2html_wrap_inline10437:8.2pt::0.0pt::9.07344pt.
+[52
+
+
+]
+l2hSize :tex2html_wrap_inline10443:8.83331pt::8.83331pt::31.4533pt.
+[53
+
+
+]
+l2hSize :tex2html_wrap_inline10445:8.33333pt::0.0pt::11.26251pt.
+[54
+
+
+]
+l2hSize :tex2html_wrap_inline10447:8.23987pt::8.23987pt::11.67343pt.
+[55
+
+
+]
+l2hSize :displaymath3458:29.03836pt::0.0pt::349.0pt.
+[56
+
+
+]
+l2hSize :tex2html_wrap_inline10449:8.36708pt::8.36708pt::10.132pt.
+[57
+
+
+]
+l2hSize :tex2html_wrap_inline10461:8.23987pt::8.23987pt::21.00679pt.
+[58
+
+
+]
+l2hSize :tex2html_wrap_inline10463:8.83331pt::8.83331pt::9.773pt.
+[59
+
+
+]
+l2hSize :tex2html_wrap_inline10465:10.30006pt::10.30006pt::16.93675pt.
+[60
+
+
+]
+l2hSize :tex2html_wrap_inline10467:10.30006pt::10.30006pt::16.93675pt.
+[61
+
+
+]
+l2hSize :displaymath3478:30.50511pt::0.0pt::349.0pt.
+[62
+
+
+]
+l2hSize :tex2html_wrap_inline10473:8.23987pt::8.23987pt::21.00679pt.
+[63
+
+
+]
+l2hSize :tex2html_wrap_inline10475:8.23987pt::8.23987pt::19.99985pt.
+[64
+
+
+]
+l2hSize :tex2html_wrap_inline10479:8.23987pt::8.23987pt::12.0249pt.
+[65
+
+
+]
+l2hSize :tex2html_wrap_inline10481:8.7pt::8.7pt::11.58757pt.
+[66
+
+
+]
+l2hSize :tex2html_wrap_inline10483:8.7pt::8.7pt::16.71745pt.
+[67
+
+
+]
+l2hSize :tex2html_wrap_inline10485:8.23987pt::8.23987pt::12.0249pt.
+[68
+
+
+]
+l2hSize :tex2html_wrap_inline10487:8.7pt::8.7pt::16.71745pt.
+[69
+
+
+]
+l2hSize :tex2html_wrap_inline10491:8.7pt::8.7pt::16.36598pt.
+[70
+
+
+]
+l2hSize :tex2html_wrap_inline10501:8.83331pt::8.83331pt::6.2992pt.
+[71
+
+
+]
+l2hSize :displaymath3512:27.45541pt::0.0pt::349.0pt.
+[72
+
+
+]
+l2hSize :tex2html_wrap_inline10505:8.23987pt::8.23987pt::14.71745pt.
+[73
+
+
+]
+l2hSize :tex2html_wrap_inline10509:8.2pt::0.0pt::7.92902pt.
+[74
+
+
+]
+l2hSize :tex2html_wrap_inline10511:8.83331pt::8.83331pt::7.66028pt.
+[75
+
+
+]
+l2hSize :displaymath3522:27.45541pt::0.0pt::349.0pt.
+[76
+
+
+]
+l2hSize :tex2html_wrap_inline10517:9.5pt::9.5pt::53.7018pt.
+[77
+
+
+]
+l2hSize :displaymath3533:26.50006pt::0.0pt::349.0pt.
+[78
+
+
+]
+l2hSize :tex2html_wrap_inline10519:10.32137pt::10.32137pt::47.12477pt.
+[79
+
+
+]
+l2hSize :displaymath3544:31.6848pt::0.0pt::349.0pt.
+[80
+
+
+]
+l2hSize :displaymath3562:29.33339pt::0.0pt::349.0pt.
+[81
+
+
+]
+l2hSize :displaymath10277:27.45541pt::0.0pt::349.0pt.
+[82
+
+
+]
+l2hSize :tex2html_wrap_inline10533:12.63332pt::12.63332pt::34.8792pt.
+[83
+
+
+]
+l2hSize :tex2html_wrap_inline10537:7.73987pt::0.0pt::29.81764pt.
+[84
+
+
+]
+l2hSize :tex2html_wrap_inline10539:12.63332pt::12.63332pt::82.70134pt.
+[85
+
+
+]
+l2hSize :tex2html_wrap_inline10541:10.01027pt::10.01027pt::18.6708pt.
+[86
+
+
+]
+l2hSize :tex2html_wrap_inline10545:8.33331pt::0.0pt::7.44151pt.
+[87
+
+
+]
+l2hSize :tex2html_wrap_inline10547:8.23987pt::8.23987pt::26.6663pt.
+[88
+
+
+]
+l2hSize :tex2html_wrap_inline10549:9.5pt::9.5pt::23.9219pt.
+[89
+
+
+]
+l2hSize :tex2html_wrap_inline10557:10.3547pt::0.0pt::21.49306pt.
+[90
+
+
+]
+l2hSize :displaymath3605:29.33339pt::0.0pt::349.0pt.
+[91
+
+
+]
+l2hSize :tex2html_wrap_inline10559:8.23987pt::8.23987pt::5.33748pt.
+[92
+
+
+]
+l2hSize :tex2html_wrap_inline10563:8.23987pt::8.23987pt::25.45703pt.
+[93
+
+
+]
+l2hSize :tex2html_wrap_inline10577:8.7pt::8.7pt::18.1699pt.
+[94
+
+
+]
+l2hSize :tex2html_wrap_inline10579:8.2pt::0.0pt::29.60931pt.
+[95
+
+
+]
+l2hSize :tex2html_wrap_inline10581:8.2pt::0.0pt::29.60931pt.
+[96
+
+
+]
+l2hSize :tex2html_wrap_inline10583:8.7pt::8.7pt::40.74808pt.
+[97
+
+
+]
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.794 $\textrm{^^c3^^85}
+                        $%
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+l2hSize :tex2html_wrap_inline10585:10.99193pt::0.0pt::9.39539pt.
+[98
+
+
+]
+l2hSize :tex2html_wrap_inline10593:9.5pt::9.5pt::24.53462pt.
+[99
+
+
+]
+l2hSize :tex2html_wrap_inline10595:9.5pt::9.5pt::23.88185pt.
+[100
+
+
+]
+l2hSize :tex2html_wrap_inline10597:9.51027pt::0.0pt::11.94868pt.
+[101
+
+
+]
+l2hSize :tex2html_wrap_inline10603:8.23987pt::8.23987pt::29.94475pt.
+[102
+
+
+]
+l2hSize :tex2html_wrap_inline10605:11.33661pt::11.33661pt::34.0872pt.
+[103
+
+
+]
+l2hSize :tex2html_wrap_inline10609:8.23987pt::8.23987pt::29.22946pt.
+[104
+
+
+]
+l2hSize :tex2html_wrap_inline10621:8.7pt::8.7pt::15.11244pt.
+[105
+
+
+]
+l2hSize :tex2html_wrap_inline10623:8.2pt::0.0pt::9.62971pt.
+[106
+
+
+]
+l2hSize :displaymath10278:24.45569pt::0.0pt::349.0pt.
+[107
+
+
+]
+l2hSize :tex2html_wrap_inline10625:8.23334pt::0.0pt::9.80965pt.
+[108
+
+
+]
+l2hSize :tex2html_wrap_inline10627:8.2pt::0.0pt::10.04843pt.
+[109
+
+
+]
+l2hSize :displaymath10279:27.63338pt::0.0pt::349.0pt.
+[110
+
+
+]
+l2hSize :displaymath6318:30.57869pt::0.0pt::349.0pt.
+[111
+
+
+]
+l2hSize :tex2html_wrap_inline10635:9.5pt::9.5pt::33.70865pt.
+[112
+
+
+]
+l2hSize :tex2html_wrap_inline10637:8.23987pt::8.23987pt::13.57626pt.
+[113
+
+
+]
+l2hSize :tex2html_wrap_inline10639:9.5pt::9.5pt::57.58708pt.
+[114
+
+
+]
+l2hSize :displaymath6342:31.77788pt::0.0pt::349.0pt.
+[115
+
+
+]
+l2hSize :tex2html_wrap_inline10641:8.23987pt::8.23987pt::15.91377pt.
+[116
+
+
+]
+l2hSize :tex2html_wrap_inline10643:7.73987pt::0.0pt::7.26445pt.
+[117
+
+
+]
+l2hSize :tex2html_wrap_inline10645:8.23987pt::8.23987pt::6.74707pt.
+[118
+
+
+]
+l2hSize :displaymath6352:25.11124pt::0.0pt::349.0pt.
+[119
+
+
+]
+l2hSize :displaymath6361:30.57869pt::0.0pt::349.0pt.
+[120
+
+
+]
+l2hSize :tex2html_wrap_inline10649:8.23987pt::8.23987pt::16.16156pt.
+[121
+
+
+]
+l2hSize :displaymath6370:30.57869pt::0.0pt::349.0pt.
+[122
+
+
+]
+l2hSize :displaymath6381:24.45569pt::0.0pt::349.0pt.
+[123
+
+
+]
+l2hSize :tex2html_wrap_inline10657:8.83331pt::8.83331pt::28.65242pt.
+[124
+
+
+]
+l2hSize :displaymath6395:34.61125pt::0.0pt::349.0pt.
+[125
+
+
+]
+l2hSize :tex2html_wrap_inline10659:9.5pt::9.5pt::33.11702pt.
+[126
+
+
+]
+l2hSize :tex2html_wrap_inline10661:8.83331pt::8.83331pt::48.30911pt.
+[127
+
+
+]
+l2hSize :displaymath6413:25.11124pt::0.0pt::349.0pt.
+[128
+
+
+]
+l2hSize :tex2html_wrap_inline10665:8.23987pt::8.23987pt::16.91573pt.
+[129
+
+
+]
+l2hSize :tex2html_wrap_inline10667:9.5pt::9.5pt::29.53705pt.
+[130
+
+
+]
+l2hSize :displaymath6436:27.578pt::0.0pt::349.0pt.
+[131
+
+
+]
+l2hSize :tex2html_wrap_inline10669:9.5pt::9.5pt::40.69267pt.
+[132
+
+
+]
+l2hSize :tex2html_wrap_inline10673:8.7pt::8.7pt::20.5993pt.
+[133
+
+
+]
+l2hSize :tex2html_wrap_inline10675:8.7pt::8.7pt::21.2419pt.
+[134
+
+
+]
+l2hSize :tex2html_wrap_inline10679:8.23987pt::8.23987pt::10.54387pt.
+[135
+
+
+]
+l2hSize :tex2html_wrap_inline10681:9.5pt::9.5pt::35.9067pt.
+[136
+
+
+]
+l2hSize :tex2html_wrap_inline10683:8.83331pt::8.83331pt::37.98578pt.
+[137
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.1082 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1084   angle=-90]{dos_
+                        disp.eps}%
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.1084   angle=-90]{dos_disp.eps}
+                                 %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\lthtmlboxmathZ ...expandafter \box \next \egroup 
+                                                  
+l.1086 \lthtmlcheckvsize
+                        \clearpage}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+l2hSize :tex2html_wrap24423:0.0pt::0.0pt::0.0pt.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1086 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1086 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1086 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.1092 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1094   angle=-90]{dos_
+                        groups.eps}%
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.1094   angle=-90]{dos_groups.eps}
+                                   %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\lthtmlboxmathZ ...expandafter \box \next \egroup 
+                                                  
+l.1096 \lthtmlcheckvsize
+                        \clearpage}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+l2hSize :tex2html_wrap24434:0.0pt::0.0pt::0.0pt.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1096 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1096 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1096 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+l2hSize :tex2html_wrap_inline10723:7.73987pt::0.0pt::6.1221pt.
+[138
+
+
+
+
+
+
+]
+l2hSize :tex2html_wrap_inline10725:8.23987pt::8.23987pt::6.48459pt.
+[139
+
+
+]
+l2hSize :tex2html_wrap_inline10727:8.33331pt::0.0pt::6.69292pt.
+[140
+
+
+]
+l2hSize :tex2html_wrap_inline10729:8.7pt::8.7pt::20.2254pt.
+[141
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.1126 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1128   angle=-90]{dos_
+                        local.eps}%
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.1128   angle=-90]{dos_local.eps}
+                                  %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\lthtmlboxmathZ ...expandafter \box \next \egroup 
+                                                  
+l.1130 \lthtmlcheckvsize
+                        \clearpage}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+l2hSize :tex2html_wrap24448:0.0pt::0.0pt::0.0pt.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1130 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1130 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1130 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.1135 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1137   angle=-90]{dos_
+                        local_smear.eps}%
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.1137   angle=-90]{dos_local_smear.eps}
+                                        %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\lthtmlboxmathZ ...expandafter \box \next \egroup 
+                                                  
+l.1139 \lthtmlcheckvsize
+                        \clearpage}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+l2hSize :tex2html_wrap24452:0.0pt::0.0pt::0.0pt.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1139 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1139 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1139 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.1148 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1149 height=5cm]{H2O_
+                       density.eps}%
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.1149 height=5cm]{H2O_density.eps}
+                                   %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\lthtmlboxmathZ ...expandafter \box \next \egroup 
+                                                  
+l.1151 \lthtmlcheckvsize
+                        \clearpage}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+l2hSize :tex2html_wrap24469:0.0pt::0.0pt::0.0pt.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1151 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1151 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1151 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+l2hSize :tex2html_wrap_inline10745:8.7pt::8.7pt::46.70117pt.
+[142
+
+
+
+
+
+
+
+
+]
+l2hSize :tex2html_wrap_inline10749:8.23987pt::8.23987pt::9.51605pt.
+[143
+
+
+]
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.1170 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1172   angle=-90]{explor_
+                           charge.eps}%
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.1172   angle=-90]{explor_charge.eps}
+                                      %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\lthtmlboxmathZ ...expandafter \box \next \egroup 
+                                                  
+l.1174 \lthtmlcheckvsize
+                        \clearpage}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+l2hSize :tex2html_wrap24487:0.0pt::0.0pt::0.0pt.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1174 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1174 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.1174 \lthtmlcheckvsize\clearpage
+                                  }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Runaway argument?
+! Paragraph ended before \Gin@ii was complete.
+<to be read again> 
+                   \par 
+l.1185 
+       
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+l2hSize :tex2html_wrap24504:8.88597pt::3.0pt::349.0pt.
+[144
+
+
+
+
+]
+l2hSize :tex2html_wrap_inline10759:8.7pt::8.7pt::61.90797pt.
+[145
+
+
+]
+l2hSize :tex2html_wrap_inline10763:8.23987pt::8.23987pt::11.66266pt.
+[146
+
+
+]
+l2hSize :tex2html_wrap_inline10765:8.23987pt::8.23987pt::10.78395pt.
+[147
+
+
+]
+l2hSize :tex2html_wrap_inline10767:8.23987pt::8.23987pt::15.29883pt.
+[148
+
+
+]
+l2hSize :displaymath10280:17.5pt::0.0pt::349.0pt.
+[149
+
+
+]
+l2hSize :tex2html_wrap_inline10769:8.23987pt::8.23987pt::10.39435pt.
+[150
+
+
+]
+l2hSize :tex2html_wrap_inline10771:8.23987pt::8.23987pt::10.39435pt.
+[151
+
+
+]
+l2hSize :tex2html_wrap_inline10783:8.23987pt::8.23987pt::67.0203pt.
+[152
+
+
+]
+l2hSize :tex2html_wrap_inline10837:8.23987pt::8.23987pt::13.4241pt.
+[153
+
+
+]
+LaTeX Font Info:    Try loading font information for T1+aett on input line 1270
+.
+(/usr/share/texmf/tex/latex/ae/t1aett.fd
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+)
+l2hSize :displaymath9218:35.15424pt::0.0pt::349.0pt.
+[154
+
+
+]
+l2hSize :tex2html_wrap_inline10849:12.18661pt::12.18661pt::24.33568pt.
+[155
+
+
+]
+l2hSize :tex2html_wrap_inline10851:9.51027pt::0.0pt::65.23007pt.
+[156
+
+
+]
+l2hSize :tex2html_wrap_inline10859:8.33331pt::0.0pt::26.03159pt.
+[157
+
+
+]
+l2hSize :displaymath9270:17.5pt::0.0pt::349.0pt.
+[158
+
+
+]
+l2hSize :displaymath9275:33.8777pt::0.0pt::349.0pt.
+[159
+
+
+]
+l2hSize :tex2html_wrap_inline10865:8.23987pt::8.23987pt::11.4549pt.
+[160
+
+
+]
+l2hSize :displaymath9310:34.75545pt::0.0pt::349.0pt.
+[161
+
+
+]
+l2hSize :tex2html_wrap_inline10881:8.7pt::8.7pt::14.74644pt.
+[162
+
+
+]
+l2hSize :tex2html_wrap_inline10883:8.7pt::8.7pt::14.74644pt.
+[163
+
+
+]
+l2hSize :tex2html_wrap_inline10885:8.23987pt::8.23987pt::11.89998pt.
+[164
+
+
+]
+l2hSize :tex2html_wrap_inline10887:8.23987pt::8.23987pt::11.89998pt.
+[165
+
+
+]
+l2hSize :tex2html_wrap_inline10889:8.36708pt::8.36708pt::9.34589pt.
+[166
+
+
+]
+l2hSize :tex2html_wrap_inline10891:8.7pt::8.7pt::14.74644pt.
+[167
+
+
+]
+l2hSize :tex2html_wrap_inline10907:8.7pt::8.7pt::17.1198pt.
+[168
+
+
+]
+l2hSize :tex2html_wrap_inline10909:9.51027pt::0.0pt::11.94868pt.
+[169
+
+
+]
+l2hSize :tex2html_wrap_inline10911:9.5pt::9.5pt::107.462pt.
+[170
+
+
+]
+l2hSize :tex2html_wrap_inline10913:8.2pt::0.0pt::11.44566pt.
+[171
+
+
+]
+l2hSize :tex2html_wrap_inline10915:9.51027pt::0.0pt::16.19572pt.
+[172
+
+
+]
+l2hSize :tex2html_wrap_inline10923:9.5pt::9.5pt::24.38998pt.
+[173
+
+
+] (images.aux) ) 
+Here is how much of TeX's memory you used:
+ 1715 strings out of 20880
+ 21381 string characters out of 197306
+ 66514 words of memory out of 350001
+ 4680 multiletter control sequences out of 10000+15000
+ 9886 words of font info for 29 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 10000
+ 28i,6n,22p,275b,219s stack positions out of 3000i,100n,1500p,50000b,4000s
+
+Output written on images.dvi (173 pages, 42664 bytes).

@@ -1,0 +1,391 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>B - Generate supercell geometry from scratch</TITLE>
+<META NAME="description" CONTENT="B - Generate supercell geometry from scratch">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node13.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html438"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html434"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html428"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html436"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html439"
+  HREF="node16.html">Pc - Generate primitive</A>
+<B> Up:</B> <A NAME="tex2html435"
+  HREF="node13.html">Detailed description of options</A>
+<B> Previous:</B> <A NAME="tex2html429"
+  HREF="node14.html">Main menu</A>
+ &nbsp <B>  <A NAME="tex2html437"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00362000000000000000"></A><A NAME="sub:B-option-tetr"></A>
+<BR>
+B - Generate supercell geometry from scratch
+</H2>
+
+<P>
+One can generate lattice vectors of the cell and atomic positions
+inside the cell from scratch. The initial <I>B-option</I> menu is
+this:
+
+<P>
+<TT><FONT SIZE="-2">========= CHOOSE AN OPTION:</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. Number of species: &lt;===== undefined</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. Basic translations of the PRIMITIVE CELL &lt;=====
+undefined</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">------- Extention
+matrix {cell -&gt; supercell} ------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5. Specify directly</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 1 0 0 |</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">IJ(i,j)= | 0 1 0 |, ext= 1</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 0 0 1 |</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">------- g e n
+e r a l s e t t i n g s --------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Or. Move atoms closer to origin: NO</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">XY. Produce &lt;geom.xyz&gt; file after every change
+for Xmol</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Hs. H atoms to be added to &lt;geom.xyz&gt; file: NO</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">An. [For input] Coordinates are specified
+in: &lt;Angstroms&gt; </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Bb. Set the size of the breeding box for visualisation</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;
+Current setting for the breeding box: &lt;&lt;&lt;&lt;&lt;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">[ 0... 0] x [ 0... 0] x [ 0... 0]</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&gt;&gt;&gt;&gt;&gt;
+extension = 1, # of atoms= 0</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Quit: return to the previous setting (if exists)</FONT></TT>
+<P>
+
+
+<P>
+<DIV ALIGN="LEFT">
+<TT><FONT SIZE="-2">-----&gt;
+Choose an appropriate option:</FONT></TT>
+</DIV>
+<P>
+
+
+<P>
+You must first specify all the data in ``undefined'' fields. Start
+from the option 1 and specify the primitive unit cell information.
+New options will appear that require additional information. The primitive
+lattice vectors <!-- MATH
+ $\mathbf{a}_{1},\mathbf{a}_{2},\mathbf{a}_{3}$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$\mathbf{a}_{1},\mathbf{a}_{2},\mathbf{a}_{3}$">are
+specified either manually or from the list, both to be found in the
+following menu:
+
+<P>
+<TT><FONT SIZE="-2">-------------------------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">----- Choose one Bravais lattices: ------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">-------------------------</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">0.Manually</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1.Triclinic system</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2.Monoclinic system. Simple lattice</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3.Monoclinic system. Side-centered lattice</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">4.Orthorhombic system. Simple lattice</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">5.Orthorhombic system. Fcc-1 lattice</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">6.Orthorhombic system. Fcc-2 lattice</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">7.Orthorhombic system. Bcc lattice</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">8.Tetragonal system. Simple lattice</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">9.Tetragonal system. Bcc-1 lattice</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">10.Tetragonal system. Bcc-2 lattice (diff.setting)</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">11.Cubic system. Simple lattice</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">12.Cubic system. Bcc lattice</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">13.Cubic system. Fcc lattice</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">14.Rhombohedral system.</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">15.Hexagonal system</FONT></TT>
+<P>
+
+
+<P>
+<DIV ALIGN="LEFT">
+<TT><FONT SIZE="-2">----&gt; Choose the
+appropriate number ----&gt;</FONT></TT>
+</DIV>
+<P>
+
+
+<P>
+The cell you want to construct may consist of several primitive cells
+with lattice vectors <BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\mathbf{A}_{i}=\sum_{j=1}^{3}T_{ij}\mathbf{a}_{j}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:a-to-A"></A><IMG
+ WIDTH="113" HEIGHT="60" BORDER="0"
+ SRC="img13.png"
+ ALT="\begin{displaymath}
+\mathbf{A}_{i}=\sum_{j=1}^{3}T_{ij}\mathbf{a}_{j}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$\mathbf{T}$"> is the <IMG
+ WIDTH="47" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$3\times3$"> transformation (extention)
+matrix consisting only of integer numbers. By default, the extention
+matrix is the unit matrix, i.e. <!-- MATH
+ $\mathbf{A}_{i}=\mathbf{a}_{i}$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$\mathbf{A}_{i}=\mathbf{a}_{i}$">.
+However, using options <B>4</B> or <B>5</B> from the B-option
+menu, the matrix <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$\mathbf{T}$"> can be specified either directly (option
+<B>4</B>) or by specifying the vectors <!-- MATH
+ $\mathbf{A}_{i}$
+ -->
+<IMG
+ WIDTH="26" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\mathbf{A}_{i}$">(option
+<B>5</B>). In the latter case the matrix <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$\mathbf{T}$"> is calculated
+and it is checked if it consists of integers only. 
+
+<P>
+Finally, the unit cell is generated in option <B>7</B>. If you leave
+the B-option menu by pressing <B>Q</B> (and Enter), the main menu
+of <B><I>tetr</I></B> will appear, so that you can modify your setting,
+add <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points and then save them in the format of your
+choice.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html438"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html434"
+  HREF="node13.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html428"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html436"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html439"
+  HREF="node16.html">Pc - Generate primitive</A>
+<B> Up:</B> <A NAME="tex2html435"
+  HREF="node13.html">Detailed description of options</A>
+<B> Previous:</B> <A NAME="tex2html429"
+  HREF="node14.html">Main menu</A>
+ &nbsp <B>  <A NAME="tex2html437"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

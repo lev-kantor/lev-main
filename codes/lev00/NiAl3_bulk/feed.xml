@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:91BB92B8-0032-437B-9162-A339932C6627</id>
+ <title>Page list Atom feed</title>
+ <updated>2015-05-08T18:47:36+01:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:05A91BB4-2294-49F8-8B41-4ECB4E3307CA</id>
+  <title>1</title>
+  <title xmlns="urn:iweb:">1</title>
+  <in-navbar xmlns="urn:iweb:">05A91BB4-2294-49F8-8B41-4ECB4E3307CA</in-navbar>
+  <link rel="alternate" href="1.html"/>
+  <updated>2015-05-08T18:47:36.001+01:00</updated>
+  <content>1</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:012A1C84-2150-41E2-BFF2-BC33F02495F0</id>
+  <title>2</title>
+  <title xmlns="urn:iweb:">2</title>
+  <in-navbar xmlns="urn:iweb:">012A1C84-2150-41E2-BFF2-BC33F02495F0</in-navbar>
+  <link rel="alternate" href="2.html"/>
+  <updated>2015-05-08T18:47:36.002+01:00</updated>
+  <content>2</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:91026F84-9501-4FDD-BA9B-3F3F7AE7B420</id>
+  <title>3</title>
+  <title xmlns="urn:iweb:">3</title>
+  <in-navbar xmlns="urn:iweb:">91026F84-9501-4FDD-BA9B-3F3F7AE7B420</in-navbar>
+  <link rel="alternate" href="3.html"/>
+  <updated>2015-05-08T18:47:36.003+01:00</updated>
+  <content>3</content>
+ </entry>
+</feed>

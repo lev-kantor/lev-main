@@ -1,0 +1,284 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>KP-menu</TITLE>
+<META NAME="description" CONTENT="KP-menu">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node21.html">
+<LINK REL="previous" HREF="node19.html">
+<LINK REL="up" HREF="node19.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html500"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html496"
+  HREF="node19.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html490"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html498"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html501"
+  HREF="node21.html">DOS</A>
+<B> Up:</B> <A NAME="tex2html497"
+  HREF="node19.html">KP - k-points generation</A>
+<B> Previous:</B> <A NAME="tex2html491"
+  HREF="node19.html">KP - k-points generation</A>
+ &nbsp <B>  <A NAME="tex2html499"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00366100000000000000">
+KP-menu</A>
+</H3>
+
+<P>
+The corresponding menu for the <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points (KP-menu) looks
+like this:
+
+<P>
+<TT><FONT SIZE="-2">/-------------------------&#92;&#92;</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">|................. K-point menu ..................|</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">&#92;&#92;-------------------------/</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">0. BULK calculation</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">NEW reciprocal lattice vectors (up to 2*PI):</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">BJ0(1): 0.09190 0.00000 0.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">BJ0(2): 0.00000 0.09190 0.00000</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">BJ0(3): 0.00000 0.00000 0.09190</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">1. DOS </FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">2. BAND: eigenvalues along a k-direction</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">3. Self-consistent (ordinary) calculation</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Q. Return to the main menu</FONT></TT>
+<P>
+
+
+<P>
+<TT><FONT SIZE="-2">Specify the character and press ENTER ----&gt;</FONT></TT>
+<P>
+
+
+<P>
+The option <B>0</B> allows one to choose between bulk and slab calculation.
+It is assumed here that the vacuum gap between slabs runs along the
+third lattice vector <!-- MATH
+ $\mathbf{a}_{3}$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$\mathbf{a}_{3}$">. Although this vector may not
+be very large in actual calculation, in most cases related to the
+reciprocal space, it is convenient to assume that it is of an infinite
+length. This in turn implies that the Brillouin zone (BZ) in the case
+of a slab calculations is effectively 2D (planar, compressed in the
+third dimension). Thus, any <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-point to be constructed
+in this menu will have its component along the third reciprocal vector
+<!-- MATH
+ $\mathbf{b}_{3}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$\mathbf{b}_{3}$"> (the reciprocal and direct primitive translation
+vectors are related via <!-- MATH
+ $\mathbf{a}_{i}\mathbf{b}_{j}=2\pi\delta_{i,j}$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$\mathbf{a}_{i}\mathbf{b}_{j}=2\pi\delta_{i,j}$">)
+removed, i.e. only <!-- MATH
+ $\mathbf{b}_{1}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$\mathbf{b}_{1}$"> and <!-- MATH
+ $\mathbf{b}_{2}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$\mathbf{b}_{2}$"> will be
+used.
+
+<P>
+Other options of the menu allows youto choose the <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points
+depending on the type of the DFT calculation to be performed:
+
+<P>
+
+<UL>
+<LI><B>1</B> - the most sophisticated option, it allows one to use the
+point symmetry of the system and split the BZ into many tetrahedra
+for the calculation of the electronic DOS. This is specifically described
+in the coming Sections below
+</LI>
+<LI><B>2</B> - <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points along a direction in the BZ can
+be chosen; this is useful for a band-structure calculation, when dispersion
+curves, <!-- MATH
+ $\varepsilon_{n}(\mathbf{k})$
+ -->
+<IMG
+ WIDTH="48" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$\varepsilon_{n}(\mathbf{k})$">, for each electronic band <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$n$">
+are to be calculated
+</LI>
+<LI><B>3</B> - <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points for a self-consistent calculation
+are chosen using the Monchorst-Pack method (either two or three integers
+to be given in the 2D and 3D cases, respectively); only inversion
+is assumed in this case (i.e. the points <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$"> and <IMG
+ WIDTH="31" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$-\mathbf{k}$">
+are assumed to be equivalent)
+</LI>
+</UL>
+Once <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points have been selected, a new option <B>S</B>
+appears (save, Section <A HREF="node41.html#sub:Save-Read-tetr">2.6.11.1</A>) that allows you
+to save the geometry and the <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points. This is ok for
+<B><I>SIESTA</I></B> since everything is contained in a single input
+file. However, it is a little inconvenient in the case of <B><I>VASP</I></B>
+since the <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points are always assumed to be in a different
+<TT>KPOINTS</TT> file (so that geometry may be saved more than once). 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html500"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html496"
+  HREF="node19.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html490"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html498"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html501"
+  HREF="node21.html">DOS</A>
+<B> Up:</B> <A NAME="tex2html497"
+  HREF="node19.html">KP - k-points generation</A>
+<B> Previous:</B> <A NAME="tex2html491"
+  HREF="node19.html">KP - k-points generation</A>
+ &nbsp <B>  <A NAME="tex2html499"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>

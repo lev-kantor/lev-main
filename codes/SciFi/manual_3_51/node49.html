@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>shells</TITLE>
+<META NAME="description" CONTENT="shells">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node50.html">
+<LINK REL="previous" HREF="node48.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node50.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1005"
+  HREF="node50.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1001"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html995"
+  HREF="node48.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1003"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1006"
+  HREF="node50.html">Output control</A>
+<B> Up:</B> <A NAME="tex2html1002"
+  HREF="node43.html">Tolerance Box</A>
+<B> Previous:</B> <A NAME="tex2html996"
+  HREF="node48.html">do_lateral</A>
+ &nbsp <B>  <A NAME="tex2html1004"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION04022600000000000000"></A><A NAME="Sec::shells"></A>
+<BR>
+shells
+</H3>
+
+<P>
+Controls whether shells in regions ``cluster atoms''
+and ``tip atoms'' are allowed to relax. 
+
+<P>
+<I>Options</I>: 
+
+<P>
+
+<UL>
+<LI><B>moveall -</B> shells of all atoms are allowed to relax;
+this option is useful, for instance, if one wants to calculate the
+electronic polarisation alone keeping all atoms in their initial positions;
+</LI>
+<LI><B>frozenall -</B> all shells are frozen irrespective
+of whether cores are allowed to move or not; this would correspond
+to the <I>frozen core approximation</I> if initial positions of shells
+are the same as for their cores;
+</LI>
+<LI><B>follow -</B> only shells of frozen cores are frozen;
+shells of atoms allowed to move will follow them; this is likely to
+be the most useful and frequently used option.
+</LI>
+</UL>
+<I>Default</I>: <B>moveall</B>
+
+<P>
+<I>Example</I>: <B>shells moveall</B>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>howto </TITLE>
+<META NAME="description" CONTENT="howto ">
+<META NAME="keywords" CONTENT="manual_3_51">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_3_51.css">
+
+<LINK REL="next" HREF="node98.html">
+<LINK REL="previous" HREF="node96.html">
+<LINK REL="up" HREF="node95.html">
+<LINK REL="next" HREF="node98.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1603"
+  HREF="node98.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1599"
+  HREF="node95.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1593"
+  HREF="node96.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1601"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1604"
+  HREF="node98.html">During energy relaxation</A>
+<B> Up:</B> <A NAME="tex2html1600"
+  HREF="node95.html">Dynamic Tip</A>
+<B> Previous:</B> <A NAME="tex2html1594"
+  HREF="node96.html">During MD</A>
+ &nbsp <B>  <A NAME="tex2html1602"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION04026200000000000000">
+howto <!-- MATH
+ $A\,\,\, T\,\,\, v_{x}\,\,\, v_{y}$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img361.png"
+ ALT="$A\,\,\, T\,\,\, v_{x}\,\,\, v_{y}$"></A>
+</H3>
+
+<P>
+The tip can be scanned laterally at a constant velocity, or oscillated
+sinusoidally in the z-direction, or both at the same time. The option
+is followed by four parameters, as indicated above, which control
+the movement of the tip, according to the following equations of motion:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+x=x_{0}+v_{x}n\Delta t
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="110" HEIGHT="27" BORDER="0"
+ SRC="img362.png"
+ ALT="\begin{displaymath}
+x=x_{0}+v_{x}n\Delta t\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+y=y_{0}+v_{y}n\Delta t
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="108" HEIGHT="29" BORDER="0"
+ SRC="img363.png"
+ ALT="\begin{displaymath}
+y=y_{0}+v_{y}n\Delta t\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+z=z_{0}+A\sin\left(\frac{2\pi n\Delta t}{T}\right)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="171" HEIGHT="45" BORDER="0"
+ SRC="img364.png"
+ ALT="\begin{displaymath}
+z=z_{0}+A\sin\left(\frac{2\pi n\Delta t}{T}\right)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img351.png"
+ ALT="$n$"> is the timestep number and <IMG
+ WIDTH="23" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img365.png"
+ ALT="$\Delta t$"> is the timestep
+itself. The units of <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img366.png"
+ ALT="$A$"> are &#197;, the units of <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img243.png"
+ ALT="$T$"> are ps, the units
+of <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img367.png"
+ ALT="$v_{x}$"> and <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img368.png"
+ ALT="$v_{y}$"> &#197;/ps. 
+
+<P>
+<I>Options</I>: <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img366.png"
+ ALT="$A$"> <IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img243.png"
+ ALT="$T$"> <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img367.png"
+ ALT="$v_{x}$"> <IMG
+ WIDTH="20" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img368.png"
+ ALT="$v_{y}$">
+
+<P>
+<I>Default</I>: no
+
+<P>
+<I>Example</I>: <B>howto</B> 4.0 20.0 1.0 1.0
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2005-08-04
+</ADDRESS>
+</BODY>
+</HTML>

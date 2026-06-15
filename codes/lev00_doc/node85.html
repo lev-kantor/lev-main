@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>tetr and SIESTA</TITLE>
+<META NAME="description" CONTENT="tetr and SIESTA">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node86.html">
+<LINK REL="previous" HREF="node84.html">
+<LINK REL="up" HREF="node84.html">
+<LINK REL="next" HREF="node86.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1362"
+  HREF="node86.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1358"
+  HREF="node84.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1352"
+  HREF="node84.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1360"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1363"
+  HREF="node86.html">lev00 and SIESTA</A>
+<B> Up:</B> <A NAME="tex2html1359"
+  HREF="node84.html">Working with SIESTA</A>
+<B> Previous:</B> <A NAME="tex2html1353"
+  HREF="node84.html">Working with SIESTA</A>
+ &nbsp <B>  <A NAME="tex2html1361"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00610000000000000000"></A><A NAME="sec:tetr-and-SIESTA"></A>
+<BR>
+<I>tetr</I> and <I>SIESTA</I>
+</H1>
+
+<P>
+First of all, the main usage of <B><I>tetr</I></B> is to produce
+the <B><I>SIESTA</I></B> input <TT>&lt;job&gt;.fdf</TT> file as described
+in Section <A HREF="node13.html#sec:Detailed-description-of-tetr">2.6</A>. Here <TT>&lt;job&gt;</TT>
+is the name of the <B><I>SIESTA</I></B> job. tetr can process both
+<TT>&lt;job&gt;.fdf</TT> and <TT>&lt;job&gt;.XV</TT> files.
+
+<P>
+The DOS option is not yet supported for <B><I>SIESTA</I></B> since
+it is not possible at present to choose at will the <IMG
+ WIDTH="16" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\mathbf{k}$">-points
+for the <B><I>SIESTA</I></B> run. The situation may change in the
+future, or, as a user, you may do the appropriate changes in <B><I>SIESTA</I></B>
+yourself. In those cases little modifications are required to allow
+for the DOS/LDOS support, similar to the <B><I>VASP</I></B> case
+(Section <A HREF="node78.html#cha:Working-with-VASP">4</A>). 
+
+<P>
+Finally, the calculation of phonon frequencies with <B><I>SIESTA</I></B>
+is completely supported. <B><I>tetr</I></B> will take care of all
+input and output files as described in Section <A HREF="node23.html#sub:Calculation-of-phonons-tetr">2.6.8</A>.
+No need for <B><I>lev00</I></B> in this case at all!
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>
