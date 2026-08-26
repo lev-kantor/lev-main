@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Bugs and comments</TITLE>
+<META NAME="description" CONTENT="Bugs and comments">
+<META NAME="keywords" CONTENT="manual_lev00_2-45c+tetr_3-94h6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="manual_lev00_2-45c+tetr_3-94h6.css">
+
+<LINK REL="next" HREF="node99.html">
+<LINK REL="previous" HREF="node97.html">
+<LINK REL="up" HREF="node96.html">
+<LINK REL="next" HREF="node99.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1525"
+  HREF="node99.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1521"
+  HREF="node96.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1515"
+  HREF="node97.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html1523"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html1526"
+  HREF="node99.html">Enjoyed?</A>
+<B> Up:</B> <A NAME="tex2html1522"
+  HREF="node96.html">Miscellaneous</A>
+<B> Previous:</B> <A NAME="tex2html1516"
+  HREF="node97.html">Limitations and parameters of</A>
+ &nbsp <B>  <A NAME="tex2html1524"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00820000000000000000">
+Bugs and comments</A>
+</H1>
+
+<P>
+The author will be grateful for any comments concerning this manual
+and the package itself. Any bugs found should be reported to the author: 
+
+<P>
+lev.kantorovitch@kcl.ac.uk
+
+<P>
+www.cmmp.ucl.ac.uk/lev
+
+<P>
+<BR><HR>
+<ADDRESS>
+Lev Kantorovich
+2006-05-08
+</ADDRESS>
+</BODY>
+</HTML>
